@@ -807,195 +807,139 @@ body.assure-v2 {
    ============================================================ */
 
 /* --- Tablet (min-width: 769px) --- */
-@media (min-width: 769px) {
-  .consumer-portal {
-    padding-bottom: 0; /* remove bottom-nav space */
-  }
-  .consumer-portal__body {
-    padding: var(--space-5);
-  }
-
-  /* Topnav: show links, hide hamburger */
-  .portal-topnav {
-    height: 64px;
-    padding: 0 var(--space-6);
-  }
-  .portal-topnav__logo {
-    font-size: var(--text-md);
-    gap: var(--space-3);
-    margin-right: var(--space-6);
-  }
-  .portal-topnav__logo-icon {
-    width: 32px;
-    height: 32px;
-    font-size: 14px;
-  }
-  .portal-topnav__links {
-    display: flex;
-  }
-  .portal-topnav__hamburger {
-    display: none;
-  }
-  .portal-topnav__avatar {
-    width: 30px;
-    height: 30px;
-    font-size: 12px;
-  }
-  .portal-topnav__user {
-    padding: 4px 12px 4px 4px;
-  }
-  .portal-topnav__username {
-    display: inline;
-  }
-  .portal-topnav__notif {
-    width: 38px;
-    height: 38px;
-  }
-  .portal-topnav__actions {
-    gap: var(--space-3);
-  }
-
-  /* Bottom nav hidden on tablet+ */
-  .portal-bottom-nav {
-    display: none;
-  }
-
-  /* Hero: 2-column */
-  .portal-hero {
-    padding: var(--space-6) var(--space-6);
-  }
-  .portal-hero__inner {
-    display: grid;
-    grid-template-columns: 1fr 360px;
-    gap: var(--space-6);
-    align-items: center;
-  }
-  .portal-hero__name {
-    font-size: 26px;
-  }
-  .portal-hero .digital-card {
-    max-width: 360px;
-  }
-
-  /* Dashboard: grid */
-  .portal-dashboard-grid {
-    display: grid;
-    grid-template-columns: repeat(12, 1fr);
-    gap: var(--space-5);
-  }
-  .portal-widget { padding: var(--space-5); }
-  .portal-widget--full  { grid-column: span 12; }
-  .portal-widget--lg    { grid-column: span 12; }
-  .portal-widget--md    { grid-column: span 6; }
-  .portal-widget--sm    { grid-column: span 6; }
-  .portal-widget--third { grid-column: span 6; }
-
-  /* Quick actions: 4 columns */
-  .consumer-portal .quick-actions {
-    grid-template-columns: repeat(4, 1fr);
-  }
-  .consumer-portal .quick-action {
-    padding: var(--space-4);
-  }
-
-  /* Page header */
-  .portal-page-header__title {
-    font-size: 24px;
-  }
-
-  /* Providers: still single column on tablet */
-
-  /* Messages: split-pane */
-  .portal-messages-split {
-    display: grid;
-    grid-template-columns: 340px 1fr;
-    gap: 0;
-    min-height: 600px;
-  }
-  .portal-messages-split__list {
-    border-right: 1px solid var(--gray-200);
-  }
-  .portal-messages-split__chat {
-    display: flex;
-    position: static;
-  }
-  .portal-messages-split__chat.active {
-    position: static;
-  }
-  .portal-messages-split__empty {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    height: 100%;
-    color: var(--gray-400);
-    font-size: var(--text-sm);
-  }
-
-  /* Footer: row */
-  .portal-footer {
-    padding: var(--space-5) var(--space-6);
-  }
-  .portal-footer__inner {
-    flex-direction: row;
-    justify-content: space-between;
-  }
-}
+/* DISABLED: forced mobile mode — see section 22 */
 
 /* --- Desktop (min-width: 1025px) --- */
-@media (min-width: 1025px) {
-  .consumer-portal__body {
-    padding: var(--space-6) var(--space-5);
-  }
+/* DISABLED: forced mobile mode — see section 22 */
 
-  /* Hero: wider card */
-  .portal-hero {
-    padding: var(--space-8) var(--space-6);
-  }
-  .portal-hero__inner {
-    grid-template-columns: 1fr 420px;
-    gap: var(--space-8);
-  }
-  .portal-hero__name {
-    font-size: 28px;
-  }
-  .portal-hero__stats {
-    gap: var(--space-6);
-  }
-  .portal-hero__stat-value {
-    font-size: var(--text-xl);
-  }
-  .portal-hero .digital-card {
-    max-width: 420px;
-  }
-
-  /* Dashboard: proper bento */
-  .portal-widget--lg    { grid-column: span 8; }
-  .portal-widget--sm    { grid-column: span 4; }
-  .portal-widget--third { grid-column: span 4; }
-
-  /* Garantie grid: 4 columns */
-  .consumer-portal .garantie-grid {
-    grid-template-columns: repeat(4, 1fr);
-  }
-
-  /* Providers: 2-column grid */
-  .portal-providers-grid {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: var(--space-4);
-  }
-
-  /* Carte: 2-column */
-  .portal-carte-layout {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: var(--space-6);
-  }
-
-  /* Profile: 2-column */
-  .portal-profile-layout {
-    display: grid;
-    grid-template-columns: 320px 1fr;
-    gap: var(--space-6);
-  }
+/* ============================================================
+   22. FORCE MOBILE MODE
+   Lock the consumer portal to a mobile viewport (max 430px)
+   regardless of actual screen size. All tablet/desktop
+   media-query rules are neutralized below.
+   ============================================================ */
+.consumer-portal {
+  max-width: 430px;
+  margin: 0 auto;
+  box-shadow: 0 0 60px rgba(0,0,0,0.08);
+  position: relative;
+}
+/* Keep mobile padding */
+.consumer-portal .consumer-portal__body {
+  padding: var(--space-4);
+}
+/* Keep bottom-nav visible */
+.portal-bottom-nav {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  max-width: 430px;
+  margin: 0 auto;
+  display: flex;
+}
+/* Keep topnav links hidden (mobile hamburger) */
+.portal-topnav__links {
+  display: none !important;
+}
+.portal-topnav__hamburger {
+  display: flex !important;
+}
+.portal-topnav__username {
+  display: none !important;
+}
+/* Keep topnav compact */
+.portal-topnav {
+  height: 56px;
+  padding: 0 var(--space-4);
+}
+/* Hero: single column */
+.portal-hero {
+  padding: var(--space-5) var(--space-4);
+}
+.portal-hero__inner {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-5);
+}
+.portal-hero__name {
+  font-size: 22px;
+}
+.portal-hero__stats {
+  gap: var(--space-4);
+}
+.portal-hero__stat-value {
+  font-size: var(--text-lg);
+}
+.portal-hero .digital-card {
+  max-width: 100%;
+}
+/* Dashboard: single column */
+.portal-dashboard-grid {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-4);
+}
+.portal-widget { padding: var(--space-4); }
+/* Quick actions: 2 columns */
+.consumer-portal .quick-actions {
+  grid-template-columns: repeat(2, 1fr) !important;
+}
+.consumer-portal .quick-action {
+  padding: var(--space-3);
+}
+/* Garantie grid: 2 columns */
+.consumer-portal .garantie-grid {
+  grid-template-columns: repeat(2, 1fr) !important;
+}
+/* Providers: single column */
+.portal-providers-grid {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-3);
+}
+/* Messages: single pane (no split) */
+.portal-messages-split {
+  display: flex;
+  flex-direction: column;
+}
+.portal-messages-split__list {
+  border-right: none;
+}
+.portal-messages-split__chat {
+  display: none;
+}
+.portal-messages-split__chat.active {
+  display: flex;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 150;
+  background: #fff;
+}
+.portal-messages-split__empty {
+  display: none;
+}
+/* Carte: single column */
+.portal-carte-layout {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-4);
+}
+/* Profile: single column */
+.portal-profile-layout {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-4);
+}
+/* Footer: stacked */
+.portal-footer__inner {
+  flex-direction: column;
+  align-items: center;
+}
+/* Page header: mobile size */
+.portal-page-header__title {
+  font-size: 20px;
 }
