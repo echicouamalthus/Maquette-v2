@@ -1,0 +1,1001 @@
+/* ============================================================
+   IIPS — Espace Assuré v2 (Portail Consommateur)
+   MOBILE-FIRST — Base = mobile, scale up with min-width
+   Top-nav (desktop) + bottom-nav (mobile) + hero + bento grid
+   ============================================================ */
+
+/* --- 0. v2 Global Reset --- */
+.consumer-portal *,
+.consumer-portal *::before,
+.consumer-portal *::after {
+  border-radius: 0 !important;
+  scrollbar-width: none;
+}
+.consumer-portal *::-webkit-scrollbar {
+  display: none;
+}
+body.assure-v2 {
+  background: #f4f4f5;
+  margin: 0;
+  padding: 0;
+}
+
+/* --- 1. Consumer Portal Shell --- */
+.consumer-portal {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  font-family: var(--font-body);
+  padding-bottom: 60px; /* room for bottom-nav on mobile */
+}
+.consumer-portal__body {
+  flex: 1;
+  padding: var(--space-4);
+}
+.consumer-portal__container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* --- 2. Top Navigation Bar --- */
+.portal-topnav {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  background: #fff;
+  border-bottom: 1px solid var(--gray-200);
+  display: flex;
+  align-items: center;
+  height: 56px;
+  padding: 0 var(--space-4);
+  gap: var(--space-2);
+}
+.portal-topnav__logo {
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+  text-decoration: none;
+  color: var(--gray-900);
+  font-family: var(--font-display);
+  font-weight: 800;
+  font-size: var(--text-sm);
+  flex-shrink: 0;
+  margin-right: auto;
+}
+.portal-topnav__logo-icon {
+  width: 28px;
+  height: 28px;
+  background: linear-gradient(135deg, var(--iips-primary), var(--iips-secondary));
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  font-size: 11px;
+  font-weight: 800;
+}
+/* Links hidden on mobile by default */
+.portal-topnav__links {
+  display: none;
+  align-items: center;
+  gap: var(--space-1);
+  flex: 1;
+  overflow-x: auto;
+}
+.portal-topnav__link {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  padding: var(--space-2) var(--space-3);
+  font-size: var(--text-sm);
+  font-weight: 500;
+  color: var(--gray-500);
+  text-decoration: none;
+  white-space: nowrap;
+  transition: color 0.15s, background 0.15s;
+  position: relative;
+}
+.portal-topnav__link:hover {
+  color: var(--gray-900);
+  background: var(--gray-50);
+}
+.portal-topnav__link.active {
+  color: var(--iips-primary);
+  font-weight: 600;
+}
+.portal-topnav__link.active::after {
+  content: '';
+  position: absolute;
+  bottom: -1px;
+  left: var(--space-3);
+  right: var(--space-3);
+  height: 2px;
+  background: var(--iips-primary);
+}
+.portal-topnav__link svg {
+  width: 18px;
+  height: 18px;
+  flex-shrink: 0;
+}
+.portal-topnav__actions {
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+  flex-shrink: 0;
+}
+.portal-topnav__notif {
+  width: 36px;
+  height: 36px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--gray-500);
+  cursor: pointer;
+  position: relative;
+  background: none;
+  border: 1px solid var(--gray-200);
+  transition: background 0.15s;
+}
+.portal-topnav__notif:hover {
+  background: var(--gray-50);
+  color: var(--gray-700);
+}
+.portal-topnav__notif .dot {
+  position: absolute;
+  top: 7px;
+  right: 7px;
+  width: 7px;
+  height: 7px;
+  background: var(--iips-accent);
+}
+.portal-topnav__user {
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+  padding: 4px;
+  border: 1px solid var(--gray-200);
+  cursor: pointer;
+  transition: background 0.15s;
+  text-decoration: none;
+  color: inherit;
+}
+.portal-topnav__user:hover {
+  background: var(--gray-50);
+}
+.portal-topnav__avatar {
+  width: 28px;
+  height: 28px;
+  background: var(--iips-primary);
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+  font-size: 11px;
+}
+/* Hidden on mobile */
+.portal-topnav__username {
+  display: none;
+  font-size: var(--text-sm);
+  font-weight: 500;
+  color: var(--gray-700);
+}
+
+/* Hamburger — visible on mobile */
+.portal-topnav__hamburger {
+  display: flex;
+  width: 36px;
+  height: 36px;
+  align-items: center;
+  justify-content: center;
+  background: none;
+  border: 1px solid var(--gray-200);
+  color: var(--gray-600);
+  cursor: pointer;
+  flex-shrink: 0;
+}
+
+/* --- 3. Mobile Navigation Drawer --- */
+.portal-mobile-nav {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 200;
+}
+.portal-mobile-nav.active {
+  display: block;
+}
+.portal-mobile-nav__overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(0,0,0,0.4);
+}
+.portal-mobile-nav__panel {
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  width: 280px;
+  max-width: 80vw;
+  background: #fff;
+  padding: var(--space-5);
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2);
+  transform: translateX(-100%);
+  transition: transform 0.25s ease;
+}
+.portal-mobile-nav.active .portal-mobile-nav__panel {
+  transform: translateX(0);
+}
+.portal-mobile-nav__header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-bottom: var(--space-4);
+  border-bottom: 1px solid var(--gray-200);
+  margin-bottom: var(--space-2);
+}
+.portal-mobile-nav__close {
+  width: 32px;
+  height: 32px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: none;
+  border: 1px solid var(--gray-200);
+  color: var(--gray-500);
+  cursor: pointer;
+}
+.portal-mobile-nav__link {
+  display: flex;
+  align-items: center;
+  gap: var(--space-3);
+  padding: var(--space-3);
+  font-size: var(--text-sm);
+  font-weight: 500;
+  color: var(--gray-600);
+  text-decoration: none;
+  transition: background 0.15s, color 0.15s;
+}
+.portal-mobile-nav__link:hover {
+  background: var(--gray-50);
+  color: var(--gray-900);
+}
+.portal-mobile-nav__link.active {
+  color: var(--iips-primary);
+  font-weight: 600;
+  background: #ECFDF5;
+}
+.portal-mobile-nav__link svg {
+  width: 20px;
+  height: 20px;
+  flex-shrink: 0;
+}
+
+/* --- 4. Bottom Navigation (Mobile) --- */
+.portal-bottom-nav {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 100;
+  background: #fff;
+  border-top: 1px solid var(--gray-200);
+  display: flex;
+  padding: var(--space-1) 0 var(--space-2);
+}
+.portal-bottom-nav__item {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2px;
+  font-size: 10px;
+  font-weight: 600;
+  color: var(--gray-400);
+  cursor: pointer;
+  padding: var(--space-1) 0;
+  transition: color 0.15s;
+  text-decoration: none;
+  position: relative;
+}
+.portal-bottom-nav__item:hover {
+  color: var(--gray-600);
+}
+.portal-bottom-nav__item.active {
+  color: var(--iips-primary);
+}
+.portal-bottom-nav__item svg {
+  width: 22px;
+  height: 22px;
+}
+.portal-bottom-nav__badge {
+  position: absolute;
+  top: -2px;
+  right: 50%;
+  transform: translateX(14px);
+  min-width: 16px;
+  height: 16px;
+  background: var(--color-error);
+  color: #fff;
+  font-size: 9px;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0 4px;
+}
+
+/* --- 5. Hero Section (Dashboard only) --- */
+.portal-hero {
+  background: linear-gradient(135deg, #064E3B 0%, var(--iips-primary) 50%, var(--iips-secondary) 100%);
+  color: #fff;
+  padding: var(--space-5) var(--space-4);
+  position: relative;
+  overflow: hidden;
+}
+.portal-hero::before {
+  content: '';
+  position: absolute;
+  top: -100px;
+  right: -100px;
+  width: 350px;
+  height: 350px;
+  background: radial-gradient(circle, rgba(255,255,255,0.06) 0%, transparent 70%);
+}
+.portal-hero__inner {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-5);
+}
+.portal-hero__greeting {
+  font-size: var(--text-sm);
+  opacity: 0.8;
+  margin-bottom: var(--space-1);
+}
+.portal-hero__name {
+  font-family: var(--font-display);
+  font-size: 22px;
+  font-weight: 700;
+  margin-bottom: var(--space-3);
+}
+.portal-hero__stats {
+  display: flex;
+  gap: var(--space-4);
+}
+.portal-hero__stat {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+.portal-hero__stat-value {
+  font-family: var(--font-display);
+  font-size: var(--text-lg);
+  font-weight: 700;
+}
+.portal-hero__stat-label {
+  font-size: var(--text-xs);
+  opacity: 0.7;
+}
+.portal-hero__plafond {
+  margin-top: var(--space-4);
+}
+.portal-hero__plafond-header {
+  display: flex;
+  justify-content: space-between;
+  font-size: var(--text-sm);
+  margin-bottom: var(--space-2);
+}
+.portal-hero__plafond-bar {
+  height: 8px;
+  background: rgba(255,255,255,0.2);
+  overflow: hidden;
+}
+.portal-hero__plafond-fill {
+  height: 100%;
+  background: #fff;
+  transition: width 0.8s ease;
+}
+.portal-hero__plafond-details {
+  display: flex;
+  justify-content: space-between;
+  font-size: 11px;
+  opacity: 0.7;
+  margin-top: var(--space-1);
+}
+
+/* Hero digital card */
+.portal-hero .digital-card {
+  margin: 0;
+  max-width: 100%;
+  box-shadow: 0 20px 60px rgba(0,0,0,0.3);
+}
+
+/* --- 6. Digital Card v2 Overrides --- */
+.consumer-portal .digital-card {
+  border-radius: 0 !important;
+}
+.consumer-portal .digital-card__type {
+  border-radius: 0 !important;
+}
+.consumer-portal .digital-card__qr {
+  border-radius: 0 !important;
+}
+
+/* --- 7. Dashboard Bento Grid --- */
+.portal-dashboard-grid {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-4);
+}
+.portal-widget {
+  background: #fff;
+  border: 1px solid var(--gray-200);
+  padding: var(--space-4);
+}
+.portal-widget__header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: var(--space-4);
+}
+.portal-widget__title {
+  font-size: var(--text-md);
+  font-weight: 700;
+  color: var(--gray-900);
+}
+.portal-widget__link {
+  font-size: var(--text-xs);
+  font-weight: 600;
+  color: var(--iips-primary);
+  text-decoration: none;
+}
+.portal-widget__link:hover {
+  text-decoration: underline;
+}
+
+/* --- 8. Content Cards --- */
+.portal-card {
+  background: #fff;
+  border: 1px solid var(--gray-200);
+  padding: var(--space-4);
+}
+
+/* --- 9. Page Header (sub-pages) --- */
+.portal-page-header {
+  max-width: 1200px;
+  margin: 0 auto var(--space-4);
+}
+.portal-page-header__breadcrumb {
+  font-size: var(--text-xs);
+  color: var(--gray-400);
+  margin-bottom: var(--space-2);
+}
+.portal-page-header__breadcrumb a {
+  color: var(--gray-400);
+  text-decoration: none;
+}
+.portal-page-header__breadcrumb a:hover {
+  color: var(--iips-primary);
+}
+.portal-page-header__breadcrumb span {
+  color: var(--gray-600);
+  font-weight: 600;
+}
+.portal-page-header__title {
+  font-family: var(--font-display);
+  font-size: 20px;
+  font-weight: 700;
+  color: var(--gray-900);
+  margin: 0;
+}
+
+/* --- 10. Plafond Card v2 Overrides --- */
+.consumer-portal .plafond-card {
+  border-radius: 0 !important;
+  background: var(--gray-50);
+  border: 1px solid var(--gray-200);
+}
+.consumer-portal .plafond-bar {
+  border-radius: 0 !important;
+}
+.consumer-portal .plafond-bar__fill {
+  border-radius: 0 !important;
+}
+
+/* --- 11. Quick Actions v2 --- */
+.consumer-portal .quick-actions {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: var(--space-3);
+  margin-bottom: 0;
+}
+.consumer-portal .quick-action {
+  border-radius: 0 !important;
+  border: 1px solid var(--gray-200);
+  padding: var(--space-3);
+  background: #fff;
+  transition: border-color 0.15s, box-shadow 0.15s;
+}
+.consumer-portal .quick-action:hover {
+  border-color: var(--iips-primary);
+  box-shadow: 0 2px 8px rgba(11,110,79,0.08);
+  background: #fff;
+}
+.consumer-portal .quick-action__icon {
+  border-radius: 0 !important;
+}
+
+/* --- 12. Garantie Detail v2 Overrides --- */
+.consumer-portal .garantie-detail-card {
+  border-radius: 0 !important;
+  border: 1px solid var(--gray-200);
+}
+.consumer-portal .garantie-detail-card__icon {
+  border-radius: 0 !important;
+}
+.consumer-portal .garantie-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: var(--space-3);
+}
+.consumer-portal .garantie-mini {
+  border-radius: 0 !important;
+  border: 1px solid var(--gray-200);
+  background: #fff;
+}
+
+/* --- 13. Prestation Items v2 Overrides --- */
+.consumer-portal .prestation-item__icon {
+  border-radius: 0 !important;
+}
+.consumer-portal .prestation-summary__item {
+  border-radius: 0 !important;
+  border: 1px solid var(--gray-200);
+  background: #fff;
+}
+.consumer-portal .prestation-filter__pill {
+  border-radius: 0 !important;
+}
+
+/* --- 14. Provider Cards v2 Overrides --- */
+.portal-providers-grid {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-3);
+}
+.consumer-portal .provider-card {
+  border-radius: 0 !important;
+}
+.consumer-portal .provider-card__icon {
+  border-radius: 0 !important;
+}
+.consumer-portal .provider-card__badge {
+  border-radius: 0 !important;
+}
+.consumer-portal .provider-card__phone {
+  border-radius: 0 !important;
+}
+.consumer-portal .provider-filter__pill {
+  border-radius: 0 !important;
+}
+.consumer-portal .provider-search__input {
+  border-radius: 0 !important;
+}
+
+/* --- 15. Messages / Chat v2 --- */
+/* Mobile: single pane, chat fullscreen overlay */
+.portal-messages-split {
+  display: flex;
+  flex-direction: column;
+  background: #fff;
+  border: 1px solid var(--gray-200);
+  min-height: 400px;
+}
+.portal-messages-split__list {
+  overflow-y: auto;
+}
+.portal-messages-split__chat {
+  display: none;
+  flex-direction: column;
+}
+.portal-messages-split__chat.active {
+  display: flex;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 150;
+  background: #fff;
+}
+.portal-messages-split__empty {
+  display: none;
+}
+.consumer-portal .message-preview__avatar {
+  border-radius: 0 !important;
+}
+.consumer-portal .message-preview.active {
+  background: var(--gray-50);
+}
+.consumer-portal .chat-bubble {
+  border-radius: 0 !important;
+}
+.consumer-portal .chat-input__field {
+  border-radius: 0 !important;
+}
+.consumer-portal .chat-input__send {
+  border-radius: 0 !important;
+}
+
+/* --- 16. Form v2 Overrides --- */
+.portal-form-panel {
+  max-width: 720px;
+}
+.consumer-portal .mobile-form-input,
+.consumer-portal .mobile-form-select,
+.consumer-portal .mobile-form-textarea {
+  border-radius: 0 !important;
+}
+.consumer-portal .mobile-btn {
+  border-radius: 0 !important;
+}
+.consumer-portal .upload-area {
+  border-radius: 0 !important;
+}
+.consumer-portal .mobile-alert {
+  border-radius: 0 !important;
+}
+
+/* --- 17. Profile v2 Overrides --- */
+.consumer-portal .profile-header {
+  border-radius: 0 !important;
+  margin: 0;
+  border: 1px solid var(--gray-200);
+  box-shadow: none;
+}
+.consumer-portal .profile-header__avatar {
+  border-radius: 0 !important;
+}
+.consumer-portal .profile-header__plan {
+  border-radius: 0 !important;
+}
+.consumer-portal .profile-menu__item-icon {
+  border-radius: 0 !important;
+}
+.consumer-portal .profile-menu__item {
+  border-radius: 0 !important;
+}
+/* Mobile: stacked, profile-layout not needed */
+.portal-profile-layout {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-4);
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* --- 18. Carte Page v2 Overrides --- */
+.consumer-portal .carte-action-btn__icon {
+  border-radius: 0 !important;
+}
+.consumer-portal .carte-beneficiaire__avatar {
+  border-radius: 0 !important;
+}
+.consumer-portal .digital-card--expanded {
+  margin: 0;
+}
+/* Mobile: stacked */
+.portal-carte-layout {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-4);
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* --- 19. Reclamation v2 Overrides --- */
+.consumer-portal .reclamation-type-card {
+  border-radius: 0 !important;
+}
+
+/* --- 20. Footer --- */
+.portal-footer {
+  background: #fff;
+  border-top: 1px solid var(--gray-200);
+  padding: var(--space-4);
+  text-align: center;
+  margin-top: auto;
+}
+.portal-footer__inner {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--space-3);
+}
+.portal-footer__brand {
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: var(--text-sm);
+  color: var(--gray-900);
+}
+.portal-footer__copy {
+  font-size: var(--text-xs);
+  color: var(--gray-400);
+}
+.portal-footer__links {
+  display: flex;
+  gap: var(--space-4);
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.portal-footer__links a {
+  font-size: var(--text-xs);
+  color: var(--gray-400);
+  text-decoration: none;
+}
+.portal-footer__links a:hover {
+  color: var(--iips-primary);
+}
+
+/* --- 21. Documents Row --- */
+.portal-doc-row {
+  display: flex;
+  align-items: center;
+  gap: var(--space-3);
+  padding: var(--space-3);
+  border: 1px solid var(--gray-200);
+  background: #fff;
+  transition: border-color 0.15s;
+  cursor: pointer;
+}
+.portal-doc-row + .portal-doc-row {
+  margin-top: var(--space-2);
+}
+.portal-doc-row:hover {
+  border-color: var(--gray-300);
+}
+.portal-doc-row__icon {
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 18px;
+  flex-shrink: 0;
+}
+.portal-doc-row__info {
+  flex: 1;
+}
+.portal-doc-row__name {
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--gray-900);
+}
+.portal-doc-row__meta {
+  font-size: 11px;
+  color: var(--gray-400);
+  margin-top: 2px;
+}
+.portal-doc-row__action {
+  width: 36px;
+  height: 36px;
+  border: 1px solid var(--gray-200);
+  background: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  color: var(--gray-500);
+  transition: background 0.15s;
+}
+.portal-doc-row__action:hover {
+  background: var(--gray-50);
+}
+
+/* ============================================================
+   RESPONSIVE — Mobile-first: scale UP
+   ============================================================ */
+
+/* --- Tablet (min-width: 769px) --- */
+@media (min-width: 769px) {
+  .consumer-portal {
+    padding-bottom: 0; /* remove bottom-nav space */
+  }
+  .consumer-portal__body {
+    padding: var(--space-5);
+  }
+
+  /* Topnav: show links, hide hamburger */
+  .portal-topnav {
+    height: 64px;
+    padding: 0 var(--space-6);
+  }
+  .portal-topnav__logo {
+    font-size: var(--text-md);
+    gap: var(--space-3);
+    margin-right: var(--space-6);
+  }
+  .portal-topnav__logo-icon {
+    width: 32px;
+    height: 32px;
+    font-size: 14px;
+  }
+  .portal-topnav__links {
+    display: flex;
+  }
+  .portal-topnav__hamburger {
+    display: none;
+  }
+  .portal-topnav__avatar {
+    width: 30px;
+    height: 30px;
+    font-size: 12px;
+  }
+  .portal-topnav__user {
+    padding: 4px 12px 4px 4px;
+  }
+  .portal-topnav__username {
+    display: inline;
+  }
+  .portal-topnav__notif {
+    width: 38px;
+    height: 38px;
+  }
+  .portal-topnav__actions {
+    gap: var(--space-3);
+  }
+
+  /* Bottom nav hidden on tablet+ */
+  .portal-bottom-nav {
+    display: none;
+  }
+
+  /* Hero: 2-column */
+  .portal-hero {
+    padding: var(--space-6) var(--space-6);
+  }
+  .portal-hero__inner {
+    display: grid;
+    grid-template-columns: 1fr 360px;
+    gap: var(--space-6);
+    align-items: center;
+  }
+  .portal-hero__name {
+    font-size: 26px;
+  }
+  .portal-hero .digital-card {
+    max-width: 360px;
+  }
+
+  /* Dashboard: grid */
+  .portal-dashboard-grid {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    gap: var(--space-5);
+  }
+  .portal-widget { padding: var(--space-5); }
+  .portal-widget--full  { grid-column: span 12; }
+  .portal-widget--lg    { grid-column: span 12; }
+  .portal-widget--md    { grid-column: span 6; }
+  .portal-widget--sm    { grid-column: span 6; }
+  .portal-widget--third { grid-column: span 6; }
+
+  /* Quick actions: 4 columns */
+  .consumer-portal .quick-actions {
+    grid-template-columns: repeat(4, 1fr);
+  }
+  .consumer-portal .quick-action {
+    padding: var(--space-4);
+  }
+
+  /* Page header */
+  .portal-page-header__title {
+    font-size: 24px;
+  }
+
+  /* Providers: still single column on tablet */
+
+  /* Messages: split-pane */
+  .portal-messages-split {
+    display: grid;
+    grid-template-columns: 340px 1fr;
+    gap: 0;
+    min-height: 600px;
+  }
+  .portal-messages-split__list {
+    border-right: 1px solid var(--gray-200);
+  }
+  .portal-messages-split__chat {
+    display: flex;
+    position: static;
+  }
+  .portal-messages-split__chat.active {
+    position: static;
+  }
+  .portal-messages-split__empty {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    color: var(--gray-400);
+    font-size: var(--text-sm);
+  }
+
+  /* Footer: row */
+  .portal-footer {
+    padding: var(--space-5) var(--space-6);
+  }
+  .portal-footer__inner {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+}
+
+/* --- Desktop (min-width: 1025px) --- */
+@media (min-width: 1025px) {
+  .consumer-portal__body {
+    padding: var(--space-6) var(--space-5);
+  }
+
+  /* Hero: wider card */
+  .portal-hero {
+    padding: var(--space-8) var(--space-6);
+  }
+  .portal-hero__inner {
+    grid-template-columns: 1fr 420px;
+    gap: var(--space-8);
+  }
+  .portal-hero__name {
+    font-size: 28px;
+  }
+  .portal-hero__stats {
+    gap: var(--space-6);
+  }
+  .portal-hero__stat-value {
+    font-size: var(--text-xl);
+  }
+  .portal-hero .digital-card {
+    max-width: 420px;
+  }
+
+  /* Dashboard: proper bento */
+  .portal-widget--lg    { grid-column: span 8; }
+  .portal-widget--sm    { grid-column: span 4; }
+  .portal-widget--third { grid-column: span 4; }
+
+  /* Garantie grid: 4 columns */
+  .consumer-portal .garantie-grid {
+    grid-template-columns: repeat(4, 1fr);
+  }
+
+  /* Providers: 2-column grid */
+  .portal-providers-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: var(--space-4);
+  }
+
+  /* Carte: 2-column */
+  .portal-carte-layout {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: var(--space-6);
+  }
+
+  /* Profile: 2-column */
+  .portal-profile-layout {
+    display: grid;
+    grid-template-columns: 320px 1fr;
+    gap: var(--space-6);
+  }
+}

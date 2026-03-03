@@ -1,0 +1,827 @@
+/* ==========================================================================
+   PRESTATAIRE.CSS — Espace Prestataire (Portail Professionnel de Santé)
+   Theme: Sky Blue #0284C7
+   ========================================================================== */
+
+/* --------------------------------------------------------------------------
+   1. SIDEBAR THEME OVERRIDE
+   -------------------------------------------------------------------------- */
+.sidebar {
+  background: linear-gradient(180deg, #0C4A6E 0%, #0E3A5C 100%);
+}
+.nav-item.active {
+  background: rgba(14,165,233,0.2);
+}
+.nav-item.active::before {
+  background: #38BDF8;
+}
+.sidebar__brand-logo {
+  background: #0284C7;
+}
+.sidebar__user-avatar {
+  background: #0284C7;
+}
+
+/* --------------------------------------------------------------------------
+   2. BUTTON PRIMARY OVERRIDE
+   -------------------------------------------------------------------------- */
+.btn-primary {
+  background: #0284C7;
+}
+.btn-primary:hover {
+  background: #0369A1;
+}
+
+/* --------------------------------------------------------------------------
+   3. VERIFICATION CARD
+   -------------------------------------------------------------------------- */
+.verification-card {
+  background: linear-gradient(135deg, #F0F9FF 0%, #E0F2FE 100%);
+  border: 2px solid #BAE6FD;
+  border-radius: var(--radius-xl);
+  padding: var(--space-8);
+  text-align: center;
+  margin-bottom: var(--space-6);
+}
+.verification-card__title {
+  font-family: var(--font-display);
+  font-size: var(--text-xl);
+  font-weight: 700;
+  color: var(--gray-900);
+  margin-bottom: var(--space-2);
+}
+.verification-card__desc {
+  font-size: var(--text-sm);
+  color: var(--gray-500);
+  margin-bottom: var(--space-5);
+}
+.verification-card__input-group {
+  display: flex;
+  gap: var(--space-3);
+  max-width: 500px;
+  margin: 0 auto;
+}
+.verification-card__input-group input {
+  flex: 1;
+  height: 50px;
+  font-size: var(--text-md);
+  text-align: center;
+  letter-spacing: 0.1em;
+  font-family: var(--font-mono);
+  font-weight: 600;
+  border-radius: var(--radius-lg);
+  border: 2px solid var(--gray-300);
+}
+.verification-card__input-group input:focus {
+  border-color: #0284C7;
+  box-shadow: 0 0 0 4px rgba(2,132,199,0.15);
+  outline: none;
+}
+.verification-card__input-group button {
+  height: 50px;
+  padding: 0 var(--space-6);
+  border-radius: var(--radius-lg);
+}
+
+/* --------------------------------------------------------------------------
+   4. RESULT CARD (vérifiation assuré)
+   -------------------------------------------------------------------------- */
+.result-card {
+  display: none;
+  margin-top: var(--space-5);
+  background: #fff;
+  border-radius: var(--radius-lg);
+  padding: var(--space-5);
+  text-align: left;
+  border: var(--border-light);
+}
+.result-card.visible {
+  display: block;
+  animation: slideUp 0.3s ease;
+}
+.result-card__header {
+  display: flex;
+  align-items: center;
+  gap: var(--space-4);
+  margin-bottom: var(--space-4);
+  padding-bottom: var(--space-4);
+  border-bottom: var(--border-light);
+}
+.result-card__avatar {
+  width: 56px;
+  height: 56px;
+  border-radius: var(--radius-full);
+  background: #0284C7;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  font-weight: 700;
+  font-size: var(--text-lg);
+  flex-shrink: 0;
+}
+.result-card__name {
+  font-weight: 700;
+  font-size: var(--text-md);
+}
+.result-card__id {
+  font-size: var(--text-xs);
+  color: var(--gray-500);
+  font-family: var(--font-mono);
+}
+.result-card__grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: var(--space-4);
+}
+.result-card__field label {
+  font-size: 11px;
+  color: var(--gray-400);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+.result-card__field p {
+  font-size: var(--text-sm);
+  font-weight: 600;
+  color: var(--gray-800);
+  margin-top: 2px;
+}
+.result-card__actions {
+  margin-top: var(--space-4);
+  display: flex;
+  gap: var(--space-3);
+}
+
+/* --------------------------------------------------------------------------
+   5. ACTE TAGS
+   -------------------------------------------------------------------------- */
+.acte-tag {
+  display: inline-block;
+  padding: 2px 8px;
+  border-radius: var(--radius-full);
+  font-size: 11px;
+  font-weight: 600;
+}
+.acte-tag.consultation { background: #DBEAFE; color: #1D4ED8; }
+.acte-tag.pharmacie { background: #D1FAE5; color: #065F46; }
+.acte-tag.hospitalisation { background: #FEE2E2; color: #991B1B; }
+.acte-tag.analyse { background: #EDE9FE; color: #6D28D9; }
+.acte-tag.optique { background: #FEF3C7; color: #92400E; }
+.acte-tag.dentaire { background: #FCE7F3; color: #9D174D; }
+
+/* --------------------------------------------------------------------------
+   6. ROW ACTIONS (table hover)
+   -------------------------------------------------------------------------- */
+.row-actions {
+  display: flex;
+  gap: 4px;
+  opacity: 0;
+  transition: opacity var(--transition-fast);
+}
+.table tbody tr:hover .row-actions {
+  opacity: 1;
+}
+.row-action-btn {
+  width: 30px;
+  height: 30px;
+  border-radius: var(--radius-sm);
+  border: none;
+  background: transparent;
+  color: var(--gray-400);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+.row-action-btn:hover {
+  background: var(--gray-100);
+  color: var(--gray-700);
+}
+
+/* --------------------------------------------------------------------------
+   7. PATIENT BANNER
+   -------------------------------------------------------------------------- */
+.patient-banner {
+  display: flex;
+  align-items: center;
+  gap: var(--space-5);
+  padding: var(--space-5) var(--space-6);
+  background: linear-gradient(135deg, #F0F9FF 0%, #E0F2FE 100%);
+  border: 1px solid #BAE6FD;
+  border-radius: var(--radius-lg);
+  margin-bottom: var(--space-6);
+}
+.patient-banner__avatar {
+  width: 52px;
+  height: 52px;
+  border-radius: var(--radius-full);
+  background: #0284C7;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  font-weight: 700;
+  font-size: var(--text-md);
+  flex-shrink: 0;
+}
+.patient-banner__info h3 {
+  font-size: var(--text-md);
+  font-weight: 600;
+}
+.patient-banner__info p {
+  font-size: 13px;
+  color: var(--gray-500);
+}
+.patient-banner__guarantees {
+  margin-left: auto;
+  display: flex;
+  gap: var(--space-6);
+}
+.patient-banner__guarantee {
+  text-align: center;
+}
+.patient-banner__guarantee-value {
+  font-family: var(--font-display);
+  font-size: var(--text-lg);
+  font-weight: 700;
+}
+.patient-banner__guarantee-label {
+  font-size: 11px;
+  color: var(--gray-500);
+}
+
+/* --------------------------------------------------------------------------
+   8. ACTE SELECTOR (saisie prestation)
+   -------------------------------------------------------------------------- */
+.acte-selector {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: var(--space-3);
+  margin-bottom: var(--space-5);
+}
+.acte-option {
+  padding: var(--space-4);
+  border: 2px solid var(--gray-200);
+  border-radius: var(--radius-lg);
+  text-align: center;
+  cursor: pointer;
+  transition: all var(--transition-fast);
+}
+.acte-option:hover {
+  border-color: var(--gray-400);
+}
+.acte-option.selected {
+  border-color: #0284C7;
+  background: #F0F9FF;
+}
+.acte-option__icon {
+  font-size: 24px;
+  margin-bottom: 4px;
+}
+.acte-option__label {
+  font-size: 12px;
+  font-weight: 600;
+  color: var(--gray-700);
+}
+
+/* --------------------------------------------------------------------------
+   9. GUARANTEE CHECK
+   -------------------------------------------------------------------------- */
+.guarantee-check {
+  padding: var(--space-4);
+  background: #D1FAE5;
+  border: 1px solid #A7F3D0;
+  border-radius: var(--radius-md);
+  font-size: var(--text-sm);
+  color: #065F46;
+  display: flex;
+  align-items: center;
+  gap: var(--space-3);
+  margin-top: var(--space-4);
+}
+.guarantee-check.warning {
+  background: #FEF3C7;
+  border-color: #FDE68A;
+  color: #92400E;
+}
+
+/* --------------------------------------------------------------------------
+   10. FORM SECTION & FOOTER
+   -------------------------------------------------------------------------- */
+.form-section {
+  margin-bottom: var(--space-6);
+}
+.form-section__title {
+  font-size: var(--text-md);
+  font-weight: 600;
+  color: var(--gray-900);
+  margin-bottom: var(--space-4);
+}
+.form-footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-top: var(--space-6);
+  border-top: var(--border-light);
+  margin-top: var(--space-6);
+}
+
+/* --------------------------------------------------------------------------
+   11. STAT CARD — PRESTA VARIANT
+   -------------------------------------------------------------------------- */
+.stat-card--presta {
+  padding: var(--space-4) var(--space-5);
+}
+.stat-card--presta .stat-card__value {
+  font-size: var(--text-2xl);
+}
+.stat-card--blue { border-top: 3px solid #0284C7; }
+.stat-card--warning { border-top: 3px solid var(--color-warning); }
+.stat-card--success { border-top: 3px solid var(--color-success); }
+.stat-card--purple { border-top: 3px solid #8B5CF6; }
+
+/* --------------------------------------------------------------------------
+   12. REF LINK (table reference numbers)
+   -------------------------------------------------------------------------- */
+.ref-link {
+  color: #0284C7;
+  font-weight: 600;
+  font-family: var(--font-mono);
+}
+
+/* --------------------------------------------------------------------------
+   13. PATIENT TIMELINE (historique-patient)
+   -------------------------------------------------------------------------- */
+.patient-timeline {
+  position: relative;
+  padding-left: var(--space-8);
+}
+.patient-timeline::before {
+  content: '';
+  position: absolute;
+  left: 15px;
+  top: 0;
+  bottom: 0;
+  width: 2px;
+  background: var(--gray-200);
+}
+.patient-timeline__visit {
+  position: relative;
+  padding: var(--space-4) var(--space-5);
+  background: #fff;
+  border: var(--border-light);
+  border-radius: var(--radius-lg);
+  margin-bottom: var(--space-4);
+}
+.patient-timeline__visit::before {
+  content: '';
+  position: absolute;
+  left: calc(-1 * var(--space-8) + 10px);
+  top: 50%;
+  transform: translateY(-50%);
+  width: 12px;
+  height: 12px;
+  border-radius: var(--radius-full);
+  background: #0284C7;
+  border: 2px solid #E0F2FE;
+}
+.patient-timeline__visit-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: var(--space-2);
+}
+.patient-timeline__date {
+  font-size: var(--text-xs);
+  color: var(--gray-500);
+  font-family: var(--font-mono);
+}
+.patient-timeline__type {
+  font-weight: 600;
+  font-size: var(--text-sm);
+}
+.patient-timeline__details {
+  font-size: 13px;
+  color: var(--gray-600);
+  margin-top: var(--space-1);
+}
+.patient-timeline__footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: var(--space-3);
+  padding-top: var(--space-3);
+  border-top: var(--border-light);
+}
+.patient-timeline__amount {
+  font-family: var(--font-mono);
+  font-weight: 700;
+  color: var(--gray-800);
+}
+
+/* Patient info grid */
+.patient-info-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: var(--space-4);
+}
+.patient-info-grid__item {
+  padding: var(--space-4);
+  background: var(--gray-50);
+  border-radius: var(--radius-md);
+}
+.patient-info-grid__label {
+  font-size: 11px;
+  color: var(--gray-400);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  margin-bottom: var(--space-1);
+}
+.patient-info-grid__value {
+  font-size: var(--text-sm);
+  font-weight: 600;
+  color: var(--gray-800);
+}
+
+/* --------------------------------------------------------------------------
+   14. BORDEREAU SUMMARY
+   -------------------------------------------------------------------------- */
+.bordereau-summary {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: var(--space-4);
+  margin-bottom: var(--space-6);
+}
+.bordereau-summary__item {
+  padding: var(--space-5);
+  background: #fff;
+  border-radius: var(--radius-lg);
+  border: var(--border-light);
+  text-align: center;
+}
+.bordereau-summary__value {
+  font-family: var(--font-display);
+  font-size: var(--text-2xl);
+  font-weight: 700;
+  color: var(--gray-900);
+}
+.bordereau-summary__label {
+  font-size: var(--text-xs);
+  color: var(--gray-500);
+  margin-top: var(--space-1);
+}
+
+/* Status tabs */
+.status-tabs {
+  display: flex;
+  gap: var(--space-2);
+  margin-bottom: var(--space-5);
+  border-bottom: 2px solid var(--gray-100);
+  padding-bottom: 0;
+}
+.status-tab {
+  padding: var(--space-2) var(--space-4);
+  font-size: var(--text-sm);
+  font-weight: 500;
+  color: var(--gray-500);
+  background: none;
+  border: none;
+  cursor: pointer;
+  border-bottom: 2px solid transparent;
+  margin-bottom: -2px;
+  transition: all var(--transition-fast);
+}
+.status-tab:hover {
+  color: var(--gray-700);
+}
+.status-tab.active {
+  color: #0284C7;
+  border-bottom-color: #0284C7;
+  font-weight: 600;
+}
+.status-tab__count {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 20px;
+  height: 20px;
+  padding: 0 6px;
+  border-radius: var(--radius-full);
+  background: var(--gray-100);
+  font-size: 11px;
+  font-weight: 600;
+  margin-left: var(--space-1);
+}
+.status-tab.active .status-tab__count {
+  background: #E0F2FE;
+  color: #0284C7;
+}
+
+/* --------------------------------------------------------------------------
+   15. PAYMENT SUMMARY
+   -------------------------------------------------------------------------- */
+.paiement-summary-presta {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: var(--space-4);
+  margin-bottom: var(--space-6);
+}
+.paiement-summary-presta__item {
+  padding: var(--space-5);
+  background: #fff;
+  border-radius: var(--radius-lg);
+  border: var(--border-light);
+  text-align: center;
+}
+.paiement-summary-presta__value {
+  font-family: var(--font-display);
+  font-size: var(--text-2xl);
+  font-weight: 700;
+  color: var(--gray-900);
+}
+.paiement-summary-presta__label {
+  font-size: var(--text-xs);
+  color: var(--gray-500);
+  margin-top: var(--space-1);
+}
+
+/* --------------------------------------------------------------------------
+   16. RECLAMATION CARD
+   -------------------------------------------------------------------------- */
+.reclamation-card {
+  background: #fff;
+  border: var(--border-light);
+  border-radius: var(--radius-lg);
+  padding: var(--space-5);
+  margin-bottom: var(--space-4);
+  transition: box-shadow var(--transition-fast);
+}
+.reclamation-card:hover {
+  box-shadow: var(--shadow-md);
+}
+.reclamation-card__header {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  margin-bottom: var(--space-3);
+}
+.reclamation-card__ref {
+  font-family: var(--font-mono);
+  font-weight: 600;
+  color: #0284C7;
+  font-size: var(--text-sm);
+}
+.reclamation-card__title {
+  font-weight: 600;
+  font-size: var(--text-md);
+  color: var(--gray-900);
+  margin-top: var(--space-1);
+}
+.reclamation-card__body {
+  font-size: var(--text-sm);
+  color: var(--gray-600);
+  line-height: 1.6;
+  margin-bottom: var(--space-3);
+}
+.reclamation-card__footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-top: var(--space-3);
+  border-top: var(--border-light);
+}
+.reclamation-card__date {
+  font-size: var(--text-xs);
+  color: var(--gray-400);
+}
+
+/* --------------------------------------------------------------------------
+   17. MESSAGERIE DESKTOP (2-column layout)
+   -------------------------------------------------------------------------- */
+.msg-layout {
+  display: grid;
+  grid-template-columns: 340px 1fr;
+  height: calc(100vh - 180px);
+  border: var(--border-light);
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  background: #fff;
+}
+
+/* Left panel — conversation list */
+.msg-list {
+  border-right: var(--border-light);
+  display: flex;
+  flex-direction: column;
+  background: var(--gray-50);
+}
+.msg-list__header {
+  padding: var(--space-4) var(--space-5);
+  border-bottom: var(--border-light);
+  background: #fff;
+}
+.msg-list__search {
+  width: 100%;
+  height: 38px;
+  padding: 0 var(--space-4);
+  border: var(--border-light);
+  border-radius: var(--radius-md);
+  font-size: var(--text-sm);
+  background: var(--gray-50);
+}
+.msg-list__items {
+  flex: 1;
+  overflow-y: auto;
+}
+.msg-preview {
+  display: flex;
+  align-items: center;
+  gap: var(--space-3);
+  padding: var(--space-4) var(--space-5);
+  cursor: pointer;
+  border-bottom: 1px solid var(--gray-100);
+  transition: background var(--transition-fast);
+}
+.msg-preview:hover {
+  background: #E0F2FE;
+}
+.msg-preview.active {
+  background: #E0F2FE;
+  border-left: 3px solid #0284C7;
+}
+.msg-preview__avatar {
+  width: 40px;
+  height: 40px;
+  border-radius: var(--radius-full);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  font-weight: 600;
+  font-size: var(--text-sm);
+  flex-shrink: 0;
+}
+.msg-preview__content {
+  flex: 1;
+  min-width: 0;
+}
+.msg-preview__name {
+  font-weight: 600;
+  font-size: var(--text-sm);
+  color: var(--gray-900);
+}
+.msg-preview__text {
+  font-size: 12px;
+  color: var(--gray-500);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.msg-preview__meta {
+  text-align: right;
+  flex-shrink: 0;
+}
+.msg-preview__time {
+  font-size: 11px;
+  color: var(--gray-400);
+}
+.msg-preview__unread {
+  display: inline-block;
+  width: 8px;
+  height: 8px;
+  border-radius: var(--radius-full);
+  background: #0284C7;
+  margin-top: var(--space-1);
+}
+
+/* Right panel — conversation detail */
+.msg-detail {
+  display: flex;
+  flex-direction: column;
+}
+.msg-detail__conv {
+  display: none;
+  flex-direction: column;
+  flex: 1;
+  min-height: 0;
+}
+.msg-detail__conv.active {
+  display: flex;
+}
+.msg-detail__header {
+  display: flex;
+  align-items: center;
+  gap: var(--space-3);
+  padding: var(--space-4) var(--space-5);
+  border-bottom: var(--border-light);
+  background: #fff;
+}
+.msg-detail__name {
+  font-weight: 600;
+  font-size: var(--text-md);
+}
+.msg-detail__status {
+  font-size: var(--text-xs);
+  color: var(--gray-500);
+}
+.msg-detail__messages {
+  flex: 1;
+  overflow-y: auto;
+  padding: var(--space-5);
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-4);
+}
+.msg-bubble {
+  max-width: 65%;
+  padding: var(--space-3) var(--space-4);
+  border-radius: var(--radius-lg);
+  font-size: var(--text-sm);
+  line-height: 1.5;
+}
+.msg-bubble--received {
+  background: var(--gray-100);
+  color: var(--gray-800);
+  align-self: flex-start;
+  border-bottom-left-radius: 4px;
+}
+.msg-bubble--sent {
+  background: #0284C7;
+  color: #fff;
+  align-self: flex-end;
+  border-bottom-right-radius: 4px;
+}
+.msg-bubble__time {
+  font-size: 11px;
+  margin-top: var(--space-1);
+  opacity: 0.6;
+}
+
+/* Input area */
+.msg-input {
+  display: flex;
+  gap: var(--space-3);
+  padding: var(--space-4) var(--space-5);
+  border-top: var(--border-light);
+  background: #fff;
+}
+.msg-input__field {
+  flex: 1;
+  height: 42px;
+  padding: 0 var(--space-4);
+  border: var(--border-light);
+  border-radius: var(--radius-lg);
+  font-size: var(--text-sm);
+}
+.msg-input__field:focus {
+  border-color: #0284C7;
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(2,132,199,0.1);
+}
+.msg-input__send {
+  width: 42px;
+  height: 42px;
+  border-radius: var(--radius-lg);
+  border: none;
+  background: #0284C7;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: background var(--transition-fast);
+}
+.msg-input__send:hover {
+  background: #0369A1;
+}
+
+/* --------------------------------------------------------------------------
+   18. RECLAMATION MODAL FORM
+   -------------------------------------------------------------------------- */
+.reclamation-form__upload {
+  padding: var(--space-5);
+  border: 2px dashed var(--gray-300);
+  border-radius: var(--radius-lg);
+  text-align: center;
+  cursor: pointer;
+  transition: border-color var(--transition-fast);
+}
+.reclamation-form__upload:hover {
+  border-color: #0284C7;
+}
+.reclamation-form__upload-icon {
+  font-size: 24px;
+  margin-bottom: var(--space-2);
+}
+.reclamation-form__upload-text {
+  font-size: var(--text-sm);
+  color: var(--gray-500);
+}
+
+/* --------------------------------------------------------------------------
+   19. UTILITY — TEXT COLOR OVERRIDES
+   -------------------------------------------------------------------------- */
+.text-presta-primary { color: #0284C7; }
+.text-success { color: var(--color-success); }
+.text-warning { color: var(--color-warning); }
+.text-accent { color: var(--iips-accent); }

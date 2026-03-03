@@ -1,0 +1,281 @@
+/* ============================================================
+   IIPS — Module Prise en Charge (PEC)
+   Styles spécifiques aux pages G-040 à G-042
+   ============================================================ */
+
+/* --- PEC Type Tags --- */
+.pec-type-tag {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  padding: 2px 10px;
+  border-radius: var(--radius-full);
+  font-size: 11px;
+  font-weight: 600;
+}
+.pec-type-tag.hospitalisation { background: #FEE2E2; color: #991B1B; }
+.pec-type-tag.analyse { background: #EDE9FE; color: #6D28D9; }
+.pec-type-tag.consultation { background: #DBEAFE; color: #1D4ED8; }
+.pec-type-tag.imagerie { background: #E0E7FF; color: #3730A3; }
+.pec-type-tag.chirurgie { background: #FCE7F3; color: #9D174D; }
+.pec-type-tag.maternite { background: #CCFBF1; color: #115E59; }
+.pec-type-tag.optique { background: #FEF3C7; color: #92400E; }
+.pec-type-tag.dentaire { background: #FFF7ED; color: #9A3412; }
+
+/* --- Urgency Badge --- */
+.pec-urgence {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  padding: 2px 8px;
+  border-radius: var(--radius-full);
+  font-size: 10px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+.pec-urgence--urgente {
+  background: #FEE2E2;
+  color: #991B1B;
+  animation: pulse-urgence 2s ease-in-out infinite;
+}
+.pec-urgence--normale { background: var(--gray-100); color: var(--gray-600); }
+
+@keyframes pulse-urgence {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.7; }
+}
+
+/* --- PEC Alert Banner (urgentes en attente) --- */
+.pec-alert {
+  display: flex;
+  align-items: center;
+  gap: var(--space-3);
+  padding: var(--space-3) var(--space-5);
+  background: linear-gradient(90deg, #FFF7ED 0%, #FFFBEB 100%);
+  border: 1px solid #FED7AA;
+  border-radius: var(--radius-md);
+  margin-bottom: var(--space-6);
+  font-size: var(--text-sm);
+}
+.pec-alert__icon {
+  width: 36px;
+  height: 36px;
+  border-radius: var(--radius-full);
+  background: #FEF3C7;
+  color: var(--color-warning);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+.pec-alert__text {
+  color: #92400E;
+  flex: 1;
+}
+.pec-alert__text strong { color: #B45309; }
+.pec-alert__action { flex-shrink: 0; }
+
+/* --- Validation Level Indicator (inline in table) --- */
+.validation-level {
+  display: inline-flex;
+  align-items: center;
+  gap: 3px;
+}
+.validation-level__dot {
+  width: 8px;
+  height: 8px;
+  border-radius: var(--radius-full);
+  background: var(--gray-200);
+}
+.validation-level__dot--completed { background: var(--color-success); }
+.validation-level__dot--active { background: var(--color-info); box-shadow: 0 0 0 2px rgba(46, 144, 250, 0.25); }
+.validation-level__dot--rejected { background: var(--color-error); }
+.validation-level__text {
+  font-size: 10px;
+  color: var(--gray-500);
+  margin-left: 4px;
+  font-weight: 500;
+}
+
+/* --- PEC Validity Period --- */
+.pec-validite {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  font-size: var(--text-xs);
+  color: var(--gray-500);
+}
+.pec-validite--active { color: var(--color-success-dark); }
+.pec-validite--expiring { color: var(--color-warning-dark); }
+.pec-validite--expired { color: var(--color-error); text-decoration: line-through; }
+
+/* --- PEC Header (Detail page) --- */
+.pec-header {
+  display: flex;
+  align-items: flex-start;
+  gap: var(--space-6);
+  padding: var(--space-6);
+}
+.pec-header__main { flex: 1; }
+.pec-header__ref {
+  font-family: var(--font-mono);
+  font-size: var(--text-xl);
+  font-weight: 700;
+  color: var(--iips-primary);
+}
+.pec-header__meta {
+  display: flex;
+  align-items: center;
+  gap: var(--space-3);
+  margin-top: var(--space-2);
+  flex-wrap: wrap;
+}
+.pec-header__actions {
+  display: flex;
+  gap: var(--space-2);
+  flex-shrink: 0;
+}
+
+/* --- PEC Status Badge (extended) --- */
+.pec-status {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 4px 12px;
+  border-radius: var(--radius-full);
+  font-size: 11px;
+  font-weight: 600;
+}
+.pec-status--attente { background: var(--color-warning-light); color: var(--color-warning-dark); }
+.pec-status--accordee { background: var(--color-success-light); color: var(--color-success-dark); }
+.pec-status--refusee { background: var(--color-error-light); color: var(--color-error-dark); }
+.pec-status--utilisee { background: var(--iips-primary-50); color: var(--iips-primary-dark); }
+.pec-status--expiree { background: var(--gray-100); color: var(--gray-500); }
+.pec-status--annulee { background: #FEE2E2; color: #991B1B; }
+
+/* --- Eligibility Check Card --- */
+.eligibilite-card {
+  background: #F0FDF4;
+  border: 1px solid #BBF7D0;
+  border-radius: var(--radius-lg);
+  padding: var(--space-5);
+}
+.eligibilite-card--warning {
+  background: #FFFBEB;
+  border-color: #FDE68A;
+}
+.eligibilite-card--error {
+  background: #FEF2F2;
+  border-color: #FECACA;
+}
+.eligibilite-card__title {
+  font-size: var(--text-sm);
+  font-weight: 600;
+  color: #166534;
+  margin-bottom: var(--space-3);
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+}
+.eligibilite-card--warning .eligibilite-card__title { color: #92400E; }
+.eligibilite-card--error .eligibilite-card__title { color: #991B1B; }
+.eligibilite-card__checklist {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2);
+}
+.eligibilite-check {
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+  font-size: var(--text-sm);
+  color: var(--gray-700);
+}
+.eligibilite-check__icon {
+  width: 20px;
+  height: 20px;
+  border-radius: var(--radius-full);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+.eligibilite-check__icon--ok { background: var(--color-success-light); color: var(--color-success); }
+.eligibilite-check__icon--warn { background: var(--color-warning-light); color: var(--color-warning); }
+.eligibilite-check__icon--fail { background: var(--color-error-light); color: var(--color-error); }
+
+/* --- PEC Amount Card --- */
+.pec-montant-card {
+  border: 2px solid var(--iips-primary-200);
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+}
+.pec-montant-card__header {
+  background: linear-gradient(135deg, var(--iips-primary-50) 0%, #EBF5FF 100%);
+  padding: var(--space-4) var(--space-5);
+  border-bottom: 2px solid var(--iips-primary-200);
+}
+.pec-montant-card__header-title {
+  font-size: var(--text-sm);
+  font-weight: 600;
+  color: var(--iips-primary-dark);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+.pec-montant-card__body { padding: var(--space-5); }
+
+/* --- PEC Row (amount detail) --- */
+.pec-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: var(--space-2) 0;
+  font-size: var(--text-sm);
+}
+.pec-row__label { color: var(--gray-600); }
+.pec-row__value { font-weight: 600; color: var(--gray-900); font-family: var(--font-mono); }
+.pec-row.total {
+  border-top: 2px solid var(--iips-primary-200);
+  margin-top: var(--space-3);
+  padding-top: var(--space-3);
+}
+.pec-row.total .pec-row__value {
+  font-size: var(--text-lg);
+  color: var(--iips-primary);
+  font-family: var(--font-display);
+  font-weight: 700;
+}
+
+/* --- Prestataire Info (compact) --- */
+.prestataire-info {
+  display: flex;
+  align-items: center;
+  gap: var(--space-3);
+  padding: var(--space-3) var(--space-4);
+  background: var(--gray-50);
+  border-radius: var(--radius-md);
+  font-size: var(--text-sm);
+}
+.prestataire-info__icon {
+  width: 36px;
+  height: 36px;
+  border-radius: var(--radius-md);
+  background: #DBEAFE;
+  color: #1D4ED8;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+.prestataire-info__details { flex: 1; }
+.prestataire-info__name { font-weight: 600; color: var(--gray-900); }
+.prestataire-info__type { font-size: var(--text-xs); color: var(--gray-500); margin-top: 1px; }
+.prestataire-info__conventione {
+  font-size: 10px;
+  font-weight: 600;
+  padding: 2px 6px;
+  border-radius: var(--radius-full);
+  background: var(--color-success-light);
+  color: var(--color-success-dark);
+}

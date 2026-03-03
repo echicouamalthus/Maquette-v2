@@ -1,0 +1,1792 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>IIPS v2 — Nouvelle souscription</title>
+  <link rel="stylesheet" href="../../css/design-system.css">
+  <link rel="stylesheet" href="../../css/design-system-v2.css">
+  <link rel="stylesheet" href="../../css/production.css">
+  <link rel="stylesheet" href="../../css/souscription.css">
+</head>
+<body data-page-module="souscription">
+<div class="app-shell">
+
+  <!-- ===== SIDEBAR v2 ===== -->
+  <aside class="sidebar">
+
+    <div class="sidebar__brand">
+      <img src="../../iips.jpg" alt="IIPS" class="sidebar__brand-logo">
+      <div class="sidebar__brand-text">
+        <span class="sidebar__brand-name">IIPS Santé</span>
+        <span class="sidebar__brand-tagline">Gestion Assurance</span>
+      </div>
+    </div>
+
+    <nav class="sidebar__nav">
+      <div class="nav-section">
+        <details open>
+          <summary class="nav-section__title">
+            Principal
+            <svg class="section-chevron" width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2"><polyline points="4,6 8,10 12,6"/></svg>
+          </summary>
+          <a href="dashboard.html" class="nav-item" data-module="dashboard" data-tooltip="Tableau de bord">
+            <span class="nav-item__icon"><svg width="20" height="20" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="7" height="8"/><rect x="11" y="2" width="7" height="5"/><rect x="2" y="12" width="7" height="6"/><rect x="11" y="9" width="7" height="9"/></svg></span>
+            <span class="nav-item__label">Tableau de bord</span>
+          </a>
+        </details>
+      </div>
+
+      <div class="nav-section">
+        <details open>
+          <summary class="nav-section__title">
+            Gestion
+            <svg class="section-chevron" width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2"><polyline points="4,6 8,10 12,6"/></svg>
+          </summary>
+          <a href="contrats.html" class="nav-item" data-module="production" data-tooltip="Production">
+            <span class="nav-item__icon"><svg width="20" height="20" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2H5a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7l-5-5z"/><path d="M12 2v5h5"/><line x1="7" y1="10" x2="13" y2="10"/><line x1="7" y1="13" x2="11" y2="13"/></svg></span>
+            <span class="nav-item__label">Production</span>
+            <span class="nav-item__badge">24</span>
+          </a>
+          <a href="souscriptions.html" class="nav-item active" data-module="souscription" data-tooltip="Souscriptions">
+            <span class="nav-item__icon"><svg width="20" height="20" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M16 17v-1a4 4 0 00-4-4H8a4 4 0 00-4 4v1"/><circle cx="10" cy="6" r="3.5"/><line x1="15" y1="5" x2="15" y2="9"/><line x1="13" y1="7" x2="17" y2="7"/></svg></span>
+            <span class="nav-item__label">Souscriptions</span>
+            <span class="nav-item__badge">8</span>
+          </a>
+          <a href="sinistres.html" class="nav-item" data-module="sinistre" data-tooltip="Sinistres">
+            <span class="nav-item__icon"><svg width="20" height="20" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M10.29 3.86L1.82 18a2 2 0 001.71 3h16.94a2 2 0 001.71-3L13.71 3.86a2 2 0 00-3.42 0z" transform="scale(0.85) translate(1.5,0)"/><line x1="10" y1="8" x2="10" y2="12"/><circle cx="10" cy="15" r="0.5" fill="currentColor"/></svg></span>
+            <span class="nav-item__label">Sinistres</span>
+            <span class="nav-item__badge">12</span>
+          </a>
+          <a href="pec.html" class="nav-item" data-module="pec" data-tooltip="Prise en charge">
+            <span class="nav-item__icon"><svg width="20" height="20" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M16 7V4a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2h8a2 2 0 002-2v-3"/><path d="M8 10h9"/><path d="M14 7l3 3-3 3"/><line x1="8" y1="6" x2="12" y2="6"/><line x1="8" y1="14" x2="11" y2="14"/></svg></span>
+            <span class="nav-item__label">Prise en charge</span>
+            <span class="nav-item__badge">7</span>
+          </a>
+          <a href="confection-cartes.html" class="nav-item" data-module="confection-cartes" data-tooltip="Confection Cartes">
+            <span class="nav-item__icon"><svg width="20" height="20" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><rect x="2" y="4" width="16" height="12"/><line x1="2" y1="9" x2="18" y2="9"/><line x1="6" y1="13" x2="10" y2="13"/></svg></span>
+            <span class="nav-item__label">Confection Cartes</span>
+          </a>
+          <a href="secretariat.html" class="nav-item" data-module="secretariat" data-tooltip="Secrétariat">
+            <span class="nav-item__icon"><svg width="20" height="20" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><rect x="3" y="2" width="14" height="16"/><line x1="7" y1="6" x2="13" y2="6"/><line x1="7" y1="10" x2="13" y2="10"/><line x1="7" y1="14" x2="10" y2="14"/></svg></span>
+            <span class="nav-item__label">Secrétariat</span>
+          </a>
+        </details>
+      </div>
+
+      <div class="nav-section">
+        <details open>
+          <summary class="nav-section__title">
+            Commercial
+            <svg class="section-chevron" width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2"><polyline points="4,6 8,10 12,6"/></svg>
+          </summary>
+          <a href="crm.html" class="nav-item" data-module="crm" data-tooltip="CRM">
+            <span class="nav-item__icon"><svg width="20" height="20" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M17 18v-1a3 3 0 00-3-3h-1"/><path d="M13 8a3 3 0 100-6"/><path d="M12 18v-1a4 4 0 00-4-4H5a4 4 0 00-4 4v1"/><circle cx="6.5" cy="6" r="3"/></svg></span>
+            <span class="nav-item__label">CRM</span>
+          </a>
+        </details>
+      </div>
+
+      <div class="nav-section">
+        <details open>
+          <summary class="nav-section__title">
+            Finance
+            <svg class="section-chevron" width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2"><polyline points="4,6 8,10 12,6"/></svg>
+          </summary>
+          <a href="comptabilite.html" class="nav-item" data-module="comptabilite" data-tooltip="Comptabilité">
+            <span class="nav-item__icon"><svg width="20" height="20" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><line x1="10" y1="2" x2="10" y2="18"/><path d="M14 5H8.5a2.5 2.5 0 000 5h3a2.5 2.5 0 010 5H6"/></svg></span>
+            <span class="nav-item__label">Comptabilité</span>
+          </a>
+          <a href="tresorerie.html" class="nav-item" data-module="tresorerie" data-tooltip="Trésorerie">
+            <span class="nav-item__icon"><svg width="20" height="20" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="3" width="16" height="14"/><path d="M2 7h16"/><path d="M2 11h16"/><circle cx="14" cy="14" r="2"/></svg></span>
+            <span class="nav-item__label">Trésorerie</span>
+          </a>
+          <a href="paiements.html" class="nav-item" data-module="paiement" data-tooltip="Paiements">
+            <span class="nav-item__icon"><svg width="20" height="20" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="16" height="12"/><line x1="2" y1="9" x2="18" y2="9"/></svg></span>
+            <span class="nav-item__label">Paiements</span>
+          </a>
+          <a href="recouvrement.html" class="nav-item" data-module="recouvrement" data-tooltip="Recouvrement">
+            <span class="nav-item__icon"><svg width="20" height="20" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M1 4v6h6"/><path d="M3.51 14a8 8 0 0013.9-3.2"/><path d="M19 16v-6h-6"/><path d="M16.49 6A8 8 0 002.6 9.2"/></svg></span>
+            <span class="nav-item__label">Recouvrement</span>
+          </a>
+        </details>
+      </div>
+
+      <div class="nav-section">
+        <details open>
+          <summary class="nav-section__title">
+            Outils
+            <svg class="section-chevron" width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2"><polyline points="4,6 8,10 12,6"/></svg>
+          </summary>
+          <a href="ged.html" class="nav-item" data-module="ged" data-tooltip="GED">
+            <span class="nav-item__icon"><svg width="20" height="20" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M18 16V6a2 2 0 00-2-2H9L7 2H4a2 2 0 00-2 2v12a2 2 0 002 2h12a2 2 0 002-2z"/></svg></span>
+            <span class="nav-item__label">GED</span>
+          </a>
+          <a href="reporting.html" class="nav-item" data-module="reporting" data-tooltip="Reporting">
+            <span class="nav-item__icon"><svg width="20" height="20" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><line x1="15" y1="5" x2="15" y2="15"/><line x1="10" y1="8" x2="10" y2="15"/><line x1="5" y1="11" x2="5" y2="15"/></svg></span>
+            <span class="nav-item__label">Reporting</span>
+          </a>
+        </details>
+      </div>
+
+      <div class="nav-section">
+        <details open>
+          <summary class="nav-section__title">
+            Système
+            <svg class="section-chevron" width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2"><polyline points="4,6 8,10 12,6"/></svg>
+          </summary>
+          <a href="administration.html" class="nav-item" data-module="administration" data-tooltip="Administration">
+            <span class="nav-item__icon"><svg width="20" height="20" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="10" cy="10" r="3"/><path d="M19.4 15a1.65 1.65 0 00.33 1.82l.06.06a2 2 0 11-2.83 2.83l-.06-.06a1.65 1.65 0 00-2.82.72V20" transform="scale(0.82) translate(1.5,1.5)"/></svg></span>
+            <span class="nav-item__label">Administration</span>
+          </a>
+          <a href="configuration.html" class="nav-item" data-module="configuration" data-tooltip="Configuration">
+            <span class="nav-item__icon"><svg width="20" height="20" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><line x1="3" y1="5" x2="17" y2="5"/><line x1="3" y1="10" x2="17" y2="10"/><line x1="3" y1="15" x2="17" y2="15"/><circle cx="13" cy="5" r="2" fill="currentColor"/><circle cx="7" cy="10" r="2" fill="currentColor"/><circle cx="11" cy="15" r="2" fill="currentColor"/></svg></span>
+            <span class="nav-item__label">Configuration</span>
+          </a>
+        </details>
+      </div>
+
+    </nav>
+
+    <div class="sidebar__footer">
+      <div class="sidebar__user">
+        <div class="sidebar__user-avatar">AD</div>
+        <div class="sidebar__user-info">
+          <div class="sidebar__user-name">Aminata Diabaté</div>
+          <div class="sidebar__user-role">Gestionnaire santé</div>
+        </div>
+        <a href="../login.html" style="color: rgba(255,255,255,0.4); margin-left: auto;" title="Déconnexion">
+          <svg width="18" height="18" viewBox="0 0 18 18" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><path d="M6 15H4a2 2 0 01-2-2V5a2 2 0 012-2h2"/><polyline points="11,13 15,9 11,5"/><line x1="15" y1="9" x2="6" y2="9"/></svg>
+        </a>
+      </div>
+    </div>
+  </aside>
+
+  <!-- ===== MAIN ===== -->
+  <main class="app-main">
+    <!-- Top Bar v2 -->
+    <header class="topbar">
+      <button class="topbar__hamburger" onclick="toggleSidebar()" title="Menu">
+        <svg width="20" height="20" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><line x1="3" y1="5" x2="17" y2="5"/><line x1="3" y1="10" x2="17" y2="10"/><line x1="3" y1="15" x2="17" y2="15"/></svg>
+      </button>
+
+      <nav class="topbar__breadcrumb">
+        <a href="dashboard.html">Accueil</a>
+        <span class="separator">/</span>
+        <a href="souscriptions.html">Souscriptions</a>
+        <span class="separator">/</span>
+        <span class="current">Nouvelle souscription</span>
+      </nav>
+
+      <div class="topbar__search">
+        <span class="topbar__search-icon">
+          <svg width="18" height="18" viewBox="0 0 18 18" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><circle cx="8" cy="8" r="5.5"/><line x1="12.5" y1="12.5" x2="16" y2="16"/></svg>
+        </span>
+        <input type="text" class="topbar__search-input" placeholder="Rechercher un contrat, un assuré, un prestataire...">
+        <div class="topbar__search-shortcut">
+          <kbd>Ctrl</kbd><kbd>K</kbd>
+        </div>
+      </div>
+
+      <div class="topbar__role-indicator">
+        <button class="topbar__role-badge" data-dropdown>
+          <span class="badge badge--primary" id="topbar-role-label">Gestionnaire</span>
+          <svg width="14" height="14" viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="2"><polyline points="4,5 7,8 10,5"/></svg>
+        </button>
+        <div class="dropdown-menu topbar__role-dropdown" id="role-switcher"></div>
+      </div>
+
+      <div class="topbar__actions">
+        <button class="topbar__action-btn" title="Aide">
+          <svg width="20" height="20" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="10" cy="10" r="8"/><path d="M7.5 7.5a2.5 2.5 0 014.87.83c0 1.67-2.5 2.5-2.5 2.5"/><circle cx="10" cy="14" r="0.5" fill="currentColor"/></svg>
+        </button>
+        <div class="topbar__notif-wrapper">
+          <button class="topbar__action-btn topbar__notif-toggle" title="Notifications">
+            <svg width="20" height="20" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M15 7a5 5 0 00-10 0c0 5-2.5 7-2.5 7h15S15 12 15 7z"/><path d="M8.5 17a1.5 1.5 0 003 0"/></svg>
+            <span class="badge-dot"></span>
+          </button>
+          <div class="topbar__notif-dropdown">
+            <div class="topbar__notif-header">
+              <h4>Notifications</h4>
+              <span class="topbar__notif-count">3 nouvelles</span>
+            </div>
+            <div class="topbar__notif-list">
+              <div class="topbar__notif-item unread">
+                <div class="topbar__notif-icon topbar__notif-icon--success"><svg width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2"><polyline points="3,8 6,11 13,4"/></svg></div>
+                <div class="topbar__notif-content">
+                  <div class="topbar__notif-title">Contrat CTR-2026-1847 validé par le superviseur</div>
+                  <div class="topbar__notif-meta">Il y a 15 min</div>
+                </div>
+              </div>
+              <div class="topbar__notif-item unread">
+                <div class="topbar__notif-icon topbar__notif-icon--warning"><svg width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2"><path d="M8 3v5"/><circle cx="8" cy="11" r="0.5" fill="currentColor"/></svg></div>
+                <div class="topbar__notif-content">
+                  <div class="topbar__notif-title">Alerte fraude : doublon détecté — Pharmacie Salama</div>
+                  <div class="topbar__notif-meta">Il y a 1h</div>
+                </div>
+              </div>
+              <div class="topbar__notif-item unread">
+                <div class="topbar__notif-icon topbar__notif-icon--info"><svg width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2"><circle cx="8" cy="8" r="6"/><line x1="8" y1="5" x2="8" y2="8"/><line x1="8" y1="8" x2="10" y2="10"/></svg></div>
+                <div class="topbar__notif-content">
+                  <div class="topbar__notif-title">Échéance renouvellement SOTRA CI dans 15 jours</div>
+                  <div class="topbar__notif-meta">Il y a 3h</div>
+                </div>
+              </div>
+            </div>
+            <div class="topbar__notif-footer"><a href="#">Voir toutes les notifications</a></div>
+          </div>
+        </div>
+      </div>
+
+      <button class="topbar__user">
+        <div class="topbar__user-avatar-top">AD</div>
+        <span class="topbar__user-name-top">Aminata</span>
+        <svg class="topbar__user-chevron" width="14" height="14" viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="2"><polyline points="4,5 7,8 10,5"/></svg>
+      </button>
+      <div class="topbar__user-dropdown">
+        <div class="topbar__user-dropdown__info">
+          <div class="topbar__user-dropdown__name">Aminata Diabaté</div>
+          <div class="topbar__user-dropdown__role">Gestionnaire santé</div>
+        </div>
+        <a href="profil.html" class="topbar__user-dropdown__item">
+          <svg width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="8" cy="5" r="3"/><path d="M2 15v-1a6 6 0 0112 0v1"/></svg>
+          Mon profil
+        </a>
+        <a href="configuration.html" class="topbar__user-dropdown__item">
+          <svg width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="8" cy="8" r="2.5"/><path d="M13.5 8a5.5 5.5 0 01-.3 1.8"/></svg>
+          Paramètres
+        </a>
+        <hr class="topbar__user-dropdown__divider">
+        <a href="../login.html" class="topbar__user-dropdown__item topbar__user-dropdown__item--danger">
+          <svg width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><path d="M5 13H3.5a1.5 1.5 0 01-1.5-1.5v-7A1.5 1.5 0 013.5 3H5"/><polyline points="9,11 13,8 9,5"/><line x1="13" y1="8" x2="5" y2="8"/></svg>
+          Déconnexion
+        </a>
+      </div>
+    </header>
+
+    <div class="app-content">
+      <!-- Breadcrumb -->
+      <div class="page-header animate-in">
+        <div class="page-header__breadcrumb">
+          <a href="dashboard.html">Tableau de bord</a>
+          <span class="separator">›</span>
+          <a href="souscriptions.html">Souscriptions</a>
+          <span class="separator">›</span>
+          <span style="color: var(--gray-800); font-weight: 500;">Nouvelle souscription</span>
+        </div>
+        <div class="page-header__top">
+          <div>
+            <h1 class="page-header__title">Nouvelle souscription</h1>
+            <p class="page-header__subtitle">Enregistrer une nouvelle demande d'adhésion — Simulation Konaté Fatoumata</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Workflow Steps -->
+      <div class="workflow-steps animate-in" style="margin-bottom: var(--space-8);" id="wizard-steps">
+        <div class="workflow-step active" data-step="1" onclick="goToStep(1)">
+          <div class="workflow-step__circle">1</div>
+          <span class="workflow-step__label">Adhérent</span>
+        </div>
+        <div class="workflow-step__line" id="line-1-2"></div>
+        <div class="workflow-step" data-step="2" onclick="goToStep(2)">
+          <div class="workflow-step__circle">2</div>
+          <span class="workflow-step__label">Ayants droit</span>
+        </div>
+        <div class="workflow-step__line" id="line-2-3"></div>
+        <div class="workflow-step" data-step="3" onclick="goToStep(3)">
+          <div class="workflow-step__circle">3</div>
+          <span class="workflow-step__label">Pièces justificatives</span>
+        </div>
+        <div class="workflow-step__line" id="line-3-4"></div>
+        <div class="workflow-step" data-step="4" onclick="goToStep(4)">
+          <div class="workflow-step__circle">4</div>
+          <span class="workflow-step__label">Récapitulatif</span>
+        </div>
+      </div>
+
+      <div style="display: grid; grid-template-columns: 1fr 340px; gap: var(--space-6);">
+
+        <!-- ============================================================
+             ÉTAPE 1 — ADHÉRENT PRINCIPAL
+             ============================================================ -->
+        <div id="step-1" class="wizard-panel">
+          <div class="card animate-in">
+            <div class="card__body">
+
+              <div class="form-section">
+                <h3 class="form-section__title">Type de souscription</h3>
+                <p class="form-section__desc">Sélectionnez le type de contrat et la nature de la souscription</p>
+
+                <div class="form-row" style="margin-bottom: var(--space-4);">
+                  <div class="form-group">
+                    <label class="form-label">Type de contrat <span class="required">*</span></label>
+                    <select class="form-select">
+                      <option value="">Sélectionner</option>
+                      <option selected>ALPHA 1</option>
+                      <option>ALPHA 2</option>
+                      <option>Fonctionnaire</option>
+                    </select>
+                  </div>
+                  <div class="form-group">
+                    <label class="form-label">Nature <span class="required">*</span></label>
+                    <select class="form-select" id="nature-select" onchange="switchNature(this.value)">
+                      <option value="">Sélectionner</option>
+                      <option value="individu" selected>Individuel / Particulier</option>
+                      <option value="groupe">Groupe (Entreprise)</option>
+                    </select>
+                  </div>
+                </div>
+
+                <div class="alert-box alert-box--info" id="nature-alert">
+                  <span>ℹ️</span>
+                  <div id="nature-alert-text">Souscription <strong>individuelle ALPHA 1</strong> : l'adhérent principal peut inscrire jusqu'à <strong>1 conjoint</strong> et <strong>4 enfants</strong> de moins de 21 ans. Prime de base : <strong>25 000 FCFA/mois</strong>. Délai de carence : <strong>3 mois</strong>.</div>
+                </div>
+              </div>
+
+              <hr class="form-section__divider">
+
+              <!-- ===== INDIVIDU ===== -->
+              <div id="step-1-individu">
+
+              <div class="form-section">
+                <h3 class="form-section__title">Identité de l'adhérent principal</h3>
+                <p class="form-section__desc">Renseignez les informations personnelles de l'adhérent</p>
+
+                <!-- Person Search Autocomplete -->
+                <div class="form-group" style="margin-bottom: var(--space-4);">
+                  <label class="form-label">Rechercher le souscripteur <span class="required">*</span></label>
+                  <div class="company-search" id="person-search-souscription">
+                    <div class="company-search__input-wrapper">
+                      <span class="company-search__icon">
+                        <svg width="18" height="18" viewBox="0 0 18 18" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><circle cx="8" cy="8" r="5.5"/><line x1="12.5" y1="12.5" x2="16" y2="16"/></svg>
+                      </span>
+                      <input type="text" class="form-input company-search__input" placeholder="Tapez le nom, prénom ou N° CNI...">
+                      <button type="button" class="company-search__clear">
+                        <svg width="14" height="14" viewBox="0 0 18 18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><line x1="4" y1="4" x2="14" y2="14"/><line x1="14" y1="4" x2="4" y2="14"/></svg>
+                      </button>
+                      <div class="company-search__dropdown"></div>
+                    </div>
+                    <div class="company-search__selected">
+                      <div class="company-search__selected-icon" style="background: var(--iips-accent); color: #fff;">
+                        <svg width="20" height="20" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M16 17v-1a4 4 0 00-4-4H8a4 4 0 00-4 4v1"/><circle cx="10" cy="6" r="3.5"/></svg>
+                      </div>
+                      <div class="company-search__selected-info">
+                        <div class="company-search__selected-name"></div>
+                        <div class="company-search__selected-meta"></div>
+                      </div>
+                      <button type="button" class="company-search__change-btn">Modifier</button>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="form-row" style="margin-bottom: var(--space-4);">
+                  <div class="form-group">
+                    <label class="form-label">Civilité <span class="required">*</span></label>
+                    <select class="form-select" id="sub-ind-civilite">
+                      <option>M.</option>
+                      <option selected>Mme</option>
+                      <option>Mlle</option>
+                    </select>
+                  </div>
+                  <div class="form-group">
+                    <label class="form-label">Nom de famille <span class="required">*</span></label>
+                    <input type="text" class="form-input" id="sub-ind-nom" value="Konaté">
+                  </div>
+                  <div class="form-group">
+                    <label class="form-label">Prénom(s) <span class="required">*</span></label>
+                    <input type="text" class="form-input" id="sub-ind-prenom" value="Fatoumata">
+                  </div>
+                </div>
+
+                <div class="form-row" style="margin-bottom: var(--space-4);">
+                  <div class="form-group">
+                    <label class="form-label">Date de naissance <span class="required">*</span></label>
+                    <input type="date" class="form-input" id="sub-ind-date-naissance" value="1988-08-14">
+                  </div>
+                  <div class="form-group">
+                    <label class="form-label">Lieu de naissance</label>
+                    <input type="text" class="form-input" id="sub-ind-lieu-naissance" value="Bouaké">
+                  </div>
+                  <div class="form-group">
+                    <label class="form-label">Genre <span class="required">*</span></label>
+                    <select class="form-select" id="sub-ind-genre">
+                      <option>Homme</option>
+                      <option selected>Femme</option>
+                    </select>
+                  </div>
+                </div>
+
+                <div class="form-row" style="margin-bottom: var(--space-4);">
+                  <div class="form-group">
+                    <label class="form-label">N° CNI / Passeport <span class="required">*</span></label>
+                    <input type="text" class="form-input" id="sub-ind-cni" value="CI-1988-0814-3421">
+                  </div>
+                  <div class="form-group">
+                    <label class="form-label">Nationalité</label>
+                    <select class="form-select" id="sub-ind-nationalite">
+                      <option selected>Ivoirienne</option>
+                      <option>Autre — préciser</option>
+                    </select>
+                  </div>
+                </div>
+
+                <div class="form-row" style="margin-bottom: var(--space-4);">
+                  <div class="form-group">
+                    <label class="form-label">Profession</label>
+                    <input type="text" class="form-input" id="sub-ind-profession" value="Enseignante — Lycée Municipal de Bouaké">
+                  </div>
+                  <div class="form-group">
+                    <label class="form-label">Situation matrimoniale</label>
+                    <select class="form-select" id="sub-ind-situation">
+                      <option>Célibataire</option>
+                      <option selected>Marié(e)</option>
+                      <option>Divorcé(e)</option>
+                      <option>Veuf/Veuve</option>
+                    </select>
+                  </div>
+                </div>
+              </div>
+
+              <hr class="form-section__divider">
+
+              <div class="form-section" style="margin-bottom: 0;">
+                <h3 class="form-section__title">Coordonnées</h3>
+                <p class="form-section__desc">Adresse et moyens de contact de l'adhérent</p>
+
+                <div class="form-row" style="margin-bottom: var(--space-4);">
+                  <div class="form-group">
+                    <label class="form-label">Téléphone mobile <span class="required">*</span></label>
+                    <input type="tel" class="form-input" id="sub-ind-telephone" value="+225 07 58 43 21 90">
+                  </div>
+                  <div class="form-group">
+                    <label class="form-label">Email</label>
+                    <input type="email" class="form-input" id="sub-ind-email" value="konate.fatoumata@gmail.com">
+                  </div>
+                </div>
+
+                <div class="form-row" style="margin-bottom: var(--space-4);">
+                  <div class="form-group">
+                    <label class="form-label">Adresse de résidence</label>
+                    <input type="text" class="form-input" id="sub-ind-adresse" value="Quartier Commerce, Rue 18, Bouaké">
+                  </div>
+                  <div class="form-group">
+                    <label class="form-label">Ville</label>
+                    <select class="form-select" id="sub-ind-ville">
+                      <option>Abidjan</option>
+                      <option selected>Bouaké</option>
+                      <option>Daloa</option>
+                      <option>Yamoussoukro</option>
+                      <option>San Pedro</option>
+                      <option>Korhogo</option>
+                      <option>Autre</option>
+                    </select>
+                  </div>
+                </div>
+
+                <div class="form-row">
+                  <div class="form-group">
+                    <label class="form-label">Date d'effet souhaitée</label>
+                    <input type="date" class="form-input" value="2026-04-01">
+                    <span class="form-hint">Couverture effective après délai de carence de 90 jours</span>
+                  </div>
+                  <div class="form-group">
+                    <label class="form-label">Commercial référent</label>
+                    <select class="form-select">
+                      <option>Sélectionner</option>
+                      <option>Touré Ibrahim</option>
+                      <option>Bamba Seydou</option>
+                      <option selected>Diallo Aminata</option>
+                      <option>Konaté Drissa</option>
+                    </select>
+                  </div>
+                </div>
+              </div>
+
+              </div><!-- /step-1-individu -->
+
+              <!-- ===== GROUPE ===== -->
+              <div id="step-1-groupe" style="display: none;">
+
+                <div class="form-section">
+                  <h3 class="form-section__title">Identification de l'entreprise</h3>
+                  <p class="form-section__desc">Renseignez les informations de l'entreprise souscriptrice</p>
+
+                  <!-- Company Search Autocomplete -->
+                  <div class="form-group" style="margin-bottom: var(--space-4);">
+                    <label class="form-label">Rechercher le souscripteur <span class="required">*</span></label>
+                    <div class="company-search" id="company-search-souscription">
+                      <div class="company-search__input-wrapper">
+                        <span class="company-search__icon">
+                          <svg width="18" height="18" viewBox="0 0 18 18" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><circle cx="8" cy="8" r="5.5"/><line x1="12.5" y1="12.5" x2="16" y2="16"/></svg>
+                        </span>
+                        <input type="text" class="form-input company-search__input" placeholder="Tapez le nom, RCCM ou secteur de l'entreprise...">
+                        <button type="button" class="company-search__clear">
+                          <svg width="14" height="14" viewBox="0 0 18 18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><line x1="4" y1="4" x2="14" y2="14"/><line x1="14" y1="4" x2="4" y2="14"/></svg>
+                        </button>
+                        <div class="company-search__dropdown"></div>
+                      </div>
+                      <div class="company-search__selected">
+                        <div class="company-search__selected-icon">
+                          <svg width="20" height="20" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="2" width="14" height="16"/><line x1="7" y1="6" x2="7" y2="6.01"/><line x1="10" y1="6" x2="10" y2="6.01"/><line x1="13" y1="6" x2="13" y2="6.01"/><line x1="7" y1="10" x2="7" y2="10.01"/><line x1="10" y1="10" x2="10" y2="10.01"/><line x1="13" y1="10" x2="13" y2="10.01"/><path d="M8 18v-4h4v4"/></svg>
+                        </div>
+                        <div class="company-search__selected-info">
+                          <div class="company-search__selected-name"></div>
+                          <div class="company-search__selected-meta"></div>
+                        </div>
+                        <button type="button" class="company-search__change-btn">Modifier</button>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="form-row" style="margin-bottom: var(--space-4);">
+                    <div class="form-group">
+                      <label class="form-label">Dénomination complète</label>
+                      <input type="text" class="form-input" id="sub-denomination" value="Aéroport International Félix Houphouët-Boigny">
+                    </div>
+                    <div class="form-group">
+                      <label class="form-label">N° RCCM <span class="required">*</span></label>
+                      <input type="text" class="form-input" id="sub-rccm" value="CI-ABJ-2001-B12-05432">
+                    </div>
+                  </div>
+
+                  <div class="form-row" style="margin-bottom: var(--space-4);">
+                    <div class="form-group">
+                      <label class="form-label">N° Compte contribuable (DGI)</label>
+                      <input type="text" class="form-input" id="sub-dgi" value="CI-0145789-R">
+                    </div>
+                    <div class="form-group">
+                      <label class="form-label">Secteur d'activité</label>
+                      <select class="form-select" id="sub-secteur">
+                        <option>Sélectionner</option>
+                        <option>Agro-industrie</option>
+                        <option>Banque & Finance</option>
+                        <option>BTP & Construction</option>
+                        <option>Commerce</option>
+                        <option>Énergie</option>
+                        <option>Industrie</option>
+                        <option>Télécommunications</option>
+                        <option selected>Transport</option>
+                        <option>Autre</option>
+                      </select>
+                    </div>
+                  </div>
+
+                  <div class="form-row" style="margin-bottom: var(--space-4);">
+                    <div class="form-group">
+                      <label class="form-label">Effectif total <span class="required">*</span></label>
+                      <input type="number" class="form-input" id="sub-effectif" value="85">
+                    </div>
+                  </div>
+                </div>
+
+                <hr class="form-section__divider">
+
+                <div class="form-section">
+                  <h3 class="form-section__title">Contacts de l'entreprise</h3>
+                  <p class="form-section__desc">Coordonnées du Directeur Général et du responsable RH</p>
+
+                  <div class="form-row" style="margin-bottom: var(--space-4);">
+                    <div class="form-group">
+                      <label class="form-label">Nom du Directeur Général</label>
+                      <input type="text" class="form-input" id="sub-nom-dg" value="M. Ouédraogo Alassane">
+                    </div>
+                    <div class="form-group">
+                      <label class="form-label">Téléphone DG</label>
+                      <input type="tel" class="form-input" id="sub-tel-dg" value="+225 21 27 72 40 01">
+                    </div>
+                  </div>
+
+                  <div class="form-row" style="margin-bottom: var(--space-4);">
+                    <div class="form-group">
+                      <label class="form-label">Responsable RH (contact principal) <span class="required">*</span></label>
+                      <input type="text" class="form-input" id="sub-responsable-rh" value="Mme Aka Christelle — DRH">
+                    </div>
+                    <div class="form-group">
+                      <label class="form-label">Email RH <span class="required">*</span></label>
+                      <input type="email" class="form-input" id="sub-email-rh" value="drh@aeria.ci">
+                    </div>
+                  </div>
+
+                  <div class="form-row" style="margin-bottom: var(--space-4);">
+                    <div class="form-group">
+                      <label class="form-label">Téléphone RH <span class="required">*</span></label>
+                      <input type="tel" class="form-input" id="sub-tel-rh" value="+225 21 27 72 40 00">
+                    </div>
+                    <div class="form-group">
+                      <label class="form-label">Adresse du siège</label>
+                      <input type="text" class="form-input" id="sub-adresse" value="07 BP 148, Abidjan 07 — Port-Bouët">
+                    </div>
+                  </div>
+
+                  <div class="form-row">
+                    <div class="form-group">
+                      <label class="form-label">Ville</label>
+                      <select class="form-select" id="sub-ville">
+                        <option selected>Abidjan</option>
+                        <option>Bouaké</option>
+                        <option>Daloa</option>
+                        <option>Yamoussoukro</option>
+                        <option>San Pedro</option>
+                        <option>Korhogo</option>
+                        <option>Autre</option>
+                      </select>
+                    </div>
+                    <div class="form-group">
+                      <label class="form-label">Commercial référent</label>
+                      <select class="form-select">
+                        <option>Sélectionner</option>
+                        <option>Touré Ibrahim</option>
+                        <option selected>Bamba Seydou</option>
+                        <option>Diallo Aminata</option>
+                        <option>Konaté Drissa</option>
+                      </select>
+                    </div>
+                  </div>
+                </div>
+
+                <hr class="form-section__divider">
+
+                <div class="form-section" style="margin-bottom: 0;">
+                  <h3 class="form-section__title">Période de couverture</h3>
+                  <p class="form-section__desc">Définissez les dates de couverture souhaitées</p>
+
+                  <div class="form-row">
+                    <div class="form-group">
+                      <label class="form-label">Date d'effet souhaitée <span class="required">*</span></label>
+                      <input type="date" class="form-input" value="2026-04-01">
+                      <span class="form-hint">Couverture effective après délai de carence de 90 jours</span>
+                    </div>
+                    <div class="form-group">
+                      <label class="form-label">Date d'échéance</label>
+                      <input type="date" class="form-input" value="2027-03-31" readonly style="background: var(--gray-50);">
+                      <span class="form-hint">Calculée automatiquement (12 mois)</span>
+                    </div>
+                  </div>
+                </div>
+
+              </div><!-- /step-1-groupe -->
+
+              <div class="form-footer">
+                <a href="souscriptions.html" class="btn btn-ghost">← Annuler</a>
+                <button class="btn btn-primary" id="step1-next-btn" onclick="goToStep(2)">Continuer vers Ayants droit →</button>
+              </div>
+
+            </div>
+          </div>
+        </div>
+
+        <!-- ============================================================
+             ÉTAPE 2 — AYANTS DROIT
+             ============================================================ -->
+        <div id="step-2" class="wizard-panel" style="display: none;">
+          <div class="card animate-in">
+            <div class="card__header">
+              <div>
+                <h3 class="card__title">Ayants droit de Konaté Fatoumata</h3>
+                <p class="text-xs text-gray-500" style="margin-top: 2px;">1 conjoint + 2 enfants = 3 ayants droit déclarés</p>
+              </div>
+              <button class="btn btn-primary btn-sm" onclick="showToast('Formulaire d\'ajout disponible dans la version finale', 'info')">
+                <svg width="14" height="14" viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><line x1="7" y1="2" x2="7" y2="12"/><line x1="2" y1="7" x2="12" y2="7"/></svg>
+                Ajouter un ayant droit
+              </button>
+            </div>
+            <div class="card__body" style="padding: 0;">
+
+              <!-- Conjoint -->
+              <div style="padding: var(--space-5) var(--space-6); border-bottom: var(--border-light);">
+                <div style="display: flex; align-items: center; gap: var(--space-2); margin-bottom: var(--space-4);">
+                  <span class="badge badge--info">Conjoint</span>
+                  <span class="text-xs text-gray-400">Ayant droit n°1</span>
+                </div>
+                <div class="form-row" style="margin-bottom: var(--space-4);">
+                  <div class="form-group">
+                    <label class="form-label">Nom & Prénom <span class="required">*</span></label>
+                    <input type="text" class="form-input" value="Konaté Ousmane">
+                  </div>
+                  <div class="form-group">
+                    <label class="form-label">Date de naissance <span class="required">*</span></label>
+                    <input type="date" class="form-input" value="1985-03-22">
+                  </div>
+                  <div class="form-group">
+                    <label class="form-label">Genre</label>
+                    <select class="form-select">
+                      <option selected>Homme</option>
+                      <option>Femme</option>
+                    </select>
+                  </div>
+                </div>
+                <div class="form-row">
+                  <div class="form-group">
+                    <label class="form-label">N° CNI</label>
+                    <input type="text" class="form-input" value="CI-1985-0322-7654">
+                  </div>
+                  <div class="form-group">
+                    <label class="form-label">Profession</label>
+                    <input type="text" class="form-input" value="Commerçant — Marché central de Bouaké">
+                  </div>
+                </div>
+              </div>
+
+              <!-- Enfant 1 -->
+              <div style="padding: var(--space-5) var(--space-6); border-bottom: var(--border-light);">
+                <div style="display: flex; align-items: center; gap: var(--space-2); margin-bottom: var(--space-4);">
+                  <span class="badge badge--neutral">Enfant</span>
+                  <span class="text-xs text-gray-400">Ayant droit n°2</span>
+                </div>
+                <div class="form-row" style="margin-bottom: var(--space-4);">
+                  <div class="form-group">
+                    <label class="form-label">Nom & Prénom <span class="required">*</span></label>
+                    <input type="text" class="form-input" value="Konaté Aminata">
+                  </div>
+                  <div class="form-group">
+                    <label class="form-label">Date de naissance <span class="required">*</span></label>
+                    <input type="date" class="form-input" value="2015-06-12">
+                  </div>
+                  <div class="form-group">
+                    <label class="form-label">Genre</label>
+                    <select class="form-select">
+                      <option>Homme</option>
+                      <option selected>Femme</option>
+                    </select>
+                  </div>
+                </div>
+                <div class="form-row">
+                  <div class="form-group">
+                    <label class="form-label">Scolarité</label>
+                    <input type="text" class="form-input" value="Élève — École primaire publique Bouaké 2">
+                  </div>
+                  <div class="form-group">
+                    <label class="form-label">Âge</label>
+                    <input type="text" class="form-input" value="10 ans" readonly style="background: var(--gray-50);">
+                  </div>
+                </div>
+              </div>
+
+              <!-- Enfant 2 -->
+              <div style="padding: var(--space-5) var(--space-6);">
+                <div style="display: flex; align-items: center; gap: var(--space-2); margin-bottom: var(--space-4);">
+                  <span class="badge badge--neutral">Enfant</span>
+                  <span class="text-xs text-gray-400">Ayant droit n°3</span>
+                </div>
+                <div class="form-row" style="margin-bottom: var(--space-4);">
+                  <div class="form-group">
+                    <label class="form-label">Nom & Prénom <span class="required">*</span></label>
+                    <input type="text" class="form-input" value="Konaté Mamadou">
+                  </div>
+                  <div class="form-group">
+                    <label class="form-label">Date de naissance <span class="required">*</span></label>
+                    <input type="date" class="form-input" value="2019-09-04">
+                  </div>
+                  <div class="form-group">
+                    <label class="form-label">Genre</label>
+                    <select class="form-select">
+                      <option selected>Homme</option>
+                      <option>Femme</option>
+                    </select>
+                  </div>
+                </div>
+                <div class="form-row">
+                  <div class="form-group">
+                    <label class="form-label">Scolarité</label>
+                    <input type="text" class="form-input" value="Non scolarisé (6 ans)">
+                  </div>
+                  <div class="form-group">
+                    <label class="form-label">Âge</label>
+                    <input type="text" class="form-input" value="6 ans" readonly style="background: var(--gray-50);">
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="alert-box alert-box--info animate-in" style="margin-top: var(--space-4);">
+            <span>ℹ️</span>
+            <div>La formule ALPHA 1 Individuel autorise jusqu'à <strong>1 conjoint</strong> et <strong>4 enfants</strong> de moins de 21 ans. Il reste <strong>2 places enfant</strong> disponibles pour cette souscription.</div>
+          </div>
+
+          <div style="padding: var(--space-5) 0;">
+            <div class="form-footer" style="border: none; padding-top: 0; margin-top: 0;">
+              <button class="btn btn-ghost" onclick="goToStep(1)">← Retour</button>
+              <button class="btn btn-primary" onclick="goToStep(3)">Continuer vers Pièces justificatives →</button>
+            </div>
+          </div>
+        </div>
+
+        <!-- ============================================================
+             ÉTAPE 2 GROUPE — ADHÉRENTS ENTREPRISE
+             ============================================================ -->
+        <div id="step-2-groupe" class="wizard-panel" style="display: none;">
+          <div class="card animate-in">
+            <div class="card__header">
+              <div>
+                <h3 class="card__title">Adhérents de AERIA CI</h3>
+                <p class="text-xs text-gray-500" style="margin-top: 2px;">85 employés déclarés — 247 bénéficiaires au total</p>
+              </div>
+              <div class="flex gap-2">
+                <button class="btn btn-secondary btn-sm" onclick="showToast('Import fichier Excel disponible dans la version finale', 'info')">
+                  <svg width="14" height="14" viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><path d="M2 9v2a2 2 0 002 2h6a2 2 0 002-2V9"/><polyline points="4,5 7,2 10,5"/><line x1="7" y1="2" x2="7" y2="10"/></svg>
+                  Importer Excel
+                </button>
+                <button class="btn btn-primary btn-sm" onclick="showToast('Formulaire d\'ajout disponible dans la version finale', 'info')">
+                  <svg width="14" height="14" viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><line x1="7" y1="2" x2="7" y2="12"/><line x1="2" y1="7" x2="12" y2="7"/></svg>
+                  Ajouter un employé
+                </button>
+              </div>
+            </div>
+            <div class="card__body" style="padding: 0;">
+              <div class="table-container">
+                <table class="table" id="groupe-adherents-table">
+                  <thead>
+                    <tr>
+                      <th style="width: 36px;"><input type="checkbox"></th>
+                      <th>Nom & Prénom</th>
+                      <th>Lien</th>
+                      <th>Date naiss.</th>
+                      <th>Genre</th>
+                      <th>N° CNI</th>
+                      <th>Poste / Fonction</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <!-- Adhérent 1 -->
+                    <tr>
+                      <td><input type="checkbox" checked></td>
+                      <td>
+                        <div class="flex items-center gap-2">
+                          <div class="avatar avatar--sm" style="background: var(--iips-secondary);">OA</div>
+                          <span style="font-weight: 500;">Ouédraogo Alassane</span>
+                        </div>
+                      </td>
+                      <td><span class="badge badge--primary">Adhérent</span></td>
+                      <td>12/05/1975</td>
+                      <td>Homme</td>
+                      <td class="font-mono text-xs">CI-1975-0512-8823</td>
+                      <td>Directeur des Opérations</td>
+                    </tr>
+                    <tr style="background: var(--gray-25);">
+                      <td><input type="checkbox" checked></td>
+                      <td style="padding-left: var(--space-10);">
+                        <span style="font-weight: 500;">Ouédraogo Mariame</span>
+                      </td>
+                      <td><span class="badge badge--info">Conjoint</span></td>
+                      <td>08/11/1980</td>
+                      <td>Femme</td>
+                      <td class="font-mono text-xs">CI-1980-1108-4521</td>
+                      <td>—</td>
+                    </tr>
+                    <tr style="background: var(--gray-25);">
+                      <td><input type="checkbox" checked></td>
+                      <td style="padding-left: var(--space-10);">
+                        <span style="font-weight: 500;">Ouédraogo Yacine</span>
+                      </td>
+                      <td><span class="badge badge--neutral">Enfant</span></td>
+                      <td>15/03/2012</td>
+                      <td>Femme</td>
+                      <td class="font-mono text-xs">—</td>
+                      <td>Élève (13 ans)</td>
+                    </tr>
+                    <!-- Adhérent 2 -->
+                    <tr>
+                      <td><input type="checkbox" checked></td>
+                      <td>
+                        <div class="flex items-center gap-2">
+                          <div class="avatar avatar--sm" style="background: var(--iips-accent);">KA</div>
+                          <span style="font-weight: 500;">Kouamé Ahou</span>
+                        </div>
+                      </td>
+                      <td><span class="badge badge--primary">Adhérent</span></td>
+                      <td>22/09/1982</td>
+                      <td>Femme</td>
+                      <td class="font-mono text-xs">CI-1982-0922-3315</td>
+                      <td>Chef comptable</td>
+                    </tr>
+                    <tr style="background: var(--gray-25);">
+                      <td><input type="checkbox" checked></td>
+                      <td style="padding-left: var(--space-10);">
+                        <span style="font-weight: 500;">Kouamé Jean-Luc</span>
+                      </td>
+                      <td><span class="badge badge--info">Conjoint</span></td>
+                      <td>04/01/1979</td>
+                      <td>Homme</td>
+                      <td class="font-mono text-xs">CI-1979-0104-6678</td>
+                      <td>—</td>
+                    </tr>
+                    <!-- Adhérent 3 -->
+                    <tr>
+                      <td><input type="checkbox" checked></td>
+                      <td>
+                        <div class="flex items-center gap-2">
+                          <div class="avatar avatar--sm" style="background: #0891B2;">DS</div>
+                          <span style="font-weight: 500;">Dembélé Souleymane</span>
+                        </div>
+                      </td>
+                      <td><span class="badge badge--primary">Adhérent</span></td>
+                      <td>18/07/1990</td>
+                      <td>Homme</td>
+                      <td class="font-mono text-xs">CI-1990-0718-2241</td>
+                      <td>Agent de piste</td>
+                    </tr>
+                    <!-- Adhérent 4 -->
+                    <tr>
+                      <td><input type="checkbox" checked></td>
+                      <td>
+                        <div class="flex items-center gap-2">
+                          <div class="avatar avatar--sm" style="background: var(--iips-primary);">AC</div>
+                          <span style="font-weight: 500;">Aka Christelle</span>
+                        </div>
+                      </td>
+                      <td><span class="badge badge--primary">Adhérent</span></td>
+                      <td>30/11/1984</td>
+                      <td>Femme</td>
+                      <td class="font-mono text-xs">CI-1984-1130-5589</td>
+                      <td>Directrice RH</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+              <div style="padding: var(--space-4) var(--space-6); border-top: var(--border-light); background: var(--gray-25); display: flex; align-items: center; justify-content: space-between;">
+                <div class="text-xs text-gray-500">Affichage de <strong>7</strong> sur <strong>247</strong> bénéficiaires (85 adhérents + 78 conjoints + 84 enfants)</div>
+                <div style="display: flex; gap: 4px;">
+                  <button class="btn btn-ghost btn-sm" style="min-width: 32px; padding: 4px 8px; font-size: 12px; font-weight: 700; background: var(--iips-primary); color: #fff; border-radius: var(--radius-md);">1</button>
+                  <button class="btn btn-ghost btn-sm" style="min-width: 32px; padding: 4px 8px; font-size: 12px;">2</button>
+                  <button class="btn btn-ghost btn-sm" style="min-width: 32px; padding: 4px 8px; font-size: 12px;">…</button>
+                  <button class="btn btn-ghost btn-sm" style="min-width: 32px; padding: 4px 8px; font-size: 12px;">31</button>
+                  <button class="btn btn-ghost btn-sm" style="min-width: 32px; padding: 4px 8px; font-size: 12px;">›</button>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="alert-box alert-box--info animate-in" style="margin-top: var(--space-4);">
+            <span>ℹ️</span>
+            <div>La formule ALPHA 2 Groupe autorise jusqu'à <strong>1 conjoint</strong> et <strong>4 enfants</strong> par employé. Effectif déclaré : <strong>85 employés</strong>. Total bénéficiaires estimés : <strong>247 personnes</strong>. Vous pouvez importer la liste depuis un <strong>fichier Excel</strong>.</div>
+          </div>
+
+          <div style="padding: var(--space-5) 0;">
+            <div class="form-footer" style="border: none; padding-top: 0; margin-top: 0;">
+              <button class="btn btn-ghost" onclick="goToStep(1)">← Retour</button>
+              <button class="btn btn-primary" onclick="goToStep(3)">Continuer vers Pièces justificatives →</button>
+            </div>
+          </div>
+        </div>
+
+        <!-- ============================================================
+             ÉTAPE 3 — PIÈCES JUSTIFICATIVES
+             ============================================================ -->
+        <div id="step-3" class="wizard-panel" style="display: none;">
+          <div class="card animate-in">
+            <div class="card__header">
+              <div>
+                <h3 class="card__title">Pièces justificatives requises</h3>
+                <p class="text-xs text-gray-500" style="margin-top: 2px;">4 pièces fournies sur 5 requises — 1 manquante</p>
+              </div>
+              <div class="flex items-center gap-2">
+                <div style="width: 120px; height: 6px; background: var(--gray-100); border-radius: var(--radius-full); overflow: hidden;">
+                  <div style="width: 80%; height: 100%; background: var(--color-warning); border-radius: var(--radius-full);"></div>
+                </div>
+                <span class="text-xs font-semibold" style="color: var(--color-warning);">4/5</span>
+              </div>
+            </div>
+            <div class="card__body">
+
+              <div class="doc-checklist">
+                <!-- Document 1 : CNI Adhérent — OK -->
+                <div class="doc-checklist-item">
+                  <div class="doc-checklist-item__check doc-checklist-item__check--ok">
+                    <svg width="14" height="14" viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><polyline points="3,7 6,10 11,4"/></svg>
+                  </div>
+                  <div class="doc-checklist-item__info">
+                    <div class="doc-checklist-item__name">Copie CNI adhérent principal</div>
+                    <div class="doc-checklist-item__meta">CNI_Konate_Fatoumata.pdf — 1,2 Mo — Téléversé le 19/02/2026</div>
+                  </div>
+                  <div class="doc-checklist-item__actions">
+                    <button class="row-action-btn" title="Voir"><svg width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M1 8s3-5 7-5 7 5 7 5-3 5-7 5-7-5-7-5z"/><circle cx="8" cy="8" r="2"/></svg></button>
+                    <button class="row-action-btn" title="Télécharger"><svg width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><path d="M2 11v2a2 2 0 002 2h8a2 2 0 002-2v-2"/><polyline points="5,7 8,10 11,7"/><line x1="8" y1="10" x2="8" y2="2"/></svg></button>
+                  </div>
+                </div>
+
+                <!-- Document 2 : CNI Conjoint — OK -->
+                <div class="doc-checklist-item">
+                  <div class="doc-checklist-item__check doc-checklist-item__check--ok">
+                    <svg width="14" height="14" viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><polyline points="3,7 6,10 11,4"/></svg>
+                  </div>
+                  <div class="doc-checklist-item__info">
+                    <div class="doc-checklist-item__name">Copie CNI conjoint</div>
+                    <div class="doc-checklist-item__meta">CNI_Konate_Ousmane.pdf — 980 Ko — Téléversé le 19/02/2026</div>
+                  </div>
+                  <div class="doc-checklist-item__actions">
+                    <button class="row-action-btn" title="Voir"><svg width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M1 8s3-5 7-5 7 5 7 5-3 5-7 5-7-5-7-5z"/><circle cx="8" cy="8" r="2"/></svg></button>
+                    <button class="row-action-btn" title="Télécharger"><svg width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><path d="M2 11v2a2 2 0 002 2h8a2 2 0 002-2v-2"/><polyline points="5,7 8,10 11,7"/><line x1="8" y1="10" x2="8" y2="2"/></svg></button>
+                  </div>
+                </div>
+
+                <!-- Document 3 : Extraits naissance enfants — OK -->
+                <div class="doc-checklist-item">
+                  <div class="doc-checklist-item__check doc-checklist-item__check--ok">
+                    <svg width="14" height="14" viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><polyline points="3,7 6,10 11,4"/></svg>
+                  </div>
+                  <div class="doc-checklist-item__info">
+                    <div class="doc-checklist-item__name">Extraits de naissance des enfants (2)</div>
+                    <div class="doc-checklist-item__meta">Extrait_Aminata.pdf + Extrait_Mamadou.pdf — 540 Ko — Téléversé le 20/02/2026</div>
+                  </div>
+                  <div class="doc-checklist-item__actions">
+                    <button class="row-action-btn" title="Voir"><svg width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M1 8s3-5 7-5 7 5 7 5-3 5-7 5-7-5-7-5z"/><circle cx="8" cy="8" r="2"/></svg></button>
+                    <button class="row-action-btn" title="Télécharger"><svg width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><path d="M2 11v2a2 2 0 002 2h8a2 2 0 002-2v-2"/><polyline points="5,7 8,10 11,7"/><line x1="8" y1="10" x2="8" y2="2"/></svg></button>
+                  </div>
+                </div>
+
+                <!-- Document 4 : Photo d'identité — OK -->
+                <div class="doc-checklist-item">
+                  <div class="doc-checklist-item__check doc-checklist-item__check--ok">
+                    <svg width="14" height="14" viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><polyline points="3,7 6,10 11,4"/></svg>
+                  </div>
+                  <div class="doc-checklist-item__info">
+                    <div class="doc-checklist-item__name">Photo d'identité adhérent</div>
+                    <div class="doc-checklist-item__meta">Photo_Konate_Fatoumata.jpg — 320 Ko — Téléversé le 19/02/2026</div>
+                  </div>
+                  <div class="doc-checklist-item__actions">
+                    <button class="row-action-btn" title="Voir"><svg width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M1 8s3-5 7-5 7 5 7 5-3 5-7 5-7-5-7-5z"/><circle cx="8" cy="8" r="2"/></svg></button>
+                    <button class="row-action-btn" title="Télécharger"><svg width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><path d="M2 11v2a2 2 0 002 2h8a2 2 0 002-2v-2"/><polyline points="5,7 8,10 11,7"/><line x1="8" y1="10" x2="8" y2="2"/></svg></button>
+                  </div>
+                </div>
+
+                <!-- Document 5 : Bulletin de salaire — MANQUANT -->
+                <div class="doc-checklist-item" style="border-color: var(--color-warning); background: #FFFBEB;">
+                  <div class="doc-checklist-item__check doc-checklist-item__check--missing">
+                    <svg width="14" height="14" viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><line x1="7" y1="3" x2="7" y2="8"/><circle cx="7" cy="11" r="0.5" fill="currentColor"/></svg>
+                  </div>
+                  <div class="doc-checklist-item__info">
+                    <div class="doc-checklist-item__name" style="color: var(--color-warning-dark);">Bulletin de salaire (3 derniers mois)</div>
+                    <div class="doc-checklist-item__meta" style="color: var(--color-warning);">Document manquant — Relance envoyée par email le 21/02/2026</div>
+                  </div>
+                  <button class="btn btn-secondary btn-sm" onclick="showToast('Zone de téléversement ouverte', 'info')">
+                    <svg width="14" height="14" viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><path d="M2 9v2a2 2 0 002 2h6a2 2 0 002-2V9"/><polyline points="4,5 7,2 10,5"/><line x1="7" y1="2" x2="7" y2="10"/></svg>
+                    Téléverser
+                  </button>
+                </div>
+              </div>
+
+              <div class="alert-box alert-box--warning" style="margin-top: var(--space-5); margin-bottom: 0;">
+                <span>⚠️</span>
+                <div>Le bulletin de salaire est <strong>obligatoire</strong> pour les souscriptions individuelles. La souscription restera à l'étape <strong>"En attente de pièces"</strong> jusqu'à réception de ce document. Une relance automatique est programmée dans 7 jours.</div>
+              </div>
+
+              <div class="form-footer">
+                <button class="btn btn-ghost" onclick="goToStep(2)">← Retour</button>
+                <button class="btn btn-primary" onclick="goToStep(4)">Continuer vers Récapitulatif →</button>
+              </div>
+
+            </div>
+          </div>
+        </div>
+
+        <!-- ============================================================
+             ÉTAPE 3 GROUPE — PIÈCES JUSTIFICATIVES ENTREPRISE
+             ============================================================ -->
+        <div id="step-3-groupe" class="wizard-panel" style="display: none;">
+          <div class="card animate-in">
+            <div class="card__header">
+              <div>
+                <h3 class="card__title">Pièces justificatives — AERIA CI</h3>
+                <p class="text-xs text-gray-500" style="margin-top: 2px;">5 pièces fournies sur 6 requises — 1 manquante</p>
+              </div>
+              <div class="flex items-center gap-2">
+                <div style="width: 120px; height: 6px; background: var(--gray-100); border-radius: var(--radius-full); overflow: hidden;">
+                  <div style="width: 83%; height: 100%; background: var(--color-warning); border-radius: var(--radius-full);"></div>
+                </div>
+                <span class="text-xs font-semibold" style="color: var(--color-warning);">5/6</span>
+              </div>
+            </div>
+            <div class="card__body">
+
+              <div class="doc-checklist">
+                <!-- Doc 1 : Statuts — OK -->
+                <div class="doc-checklist-item">
+                  <div class="doc-checklist-item__check doc-checklist-item__check--ok">
+                    <svg width="14" height="14" viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><polyline points="3,7 6,10 11,4"/></svg>
+                  </div>
+                  <div class="doc-checklist-item__info">
+                    <div class="doc-checklist-item__name">Statuts de la société</div>
+                    <div class="doc-checklist-item__meta">Statuts_AERIA_CI.pdf — 2,4 Mo — Téléversé le 18/02/2026</div>
+                  </div>
+                  <div class="doc-checklist-item__actions">
+                    <button class="row-action-btn" title="Voir"><svg width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M1 8s3-5 7-5 7 5 7 5-3 5-7 5-7-5-7-5z"/><circle cx="8" cy="8" r="2"/></svg></button>
+                    <button class="row-action-btn" title="Télécharger"><svg width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><path d="M2 11v2a2 2 0 002 2h8a2 2 0 002-2v-2"/><polyline points="5,7 8,10 11,7"/><line x1="8" y1="10" x2="8" y2="2"/></svg></button>
+                  </div>
+                </div>
+
+                <!-- Doc 2 : RCCM — OK -->
+                <div class="doc-checklist-item">
+                  <div class="doc-checklist-item__check doc-checklist-item__check--ok">
+                    <svg width="14" height="14" viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><polyline points="3,7 6,10 11,4"/></svg>
+                  </div>
+                  <div class="doc-checklist-item__info">
+                    <div class="doc-checklist-item__name">Registre du commerce (RCCM)</div>
+                    <div class="doc-checklist-item__meta">RCCM_AERIA.pdf — 890 Ko — Téléversé le 18/02/2026</div>
+                  </div>
+                  <div class="doc-checklist-item__actions">
+                    <button class="row-action-btn" title="Voir"><svg width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M1 8s3-5 7-5 7 5 7 5-3 5-7 5-7-5-7-5z"/><circle cx="8" cy="8" r="2"/></svg></button>
+                    <button class="row-action-btn" title="Télécharger"><svg width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><path d="M2 11v2a2 2 0 002 2h8a2 2 0 002-2v-2"/><polyline points="5,7 8,10 11,7"/><line x1="8" y1="10" x2="8" y2="2"/></svg></button>
+                  </div>
+                </div>
+
+                <!-- Doc 3 : Liste employés — OK -->
+                <div class="doc-checklist-item">
+                  <div class="doc-checklist-item__check doc-checklist-item__check--ok">
+                    <svg width="14" height="14" viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><polyline points="3,7 6,10 11,4"/></svg>
+                  </div>
+                  <div class="doc-checklist-item__info">
+                    <div class="doc-checklist-item__name">Liste nominative des employés (Excel)</div>
+                    <div class="doc-checklist-item__meta">Liste_employes_AERIA_2026.xlsx — 156 Ko — 85 lignes — Téléversé le 19/02/2026</div>
+                  </div>
+                  <div class="doc-checklist-item__actions">
+                    <button class="row-action-btn" title="Voir"><svg width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M1 8s3-5 7-5 7 5 7 5-3 5-7 5-7-5-7-5z"/><circle cx="8" cy="8" r="2"/></svg></button>
+                    <button class="row-action-btn" title="Télécharger"><svg width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><path d="M2 11v2a2 2 0 002 2h8a2 2 0 002-2v-2"/><polyline points="5,7 8,10 11,7"/><line x1="8" y1="10" x2="8" y2="2"/></svg></button>
+                  </div>
+                </div>
+
+                <!-- Doc 4 : Attestation DGI — OK -->
+                <div class="doc-checklist-item">
+                  <div class="doc-checklist-item__check doc-checklist-item__check--ok">
+                    <svg width="14" height="14" viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><polyline points="3,7 6,10 11,4"/></svg>
+                  </div>
+                  <div class="doc-checklist-item__info">
+                    <div class="doc-checklist-item__name">Attestation fiscale DGI (en cours de validité)</div>
+                    <div class="doc-checklist-item__meta">Attestation_fiscale_AERIA_2026.pdf — 420 Ko — Téléversé le 19/02/2026</div>
+                  </div>
+                  <div class="doc-checklist-item__actions">
+                    <button class="row-action-btn" title="Voir"><svg width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M1 8s3-5 7-5 7 5 7 5-3 5-7 5-7-5-7-5z"/><circle cx="8" cy="8" r="2"/></svg></button>
+                    <button class="row-action-btn" title="Télécharger"><svg width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><path d="M2 11v2a2 2 0 002 2h8a2 2 0 002-2v-2"/><polyline points="5,7 8,10 11,7"/><line x1="8" y1="10" x2="8" y2="2"/></svg></button>
+                  </div>
+                </div>
+
+                <!-- Doc 5 : Lettre souscription — OK -->
+                <div class="doc-checklist-item">
+                  <div class="doc-checklist-item__check doc-checklist-item__check--ok">
+                    <svg width="14" height="14" viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><polyline points="3,7 6,10 11,4"/></svg>
+                  </div>
+                  <div class="doc-checklist-item__info">
+                    <div class="doc-checklist-item__name">Lettre de demande de souscription signée</div>
+                    <div class="doc-checklist-item__meta">Lettre_souscription_AERIA.pdf — 680 Ko — Téléversé le 20/02/2026</div>
+                  </div>
+                  <div class="doc-checklist-item__actions">
+                    <button class="row-action-btn" title="Voir"><svg width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M1 8s3-5 7-5 7 5 7 5-3 5-7 5-7-5-7-5z"/><circle cx="8" cy="8" r="2"/></svg></button>
+                    <button class="row-action-btn" title="Télécharger"><svg width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><path d="M2 11v2a2 2 0 002 2h8a2 2 0 002-2v-2"/><polyline points="5,7 8,10 11,7"/><line x1="8" y1="10" x2="8" y2="2"/></svg></button>
+                  </div>
+                </div>
+
+                <!-- Doc 6 : CNI signataire — MANQUANT -->
+                <div class="doc-checklist-item" style="border-color: var(--color-warning); background: #FFFBEB;">
+                  <div class="doc-checklist-item__check doc-checklist-item__check--missing">
+                    <svg width="14" height="14" viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><line x1="7" y1="3" x2="7" y2="8"/><circle cx="7" cy="11" r="0.5" fill="currentColor"/></svg>
+                  </div>
+                  <div class="doc-checklist-item__info">
+                    <div class="doc-checklist-item__name" style="color: var(--color-warning-dark);">Copie CNI du signataire (DRH)</div>
+                    <div class="doc-checklist-item__meta" style="color: var(--color-warning);">Document manquant — Relance envoyée par email le 21/02/2026</div>
+                  </div>
+                  <button class="btn btn-secondary btn-sm" onclick="showToast('Zone de téléversement ouverte', 'info')">
+                    <svg width="14" height="14" viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><path d="M2 9v2a2 2 0 002 2h6a2 2 0 002-2V9"/><polyline points="4,5 7,2 10,5"/><line x1="7" y1="2" x2="7" y2="10"/></svg>
+                    Téléverser
+                  </button>
+                </div>
+              </div>
+
+              <div class="alert-box alert-box--warning" style="margin-top: var(--space-5); margin-bottom: 0;">
+                <span>⚠️</span>
+                <div>La copie CNI du signataire est <strong>obligatoire</strong> pour les souscriptions groupe. La souscription restera à l'étape <strong>"En attente de pièces"</strong> jusqu'à réception de ce document. Le commercial <strong>Bamba Seydou</strong> sera notifié.</div>
+              </div>
+
+              <div class="form-footer">
+                <button class="btn btn-ghost" onclick="goToStep(2)">← Retour</button>
+                <button class="btn btn-primary" onclick="goToStep(4)">Continuer vers Récapitulatif →</button>
+              </div>
+
+            </div>
+          </div>
+        </div>
+
+        <!-- ============================================================
+             ÉTAPE 4 — RÉCAPITULATIF
+             ============================================================ -->
+        <div id="step-4" class="wizard-panel" style="display: none;">
+          <div class="card animate-in mb-6">
+            <div class="card__header" style="background: var(--iips-primary); color: #fff; border-radius: var(--radius-lg) var(--radius-lg) 0 0;">
+              <h3 class="card__title" style="color: #fff;">Récapitulatif de la souscription</h3>
+              <span class="badge" style="background: rgba(255,255,255,0.2); color: #fff;">SUB-2026-0204</span>
+            </div>
+            <div class="card__body">
+
+              <div class="info-grid info-grid--3" style="gap: var(--space-5); margin-bottom: var(--space-6);">
+                <div class="info-block">
+                  <span class="info-block__label">N° Souscription</span>
+                  <span class="info-block__value info-block__value--mono info-block__value--primary">SUB-2026-0204</span>
+                </div>
+                <div class="info-block">
+                  <span class="info-block__label">Type / Nature</span>
+                  <div class="flex gap-2" style="margin-top: 4px;"><span class="contract-type alpha1">ALPHA 1</span><span class="contract-type individuel">Individuel</span></div>
+                </div>
+                <div class="info-block">
+                  <span class="info-block__label">Statut</span>
+                  <span class="workflow-badge workflow-badge--pending"><span class="step-num">1</span> En attente de pièces</span>
+                </div>
+              </div>
+
+              <hr class="form-section__divider" style="margin: var(--space-5) 0;">
+
+              <h4 style="font-size: var(--text-sm); font-weight: 600; color: var(--gray-900); margin-bottom: var(--space-4);">Adhérent principal</h4>
+              <div class="info-grid" style="gap: var(--space-4); margin-bottom: var(--space-6);">
+                <div class="info-block">
+                  <span class="info-block__label">Nom complet</span>
+                  <span class="info-block__value" id="sub-ind-summary-nom">Mme Konaté Fatoumata</span>
+                </div>
+                <div class="info-block">
+                  <span class="info-block__label">Date de naissance</span>
+                  <span class="info-block__value" id="sub-ind-summary-naissance">14 Août 1988 (37 ans)</span>
+                </div>
+                <div class="info-block">
+                  <span class="info-block__label">N° CNI</span>
+                  <span class="info-block__value info-block__value--mono" id="sub-ind-summary-cni">CI-1988-0814-3421</span>
+                </div>
+                <div class="info-block">
+                  <span class="info-block__label">Profession</span>
+                  <span class="info-block__value" id="sub-ind-summary-profession">Enseignante — Lycée Municipal Bouaké</span>
+                </div>
+                <div class="info-block">
+                  <span class="info-block__label">Téléphone</span>
+                  <span class="info-block__value" id="sub-ind-summary-tel">+225 07 58 43 21 90</span>
+                </div>
+                <div class="info-block">
+                  <span class="info-block__label">Adresse</span>
+                  <span class="info-block__value" id="sub-ind-summary-adresse">Quartier Commerce, Rue 18, Bouaké</span>
+                </div>
+              </div>
+
+              <hr class="form-section__divider" style="margin: var(--space-5) 0;">
+
+              <h4 style="font-size: var(--text-sm); font-weight: 600; color: var(--gray-900); margin-bottom: var(--space-4);">Ayants droit (3)</h4>
+              <div style="border: var(--border-light); border-radius: var(--radius-md); overflow: hidden; margin-bottom: var(--space-6);">
+                <table class="table" style="margin: 0;">
+                  <thead><tr><th>Nom & Prénom</th><th>Lien</th><th>Date naiss.</th><th>Âge</th><th>N° CNI</th></tr></thead>
+                  <tbody>
+                    <tr><td style="font-weight:500;">Konaté Ousmane</td><td><span class="badge badge--info">Conjoint</span></td><td>22/03/1985</td><td>40 ans</td><td class="font-mono text-xs">CI-1985-0322-7654</td></tr>
+                    <tr><td style="font-weight:500;">Konaté Aminata</td><td><span class="badge badge--neutral">Enfant</span></td><td>12/06/2015</td><td>10 ans</td><td class="font-mono text-xs">—</td></tr>
+                    <tr><td style="font-weight:500;">Konaté Mamadou</td><td><span class="badge badge--neutral">Enfant</span></td><td>04/09/2019</td><td>6 ans</td><td class="font-mono text-xs">—</td></tr>
+                  </tbody>
+                </table>
+              </div>
+
+              <hr class="form-section__divider" style="margin: var(--space-5) 0;">
+
+              <h4 style="font-size: var(--text-sm); font-weight: 600; color: var(--gray-900); margin-bottom: var(--space-4);">Pièces justificatives</h4>
+              <div class="grid grid-3 mb-6" style="gap: var(--space-4);">
+                <div style="background: var(--color-success-light); padding: var(--space-4); border-radius: var(--radius-md); text-align: center; border: 1px solid #A7F3D0;">
+                  <div style="font-family: var(--font-display); font-size: var(--text-2xl); font-weight: 700; color: var(--color-success-dark);">4</div>
+                  <div class="text-xs" style="color: var(--color-success-dark);">Fournies</div>
+                </div>
+                <div style="background: var(--color-warning-light); padding: var(--space-4); border-radius: var(--radius-md); text-align: center; border: 1px solid #FEDF89;">
+                  <div style="font-family: var(--font-display); font-size: var(--text-2xl); font-weight: 700; color: var(--color-warning-dark);">1</div>
+                  <div class="text-xs" style="color: var(--color-warning-dark);">Manquante</div>
+                </div>
+                <div style="background: var(--gray-50); padding: var(--space-4); border-radius: var(--radius-md); text-align: center;">
+                  <div style="font-family: var(--font-display); font-size: var(--text-2xl); font-weight: 700; color: var(--gray-900);">5</div>
+                  <div class="text-xs text-gray-500">Total requises</div>
+                </div>
+              </div>
+
+              <div class="alert-box alert-box--warning" style="margin-bottom: 0;">
+                <span>⚠️</span>
+                <div>La souscription sera enregistrée avec le statut <strong>"En attente de pièces"</strong> car le bulletin de salaire est manquant. Dès réception, elle passera automatiquement à l'étape de <strong>validation Chef d'équipe (Niv. 1)</strong>. La commerciale <strong>Diallo Aminata</strong> sera notifiée.</div>
+              </div>
+            </div>
+          </div>
+
+          <div class="form-footer" style="border: none; padding-top: 0; margin-top: 0;">
+            <button class="btn btn-ghost" onclick="goToStep(3)">← Retour</button>
+            <div class="flex gap-3">
+              <button class="btn btn-secondary" onclick="showToast('Brouillon de la souscription enregistré', 'info')">Enregistrer brouillon</button>
+              <button class="btn btn-primary btn-lg" onclick="showToast('Souscription SUB-2026-0204 enregistrée ! En attente de pièces.', 'success'); setTimeout(()=>window.location='souscriptions.html', 2000)">
+                <svg width="18" height="18" viewBox="0 0 18 18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><polyline points="4,9 7.5,12.5 14,5"/></svg>
+                Enregistrer la souscription
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <!-- ============================================================
+             ÉTAPE 4 GROUPE — RÉCAPITULATIF ENTREPRISE
+             ============================================================ -->
+        <div id="step-4-groupe" class="wizard-panel" style="display: none;">
+          <div class="card animate-in mb-6">
+            <div class="card__header" style="background: var(--iips-primary); color: #fff; border-radius: var(--radius-lg) var(--radius-lg) 0 0;">
+              <h3 class="card__title" style="color: #fff;">Récapitulatif de la souscription groupe</h3>
+              <span class="badge" style="background: rgba(255,255,255,0.2); color: #fff;">SUB-2026-0205</span>
+            </div>
+            <div class="card__body">
+
+              <div class="info-grid info-grid--3" style="gap: var(--space-5); margin-bottom: var(--space-6);">
+                <div class="info-block">
+                  <span class="info-block__label">N° Souscription</span>
+                  <span class="info-block__value info-block__value--mono info-block__value--primary">SUB-2026-0205</span>
+                </div>
+                <div class="info-block">
+                  <span class="info-block__label">Type / Nature</span>
+                  <div class="flex gap-2" style="margin-top: 4px;"><span class="contract-type alpha2">ALPHA 2</span><span class="contract-type groupe">Groupe</span></div>
+                </div>
+                <div class="info-block">
+                  <span class="info-block__label">Statut</span>
+                  <span class="workflow-badge workflow-badge--pending"><span class="step-num">1</span> En attente de pièces</span>
+                </div>
+              </div>
+
+              <hr class="form-section__divider" style="margin: var(--space-5) 0;">
+
+              <h4 style="font-size: var(--text-sm); font-weight: 600; color: var(--gray-900); margin-bottom: var(--space-4);">Souscripteur — Entreprise</h4>
+              <div class="info-grid" style="gap: var(--space-4); margin-bottom: var(--space-6);">
+                <div class="info-block">
+                  <span class="info-block__label">Raison sociale</span>
+                  <span class="info-block__value" id="sub-summary-raison" style="font-weight: 600;">AERIA CI</span>
+                </div>
+                <div class="info-block">
+                  <span class="info-block__label">RCCM</span>
+                  <span class="info-block__value info-block__value--mono" id="sub-summary-rccm">CI-ABJ-2001-B12-05432</span>
+                </div>
+                <div class="info-block">
+                  <span class="info-block__label">Secteur d'activité</span>
+                  <span class="info-block__value" id="sub-summary-secteur">Transport aérien</span>
+                </div>
+                <div class="info-block">
+                  <span class="info-block__label">Directeur Général</span>
+                  <span class="info-block__value" id="sub-summary-dg">M. Ouédraogo Alassane</span>
+                </div>
+                <div class="info-block">
+                  <span class="info-block__label">Responsable RH</span>
+                  <span class="info-block__value" id="sub-summary-rh">Mme Aka Christelle</span>
+                </div>
+                <div class="info-block">
+                  <span class="info-block__label">Siège social</span>
+                  <span class="info-block__value" id="sub-summary-adresse">Zone aéroportuaire, Port-Bouët — Abidjan</span>
+                </div>
+              </div>
+
+              <hr class="form-section__divider" style="margin: var(--space-5) 0;">
+
+              <h4 style="font-size: var(--text-sm); font-weight: 600; color: var(--gray-900); margin-bottom: var(--space-4);">Bénéficiaires</h4>
+              <div class="grid grid-3 mb-6" style="gap: var(--space-4);">
+                <div style="background: var(--color-info-light); padding: var(--space-4); border-radius: var(--radius-md); text-align: center; border: 1px solid #BFDBFE;">
+                  <div style="font-family: var(--font-display); font-size: var(--text-2xl); font-weight: 700; color: var(--color-info-dark);">85</div>
+                  <div class="text-xs" style="color: var(--color-info-dark);">Adhérents (employés)</div>
+                </div>
+                <div style="background: var(--gray-50); padding: var(--space-4); border-radius: var(--radius-md); text-align: center;">
+                  <div style="font-family: var(--font-display); font-size: var(--text-2xl); font-weight: 700; color: var(--gray-900);">78 + 84</div>
+                  <div class="text-xs text-gray-500">Conjoints + Enfants</div>
+                </div>
+                <div style="background: var(--color-success-light); padding: var(--space-4); border-radius: var(--radius-md); text-align: center; border: 1px solid #A7F3D0;">
+                  <div style="font-family: var(--font-display); font-size: var(--text-2xl); font-weight: 700; color: var(--color-success-dark);">247</div>
+                  <div class="text-xs" style="color: var(--color-success-dark);">Total bénéficiaires</div>
+                </div>
+              </div>
+
+              <hr class="form-section__divider" style="margin: var(--space-5) 0;">
+
+              <h4 style="font-size: var(--text-sm); font-weight: 600; color: var(--gray-900); margin-bottom: var(--space-4);">Pièces justificatives</h4>
+              <div class="grid grid-3 mb-6" style="gap: var(--space-4);">
+                <div style="background: var(--color-success-light); padding: var(--space-4); border-radius: var(--radius-md); text-align: center; border: 1px solid #A7F3D0;">
+                  <div style="font-family: var(--font-display); font-size: var(--text-2xl); font-weight: 700; color: var(--color-success-dark);">5</div>
+                  <div class="text-xs" style="color: var(--color-success-dark);">Fournies</div>
+                </div>
+                <div style="background: var(--color-warning-light); padding: var(--space-4); border-radius: var(--radius-md); text-align: center; border: 1px solid #FEDF89;">
+                  <div style="font-family: var(--font-display); font-size: var(--text-2xl); font-weight: 700; color: var(--color-warning-dark);">1</div>
+                  <div class="text-xs" style="color: var(--color-warning-dark);">Manquante</div>
+                </div>
+                <div style="background: var(--gray-50); padding: var(--space-4); border-radius: var(--radius-md); text-align: center;">
+                  <div style="font-family: var(--font-display); font-size: var(--text-2xl); font-weight: 700; color: var(--gray-900);">6</div>
+                  <div class="text-xs text-gray-500">Total requises</div>
+                </div>
+              </div>
+
+              <div class="alert-box alert-box--warning" style="margin-bottom: 0;">
+                <span>⚠️</span>
+                <div>La souscription sera enregistrée avec le statut <strong>"En attente de pièces"</strong> car la copie CNI du signataire est manquante. Dès réception, elle passera à l'étape de <strong>validation Chef d'équipe (Niv. 1)</strong>. Le commercial <strong>Bamba Seydou</strong> sera notifié.</div>
+              </div>
+            </div>
+          </div>
+
+          <div class="form-footer" style="border: none; padding-top: 0; margin-top: 0;">
+            <button class="btn btn-ghost" onclick="goToStep(3)">← Retour</button>
+            <div class="flex gap-3">
+              <button class="btn btn-secondary" onclick="showToast('Brouillon de la souscription groupe enregistré', 'info')">Enregistrer brouillon</button>
+              <button class="btn btn-primary btn-lg" onclick="showToast('Souscription SUB-2026-0205 enregistrée ! En attente de pièces.', 'success'); setTimeout(()=>window.location='souscriptions.html', 2000)">
+                <svg width="18" height="18" viewBox="0 0 18 18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><polyline points="4,9 7.5,12.5 14,5"/></svg>
+                Enregistrer la souscription
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <!-- ============================================================
+             PANNEAU LATÉRAL — RÉSUMÉ SOUSCRIPTION
+             ============================================================ -->
+        <div>
+          <!-- === SIDEBAR INDIVIDU === -->
+          <div id="sidebar-individu" class="tarif-preview animate-in" style="position: sticky; top: 88px;">
+            <div class="tarif-preview__title">Résumé souscription</div>
+
+            <div class="tarif-row">
+              <span class="tarif-row__label">Formule</span>
+              <span class="tarif-row__value">ALPHA 1</span>
+            </div>
+            <div class="tarif-row">
+              <span class="tarif-row__label">Nature</span>
+              <span class="tarif-row__value">Individuel</span>
+            </div>
+            <div class="tarif-row">
+              <span class="tarif-row__label">Adhérent principal</span>
+              <span class="tarif-row__value">1</span>
+            </div>
+            <div class="tarif-row">
+              <span class="tarif-row__label">Conjoint</span>
+              <span class="tarif-row__value">1</span>
+            </div>
+            <div class="tarif-row">
+              <span class="tarif-row__label">Enfants</span>
+              <span class="tarif-row__value">2</span>
+            </div>
+            <div class="tarif-row">
+              <span class="tarif-row__label">Total bénéficiaires</span>
+              <span class="tarif-row__value" style="font-weight: 700;">4 personnes</span>
+            </div>
+
+            <div style="border-top: var(--border-light); margin: var(--space-3) 0; padding-top: var(--space-3);">
+              <div class="tarif-row">
+                <span class="tarif-row__label">Prime adhérent</span>
+                <span class="tarif-row__value">25 000 FCFA</span>
+              </div>
+              <div class="tarif-row">
+                <span class="tarif-row__label">Conjoint (+30%)</span>
+                <span class="tarif-row__value">+ 7 500 FCFA</span>
+              </div>
+              <div class="tarif-row">
+                <span class="tarif-row__label">Enfants (+15% ×2)</span>
+                <span class="tarif-row__value">+ 7 500 FCFA</span>
+              </div>
+              <div class="tarif-row">
+                <span class="tarif-row__label">Frais d'adhésion</span>
+                <span class="tarif-row__value">5 000 FCFA (unique)</span>
+              </div>
+            </div>
+
+            <div class="tarif-row total">
+              <span class="tarif-row__label" style="font-weight: 600;">Prime mensuelle</span>
+              <span class="tarif-row__value">40 000 FCFA</span>
+            </div>
+            <div class="tarif-row" style="padding-top: 0;">
+              <span class="tarif-row__label">Prime annuelle</span>
+              <span class="tarif-row__value" style="font-size: var(--text-md); color: var(--iips-primary);">480 000 FCFA</span>
+            </div>
+
+            <div style="border-top: var(--border-light); margin: var(--space-3) 0; padding-top: var(--space-3);">
+              <div class="tarif-row">
+                <span class="tarif-row__label">Pièces</span>
+                <span class="tarif-row__value" style="color: var(--color-warning);">4/5</span>
+              </div>
+              <div class="tarif-row">
+                <span class="tarif-row__label">Date d'effet souhaitée</span>
+                <span class="tarif-row__value">01/04/2026</span>
+              </div>
+              <div class="tarif-row">
+                <span class="tarif-row__label">Fin de carence</span>
+                <span class="tarif-row__value" style="color: var(--color-warning);">30/06/2026</span>
+              </div>
+            </div>
+
+            <div style="margin-top: var(--space-4); padding: var(--space-3); background: rgba(255,255,255,0.6); border-radius: var(--radius-md); font-size: 11px; color: var(--gray-600); line-height: 1.5;">
+              Prime ALPHA 1 individuel : 25 000 FCFA/mois. Conjoint : +30%. Enfant (-21 ans) : +15%. Plafond annuel global : 25 000 000 FCFA. Délai de carence : 90 jours.
+            </div>
+
+            <div style="margin-top: var(--space-4); display: flex; align-items: center; gap: var(--space-2); font-size: var(--text-xs); color: var(--gray-500);">
+              <svg width="14" height="14" viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="7" cy="7" r="5.5"/><path d="M7 4v3.5h2.5"/></svg>
+              Commerciale : Diallo Aminata
+            </div>
+          </div>
+
+          <!-- === SIDEBAR GROUPE === -->
+          <div id="sidebar-groupe" class="tarif-preview animate-in" style="position: sticky; top: 88px; display: none;">
+            <div class="tarif-preview__title">Résumé souscription groupe</div>
+
+            <div class="tarif-row">
+              <span class="tarif-row__label">Formule</span>
+              <span class="tarif-row__value">ALPHA 2</span>
+            </div>
+            <div class="tarif-row">
+              <span class="tarif-row__label">Nature</span>
+              <span class="tarif-row__value"><span class="badge badge--info" style="font-size: 11px;">Groupe (Entreprise)</span></span>
+            </div>
+            <div class="tarif-row">
+              <span class="tarif-row__label">Entreprise</span>
+              <span class="tarif-row__value" style="font-weight: 600;">AERIA CI</span>
+            </div>
+
+            <div style="border-top: var(--border-light); margin: var(--space-3) 0; padding-top: var(--space-3);">
+              <div class="tarif-row">
+                <span class="tarif-row__label">Employés (adhérents)</span>
+                <span class="tarif-row__value">85</span>
+              </div>
+              <div class="tarif-row">
+                <span class="tarif-row__label">Conjoints déclarés</span>
+                <span class="tarif-row__value">78</span>
+              </div>
+              <div class="tarif-row">
+                <span class="tarif-row__label">Enfants déclarés</span>
+                <span class="tarif-row__value">84</span>
+              </div>
+              <div class="tarif-row">
+                <span class="tarif-row__label">Total bénéficiaires</span>
+                <span class="tarif-row__value" style="font-weight: 700;">247 personnes</span>
+              </div>
+            </div>
+
+            <div style="border-top: var(--border-light); margin: var(--space-3) 0; padding-top: var(--space-3);">
+              <div class="tarif-row">
+                <span class="tarif-row__label">Prime base (×85)</span>
+                <span class="tarif-row__value">1 853 000 FCFA</span>
+              </div>
+              <div class="tarif-row">
+                <span class="tarif-row__label">Conjoints (+30% ×78)</span>
+                <span class="tarif-row__value">+ 509 600 FCFA</span>
+              </div>
+              <div class="tarif-row">
+                <span class="tarif-row__label">Enfants (+15% ×84)</span>
+                <span class="tarif-row__value">+ 274 400 FCFA</span>
+              </div>
+              <div class="tarif-row">
+                <span class="tarif-row__label">Frais de dossier</span>
+                <span class="tarif-row__value">75 000 FCFA (unique)</span>
+              </div>
+            </div>
+
+            <div class="tarif-row total">
+              <span class="tarif-row__label" style="font-weight: 600;">Prime mensuelle</span>
+              <span class="tarif-row__value">2 637 000 FCFA</span>
+            </div>
+            <div class="tarif-row" style="padding-top: 0;">
+              <span class="tarif-row__label">Prime annuelle</span>
+              <span class="tarif-row__value" style="font-size: var(--text-md); color: var(--iips-primary);">31 644 000 FCFA</span>
+            </div>
+
+            <div style="border-top: var(--border-light); margin: var(--space-3) 0; padding-top: var(--space-3);">
+              <div class="tarif-row">
+                <span class="tarif-row__label">Pièces</span>
+                <span class="tarif-row__value" style="color: var(--color-warning);">5/6</span>
+              </div>
+              <div class="tarif-row">
+                <span class="tarif-row__label">Date d'effet souhaitée</span>
+                <span class="tarif-row__value">01/04/2026</span>
+              </div>
+              <div class="tarif-row">
+                <span class="tarif-row__label">Durée du contrat</span>
+                <span class="tarif-row__value">12 mois</span>
+              </div>
+            </div>
+
+            <div style="margin-top: var(--space-4); padding: var(--space-3); background: rgba(255,255,255,0.6); border-radius: var(--radius-md); font-size: 11px; color: var(--gray-600); line-height: 1.5;">
+              Prime ALPHA 2 groupe : 21 800 FCFA/mois/employé. Conjoint : +30%. Enfant (-21 ans) : +15%. Plafond annuel entreprise : 500 000 000 FCFA. Pas de délai de carence pour les groupes.
+            </div>
+
+            <div style="margin-top: var(--space-4); display: flex; align-items: center; gap: var(--space-2); font-size: var(--text-xs); color: var(--gray-500);">
+              <svg width="14" height="14" viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="7" cy="7" r="5.5"/><path d="M7 4v3.5h2.5"/></svg>
+              Commercial : Bamba Seydou
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </main>
+</div>
+
+<script src="../../js/roles.js"></script>
+<script src="../../js/main.js"></script>
+<script src="../../js/main-v2.js"></script>
+<script>
+  var currentStep = 1;
+  var currentNature = 'individu';
+
+  /* ── Switch Nature (Individu / Groupe) ────────────────── */
+  function switchNature(value) {
+    currentNature = (value === 'groupe') ? 'groupe' : 'individu';
+    var isGroupe = currentNature === 'groupe';
+
+    // 1. Toggle step-1 internal panels
+    var s1i = document.getElementById('step-1-individu');
+    var s1g = document.getElementById('step-1-groupe');
+    if (s1i) s1i.style.display = isGroupe ? 'none' : '';
+    if (s1g) s1g.style.display = isGroupe ? '' : 'none';
+
+    // 2. Update workflow step labels
+    var steps = document.querySelectorAll('.workflow-step');
+    var labelsIndiv = ['Adhérent', 'Ayants droit', 'Pièces justificatives', 'Récapitulatif'];
+    var labelsGroupe = ['Entreprise', 'Adhérents', 'Pièces justificatives', 'Récapitulatif'];
+    var labels = isGroupe ? labelsGroupe : labelsIndiv;
+    steps.forEach(function(ws, idx) {
+      var lbl = ws.querySelector('.workflow-step__label');
+      if (lbl && labels[idx]) lbl.textContent = labels[idx];
+    });
+
+    // 3. Update alert box text
+    var alertText = document.getElementById('nature-alert-text');
+    if (alertText) {
+      if (isGroupe) {
+        alertText.innerHTML = 'Souscription <strong>groupe ALPHA 2</strong> : l\'entreprise souscrit pour l\'ensemble de ses employés. Prime de base : <strong>21 800 FCFA/mois/employé</strong>. Conjoint : +30%. Enfants : +15%. <strong>Pas de délai de carence</strong> pour les groupes.';
+      } else {
+        alertText.innerHTML = 'Souscription <strong>individuelle ALPHA 1</strong> : l\'adhérent principal peut inscrire jusqu\'à <strong>1 conjoint</strong> et <strong>4 enfants</strong> de moins de 21 ans. Prime de base : <strong>25 000 FCFA/mois</strong>. Délai de carence : <strong>3 mois</strong>.';
+      }
+    }
+
+    // 4. Update step1 next button text
+    var nextBtn = document.getElementById('step1-next-btn');
+    if (nextBtn) {
+      nextBtn.textContent = isGroupe ? 'Continuer vers les adhérents →' : 'Continuer vers les ayants droit →';
+    }
+
+    // 5. Toggle sidebar panels
+    var sideI = document.getElementById('sidebar-individu');
+    var sideG = document.getElementById('sidebar-groupe');
+    if (sideI) sideI.style.display = isGroupe ? 'none' : '';
+    if (sideG) sideG.style.display = isGroupe ? '' : 'none';
+
+    // 6. Update page subtitle
+    var subtitle = document.querySelector('.page-header__subtitle');
+    if (subtitle) {
+      subtitle.textContent = isGroupe
+        ? 'Enregistrer une nouvelle demande d\'adhésion — Groupe AERIA CI'
+        : 'Enregistrer une nouvelle demande d\'adhésion — Simulation Konaté Fatoumata';
+    }
+
+    // 7. Reset to step 1
+    goToStep(1);
+  }
+
+  /* ── Navigate Wizard Steps (nature-aware) ─────────────── */
+  function goToStep(step) {
+    var isGroupe = currentNature === 'groupe';
+
+    // Hide ALL wizard panels
+    document.querySelectorAll('.wizard-panel').forEach(function(p) { p.style.display = 'none'; });
+
+    // Determine the target panel id
+    var targetId;
+    if (step === 1) {
+      targetId = 'step-1'; // step-1 always visible, internal panels handle nature
+    } else {
+      targetId = isGroupe ? 'step-' + step + '-groupe' : 'step-' + step;
+    }
+
+    var target = document.getElementById(targetId);
+    if (target) {
+      target.style.display = 'block';
+      target.querySelectorAll('.animate-in').forEach(function(el) {
+        el.style.animation = 'none';
+        el.offsetHeight;
+        el.style.animation = '';
+      });
+    }
+
+    // Step 1 is always shown (it contains both nature panels internally)
+    if (step === 1) {
+      // already handled above
+    }
+
+    // Update workflow step indicators
+    document.querySelectorAll('.workflow-step').forEach(function(ws) {
+      var wsStep = parseInt(ws.dataset.step);
+      ws.classList.remove('active', 'completed');
+      if (wsStep === step) ws.classList.add('active');
+      else if (wsStep < step) ws.classList.add('completed');
+    });
+
+    // Update connector lines
+    for (var i = 1; i <= 3; i++) {
+      var line = document.getElementById('line-' + i + '-' + (i + 1));
+      if (line) line.classList.toggle('completed', i < step);
+    }
+
+    currentStep = step;
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  }
+
+  // --- Company Search Autocomplete ---
+  initCompanySearch({
+    containerId: 'company-search-souscription',
+    companies: DEMO_COMPANIES,
+    fieldMap: {
+      denomination: '#sub-denomination',
+      rccm: '#sub-rccm',
+      dgi: '#sub-dgi',
+      secteur: '#sub-secteur',
+      effectif: '#sub-effectif',
+      nomDG: '#sub-nom-dg',
+      telDG: '#sub-tel-dg',
+      responsableRH: '#sub-responsable-rh',
+      emailRH: '#sub-email-rh',
+      telRH: '#sub-tel-rh',
+      adresse: '#sub-adresse',
+      ville: '#sub-ville'
+    },
+    summaryMap: {
+      raisonSociale: '#sub-summary-raison',
+      rccm: '#sub-summary-rccm',
+      secteur: '#sub-summary-secteur',
+      nomDG: '#sub-summary-dg',
+      responsableRH: '#sub-summary-rh',
+      adresse: '#sub-summary-adresse'
+    }
+  });
+
+  // Pre-select default company (AERIA CI)
+  (function() {
+    var container = document.getElementById('company-search-souscription');
+    if (!container || !container._companies) return;
+    var company = container._companies.find(function(c) { return c.raisonSociale === 'AERIA CI'; });
+    if (company) container._selectCompany(company);
+  })();
+
+  // --- Person Search Autocomplete (Individuel) ---
+  initPersonSearch({
+    containerId: 'person-search-souscription',
+    persons: DEMO_PERSONS,
+    fieldMap: {
+      civilite: '#sub-ind-civilite',
+      nom: '#sub-ind-nom',
+      prenom: '#sub-ind-prenom',
+      dateNaissance: '#sub-ind-date-naissance',
+      lieuNaissance: '#sub-ind-lieu-naissance',
+      genre: '#sub-ind-genre',
+      cni: '#sub-ind-cni',
+      nationalite: '#sub-ind-nationalite',
+      profession: '#sub-ind-profession',
+      situationMatrimoniale: '#sub-ind-situation',
+      telephone: '#sub-ind-telephone',
+      email: '#sub-ind-email',
+      adresse: '#sub-ind-adresse',
+      ville: '#sub-ind-ville'
+    },
+    summaryMap: {
+      nomComplet: '#sub-ind-summary-nom',
+      cni: '#sub-ind-summary-cni',
+      profession: '#sub-ind-summary-profession',
+      telephone: '#sub-ind-summary-tel',
+      adresse: '#sub-ind-summary-adresse'
+    }
+  });
+
+  // Pre-select default person (Konaté Fatoumata)
+  (function() {
+    var container = document.getElementById('person-search-souscription');
+    if (!container || !container._persons) return;
+    var person = container._persons.find(function(p) { return p.nom === 'Konaté'; });
+    if (person) container._selectPerson(person);
+  })();
+</script>
+</body>
+</html>

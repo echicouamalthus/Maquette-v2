@@ -1,0 +1,668 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>IIPS v2 — Hospitalisation</title>
+  <link rel="stylesheet" href="../../css/design-system.css">
+  <link rel="stylesheet" href="../../css/design-system-v2.css">
+  <link rel="stylesheet" href="../../css/prestataire.css">
+  <script src="../../js/icons.js"></script>
+  <style>
+    .sejour-card { background: #fff; border-radius: 12px; border: 1px solid #e2e8f0; padding: 16px; margin-bottom: 10px; }
+    .sejour-card__header { display: flex; justify-content: space-between; align-items: center; margin-bottom: 10px; }
+    .sejour-card__ref { font-weight: 700; color: #1B4965; font-size: 14px; }
+    .sejour-card__grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 10px; font-size: 13px; }
+    .sejour-card__grid label { font-size: 11px; color: #94a3b8; display: block; margin-bottom: 2px; }
+    .sejour-card__footer { display: flex; justify-content: space-between; align-items: center; margin-top: 12px; padding-top: 12px; border-top: 1px solid #f1f5f9; }
+
+    .chambre-badge { padding: 4px 10px; border-radius: 6px; font-size: 11px; font-weight: 600; }
+    .chambre-badge--individuelle { background: #E0E7FF; color: #3730A3; }
+    .chambre-badge--double { background: #DBEAFE; color: #1E40AF; }
+    .chambre-badge--vip { background: #FEF3C7; color: #92400E; }
+    .chambre-badge--rea { background: #FEE2E2; color: #991B1B; }
+
+    .occupation-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 12px; margin-bottom: 24px; }
+    .occupation-item { background: #fff; border-radius: 12px; border: 1px solid #e2e8f0; padding: 16px; text-align: center; }
+    .occupation-item__label { font-size: 12px; color: #64748b; margin-bottom: 6px; }
+    .occupation-item__bar { background: #f1f5f9; border-radius: 6px; height: 8px; margin-bottom: 6px; overflow: hidden; }
+    .occupation-item__bar-fill { height: 100%; border-radius: 6px; }
+    .occupation-item__text { font-size: 13px; font-weight: 600; color: #1a1a2e; }
+
+    .acte-list { display: flex; flex-wrap: wrap; gap: 6px; margin-top: 8px; }
+    .acte-tag { padding: 3px 10px; border-radius: 6px; font-size: 11px; font-weight: 500; background: #F1F5F9; color: #475569; }
+
+    @media (max-width: 768px) {
+      .sejour-card__grid { grid-template-columns: repeat(2, 1fr); }
+      .occupation-grid { grid-template-columns: repeat(2, 1fr); }
+    }
+  </style>
+</head>
+<body>
+<div class="app-shell">
+  <!-- ===== SIDEBAR v2 ===== -->
+  <aside class="sidebar">
+
+    <div class="sidebar__brand">
+      <img src="../../iips.jpg" alt="IIPS" class="sidebar__brand-logo">
+      <div class="sidebar__brand-text">
+        <span class="sidebar__brand-name">Espace Clinique</span>
+        <span class="sidebar__brand-tagline">IIPS Santé</span>
+      </div>
+    </div>
+
+    <nav class="sidebar__nav">
+      <div class="nav-section">
+        <details open>
+          <summary class="nav-section__title">
+            Principal
+            <svg class="section-chevron" width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2"><polyline points="4,6 8,10 12,6"/></svg>
+          </summary>
+          <a href="dashboard.html" class="nav-item" data-module="dashboard" data-tooltip="Tableau de bord">
+            <span class="nav-item__icon"><svg width="20" height="20" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="2" y="2" width="7" height="8"/><rect x="11" y="2" width="7" height="5"/><rect x="2" y="12" width="7" height="6"/><rect x="11" y="9" width="7" height="9"/></svg></span>
+            <span class="nav-item__label">Tableau de bord</span>
+          </a>
+        </details>
+      </div>
+
+      <div class="nav-section">
+        <details open>
+          <summary class="nav-section__title">
+            Prestations
+            <svg class="section-chevron" width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2"><polyline points="4,6 8,10 12,6"/></svg>
+          </summary>
+          <a href="saisie-prestation.html" class="nav-item" data-module="saisie-prestation" data-tooltip="Saisie prestation">
+            <span class="nav-item__icon"><svg width="20" height="20" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 2H5a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7l-5-5z"/><path d="M12 2v5h5"/><line x1="7" y1="10" x2="13" y2="10"/><line x1="7" y1="13" x2="11" y2="13"/></svg></span>
+            <span class="nav-item__label">Saisie prestation</span>
+          </a>
+          <a href="prestations.html" class="nav-item" data-module="prestations" data-tooltip="Suivi prestations">
+            <span class="nav-item__icon"><svg width="20" height="20" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M9 5H7a2 2 0 00-2 2v8a2 2 0 002 2h6a2 2 0 002-2V7a2 2 0 00-2-2h-2"/><path d="M9 5a2 2 0 002-2h0a2 2 0 012 2v0H9z"/><line x1="8" y1="10" x2="12" y2="10"/><line x1="8" y1="13" x2="12" y2="13"/></svg></span>
+            <span class="nav-item__label">Suivi prestations</span>
+          </a>
+          <a href="historique-patient.html" class="nav-item" data-module="historique-patient" data-tooltip="Historique patient">
+            <span class="nav-item__icon"><svg width="20" height="20" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="10" cy="7" r="4"/><path d="M3 18v-1a7 7 0 0114 0v1"/></svg></span>
+            <span class="nav-item__label">Historique patient</span>
+          </a>
+          <a href="analyses.html" class="nav-item" data-module="analyses" data-tooltip="Analyses">
+            <span class="nav-item__icon"><svg width="20" height="20" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M8 2v4a2 2 0 01-2 2H2"/><path d="M6 18V8l6-6v4a2 2 0 002 2h4v10a2 2 0 01-2 2H8a2 2 0 01-2-2z"/><line x1="10" y1="12" x2="14" y2="12"/><line x1="10" y1="15" x2="14" y2="15"/></svg></span>
+            <span class="nav-item__label">Analyses</span>
+          </a>
+          <a href="hospitalisation.html" class="nav-item active" data-module="hospitalisation" data-tooltip="Hospitalisation">
+            <span class="nav-item__icon"><svg width="20" height="20" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="2" y="4" width="16" height="14"/><line x1="10" y1="4" x2="10" y2="18"/><line x1="2" y1="11" x2="18" y2="11"/><path d="M8 1v3"/><path d="M12 1v3"/></svg></span>
+            <span class="nav-item__label">Hospitalisation</span>
+          </a>
+        </details>
+      </div>
+
+      <div class="nav-section">
+        <details open>
+          <summary class="nav-section__title">
+            Finance
+            <svg class="section-chevron" width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2"><polyline points="4,6 8,10 12,6"/></svg>
+          </summary>
+          <a href="bordereaux.html" class="nav-item" data-module="bordereaux" data-tooltip="Bordereaux">
+            <span class="nav-item__icon"><svg width="20" height="20" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="2" y="4" width="16" height="12"/><line x1="2" y1="9" x2="18" y2="9"/></svg></span>
+            <span class="nav-item__label">Bordereaux</span>
+          </a>
+          <a href="suivi-paiements.html" class="nav-item" data-module="suivi-paiements" data-tooltip="Suivi paiements">
+            <span class="nav-item__icon"><svg width="20" height="20" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.8"><line x1="10" y1="2" x2="10" y2="18"/><path d="M14 5H8.5a2.5 2.5 0 000 5h3a2.5 2.5 0 010 5H6"/></svg></span>
+            <span class="nav-item__label">Suivi paiements</span>
+          </a>
+        </details>
+      </div>
+
+      <div class="nav-section">
+        <details open>
+          <summary class="nav-section__title">
+            Support
+            <svg class="section-chevron" width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2"><polyline points="4,6 8,10 12,6"/></svg>
+          </summary>
+          <a href="demandes.html" class="nav-item" data-module="demandes" data-tooltip="Demandes">
+            <span class="nav-item__icon"><svg width="20" height="20" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="4" y="2" width="12" height="16"/><line x1="8" y1="6" x2="12" y2="6"/><line x1="8" y1="10" x2="12" y2="10"/><line x1="8" y1="14" x2="10" y2="14"/></svg></span>
+            <span class="nav-item__label">Demandes</span>
+          </a>
+          <a href="reclamations.html" class="nav-item" data-module="reclamations" data-tooltip="Réclamations">
+            <span class="nav-item__icon"><svg width="20" height="20" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M17 10c0 4.4-3.6 8-8 8a8 8 0 01-4-.9L2 18l1-3.1A7.9 7.9 0 012 10c0-4.4 3.6-8 8-8a8 8 0 018 8z"/><line x1="10" y1="7" x2="10" y2="11"/><circle cx="10" cy="14" r="0.5" fill="currentColor"/></svg></span>
+            <span class="nav-item__label">Réclamations</span>
+          </a>
+          <a href="messagerie.html" class="nav-item" data-module="messagerie" data-tooltip="Messagerie">
+            <span class="nav-item__icon"><svg width="20" height="20" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M18 13a2 2 0 01-2 2H6l-4 4V4a2 2 0 012-2h12a2 2 0 012 2z"/></svg></span>
+            <span class="nav-item__label">Messagerie</span>
+          </a>
+        </details>
+      </div>
+
+    </nav>
+
+    <div class="sidebar__footer">
+      <div class="sidebar__user">
+        <div class="sidebar__user-avatar">JK</div>
+        <div class="sidebar__user-info">
+          <div class="sidebar__user-name">Dr. Kouassi Jean</div>
+          <div class="sidebar__user-role">Clinique Biaka Boda</div>
+        </div>
+        <a href="../login.html" style="color: rgba(255,255,255,0.4); margin-left: auto;" title="Déconnexion">
+          <svg width="18" height="18" viewBox="0 0 18 18" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><path d="M6 15H4a2 2 0 01-2-2V5a2 2 0 012-2h2"/><polyline points="11,13 15,9 11,5"/><line x1="15" y1="9" x2="6" y2="9"/></svg>
+        </a>
+      </div>
+    </div>
+  </aside>
+
+  <main class="app-main">
+    <!-- Top Bar v2 -->
+    <header class="topbar">
+      <button class="topbar__hamburger" onclick="toggleSidebar()" title="Menu">
+        <svg width="20" height="20" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><line x1="3" y1="5" x2="17" y2="5"/><line x1="3" y1="10" x2="17" y2="10"/><line x1="3" y1="15" x2="17" y2="15"/></svg>
+      </button>
+
+      <nav class="topbar__breadcrumb">
+        <a href="dashboard.html">Accueil</a>
+        <span class="separator">/</span>
+        <span class="current">Hospitalisation</span>
+      </nav>
+
+      <div class="topbar__search">
+        <span class="topbar__search-icon">
+          <svg width="18" height="18" viewBox="0 0 18 18" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><circle cx="8" cy="8" r="5.5"/><line x1="12.5" y1="12.5" x2="16" y2="16"/></svg>
+        </span>
+        <input type="text" class="topbar__search-input" placeholder="Rechercher un assuré, une prestation...">
+        <div class="topbar__search-shortcut">
+          <kbd>Ctrl</kbd><kbd>K</kbd>
+        </div>
+      </div>
+
+      <div class="topbar__actions">
+        <button class="topbar__action-btn" title="Aide">
+          <svg width="20" height="20" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="10" cy="10" r="8"/><path d="M7.5 7.5a2.5 2.5 0 014.87.83c0 1.67-2.5 2.5-2.5 2.5"/><circle cx="10" cy="14" r="0.5" fill="currentColor"/></svg>
+        </button>
+        <div class="topbar__notif-wrapper">
+          <button class="topbar__action-btn topbar__notif-toggle" title="Notifications">
+            <svg width="20" height="20" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M15 7a5 5 0 00-10 0c0 5-2.5 7-2.5 7h15S15 12 15 7z"/><path d="M8.5 17a1.5 1.5 0 003 0"/></svg>
+            <span class="badge-dot"></span>
+          </button>
+          <div class="topbar__notif-dropdown">
+            <div class="topbar__notif-header">
+              <h4>Notifications</h4>
+              <span class="topbar__notif-count">2 nouvelles</span>
+            </div>
+            <div class="topbar__notif-list">
+              <div class="topbar__notif-item unread">
+                <div class="topbar__notif-icon topbar__notif-icon--success"><svg width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2"><polyline points="3,8 6,11 13,4"/></svg></div>
+                <div class="topbar__notif-content">
+                  <div class="topbar__notif-title">Bordereau BRD-0042 validé — paiement en cours</div>
+                  <div class="topbar__notif-meta">Il y a 30 min</div>
+                </div>
+              </div>
+              <div class="topbar__notif-item unread">
+                <div class="topbar__notif-icon topbar__notif-icon--info"><svg width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2"><circle cx="8" cy="8" r="6"/><line x1="8" y1="5" x2="8" y2="8"/><line x1="8" y1="8" x2="10" y2="10"/></svg></div>
+                <div class="topbar__notif-content">
+                  <div class="topbar__notif-title">Prestation PRS-0423 en attente de validation IIPS</div>
+                  <div class="topbar__notif-meta">Il y a 2h</div>
+                </div>
+              </div>
+            </div>
+            <div class="topbar__notif-footer"><a href="#">Voir toutes les notifications</a></div>
+          </div>
+        </div>
+      </div>
+
+      <button class="topbar__user">
+        <div class="topbar__user-avatar-top">JK</div>
+        <span class="topbar__user-name-top">Dr. Kouassi</span>
+        <svg class="topbar__user-chevron" width="14" height="14" viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="2"><polyline points="4,5 7,8 10,5"/></svg>
+      </button>
+      <div class="topbar__user-dropdown">
+        <div class="topbar__user-dropdown__info">
+          <div class="topbar__user-dropdown__name">Dr. Kouassi Jean</div>
+          <div class="topbar__user-dropdown__role">Clinique Biaka Boda</div>
+        </div>
+        <a href="#" class="topbar__user-dropdown__item">
+          <svg width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="8" cy="5" r="3"/><path d="M2 15v-1a6 6 0 0112 0v1"/></svg>
+          Mon profil
+        </a>
+        <hr class="topbar__user-dropdown__divider">
+        <a href="../login.html" class="topbar__user-dropdown__item topbar__user-dropdown__item--danger">
+          <svg width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><path d="M5 13H3.5a1.5 1.5 0 01-1.5-1.5v-7A1.5 1.5 0 013.5 3H5"/><polyline points="9,11 13,8 9,5"/><line x1="13" y1="8" x2="5" y2="8"/></svg>
+          Déconnexion
+        </a>
+      </div>
+    </header>
+
+    <div class="app-content">
+      <div class="page-header animate-in">
+        <div class="page-header__top">
+          <div>
+            <h1 class="page-header__title">Hospitalisation</h1>
+            <p class="page-header__subtitle">Gestion des séjours, admissions et suivi des patients hospitalisés</p>
+          </div>
+          <div class="page-header__actions">
+            <button class="btn btn-primary btn-sm" onclick="openModal('modal-admission')">
+              <svg width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><line x1="8" y1="3" x2="8" y2="13"/><line x1="3" y1="8" x2="13" y2="8"/></svg>
+              Nouvelle admission
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <!-- KPIs -->
+      <div class="grid grid-4 mb-6">
+        <div class="card stat-card stat-card--presta stat-card--blue animate-in">
+          <div class="stat-card__value" data-count="18">18</div>
+          <div class="stat-card__label">Patients hospitalisés</div>
+        </div>
+        <div class="card stat-card stat-card--presta stat-card--warning animate-in">
+          <div class="stat-card__value" data-count="3">3</div>
+          <div class="stat-card__label">Admissions aujourd'hui</div>
+        </div>
+        <div class="card stat-card stat-card--presta stat-card--success animate-in">
+          <div class="stat-card__value">12.5M</div>
+          <div class="stat-card__label">Montant PEC en cours (FCFA)</div>
+        </div>
+        <div class="card stat-card stat-card--presta stat-card--purple animate-in">
+          <div class="stat-card__value">4.2j</div>
+          <div class="stat-card__label">Durée moyenne séjour</div>
+        </div>
+      </div>
+
+      <!-- Taux d'occupation -->
+      <div class="card mb-6 animate-in">
+        <div class="card__header">
+          <h3 class="card__title">Taux d'occupation par service</h3>
+        </div>
+        <div class="occupation-grid">
+          <div class="occupation-item">
+            <div class="occupation-item__label">Médecine générale</div>
+            <div class="occupation-item__bar"><div class="occupation-item__bar-fill" style="width:75%;background:#0B6E4F;"></div></div>
+            <div class="occupation-item__text">15/20 lits (75%)</div>
+          </div>
+          <div class="occupation-item">
+            <div class="occupation-item__label">Chirurgie</div>
+            <div class="occupation-item__bar"><div class="occupation-item__bar-fill" style="width:60%;background:#1B4965;"></div></div>
+            <div class="occupation-item__text">6/10 lits (60%)</div>
+          </div>
+          <div class="occupation-item">
+            <div class="occupation-item__label">Maternité</div>
+            <div class="occupation-item__bar"><div class="occupation-item__bar-fill" style="width:87%;background:#E8871E;"></div></div>
+            <div class="occupation-item__text">13/15 lits (87%)</div>
+          </div>
+          <div class="occupation-item">
+            <div class="occupation-item__label">Réanimation</div>
+            <div class="occupation-item__bar"><div class="occupation-item__bar-fill" style="width:40%;background:#DC2626;"></div></div>
+            <div class="occupation-item__text">2/5 lits (40%)</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Séjours en cours -->
+      <div class="card animate-in">
+        <div class="card__header">
+          <h3 class="card__title">Séjours en cours</h3>
+          <div class="tabs" style="overflow-x:auto;white-space:nowrap;">
+            <button class="tab active" data-tab="tous-sejours">Tous (18)</button>
+            <button class="tab" data-tab="medecine">Médecine (15)</button>
+            <button class="tab" data-tab="chirurgie-tab">Chirurgie (6)</button>
+            <button class="tab" data-tab="sortie-prevue">Sortie prévue (5)</button>
+          </div>
+        </div>
+
+        <div class="tab-panel active" data-tab-panel="tous-sejours">
+          <div class="sejour-card">
+            <div class="sejour-card__header">
+              <span class="sejour-card__ref">HSP-2026-0089</span>
+              <span class="chambre-badge chambre-badge--rea">Réanimation — Lit 2</span>
+            </div>
+            <div class="sejour-card__grid">
+              <div><label>Patient</label><strong>Koné Dramane</strong></div>
+              <div><label>N° Assuré</label><strong>IIPS-2026-001234</strong></div>
+              <div><label>Admission</label><strong>23/02/2026</strong></div>
+              <div><label>Médecin traitant</label><strong>Dr. Kouassi Jean</strong></div>
+            </div>
+            <div class="acte-list">
+              <span class="acte-tag">Insuffisance cardiaque</span>
+              <span class="acte-tag">Monitoring continu</span>
+              <span class="acte-tag">Perfusion IV</span>
+            </div>
+            <div class="sejour-card__footer">
+              <span style="font-size:12px;color:#64748b;">Jour 3 — PEC : 2 450 000 FCFA</span>
+              <div style="display:flex;gap:6px;">
+                <button class="btn btn-sm" onclick="showToast('Dossier médical HSP-2026-0089', 'info')">Dossier</button>
+                <button class="btn btn-sm btn-primary" onclick="showToast('Extension PEC demandée', 'success')">Demander extension PEC</button>
+              </div>
+            </div>
+          </div>
+
+          <div class="sejour-card">
+            <div class="sejour-card__header">
+              <span class="sejour-card__ref">HSP-2026-0088</span>
+              <span class="chambre-badge chambre-badge--individuelle">Ch. individuelle — 204</span>
+            </div>
+            <div class="sejour-card__grid">
+              <div><label>Patient</label><strong>Bamba Mariame</strong></div>
+              <div><label>N° Assuré</label><strong>IIPS-2026-003456</strong></div>
+              <div><label>Admission</label><strong>22/02/2026</strong></div>
+              <div><label>Médecin traitant</label><strong>Dr. Touré Mariam</strong></div>
+            </div>
+            <div class="acte-list">
+              <span class="acte-tag">Appendicectomie</span>
+              <span class="acte-tag">Post-opératoire J4</span>
+            </div>
+            <div class="sejour-card__footer">
+              <span style="font-size:12px;color:#64748b;">Jour 4 — PEC : 875 000 FCFA · Sortie prévue 27/02</span>
+              <div style="display:flex;gap:6px;">
+                <button class="btn btn-sm" onclick="showToast('Dossier médical HSP-2026-0088', 'info')">Dossier</button>
+                <button class="btn btn-sm btn-primary" onclick="showToast('Bulletin de sortie en préparation', 'info')">Préparer sortie</button>
+              </div>
+            </div>
+          </div>
+
+          <div class="sejour-card">
+            <div class="sejour-card__header">
+              <span class="sejour-card__ref">HSP-2026-0087</span>
+              <span class="chambre-badge chambre-badge--double">Ch. double — 112B</span>
+            </div>
+            <div class="sejour-card__grid">
+              <div><label>Patient</label><strong>Ouattara Seydou</strong></div>
+              <div><label>N° Assuré</label><strong>IIPS-2026-002156</strong></div>
+              <div><label>Admission</label><strong>24/02/2026</strong></div>
+              <div><label>Médecin traitant</label><strong>Dr. Yao Koffi</strong></div>
+            </div>
+            <div class="acte-list">
+              <span class="acte-tag">Paludisme grave</span>
+              <span class="acte-tag">Perfusion Artésunate</span>
+              <span class="acte-tag">Transfusion sanguine</span>
+            </div>
+            <div class="sejour-card__footer">
+              <span style="font-size:12px;color:#64748b;">Jour 2 — PEC : 520 000 FCFA</span>
+              <button class="btn btn-sm" onclick="showToast('Dossier médical HSP-2026-0087', 'info')">Dossier</button>
+            </div>
+          </div>
+
+          <div class="sejour-card">
+            <div class="sejour-card__header">
+              <span class="sejour-card__ref">HSP-2026-0086</span>
+              <span class="chambre-badge chambre-badge--vip">Suite VIP — 301</span>
+            </div>
+            <div class="sejour-card__grid">
+              <div><label>Patient</label><strong>Diabaté Souleymane</strong></div>
+              <div><label>N° Assuré</label><strong>IIPS-2026-000567</strong></div>
+              <div><label>Admission</label><strong>20/02/2026</strong></div>
+              <div><label>Médecin traitant</label><strong>Dr. Konaté Seydou</strong></div>
+            </div>
+            <div class="acte-list">
+              <span class="acte-tag">Prothèse totale hanche</span>
+              <span class="acte-tag">Rééducation J6</span>
+            </div>
+            <div class="sejour-card__footer">
+              <span style="font-size:12px;color:#64748b;">Jour 6 — PEC : 3 200 000 FCFA · Sortie prévue 01/03</span>
+              <div style="display:flex;gap:6px;">
+                <button class="btn btn-sm" onclick="showToast('Dossier médical HSP-2026-0086', 'info')">Dossier</button>
+                <button class="btn btn-sm btn-primary" onclick="showToast('Bulletin de sortie en préparation', 'info')">Préparer sortie</button>
+              </div>
+            </div>
+          </div>
+
+          <div class="sejour-card">
+            <div class="sejour-card__header">
+              <span class="sejour-card__ref">HSP-2026-0085</span>
+              <span class="chambre-badge chambre-badge--double">Ch. double — 108A</span>
+            </div>
+            <div class="sejour-card__grid">
+              <div><label>Patient</label><strong>Coulibaly Fatoumata</strong></div>
+              <div><label>N° Assuré</label><strong>IIPS-2026-004789</strong></div>
+              <div><label>Admission</label><strong>25/02/2026</strong></div>
+              <div><label>Médecin traitant</label><strong>Dr. Touré Mariam</strong></div>
+            </div>
+            <div class="acte-list">
+              <span class="acte-tag">Accouchement prévu</span>
+              <span class="acte-tag">Suivi grossesse</span>
+            </div>
+            <div class="sejour-card__footer">
+              <span style="font-size:12px;color:#64748b;">Jour 1 — PEC : 180 000 FCFA</span>
+              <button class="btn btn-sm" onclick="showToast('Dossier médical HSP-2026-0085', 'info')">Dossier</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="tab-panel" data-tab-panel="medecine">
+          <div class="sejour-card">
+            <div class="sejour-card__header">
+              <span class="sejour-card__ref">HSP-2026-0087</span>
+              <span class="chambre-badge chambre-badge--double">Ch. double — 112B</span>
+            </div>
+            <div class="sejour-card__grid">
+              <div><label>Patient</label><strong>Ouattara Seydou</strong></div>
+              <div><label>N° Assuré</label><strong>IIPS-2026-002156</strong></div>
+              <div><label>Admission</label><strong>24/02/2026</strong></div>
+              <div><label>Diagnostic</label><strong>Paludisme grave</strong></div>
+            </div>
+            <div class="sejour-card__footer">
+              <span style="font-size:12px;color:#64748b;">Jour 2 — PEC : 520 000 FCFA</span>
+              <button class="btn btn-sm" onclick="showToast('Dossier médical', 'info')">Dossier</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="tab-panel" data-tab-panel="chirurgie-tab">
+          <div class="sejour-card">
+            <div class="sejour-card__header">
+              <span class="sejour-card__ref">HSP-2026-0088</span>
+              <span class="chambre-badge chambre-badge--individuelle">Ch. individuelle — 204</span>
+            </div>
+            <div class="sejour-card__grid">
+              <div><label>Patient</label><strong>Bamba Mariame</strong></div>
+              <div><label>N° Assuré</label><strong>IIPS-2026-003456</strong></div>
+              <div><label>Intervention</label><strong>Appendicectomie</strong></div>
+              <div><label>Post-op</label><strong>J4 — Évolution favorable</strong></div>
+            </div>
+            <div class="sejour-card__footer">
+              <span style="font-size:12px;color:#64748b;">Sortie prévue 27/02/2026</span>
+              <button class="btn btn-sm btn-primary" onclick="showToast('Bulletin de sortie en préparation', 'info')">Préparer sortie</button>
+            </div>
+          </div>
+          <div class="sejour-card">
+            <div class="sejour-card__header">
+              <span class="sejour-card__ref">HSP-2026-0086</span>
+              <span class="chambre-badge chambre-badge--vip">Suite VIP — 301</span>
+            </div>
+            <div class="sejour-card__grid">
+              <div><label>Patient</label><strong>Diabaté Souleymane</strong></div>
+              <div><label>N° Assuré</label><strong>IIPS-2026-000567</strong></div>
+              <div><label>Intervention</label><strong>Prothèse totale hanche</strong></div>
+              <div><label>Post-op</label><strong>J6 — Rééducation</strong></div>
+            </div>
+            <div class="sejour-card__footer">
+              <span style="font-size:12px;color:#64748b;">Sortie prévue 01/03/2026</span>
+              <button class="btn btn-sm btn-primary" onclick="showToast('Bulletin de sortie en préparation', 'info')">Préparer sortie</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="tab-panel" data-tab-panel="sortie-prevue">
+          <div class="table-container">
+            <table class="table">
+              <thead>
+                <tr>
+                  <th>Réf.</th>
+                  <th>Patient</th>
+                  <th>Service</th>
+                  <th>Admission</th>
+                  <th>Sortie prévue</th>
+                  <th>PEC totale</th>
+                  <th>Actions</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td><strong>HSP-2026-0088</strong></td>
+                  <td>Bamba Mariame</td>
+                  <td>Chirurgie</td>
+                  <td>22/02/2026</td>
+                  <td>27/02/2026</td>
+                  <td>875 000 FCFA</td>
+                  <td><button class="btn btn-sm btn-primary" onclick="showToast('Bulletin de sortie en préparation', 'info')">Sortie</button></td>
+                </tr>
+                <tr>
+                  <td><strong>HSP-2026-0086</strong></td>
+                  <td>Diabaté Souleymane</td>
+                  <td>Chirurgie VIP</td>
+                  <td>20/02/2026</td>
+                  <td>01/03/2026</td>
+                  <td>3 200 000 FCFA</td>
+                  <td><button class="btn btn-sm btn-primary" onclick="showToast('Bulletin de sortie en préparation', 'info')">Sortie</button></td>
+                </tr>
+                <tr>
+                  <td><strong>HSP-2026-0083</strong></td>
+                  <td>Yao Patricia</td>
+                  <td>Maternité</td>
+                  <td>24/02/2026</td>
+                  <td>27/02/2026</td>
+                  <td>350 000 FCFA</td>
+                  <td><button class="btn btn-sm btn-primary" onclick="showToast('Bulletin de sortie en préparation', 'info')">Sortie</button></td>
+                </tr>
+                <tr>
+                  <td><strong>HSP-2026-0081</strong></td>
+                  <td>Traoré Issa</td>
+                  <td>Médecine</td>
+                  <td>21/02/2026</td>
+                  <td>28/02/2026</td>
+                  <td>680 000 FCFA</td>
+                  <td><button class="btn btn-sm btn-primary" onclick="showToast('Bulletin de sortie en préparation', 'info')">Sortie</button></td>
+                </tr>
+                <tr>
+                  <td><strong>HSP-2026-0079</strong></td>
+                  <td>N'Guessan Aka</td>
+                  <td>Médecine</td>
+                  <td>19/02/2026</td>
+                  <td>26/02/2026</td>
+                  <td>420 000 FCFA</td>
+                  <td><button class="btn btn-sm btn-primary" onclick="showToast('Bulletin de sortie en préparation', 'info')">Sortie</button></td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+
+      <!-- Historique sorties -->
+      <div class="card mt-6 animate-in">
+        <div class="card__header">
+          <h3 class="card__title">Dernières sorties</h3>
+        </div>
+        <div class="table-container">
+          <table class="table">
+            <thead>
+              <tr>
+                <th>Réf.</th>
+                <th>Patient</th>
+                <th>Service</th>
+                <th>Durée séjour</th>
+                <th>PEC totale</th>
+                <th>Date sortie</th>
+                <th>Statut</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><strong>HSP-2026-0078</strong></td>
+                <td>Konan Aya</td>
+                <td>Maternité</td>
+                <td>3 jours</td>
+                <td>450 000 FCFA</td>
+                <td>24/02/2026</td>
+                <td><span class="badge badge--success">Facturé</span></td>
+              </tr>
+              <tr>
+                <td><strong>HSP-2026-0075</strong></td>
+                <td>Soro Ibrahim</td>
+                <td>Chirurgie</td>
+                <td>5 jours</td>
+                <td>1 250 000 FCFA</td>
+                <td>22/02/2026</td>
+                <td><span class="badge badge--success">Facturé</span></td>
+              </tr>
+              <tr>
+                <td><strong>HSP-2026-0072</strong></td>
+                <td>Dembélé Moussa</td>
+                <td>Médecine</td>
+                <td>7 jours</td>
+                <td>890 000 FCFA</td>
+                <td>20/02/2026</td>
+                <td><span class="badge badge--success">Facturé</span></td>
+              </tr>
+              <tr>
+                <td><strong>HSP-2026-0070</strong></td>
+                <td>Aka Marie-Claire</td>
+                <td>Réanimation</td>
+                <td>4 jours</td>
+                <td>2 800 000 FCFA</td>
+                <td>18/02/2026</td>
+                <td><span class="badge badge--success">Facturé</span></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+  </main>
+</div>
+
+<!-- Modal Nouvelle admission -->
+<div class="modal-backdrop" id="modal-admission">
+  <div class="modal" style="max-width:600px;">
+    <div class="modal__header">
+      <h3 class="modal__title">Nouvelle admission</h3>
+      <button class="modal__close" onclick="closeModal('modal-admission')">&times;</button>
+    </div>
+    <div class="modal__body">
+      <div class="form-group">
+        <label class="form-label">N° carte assuré</label>
+        <input type="text" class="form-input" placeholder="IIPS-2026-XXXXXX">
+      </div>
+      <div style="display:grid;grid-template-columns:1fr 1fr;gap:16px;">
+        <div class="form-group">
+          <label class="form-label">Service</label>
+          <select class="form-select">
+            <option>Médecine générale</option>
+            <option>Chirurgie</option>
+            <option>Maternité</option>
+            <option>Réanimation</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label class="form-label">Type chambre</label>
+          <select class="form-select">
+            <option>Chambre double</option>
+            <option>Chambre individuelle</option>
+            <option>Suite VIP</option>
+          </select>
+        </div>
+      </div>
+      <div class="form-group">
+        <label class="form-label">Médecin traitant</label>
+        <select class="form-select">
+          <option>Dr. Kouassi Jean</option>
+          <option>Dr. Touré Mariam</option>
+          <option>Dr. Yao Koffi</option>
+          <option>Dr. Konaté Seydou</option>
+        </select>
+      </div>
+      <div class="form-group">
+        <label class="form-label">Motif d'hospitalisation</label>
+        <textarea class="form-input" rows="3" placeholder="Diagnostic principal et motif..."></textarea>
+      </div>
+      <div class="form-group">
+        <label class="form-label">N° PEC (si existant)</label>
+        <input type="text" class="form-input" placeholder="PEC-2026-XXXXX">
+      </div>
+    </div>
+    <div class="modal__footer">
+      <button class="btn" onclick="closeModal('modal-admission')">Annuler</button>
+      <button class="btn btn-primary" onclick="closeModal('modal-admission'); showToast('Admission enregistrée — Réf: HSP-2026-0090', 'success')">Admettre</button>
+    </div>
+  </div>
+</div>
+
+<script src="../../js/main.js"></script>
+<script src="../../js/main-v2.js"></script>
+</body>
+</html>

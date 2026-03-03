@@ -1,0 +1,306 @@
+/* ============================================================
+   IIPS — Module CRM (G-040 a G-047)
+   Styles specifiques aux pages CRM & Prospection
+   ============================================================ */
+
+/* ---- Prospect Header ---- */
+.prospect-header {
+  display: flex;
+  align-items: flex-start;
+  gap: var(--space-6);
+  padding: var(--space-6);
+}
+
+.prospect-header__avatar {
+  width: 56px;
+  height: 56px;
+  border-radius: var(--radius-lg);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 800;
+  font-size: 18px;
+  color: #fff;
+  flex-shrink: 0;
+}
+
+.prospect-header__main {
+  flex: 1;
+  min-width: 0;
+}
+
+.prospect-header__ref {
+  font-family: var(--font-mono);
+  font-size: var(--text-sm);
+  font-weight: 600;
+  color: var(--iips-primary);
+  letter-spacing: 0.02em;
+}
+
+.prospect-header__name {
+  font-family: var(--font-display);
+  font-size: var(--text-xl);
+  font-weight: 700;
+  color: var(--gray-900);
+  margin-top: 2px;
+}
+
+.prospect-header__meta {
+  display: flex;
+  align-items: center;
+  gap: var(--space-3);
+  margin-top: var(--space-2);
+  font-size: var(--text-xs);
+  color: var(--gray-500);
+  flex-wrap: wrap;
+}
+
+.prospect-header__meta .separator {
+  color: var(--gray-300);
+}
+
+.prospect-header__actions {
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+  flex-shrink: 0;
+  flex-wrap: wrap;
+}
+
+/* ---- Contact Card ---- */
+.contact-card {
+  display: flex;
+  align-items: flex-start;
+  gap: var(--space-4);
+  padding: var(--space-5);
+  border: 1px solid var(--gray-100);
+  border-radius: var(--radius-lg);
+  background: var(--gray-50);
+}
+
+.contact-card__avatar {
+  width: 44px;
+  height: 44px;
+  border-radius: var(--radius-full);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+  font-size: 14px;
+  color: #fff;
+  flex-shrink: 0;
+}
+
+.contact-card__info {
+  flex: 1;
+  min-width: 0;
+}
+
+.contact-card__name {
+  font-weight: 600;
+  font-size: var(--text-sm);
+  color: var(--gray-900);
+}
+
+.contact-card__role {
+  font-size: var(--text-xs);
+  color: var(--gray-500);
+  margin-top: 1px;
+}
+
+.contact-card__details {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2);
+  margin-top: var(--space-3);
+}
+
+.contact-card__detail {
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+  font-size: var(--text-xs);
+  color: var(--gray-600);
+}
+
+.contact-card__detail svg {
+  color: var(--gray-400);
+  flex-shrink: 0;
+}
+
+.contact-card__actions {
+  display: flex;
+  gap: var(--space-2);
+  margin-top: var(--space-3);
+}
+
+/* ---- Interaction Timeline ---- */
+.interaction-entry {
+  display: flex;
+  gap: var(--space-4);
+  padding: var(--space-4) 0;
+  border-bottom: 1px solid var(--gray-100);
+}
+
+.interaction-entry:last-child {
+  border-bottom: none;
+}
+
+.interaction-entry__icon {
+  width: 36px;
+  height: 36px;
+  border-radius: var(--radius-full);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.interaction-entry__icon--call {
+  background: var(--color-info-light);
+  color: var(--color-info-dark);
+}
+
+.interaction-entry__icon--email {
+  background: var(--iips-primary-50);
+  color: var(--iips-primary-dark);
+}
+
+.interaction-entry__icon--meeting {
+  background: var(--color-success-light);
+  color: var(--color-success-dark);
+}
+
+.interaction-entry__icon--note {
+  background: var(--color-warning-light);
+  color: var(--color-warning-dark);
+}
+
+.interaction-entry__content {
+  flex: 1;
+  min-width: 0;
+}
+
+.interaction-entry__header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--space-3);
+}
+
+.interaction-entry__title {
+  font-weight: 600;
+  font-size: var(--text-sm);
+  color: var(--gray-900);
+}
+
+.interaction-entry__date {
+  font-size: var(--text-xs);
+  color: var(--gray-400);
+  flex-shrink: 0;
+}
+
+.interaction-entry__desc {
+  font-size: var(--text-xs);
+  color: var(--gray-600);
+  margin-top: 4px;
+  line-height: 1.5;
+}
+
+.interaction-entry__user {
+  font-size: 11px;
+  color: var(--gray-400);
+  margin-top: var(--space-2);
+}
+
+/* ---- Note Entry ---- */
+.note-entry {
+  padding: var(--space-4);
+  border: 1px solid var(--gray-100);
+  border-radius: var(--radius-md);
+  background: #fff;
+}
+
+.note-entry + .note-entry {
+  margin-top: var(--space-3);
+}
+
+.note-entry__header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--space-3);
+}
+
+.note-entry__author {
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+}
+
+.note-entry__author-avatar {
+  width: 28px;
+  height: 28px;
+  border-radius: var(--radius-full);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+  font-size: 10px;
+  color: #fff;
+  flex-shrink: 0;
+}
+
+.note-entry__author-name {
+  font-weight: 600;
+  font-size: var(--text-xs);
+  color: var(--gray-800);
+}
+
+.note-entry__date {
+  font-size: 11px;
+  color: var(--gray-400);
+}
+
+.note-entry__body {
+  font-size: var(--text-xs);
+  color: var(--gray-600);
+  line-height: 1.6;
+  margin-top: var(--space-3);
+}
+
+/* ---- Source Tag ---- */
+.source-tag {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  padding: 2px 8px;
+  border-radius: var(--radius-full);
+  font-size: 11px;
+  font-weight: 600;
+}
+
+.source-tag--salon {
+  background: var(--color-info-light);
+  color: var(--color-info-dark);
+}
+
+.source-tag--recommandation {
+  background: var(--color-success-light);
+  color: var(--color-success-dark);
+}
+
+.source-tag--prospection {
+  background: var(--color-warning-light);
+  color: var(--color-warning-dark);
+}
+
+.source-tag--appel {
+  background: var(--iips-primary-50);
+  color: var(--iips-primary-dark);
+}
+
+.source-tag--email {
+  background: var(--gray-100);
+  color: var(--gray-600);
+}

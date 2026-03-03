@@ -1,0 +1,653 @@
+/* ============================================================
+   IIPS — Module Sinistres
+   Styles spécifiques aux pages G-030 à G-035
+   ============================================================ */
+
+/* --- Acte Type Tags (Liste sinistres G-030) --- */
+.acte-tag {
+  display: inline-block;
+  padding: 2px 8px;
+  border-radius: var(--radius-full);
+  font-size: 11px;
+  font-weight: 600;
+}
+.acte-tag.consultation { background: #DBEAFE; color: #1D4ED8; }
+.acte-tag.pharmacie { background: #D1FAE5; color: #065F46; }
+.acte-tag.hospitalisation { background: #FEE2E2; color: #991B1B; }
+.acte-tag.analyse { background: #EDE9FE; color: #6D28D9; }
+.acte-tag.optique { background: #FEF3C7; color: #92400E; }
+.acte-tag.radio { background: #E0E7FF; color: #3730A3; }
+.acte-tag.dentaire { background: #FCE7F3; color: #9D174D; }
+.acte-tag.maternite { background: #CCFBF1; color: #115E59; }
+
+/* --- Fraud Alert Banner --- */
+.fraud-alert {
+  display: flex;
+  align-items: center;
+  gap: var(--space-3);
+  padding: var(--space-3) var(--space-5);
+  background: linear-gradient(90deg, #FEF2F2 0%, #FFF1F2 100%);
+  border: 1px solid #FECACA;
+  border-radius: var(--radius-md);
+  margin-bottom: var(--space-6);
+  font-size: var(--text-sm);
+}
+.fraud-alert__icon {
+  width: 36px;
+  height: 36px;
+  border-radius: var(--radius-full);
+  background: #FEE2E2;
+  color: var(--color-error);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+.fraud-alert__text {
+  color: var(--color-error-dark);
+  flex: 1;
+}
+.fraud-alert__text strong {
+  color: var(--color-error);
+}
+.fraud-alert__action {
+  flex-shrink: 0;
+}
+.fraud-alert__close {
+  width: 28px;
+  height: 28px;
+  border-radius: var(--radius-sm);
+  border: none;
+  background: transparent;
+  color: var(--color-error);
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0.6;
+  transition: opacity var(--transition-fast);
+}
+.fraud-alert__close:hover { opacity: 1; }
+
+/* --- Amount Cell (Part assureur / Part assuré) --- */
+.amount-cell {
+  font-family: var(--font-mono);
+  font-weight: 600;
+  font-size: 13px;
+}
+.amount-cell .part-assureur { color: var(--iips-primary); }
+.amount-cell .part-assure { color: var(--gray-400); font-size: 11px; font-weight: 400; }
+
+/* --- Fraud Row Highlight --- */
+.table tbody tr.fraud-row {
+  background: #FFF5F5;
+}
+.table tbody tr.fraud-row:hover {
+  background: #FEF2F2;
+}
+.fraud-label {
+  font-size: 10px;
+  color: var(--color-error);
+  font-weight: 600;
+  margin-top: 2px;
+  display: flex;
+  align-items: center;
+  gap: 3px;
+}
+
+
+/* ============================================================
+   DÉTAIL SINISTRE (G-032)
+   ============================================================ */
+
+/* --- Claim Header --- */
+.claim-header {
+  display: flex;
+  align-items: flex-start;
+  gap: var(--space-6);
+  padding: var(--space-6);
+}
+.claim-header__main { flex: 1; }
+.claim-header__ref {
+  font-family: var(--font-mono);
+  font-size: var(--text-xl);
+  font-weight: 700;
+  color: var(--iips-primary);
+}
+.claim-header__meta {
+  display: flex;
+  align-items: center;
+  gap: var(--space-3);
+  margin-top: var(--space-2);
+  flex-wrap: wrap;
+}
+.claim-header__actions {
+  display: flex;
+  gap: var(--space-2);
+  flex-shrink: 0;
+}
+
+/* --- Medical Info Card --- */
+.medical-info {
+  background: var(--gray-50);
+  border: var(--border-light);
+  border-radius: var(--radius-lg);
+  padding: var(--space-5);
+}
+.medical-info__title {
+  font-size: var(--text-sm);
+  font-weight: 600;
+  color: var(--gray-900);
+  margin-bottom: var(--space-4);
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+}
+.medical-info__title svg { color: var(--iips-primary); }
+.medical-info__grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: var(--space-4);
+}
+
+/* --- Remboursement Card --- */
+.remboursement-card {
+  border: 2px solid var(--iips-primary-200);
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+}
+.remboursement-card__header {
+  background: linear-gradient(135deg, var(--iips-primary-50) 0%, #EBF5FF 100%);
+  padding: var(--space-4) var(--space-5);
+  border-bottom: 2px solid var(--iips-primary-200);
+}
+.remboursement-card__header-title {
+  font-size: var(--text-sm);
+  font-weight: 600;
+  color: var(--iips-primary-dark);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+.remboursement-card__body {
+  padding: var(--space-5);
+}
+.remboursement-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: var(--space-2) 0;
+  font-size: var(--text-sm);
+}
+.remboursement-row__label { color: var(--gray-600); }
+.remboursement-row__value { font-weight: 600; color: var(--gray-900); font-family: var(--font-mono); }
+.remboursement-row.total {
+  border-top: 2px solid var(--iips-primary-200);
+  margin-top: var(--space-3);
+  padding-top: var(--space-3);
+}
+.remboursement-row.total .remboursement-row__value {
+  font-size: var(--text-lg);
+  color: var(--iips-primary);
+  font-family: var(--font-display);
+  font-weight: 700;
+}
+
+/* --- Prescription Items (ordonnance) --- */
+.prescription-list {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2);
+}
+.prescription-item {
+  display: flex;
+  align-items: center;
+  gap: var(--space-3);
+  padding: var(--space-3) var(--space-4);
+  background: var(--gray-50);
+  border-radius: var(--radius-md);
+  font-size: var(--text-sm);
+}
+.prescription-item__name {
+  font-weight: 500;
+  color: var(--gray-900);
+  flex: 1;
+}
+.prescription-item__qty {
+  color: var(--gray-500);
+  font-size: var(--text-xs);
+}
+.prescription-item__amount {
+  font-family: var(--font-mono);
+  font-weight: 600;
+  color: var(--gray-900);
+}
+
+/* --- Sinistre Status Badge (extended) --- */
+.sinistre-status {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 4px 12px;
+  border-radius: var(--radius-full);
+  font-size: 11px;
+  font-weight: 600;
+}
+.sinistre-status--attente { background: var(--color-warning-light); color: var(--color-warning-dark); }
+.sinistre-status--controle { background: #DBEAFE; color: #1D4ED8; }
+.sinistre-status--valide { background: var(--color-success-light); color: var(--color-success-dark); }
+.sinistre-status--rejete { background: var(--color-error-light); color: var(--color-error-dark); }
+.sinistre-status--paye { background: var(--iips-primary-50); color: var(--iips-primary-dark); }
+.sinistre-status--fraude { background: #FEE2E2; color: #991B1B; }
+
+/* --- Contrôle Médical Card --- */
+.controle-card {
+  background: #F0F9FF;
+  border: 1px solid #BAE6FD;
+  border-radius: var(--radius-lg);
+  padding: var(--space-5);
+}
+.controle-card__title {
+  font-size: var(--text-sm);
+  font-weight: 600;
+  color: #0C4A6E;
+  margin-bottom: var(--space-3);
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+}
+.controle-card__checklist {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2);
+}
+.controle-check {
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+  font-size: var(--text-sm);
+  color: var(--gray-700);
+}
+.controle-check__icon {
+  width: 20px;
+  height: 20px;
+  border-radius: var(--radius-full);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+.controle-check__icon--ok { background: var(--color-success-light); color: var(--color-success); }
+.controle-check__icon--warn { background: var(--color-warning-light); color: var(--color-warning); }
+.controle-check__icon--fail { background: var(--color-error-light); color: var(--color-error); }
+
+
+/* ============================================================
+   NOUVEAU SINISTRE — WIZARD (G-031)
+   ============================================================ */
+
+/* --- Assuré Search Card --- */
+.assure-search {
+  position: relative;
+}
+.assure-search__results {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  right: 0;
+  background: #fff;
+  border: var(--border-medium);
+  border-radius: var(--radius-md);
+  box-shadow: var(--shadow-lg);
+  z-index: var(--z-dropdown);
+  margin-top: var(--space-1);
+}
+.assure-search__item {
+  display: flex;
+  align-items: center;
+  gap: var(--space-3);
+  padding: var(--space-3) var(--space-4);
+  cursor: pointer;
+  transition: background var(--transition-fast);
+}
+.assure-search__item:hover {
+  background: var(--gray-50);
+}
+
+/* --- Assuré Selected Card --- */
+.assure-selected {
+  display: flex;
+  align-items: center;
+  gap: var(--space-4);
+  padding: var(--space-4) var(--space-5);
+  background: var(--iips-primary-50);
+  border: 2px solid var(--iips-primary-200);
+  border-radius: var(--radius-lg);
+}
+.assure-selected__avatar {
+  width: 48px;
+  height: 48px;
+  border-radius: var(--radius-full);
+  background: var(--iips-primary);
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+  font-size: var(--text-md);
+  flex-shrink: 0;
+}
+.assure-selected__info { flex: 1; }
+.assure-selected__name {
+  font-size: var(--text-md);
+  font-weight: 600;
+  color: var(--gray-900);
+}
+.assure-selected__meta {
+  font-size: var(--text-xs);
+  color: var(--gray-500);
+  margin-top: 2px;
+}
+.assure-selected__change {
+  font-size: var(--text-xs);
+  color: var(--iips-primary);
+  font-weight: 600;
+  cursor: pointer;
+  background: none;
+  border: none;
+  text-decoration: underline;
+}
+
+/* --- Garantie Restante Bar --- */
+.garantie-bar {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-1);
+  margin-bottom: var(--space-3);
+}
+.garantie-bar__header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: var(--text-xs);
+}
+.garantie-bar__name { color: var(--gray-700); font-weight: 500; }
+.garantie-bar__values { color: var(--gray-500); }
+.garantie-bar__values strong { color: var(--gray-900); }
+.garantie-bar__track {
+  height: 6px;
+  background: var(--gray-100);
+  border-radius: var(--radius-full);
+  overflow: hidden;
+}
+.garantie-bar__fill {
+  height: 100%;
+  border-radius: var(--radius-full);
+  transition: width var(--transition-slow);
+}
+.garantie-bar__fill--ok { background: var(--color-success); }
+.garantie-bar__fill--warn { background: var(--color-warning); }
+.garantie-bar__fill--danger { background: var(--color-error); }
+
+/* --- Prestation Detail Row --- */
+.prestation-detail {
+  display: grid;
+  grid-template-columns: 1fr 1fr auto;
+  gap: var(--space-3);
+  align-items: center;
+  padding: var(--space-3) var(--space-4);
+  background: var(--gray-50);
+  border-radius: var(--radius-md);
+  margin-bottom: var(--space-2);
+  font-size: var(--text-sm);
+}
+.prestation-detail__label { font-weight: 500; color: var(--gray-800); }
+.prestation-detail__amount {
+  font-family: var(--font-mono);
+  font-weight: 600;
+  color: var(--gray-900);
+  text-align: right;
+}
+
+/* --- Reuse shared styles from Production --- */
+/* status-tabs, row-actions, form-section, tarif-preview, alert-box,
+   form-footer, info-grid, info-block, diff-row, tab-panel, timeline,
+   doc-row, doc-checklist, workflow-stepper, validation-actions
+   are in production.css and souscription.css */
+
+
+/* ============================================================
+   RÉGULARISATION SINISTRE (G-033)
+   ============================================================ */
+
+/* --- Amount Compare (Ancien vs Nouveau montant) --- */
+.amount-compare {
+  display: flex;
+  align-items: center;
+  gap: var(--space-4);
+  padding: var(--space-4) var(--space-5);
+  background: var(--gray-50);
+  border: var(--border-light);
+  border-radius: var(--radius-lg);
+}
+.amount-compare__old {
+  flex: 1;
+  text-align: center;
+}
+.amount-compare__new {
+  flex: 1;
+  text-align: center;
+}
+.amount-compare__old .amount-compare__label,
+.amount-compare__new .amount-compare__label {
+  font-size: var(--text-xs);
+  color: var(--gray-500);
+  margin-bottom: var(--space-1);
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+.amount-compare__old .amount-compare__value {
+  font-family: var(--font-mono);
+  font-size: var(--text-lg);
+  font-weight: 700;
+  color: var(--gray-400);
+  text-decoration: line-through;
+}
+.amount-compare__new .amount-compare__value {
+  font-family: var(--font-mono);
+  font-size: var(--text-lg);
+  font-weight: 700;
+  color: var(--iips-primary);
+}
+.amount-compare__arrow {
+  width: 36px;
+  height: 36px;
+  border-radius: var(--radius-full);
+  background: var(--iips-primary-50);
+  color: var(--iips-primary);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+/* --- Regularisation Timeline --- */
+.regul-timeline {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+  padding-left: var(--space-4);
+  border-left: 2px solid var(--gray-200);
+}
+.regul-timeline__item {
+  position: relative;
+  padding: var(--space-3) 0 var(--space-3) var(--space-4);
+}
+.regul-timeline__item::before {
+  content: '';
+  position: absolute;
+  left: calc(-1 * var(--space-4) - 5px);
+  top: var(--space-4);
+  width: 8px;
+  height: 8px;
+  border-radius: var(--radius-full);
+  background: var(--gray-300);
+  border: 2px solid #fff;
+}
+.regul-timeline__item:first-child::before {
+  background: var(--iips-primary);
+}
+.regul-timeline__date {
+  font-size: var(--text-xs);
+  color: var(--gray-400);
+  margin-bottom: 2px;
+}
+.regul-timeline__text {
+  font-size: var(--text-sm);
+  color: var(--gray-700);
+  line-height: 1.5;
+}
+
+/* --- Upload Zone (reused pattern) --- */
+.sinistre-upload {
+  border: 2px dashed var(--gray-200);
+  border-radius: var(--radius-lg);
+  padding: var(--space-5);
+  text-align: center;
+  cursor: pointer;
+  transition: border-color var(--transition-fast), background var(--transition-fast);
+}
+.sinistre-upload:hover {
+  border-color: var(--iips-primary-200);
+  background: var(--iips-primary-50);
+}
+.sinistre-upload__icon {
+  color: var(--gray-400);
+  margin-bottom: var(--space-2);
+}
+.sinistre-upload__text {
+  font-size: var(--text-sm);
+  color: var(--gray-500);
+}
+
+
+/* ============================================================
+   ALERTES FRAUDES (G-034)
+   ============================================================ */
+
+/* --- Fraud Card --- */
+.fraud-card {
+  background: #fff;
+  border: var(--border-light);
+  border-radius: var(--radius-lg);
+  padding: var(--space-5);
+  margin-bottom: var(--space-4);
+  transition: box-shadow var(--transition-fast);
+}
+.fraud-card:hover {
+  box-shadow: var(--shadow-md);
+}
+.fraud-card__header {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  margin-bottom: var(--space-3);
+}
+.fraud-card__ref {
+  font-family: var(--font-mono);
+  font-size: var(--text-sm);
+  font-weight: 600;
+  color: var(--color-error);
+}
+.fraud-card__type {
+  font-size: 10px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--color-error);
+  margin-top: 2px;
+}
+.fraud-card__title {
+  font-size: var(--text-md);
+  font-weight: 600;
+  color: var(--gray-900);
+  margin-top: var(--space-1);
+}
+.fraud-card__body {
+  font-size: var(--text-sm);
+  color: var(--gray-600);
+  line-height: 1.6;
+  margin-bottom: var(--space-4);
+}
+.fraud-card__indicators {
+  display: flex;
+  gap: var(--space-4);
+  margin-bottom: var(--space-4);
+  padding: var(--space-3) var(--space-4);
+  background: #FFF5F5;
+  border-radius: var(--radius-md);
+}
+.fraud-card__footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-top: var(--space-3);
+  border-top: var(--border-light);
+}
+.fraud-card__meta {
+  font-size: var(--text-xs);
+  color: var(--gray-400);
+}
+
+/* --- Fraud Risk Badge --- */
+.fraud-risk-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  padding: 3px 10px;
+  border-radius: var(--radius-full);
+  font-size: 11px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+.fraud-risk-badge--high {
+  background: #FEE2E2;
+  color: #991B1B;
+}
+.fraud-risk-badge--medium {
+  background: #FEF3C7;
+  color: #92400E;
+}
+.fraud-risk-badge--low {
+  background: #FEF9C3;
+  color: #854D0E;
+}
+
+/* --- Fraud Indicator --- */
+.fraud-indicator {
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+  flex: 1;
+}
+.fraud-indicator__icon {
+  width: 28px;
+  height: 28px;
+  border-radius: var(--radius-full);
+  background: #FEE2E2;
+  color: var(--color-error);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+.fraud-indicator__label {
+  font-size: 11px;
+  color: var(--gray-500);
+}
+.fraud-indicator__value {
+  font-size: var(--text-sm);
+  font-weight: 600;
+  color: var(--gray-900);
+}

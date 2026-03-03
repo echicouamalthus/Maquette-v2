@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>IIPS &#8212; Ma Carte</title>
+  <link rel="stylesheet" href="../../css/design-system.css">
+  <link rel="stylesheet" href="../../css/assure.css">
+  <link rel="stylesheet" href="../../css/assure-v2.css">
+  <script src="../../js/icons.js"></script>
+</head>
+<body class="assure-v2">
+<div class="consumer-portal">
+
+  <!-- ===== TOP NAVIGATION ===== -->
+  <nav class="portal-topnav">
+    <a href="dashboard.html" class="portal-topnav__logo">
+      <div class="portal-topnav__logo-icon">IP</div>
+      IIPS Sant&#233;
+    </a>
+    <div class="portal-topnav__links">
+      <a href="dashboard.html" class="portal-topnav__link">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3" y="3" width="7" height="7"/><rect x="14" y="3" width="7" height="7"/><rect x="3" y="14" width="7" height="7"/><rect x="14" y="14" width="7" height="7"/></svg>
+        Accueil
+      </a>
+      <a href="carte.html" class="portal-topnav__link active">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3" y="3" width="18" height="18"/><line x1="3" y1="9" x2="21" y2="9"/><line x1="9" y1="3" x2="9" y2="9"/></svg>
+        Carte
+      </a>
+      <a href="garanties.html" class="portal-topnav__link">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+        Garanties
+      </a>
+      <a href="prestations.html" class="portal-topnav__link">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z"/><polyline points="14,2 14,8 20,8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/></svg>
+        Prestations
+      </a>
+      <a href="reseau.html" class="portal-topnav__link">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
+        R&#233;seau
+      </a>
+      <a href="messages.html" class="portal-topnav__link">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M21 15a2 2 0 01-2 2H7l-4 4V5a2 2 0 012-2h14a2 2 0 012 2z"/></svg>
+        Messages
+      </a>
+      <a href="profil.html" class="portal-topnav__link">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="12" cy="7" r="4"/><path d="M5.5 21v-1a6.5 6.5 0 0113 0v1"/></svg>
+        Profil
+      </a>
+    </div>
+    <div class="portal-topnav__actions">
+      <button class="portal-topnav__hamburger" onclick="toggleMobileNav()">
+        <svg width="20" height="20" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.8"><line x1="3" y1="5" x2="17" y2="5"/><line x1="3" y1="10" x2="17" y2="10"/><line x1="3" y1="15" x2="17" y2="15"/></svg>
+      </button>
+      <button class="portal-topnav__notif">
+        <svg width="18" height="18" viewBox="0 0 18 18" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M13 7a4 4 0 00-8 0c0 4-2 5.5-2 5.5h12S13 11 13 7z"/><path d="M7.5 14a1.5 1.5 0 003 0"/></svg>
+        <span class="dot"></span>
+      </button>
+      <a href="profil.html" class="portal-topnav__user">
+        <div class="portal-topnav__avatar">FB</div>
+        <span class="portal-topnav__username">Fatoumata</span>
+      </a>
+    </div>
+  </nav>
+
+  <!-- ===== MOBILE DRAWER ===== -->
+  <div class="portal-mobile-nav" id="mobile-nav">
+    <div class="portal-mobile-nav__overlay" onclick="toggleMobileNav()"></div>
+    <div class="portal-mobile-nav__panel">
+      <div class="portal-mobile-nav__header">
+        <span style="font-family:var(--font-display);font-weight:800;font-size:var(--text-md);">IIPS Sant&#233;</span>
+        <button class="portal-mobile-nav__close" onclick="toggleMobileNav()">
+          <svg width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4l8 8M12 4l-8 8"/></svg>
+        </button>
+      </div>
+      <a href="dashboard.html" class="portal-mobile-nav__link">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3" y="3" width="7" height="7"/><rect x="14" y="3" width="7" height="7"/><rect x="3" y="14" width="7" height="7"/><rect x="14" y="14" width="7" height="7"/></svg>
+        Accueil
+      </a>
+      <a href="carte.html" class="portal-mobile-nav__link active">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3" y="3" width="18" height="18"/><line x1="3" y1="9" x2="21" y2="9"/><line x1="9" y1="3" x2="9" y2="9"/></svg>
+        Ma carte
+      </a>
+      <a href="garanties.html" class="portal-mobile-nav__link">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+        Mes garanties
+      </a>
+      <a href="prestations.html" class="portal-mobile-nav__link">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z"/><polyline points="14,2 14,8 20,8"/></svg>
+        Mes prestations
+      </a>
+      <a href="reseau.html" class="portal-mobile-nav__link">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
+        R&#233;seau de soins
+      </a>
+      <a href="messages.html" class="portal-mobile-nav__link">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M21 15a2 2 0 01-2 2H7l-4 4V5a2 2 0 012-2h14a2 2 0 012 2z"/></svg>
+        Messages
+      </a>
+      <a href="remboursement.html" class="portal-mobile-nav__link">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><line x1="12" y1="1" x2="12" y2="23"/><path d="M17 5H9.5a3.5 3.5 0 000 7h5a3.5 3.5 0 010 7H6"/></svg>
+        Remboursement
+      </a>
+      <a href="reclamation.html" class="portal-mobile-nav__link">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M10.29 3.86L1.82 18a2 2 0 001.71 3h16.94a2 2 0 001.71-3L13.71 3.86a2 2 0 00-3.42 0z"/><line x1="12" y1="9" x2="12" y2="13"/><line x1="12" y1="17" x2="12.01" y2="17"/></svg>
+        R&#233;clamation
+      </a>
+      <a href="profil.html" class="portal-mobile-nav__link">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="12" cy="7" r="4"/><path d="M5.5 21v-1a6.5 6.5 0 0113 0v1"/></svg>
+        Mon profil
+      </a>
+    </div>
+  </div>
+
+  <!-- ===== PAGE CONTENT ===== -->
+  <div class="consumer-portal__body">
+    <div class="consumer-portal__container">
+
+      <!-- Page Header -->
+      <div class="portal-page-header">
+        <div class="portal-page-header__breadcrumb">
+          <a href="dashboard.html">Accueil</a> / <span>Ma carte</span>
+        </div>
+        <h1 class="portal-page-header__title">Ma carte</h1>
+      </div>
+
+      <!-- 2-column layout -->
+      <div class="portal-carte-layout">
+
+        <!-- LEFT: Card + Actions -->
+        <div>
+          <!-- Digital Card Expanded -->
+          <div class="digital-card digital-card--expanded" style="max-width:480px;margin:0 auto;">
+            <div class="digital-card__header">
+              <div class="digital-card__logo">IIPS Sant&#233;</div>
+              <span class="digital-card__type">ALPHA 2</span>
+            </div>
+            <div class="digital-card__number">IIPS-2026-004521</div>
+            <div class="digital-card__info">
+              <div class="digital-card__info-left">
+                <div class="digital-card__field"><label>Titulaire</label><p>Fatoumata Bamba</p></div>
+                <div class="digital-card__field"><label>Validit&#233;</label><p>01/01/2026 &#8212; 31/12/2026</p></div>
+                <div class="digital-card__field"><label>Soci&#233;t&#233;</label><p>SOTRA CI</p></div>
+              </div>
+              <div class="digital-card__qr">
+                <svg width="56" height="56" viewBox="0 0 36 36"><rect x="2" y="2" width="12" height="12" fill="#111"/><rect x="22" y="2" width="12" height="12" fill="#111"/><rect x="2" y="22" width="12" height="12" fill="#111"/><rect x="6" y="6" width="4" height="4" fill="#fff"/><rect x="26" y="6" width="4" height="4" fill="#fff"/><rect x="6" y="26" width="4" height="4" fill="#fff"/><rect x="18" y="18" width="4" height="4" fill="#111"/><rect x="24" y="24" width="4" height="4" fill="#111"/><rect x="18" y="26" width="4" height="4" fill="#111"/><rect x="28" y="18" width="4" height="4" fill="#111"/></svg>
+              </div>
+            </div>
+          </div>
+
+          <!-- Actions -->
+          <div class="carte-actions" style="margin-top:var(--space-5);max-width:480px;margin-left:auto;margin-right:auto;">
+            <button class="carte-action-btn" onclick="showToast('Carte partag&#233;e avec succ&#232;s', 'success')">
+              <div class="carte-action-btn__icon">
+                <svg width="20" height="20" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M15 7l-5-5-5 5"/><path d="M10 2v11"/><path d="M3 13v3a2 2 0 002 2h10a2 2 0 002-2v-3"/></svg>
+              </div>
+              <span class="carte-action-btn__label">Partager</span>
+            </button>
+            <button class="carte-action-btn" onclick="showToast('T&#233;l&#233;chargement en cours...', 'info')">
+              <div class="carte-action-btn__icon">
+                <svg width="20" height="20" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M3 13v3a2 2 0 002 2h10a2 2 0 002-2v-3"/><path d="M10 3v11"/><path d="M5 10l5 5 5-5"/></svg>
+              </div>
+              <span class="carte-action-btn__label">T&#233;l&#233;charger</span>
+            </button>
+            <button class="carte-action-btn" onclick="openModal('modal-qr')">
+              <div class="carte-action-btn__icon">
+                <svg width="20" height="20" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="2" y="2" width="6" height="6"/><rect x="12" y="2" width="6" height="6"/><rect x="2" y="12" width="6" height="6"/><rect x="14" y="14" width="4" height="4"/></svg>
+              </div>
+              <span class="carte-action-btn__label">QR plein &#233;cran</span>
+            </button>
+          </div>
+        </div>
+
+        <!-- RIGHT: Contract Info + Beneficiaries -->
+        <div>
+          <!-- Contract Info -->
+          <div class="portal-card" style="margin-bottom:var(--space-5);">
+            <h3 style="font-size:var(--text-md);font-weight:700;color:var(--gray-900);margin:0 0 var(--space-4) 0;">Informations du contrat</h3>
+            <div class="carte-info-section">
+              <div class="carte-info-row">
+                <span class="carte-info-row__label">Soci&#233;t&#233;</span>
+                <span class="carte-info-row__value">SOTRA CI</span>
+              </div>
+              <div class="carte-info-row">
+                <span class="carte-info-row__label">N&#176; Contrat</span>
+                <span class="carte-info-row__value" style="font-family:var(--font-mono);">CTR-2026-0089</span>
+              </div>
+              <div class="carte-info-row">
+                <span class="carte-info-row__label">Formule</span>
+                <span class="carte-info-row__value">ALPHA 2 &#8212; Groupe</span>
+              </div>
+              <div class="carte-info-row">
+                <span class="carte-info-row__label">Validit&#233;</span>
+                <span class="carte-info-row__value">01/01/2026 &#8212; 31/12/2026</span>
+              </div>
+              <div class="carte-info-row">
+                <span class="carte-info-row__label">Statut</span>
+                <span class="badge badge--success">Actif</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Beneficiaries -->
+          <div class="portal-card">
+            <h3 style="font-size:var(--text-md);font-weight:700;color:var(--gray-900);margin:0 0 var(--space-4) 0;">B&#233;n&#233;ficiaires</h3>
+            <div class="carte-beneficiaire">
+              <div class="carte-beneficiaire__avatar" style="background:var(--iips-primary);">FB</div>
+              <div class="carte-beneficiaire__info">
+                <div class="carte-beneficiaire__name">Fatoumata Bamba</div>
+                <div class="carte-beneficiaire__role">Titulaire</div>
+              </div>
+              <span class="badge badge--success">Actif</span>
+            </div>
+            <div class="carte-beneficiaire">
+              <div class="carte-beneficiaire__avatar" style="background:var(--iips-secondary);">IB</div>
+              <div class="carte-beneficiaire__info">
+                <div class="carte-beneficiaire__name">Ibrahim Bamba</div>
+                <div class="carte-beneficiaire__role">Conjoint</div>
+              </div>
+              <span class="badge badge--success">Actif</span>
+            </div>
+            <div class="carte-beneficiaire">
+              <div class="carte-beneficiaire__avatar" style="background:var(--iips-accent);">AB</div>
+              <div class="carte-beneficiaire__info">
+                <div class="carte-beneficiaire__name">Aya Bamba</div>
+                <div class="carte-beneficiaire__role">Enfant</div>
+              </div>
+              <span class="badge badge--success">Actif</span>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </div>
+
+  <!-- Modal QR plein &#233;cran -->
+  <div class="modal-backdrop" id="modal-qr">
+    <div class="modal" style="max-width:340px;text-align:center;">
+      <div class="modal__header">
+        <h3 class="modal__title">QR Code</h3>
+        <button class="modal__close" onclick="closeModal('modal-qr')">&times;</button>
+      </div>
+      <div class="modal__body" style="padding:var(--space-8);">
+        <svg width="200" height="200" viewBox="0 0 36 36" style="margin:0 auto;display:block;"><rect x="2" y="2" width="12" height="12" fill="#111"/><rect x="22" y="2" width="12" height="12" fill="#111"/><rect x="2" y="22" width="12" height="12" fill="#111"/><rect x="6" y="6" width="4" height="4" fill="#fff"/><rect x="26" y="6" width="4" height="4" fill="#fff"/><rect x="6" y="26" width="4" height="4" fill="#fff"/><rect x="18" y="18" width="4" height="4" fill="#111"/><rect x="24" y="24" width="4" height="4" fill="#111"/><rect x="18" y="26" width="4" height="4" fill="#111"/><rect x="28" y="18" width="4" height="4" fill="#111"/></svg>
+        <p style="margin-top:var(--space-4);font-family:var(--font-mono);font-size:var(--text-md);font-weight:600;color:var(--gray-900);">IIPS-2026-004521</p>
+        <p style="font-size:var(--text-sm);color:var(--gray-500);margin-top:var(--space-1);">Fatoumata Bamba &#183; ALPHA 2</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- ===== FOOTER ===== -->
+  <footer class="portal-footer">
+    <div class="portal-footer__inner">
+      <span class="portal-footer__brand">IIPS Sant&#233;</span>
+      <div class="portal-footer__links">
+        <a href="#">Conditions d'utilisation</a>
+        <a href="#">Politique de confidentialit&#233;</a>
+        <a href="#">Aide &amp; FAQ</a>
+      </div>
+      <span class="portal-footer__copy">&#169; 2026 KOJIT Systems &#8212; C&#244;te d'Ivoire</span>
+    </div>
+  </footer>
+
+  <!-- ===== BOTTOM NAV (Mobile) ===== -->
+  <div class="portal-bottom-nav">
+    <a class="portal-bottom-nav__item" href="dashboard.html">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="7" height="7"/><rect x="14" y="3" width="7" height="7"/><rect x="3" y="14" width="7" height="7"/><rect x="14" y="14" width="7" height="7"/></svg>
+      Accueil
+    </a>
+    <a class="portal-bottom-nav__item active" href="carte.html">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18"/><line x1="3" y1="9" x2="21" y2="9"/><line x1="9" y1="3" x2="9" y2="9"/></svg>
+      Carte
+    </a>
+    <a class="portal-bottom-nav__item" href="reseau.html">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s-8-4.5-8-11.8A8 8 0 0112 2a8 8 0 018 8.2c0 7.3-8 11.8-8 11.8z"/><circle cx="12" cy="10" r="3"/></svg>
+      Réseau
+    </a>
+    <a class="portal-bottom-nav__item" href="messages.html">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15a2 2 0 01-2 2H7l-4 4V5a2 2 0 012-2h14a2 2 0 012 2z"/></svg>
+      Messages
+    </a>
+    <a class="portal-bottom-nav__item" href="profil.html">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="7" r="4"/><path d="M5.5 21v-1a6.5 6.5 0 0113 0v1"/></svg>
+      Profil
+    </a>
+  </div>
+
+</div>
+
+<script src="../../js/main.js"></script>
+<script>
+function toggleMobileNav() {
+  document.getElementById('mobile-nav').classList.toggle('active');
+}
+</script>
+</body>
+</html>

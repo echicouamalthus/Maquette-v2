@@ -1,0 +1,595 @@
+/* ============================================================
+   IIPS — Espace Médecin-conseil
+   Thème Teal (#0891B2) — Portail de validation médicale
+   ============================================================ */
+
+/* === 1. Sidebar Theme === */
+.sidebar {
+  background: linear-gradient(180deg, #164E63 0%, #0E3A4B 100%);
+}
+.sidebar__brand-logo {
+  background: #0891B2;
+}
+.nav-item.active {
+  background: rgba(8, 145, 178, 0.15);
+  color: #06B6D4;
+  border-left-color: #06B6D4;
+}
+.nav-item:hover:not(.active) {
+  background: rgba(8, 145, 178, 0.08);
+}
+.nav-item__badge {
+  background: #0891B2;
+}
+
+/* === 2. Button Primary Override === */
+.btn-primary {
+  background: #0891B2;
+  border-color: #0891B2;
+}
+.btn-primary:hover {
+  background: #0E7490;
+  border-color: #0E7490;
+}
+
+/* === 3. Stat Card Variant === */
+.stat-card--medecin .stat-card__icon,
+.stat-card--teal .stat-card__icon {
+  background: #ECFEFF;
+  color: #0891B2;
+}
+
+/* === 4. Status Tabs Override === */
+.status-tab.active {
+  color: #0891B2;
+  border-bottom-color: #0891B2;
+}
+
+/* === 5. Dossier Card === */
+.dossier-card {
+  background: #fff;
+  border: var(--border-light);
+  border-radius: var(--radius-lg);
+  padding: var(--space-5);
+  margin-bottom: var(--space-4);
+  transition: box-shadow var(--transition-fast);
+}
+.dossier-card:hover {
+  box-shadow: var(--shadow-md);
+}
+.dossier-card__header {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  margin-bottom: var(--space-3);
+}
+.dossier-card__ref {
+  font-family: var(--font-mono);
+  font-size: var(--text-sm);
+  font-weight: 600;
+  color: #0891B2;
+}
+.dossier-card__priority {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  padding: 2px 8px;
+  border-radius: var(--radius-full);
+  font-size: 11px;
+  font-weight: 600;
+}
+.dossier-card__priority--urgent {
+  background: #FEE2E2;
+  color: #991B1B;
+}
+.dossier-card__priority--normal {
+  background: #DBEAFE;
+  color: #1D4ED8;
+}
+.dossier-card__priority--low {
+  background: var(--gray-100);
+  color: var(--gray-500);
+}
+.dossier-card__patient {
+  display: flex;
+  align-items: center;
+  gap: var(--space-3);
+  margin-bottom: var(--space-3);
+}
+.dossier-card__diagnosis {
+  font-size: var(--text-sm);
+  color: var(--gray-600);
+  line-height: 1.6;
+  margin-bottom: var(--space-4);
+}
+.dossier-card__meta {
+  display: flex;
+  align-items: center;
+  gap: var(--space-4);
+  margin-bottom: var(--space-4);
+  font-size: var(--text-xs);
+  color: var(--gray-500);
+}
+.dossier-card__meta strong {
+  color: var(--gray-900);
+  font-family: var(--font-mono);
+}
+.dossier-card__actions {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-top: var(--space-3);
+  border-top: var(--border-light);
+}
+.dossier-card__date {
+  font-size: var(--text-xs);
+  color: var(--gray-400);
+}
+
+/* === 6. Avis Card === */
+.avis-card {
+  background: #fff;
+  border: var(--border-light);
+  border-radius: var(--radius-lg);
+  padding: var(--space-5);
+  margin-bottom: var(--space-4);
+}
+.avis-card__header {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  margin-bottom: var(--space-3);
+}
+.avis-card__ref {
+  font-family: var(--font-mono);
+  font-size: var(--text-sm);
+  font-weight: 600;
+  color: #0891B2;
+}
+.avis-card__patient {
+  font-size: var(--text-md);
+  font-weight: 600;
+  color: var(--gray-900);
+  margin-top: var(--space-1);
+}
+.avis-card__body {
+  font-size: var(--text-sm);
+  color: var(--gray-600);
+  line-height: 1.6;
+  margin-bottom: var(--space-3);
+}
+.avis-card__footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-top: var(--space-3);
+  border-top: var(--border-light);
+  font-size: var(--text-xs);
+  color: var(--gray-400);
+}
+
+/* === 7. Protocole Card === */
+.protocole-card {
+  background: #fff;
+  border: var(--border-light);
+  border-radius: var(--radius-lg);
+  padding: var(--space-5);
+  transition: box-shadow var(--transition-fast), border-color var(--transition-fast);
+  cursor: pointer;
+}
+.protocole-card:hover {
+  box-shadow: var(--shadow-md);
+  border-color: #A5F3FC;
+}
+.protocole-card__icon {
+  width: 44px;
+  height: 44px;
+  border-radius: var(--radius-lg);
+  background: #ECFEFF;
+  color: #0891B2;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: var(--space-3);
+}
+.protocole-card__title {
+  font-size: var(--text-md);
+  font-weight: 600;
+  color: var(--gray-900);
+  margin-bottom: var(--space-2);
+}
+.protocole-card__desc {
+  font-size: var(--text-sm);
+  color: var(--gray-500);
+  line-height: 1.6;
+  margin-bottom: var(--space-4);
+}
+.protocole-card__link {
+  font-size: var(--text-sm);
+  font-weight: 600;
+  color: #0891B2;
+}
+.protocole-card__link:hover {
+  text-decoration: underline;
+}
+
+/* === 8. Alert Card Médecin === */
+.med-alert-card {
+  background: #fff;
+  border: var(--border-light);
+  border-radius: var(--radius-lg);
+  padding: var(--space-5);
+  margin-bottom: var(--space-4);
+  transition: box-shadow var(--transition-fast);
+}
+.med-alert-card:hover {
+  box-shadow: var(--shadow-md);
+}
+.med-alert-card__header {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  margin-bottom: var(--space-3);
+}
+.med-alert-card__type {
+  font-size: 10px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--color-error);
+  margin-bottom: 2px;
+}
+.med-alert-card__title {
+  font-size: var(--text-md);
+  font-weight: 600;
+  color: var(--gray-900);
+  margin-top: var(--space-1);
+}
+.med-alert-card__body {
+  font-size: var(--text-sm);
+  color: var(--gray-600);
+  line-height: 1.6;
+  margin-bottom: var(--space-4);
+}
+.med-alert-card__indicators {
+  display: flex;
+  gap: var(--space-4);
+  margin-bottom: var(--space-4);
+  padding: var(--space-3) var(--space-4);
+  background: #FFF7ED;
+  border-radius: var(--radius-md);
+}
+.med-alert-card__footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-top: var(--space-3);
+  border-top: var(--border-light);
+}
+.med-alert-card__meta {
+  font-size: var(--text-xs);
+  color: var(--gray-400);
+}
+
+/* === 9. Decision Badge === */
+.decision-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  padding: 3px 10px;
+  border-radius: var(--radius-full);
+  font-size: 11px;
+  font-weight: 600;
+}
+.decision-badge--favorable {
+  background: var(--color-success-light);
+  color: var(--color-success-dark);
+}
+.decision-badge--reserve {
+  background: var(--color-warning-light);
+  color: var(--color-warning-dark);
+}
+.decision-badge--defavorable {
+  background: var(--color-error-light);
+  color: var(--color-error-dark);
+}
+
+/* === 10. Patient Info === */
+.patient-info {
+  display: flex;
+  align-items: center;
+  gap: var(--space-3);
+}
+.patient-info__avatar {
+  width: 36px;
+  height: 36px;
+  border-radius: var(--radius-full);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+  font-size: 12px;
+  color: #fff;
+  flex-shrink: 0;
+}
+.patient-info__name {
+  font-weight: 600;
+  font-size: 13px;
+  color: var(--gray-900);
+}
+.patient-info__meta {
+  font-size: 11px;
+  color: var(--gray-500);
+}
+
+/* === 11. Messagerie (teal theme) === */
+.msg-layout {
+  display: grid;
+  grid-template-columns: 340px 1fr;
+  gap: 0;
+  background: #fff;
+  border: var(--border-light);
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  height: calc(100vh - 220px);
+  min-height: 500px;
+}
+.msg-list {
+  border-right: var(--border-light);
+  overflow-y: auto;
+  background: var(--gray-50);
+}
+.msg-list__header {
+  padding: var(--space-4) var(--space-5);
+  border-bottom: var(--border-light);
+  background: #fff;
+}
+.msg-list__title {
+  font-size: var(--text-md);
+  font-weight: 600;
+  color: var(--gray-900);
+}
+.msg-detail {
+  display: flex;
+  flex-direction: column;
+  min-height: 0;
+}
+.msg-detail__conv {
+  display: none;
+  flex-direction: column;
+  flex: 1;
+  min-height: 0;
+}
+.msg-detail__conv.active {
+  display: flex;
+}
+.msg-detail__header {
+  display: flex;
+  align-items: center;
+  gap: var(--space-3);
+  padding: var(--space-4) var(--space-5);
+  border-bottom: var(--border-light);
+  background: #fff;
+}
+.msg-detail__name {
+  font-weight: 600;
+  font-size: 14px;
+  color: var(--gray-900);
+}
+.msg-detail__status {
+  font-size: 12px;
+  color: var(--gray-500);
+}
+.msg-detail__messages {
+  flex: 1;
+  overflow-y: auto;
+  padding: var(--space-5);
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-4);
+}
+.msg-preview {
+  display: flex;
+  align-items: center;
+  gap: var(--space-3);
+  padding: var(--space-3) var(--space-4);
+  cursor: pointer;
+  transition: background var(--transition-fast);
+  border-bottom: 1px solid var(--gray-100);
+}
+.msg-preview:hover {
+  background: #fff;
+}
+.msg-preview.active {
+  background: #ECFEFF;
+  border-left: 3px solid #0891B2;
+}
+.msg-preview__avatar {
+  width: 40px;
+  height: 40px;
+  border-radius: var(--radius-full);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+  font-size: 13px;
+  color: #fff;
+  flex-shrink: 0;
+}
+.msg-preview__content {
+  flex: 1;
+  min-width: 0;
+}
+.msg-preview__name {
+  font-weight: 600;
+  font-size: 13px;
+  color: var(--gray-900);
+}
+.msg-preview__text {
+  font-size: 12px;
+  color: var(--gray-500);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.msg-preview__meta {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 4px;
+  flex-shrink: 0;
+}
+.msg-preview__time {
+  font-size: 11px;
+  color: var(--gray-400);
+}
+.msg-preview__badge {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 20px;
+  height: 20px;
+  padding: 0 6px;
+  border-radius: var(--radius-full);
+  background: #0891B2;
+  color: #fff;
+  font-size: 11px;
+  font-weight: 700;
+}
+.msg-bubble {
+  max-width: 75%;
+  padding: var(--space-3) var(--space-4);
+  border-radius: var(--radius-lg);
+  font-size: var(--text-sm);
+  line-height: 1.6;
+}
+.msg-bubble--received {
+  background: var(--gray-100);
+  color: var(--gray-800);
+  align-self: flex-start;
+  border-bottom-left-radius: 4px;
+}
+.msg-bubble--sent {
+  background: #0891B2;
+  color: #fff;
+  align-self: flex-end;
+  border-bottom-right-radius: 4px;
+}
+.msg-bubble__time {
+  font-size: 10px;
+  margin-top: var(--space-1);
+  opacity: 0.6;
+}
+.msg-input {
+  display: flex;
+  align-items: center;
+  gap: var(--space-3);
+  padding: var(--space-3) var(--space-4);
+  border-top: var(--border-light);
+  background: #fff;
+}
+.msg-input__field {
+  flex: 1;
+  border: var(--border-light);
+  border-radius: var(--radius-full);
+  padding: var(--space-2) var(--space-4);
+  font-size: var(--text-sm);
+  outline: none;
+  transition: border-color var(--transition-fast);
+}
+.msg-input__field:focus {
+  border-color: #0891B2;
+}
+.msg-input__send {
+  width: 36px;
+  height: 36px;
+  border-radius: var(--radius-full);
+  background: #0891B2;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background var(--transition-fast);
+  flex-shrink: 0;
+}
+.msg-input__send:hover {
+  background: #0E7490;
+}
+
+/* === 12. Summary Grid === */
+.med-summary {
+  display: grid;
+  gap: var(--space-4);
+  margin-bottom: var(--space-6);
+}
+.med-summary--3 {
+  grid-template-columns: repeat(3, 1fr);
+}
+.med-summary--4 {
+  grid-template-columns: repeat(4, 1fr);
+}
+.med-summary__item {
+  background: #fff;
+  border: var(--border-light);
+  border-radius: var(--radius-lg);
+  padding: var(--space-4) var(--space-5);
+  text-align: center;
+}
+.med-summary__value {
+  font-family: var(--font-display);
+  font-size: var(--text-2xl);
+  font-weight: 800;
+  color: var(--gray-900);
+}
+.med-summary__label {
+  font-size: var(--text-xs);
+  color: var(--gray-500);
+  margin-top: var(--space-1);
+}
+
+/* === 13. Ref Link === */
+.ref-link {
+  font-family: var(--font-mono);
+  font-size: var(--text-sm);
+  font-weight: 600;
+  color: #0891B2;
+  cursor: pointer;
+}
+.ref-link:hover {
+  text-decoration: underline;
+}
+
+/* === 14. Utility === */
+.text-medecin-primary {
+  color: #0891B2;
+}
+
+/* Alert indicator (reuse fraud-indicator pattern) */
+.med-indicator {
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+  flex: 1;
+}
+.med-indicator__icon {
+  width: 28px;
+  height: 28px;
+  border-radius: var(--radius-full);
+  background: #FEF3C7;
+  color: #D97706;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+.med-indicator__label {
+  font-size: 11px;
+  color: var(--gray-500);
+}
+.med-indicator__value {
+  font-size: var(--text-sm);
+  font-weight: 600;
+  color: var(--gray-900);
+}

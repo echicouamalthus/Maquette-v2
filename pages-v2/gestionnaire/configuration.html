@@ -1,0 +1,5594 @@
+﻿<!doctype html>
+<html lang="fr">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>IIPS v2 — Configuration</title>
+		<link rel="stylesheet" href="../../css/design-system.css" />
+		<link rel="stylesheet" href="../../css/design-system-v2.css" />
+		<script src="../../js/icons.js"></script>
+	</head>
+	<body data-page-module="configuration">
+		<div class="app-shell">
+			<!-- ===== SIDEBAR v2 ===== -->
+			<aside class="sidebar">
+				<div class="sidebar__brand">
+					<img src="../../iips.jpg" alt="IIPS" class="sidebar__brand-logo" />
+					<div class="sidebar__brand-text">
+						<span class="sidebar__brand-name">IIPS Santé</span>
+						<span class="sidebar__brand-tagline">Gestion Assurance</span>
+					</div>
+				</div>
+
+				<nav class="sidebar__nav">
+					<div class="nav-section">
+						<details open>
+							<summary class="nav-section__title">
+								Principal
+								<svg
+									class="section-chevron"
+									width="16"
+									height="16"
+									viewBox="0 0 16 16"
+									fill="none"
+									stroke="currentColor"
+									stroke-width="2"
+								>
+									<polyline points="4,6 8,10 12,6" />
+								</svg>
+							</summary>
+							<a
+								href="dashboard.html"
+								class="nav-item"
+								data-module="dashboard"
+								data-tooltip="Tableau de bord"
+							>
+								<span class="nav-item__icon"
+									><svg
+										width="20"
+										height="20"
+										viewBox="0 0 20 20"
+										fill="none"
+										stroke="currentColor"
+										stroke-width="1.8"
+										stroke-linecap="round"
+										stroke-linejoin="round"
+									>
+										<rect x="2" y="2" width="7" height="8" />
+										<rect x="11" y="2" width="7" height="5" />
+										<rect x="2" y="12" width="7" height="6" />
+										<rect x="11" y="9" width="7" height="9" /></svg
+								></span>
+								<span class="nav-item__label">Tableau de bord</span>
+							</a>
+						</details>
+					</div>
+
+					<div class="nav-section">
+						<details open>
+							<summary class="nav-section__title">
+								Gestion
+								<svg
+									class="section-chevron"
+									width="16"
+									height="16"
+									viewBox="0 0 16 16"
+									fill="none"
+									stroke="currentColor"
+									stroke-width="2"
+								>
+									<polyline points="4,6 8,10 12,6" />
+								</svg>
+							</summary>
+							<a
+								href="contrats.html"
+								class="nav-item"
+								data-module="production"
+								data-tooltip="Production"
+							>
+								<span class="nav-item__icon"
+									><svg
+										width="20"
+										height="20"
+										viewBox="0 0 20 20"
+										fill="none"
+										stroke="currentColor"
+										stroke-width="1.8"
+										stroke-linecap="round"
+										stroke-linejoin="round"
+									>
+										<path
+											d="M12 2H5a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7l-5-5z"
+										/>
+										<path d="M12 2v5h5" />
+										<line x1="7" y1="10" x2="13" y2="10" />
+										<line x1="7" y1="13" x2="11" y2="13" /></svg
+								></span>
+								<span class="nav-item__label">Production</span>
+								<span class="nav-item__badge">24</span>
+							</a>
+							<a
+								href="souscriptions.html"
+								class="nav-item"
+								data-module="souscription"
+								data-tooltip="Souscriptions"
+							>
+								<span class="nav-item__icon"
+									><svg
+										width="20"
+										height="20"
+										viewBox="0 0 20 20"
+										fill="none"
+										stroke="currentColor"
+										stroke-width="1.8"
+										stroke-linecap="round"
+										stroke-linejoin="round"
+									>
+										<path d="M16 17v-1a4 4 0 00-4-4H8a4 4 0 00-4 4v1" />
+										<circle cx="10" cy="6" r="3.5" />
+										<line x1="15" y1="5" x2="15" y2="9" />
+										<line x1="13" y1="7" x2="17" y2="7" /></svg
+								></span>
+								<span class="nav-item__label">Souscriptions</span>
+								<span class="nav-item__badge">8</span>
+							</a>
+							<a
+								href="sinistres.html"
+								class="nav-item"
+								data-module="sinistre"
+								data-tooltip="Sinistres"
+							>
+								<span class="nav-item__icon"
+									><svg
+										width="20"
+										height="20"
+										viewBox="0 0 20 20"
+										fill="none"
+										stroke="currentColor"
+										stroke-width="1.8"
+										stroke-linecap="round"
+										stroke-linejoin="round"
+									>
+										<path
+											d="M10.29 3.86L1.82 18a2 2 0 001.71 3h16.94a2 2 0 001.71-3L13.71 3.86a2 2 0 00-3.42 0z"
+											transform="scale(0.85) translate(1.5,0)"
+										/>
+										<line x1="10" y1="8" x2="10" y2="12" />
+										<circle cx="10" cy="15" r="0.5" fill="currentColor" /></svg
+								></span>
+								<span class="nav-item__label">Sinistres</span>
+								<span class="nav-item__badge">12</span>
+							</a>
+							<a
+								href="pec.html"
+								class="nav-item"
+								data-module="pec"
+								data-tooltip="Prise en charge"
+							>
+								<span class="nav-item__icon"
+									><svg
+										width="20"
+										height="20"
+										viewBox="0 0 20 20"
+										fill="none"
+										stroke="currentColor"
+										stroke-width="1.8"
+									>
+										<path
+											d="M16 7V4a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2h8a2 2 0 002-2v-3"
+										/>
+										<path d="M8 10h9" />
+										<path d="M14 7l3 3-3 3" />
+										<line x1="8" y1="6" x2="12" y2="6" />
+										<line x1="8" y1="14" x2="11" y2="14" /></svg
+								></span>
+								<span class="nav-item__label">Prise en charge</span>
+								<span class="nav-item__badge">7</span>
+							</a>
+							<a
+								href="confection-cartes.html"
+								class="nav-item"
+								data-module="confection-cartes"
+								data-tooltip="Confection Cartes"
+							>
+								<span class="nav-item__icon"
+									><svg
+										width="20"
+										height="20"
+										viewBox="0 0 20 20"
+										fill="none"
+										stroke="currentColor"
+										stroke-width="1.8"
+										stroke-linecap="round"
+									>
+										<rect x="2" y="4" width="16" height="12" />
+										<line x1="2" y1="9" x2="18" y2="9" />
+										<line x1="6" y1="13" x2="10" y2="13" /></svg
+								></span>
+								<span class="nav-item__label">Confection Cartes</span>
+							</a>
+							<a
+								href="secretariat.html"
+								class="nav-item"
+								data-module="secretariat"
+								data-tooltip="Secrétariat"
+							>
+								<span class="nav-item__icon"
+									><svg
+										width="20"
+										height="20"
+										viewBox="0 0 20 20"
+										fill="none"
+										stroke="currentColor"
+										stroke-width="1.8"
+										stroke-linecap="round"
+									>
+										<rect x="3" y="2" width="14" height="16" />
+										<line x1="7" y1="6" x2="13" y2="6" />
+										<line x1="7" y1="10" x2="13" y2="10" />
+										<line x1="7" y1="14" x2="10" y2="14" /></svg
+								></span>
+								<span class="nav-item__label">Secrétariat</span>
+							</a>
+						</details>
+					</div>
+
+					<div class="nav-section">
+						<details open>
+							<summary class="nav-section__title">
+								Commercial
+								<svg
+									class="section-chevron"
+									width="16"
+									height="16"
+									viewBox="0 0 16 16"
+									fill="none"
+									stroke="currentColor"
+									stroke-width="2"
+								>
+									<polyline points="4,6 8,10 12,6" />
+								</svg>
+							</summary>
+							<a
+								href="crm.html"
+								class="nav-item"
+								data-module="crm"
+								data-tooltip="CRM"
+							>
+								<span class="nav-item__icon"
+									><svg
+										width="20"
+										height="20"
+										viewBox="0 0 20 20"
+										fill="none"
+										stroke="currentColor"
+										stroke-width="1.8"
+										stroke-linecap="round"
+										stroke-linejoin="round"
+									>
+										<path d="M17 18v-1a3 3 0 00-3-3h-1" />
+										<path d="M13 8a3 3 0 100-6" />
+										<path d="M12 18v-1a4 4 0 00-4-4H5a4 4 0 00-4 4v1" />
+										<circle cx="6.5" cy="6" r="3" /></svg
+								></span>
+								<span class="nav-item__label">CRM</span>
+							</a>
+						</details>
+					</div>
+
+					<div class="nav-section">
+						<details open>
+							<summary class="nav-section__title">
+								Finance
+								<svg
+									class="section-chevron"
+									width="16"
+									height="16"
+									viewBox="0 0 16 16"
+									fill="none"
+									stroke="currentColor"
+									stroke-width="2"
+								>
+									<polyline points="4,6 8,10 12,6" />
+								</svg>
+							</summary>
+							<a
+								href="comptabilite.html"
+								class="nav-item"
+								data-module="comptabilite"
+								data-tooltip="Comptabilité"
+							>
+								<span class="nav-item__icon"
+									><svg
+										width="20"
+										height="20"
+										viewBox="0 0 20 20"
+										fill="none"
+										stroke="currentColor"
+										stroke-width="1.8"
+										stroke-linecap="round"
+										stroke-linejoin="round"
+									>
+										<line x1="10" y1="2" x2="10" y2="18" />
+										<path
+											d="M14 5H8.5a2.5 2.5 0 000 5h3a2.5 2.5 0 010 5H6"
+										/></svg
+								></span>
+								<span class="nav-item__label">Comptabilité</span>
+							</a>
+							<a
+								href="tresorerie.html"
+								class="nav-item"
+								data-module="tresorerie"
+								data-tooltip="Trésorerie"
+							>
+								<span class="nav-item__icon"
+									><svg
+										width="20"
+										height="20"
+										viewBox="0 0 20 20"
+										fill="none"
+										stroke="currentColor"
+										stroke-width="1.8"
+										stroke-linecap="round"
+										stroke-linejoin="round"
+									>
+										<rect x="2" y="3" width="16" height="14" />
+										<path d="M2 7h16" />
+										<path d="M2 11h16" />
+										<circle cx="14" cy="14" r="2" /></svg
+								></span>
+								<span class="nav-item__label">Trésorerie</span>
+							</a>
+							<a
+								href="paiements.html"
+								class="nav-item"
+								data-module="paiement"
+								data-tooltip="Paiements"
+							>
+								<span class="nav-item__icon"
+									><svg
+										width="20"
+										height="20"
+										viewBox="0 0 20 20"
+										fill="none"
+										stroke="currentColor"
+										stroke-width="1.8"
+										stroke-linecap="round"
+										stroke-linejoin="round"
+									>
+										<rect x="2" y="4" width="16" height="12" />
+										<line x1="2" y1="9" x2="18" y2="9" /></svg
+								></span>
+								<span class="nav-item__label">Paiements</span>
+							</a>
+							<a
+								href="recouvrement.html"
+								class="nav-item"
+								data-module="recouvrement"
+								data-tooltip="Recouvrement"
+							>
+								<span class="nav-item__icon"
+									><svg
+										width="20"
+										height="20"
+										viewBox="0 0 20 20"
+										fill="none"
+										stroke="currentColor"
+										stroke-width="1.8"
+										stroke-linecap="round"
+										stroke-linejoin="round"
+									>
+										<path d="M1 4v6h6" />
+										<path d="M3.51 14a8 8 0 0013.9-3.2" />
+										<path d="M19 16v-6h-6" />
+										<path d="M16.49 6A8 8 0 002.6 9.2" /></svg
+								></span>
+								<span class="nav-item__label">Recouvrement</span>
+							</a>
+						</details>
+					</div>
+
+					<div class="nav-section">
+						<details open>
+							<summary class="nav-section__title">
+								Outils
+								<svg
+									class="section-chevron"
+									width="16"
+									height="16"
+									viewBox="0 0 16 16"
+									fill="none"
+									stroke="currentColor"
+									stroke-width="2"
+								>
+									<polyline points="4,6 8,10 12,6" />
+								</svg>
+							</summary>
+							<a
+								href="ged.html"
+								class="nav-item"
+								data-module="ged"
+								data-tooltip="GED"
+							>
+								<span class="nav-item__icon"
+									><svg
+										width="20"
+										height="20"
+										viewBox="0 0 20 20"
+										fill="none"
+										stroke="currentColor"
+										stroke-width="1.8"
+										stroke-linecap="round"
+										stroke-linejoin="round"
+									>
+										<path
+											d="M18 16V6a2 2 0 00-2-2H9L7 2H4a2 2 0 00-2 2v12a2 2 0 002 2h12a2 2 0 002-2z"
+										/></svg
+								></span>
+								<span class="nav-item__label">GED</span>
+							</a>
+							<a
+								href="reporting.html"
+								class="nav-item"
+								data-module="reporting"
+								data-tooltip="Reporting"
+							>
+								<span class="nav-item__icon"
+									><svg
+										width="20"
+										height="20"
+										viewBox="0 0 20 20"
+										fill="none"
+										stroke="currentColor"
+										stroke-width="1.8"
+										stroke-linecap="round"
+										stroke-linejoin="round"
+									>
+										<line x1="15" y1="5" x2="15" y2="15" />
+										<line x1="10" y1="8" x2="10" y2="15" />
+										<line x1="5" y1="11" x2="5" y2="15" /></svg
+								></span>
+								<span class="nav-item__label">Reporting</span>
+							</a>
+						</details>
+					</div>
+
+					<div class="nav-section">
+						<details open>
+							<summary class="nav-section__title">
+								Système
+								<svg
+									class="section-chevron"
+									width="16"
+									height="16"
+									viewBox="0 0 16 16"
+									fill="none"
+									stroke="currentColor"
+									stroke-width="2"
+								>
+									<polyline points="4,6 8,10 12,6" />
+								</svg>
+							</summary>
+							<a
+								href="administration.html"
+								class="nav-item"
+								data-module="administration"
+								data-tooltip="Administration"
+							>
+								<span class="nav-item__icon"
+									><svg
+										width="20"
+										height="20"
+										viewBox="0 0 20 20"
+										fill="none"
+										stroke="currentColor"
+										stroke-width="1.8"
+										stroke-linecap="round"
+										stroke-linejoin="round"
+									>
+										<circle cx="10" cy="10" r="3" />
+										<path
+											d="M19.4 15a1.65 1.65 0 00.33 1.82l.06.06a2 2 0 11-2.83 2.83l-.06-.06a1.65 1.65 0 00-2.82.72V20"
+											transform="scale(0.82) translate(1.5,1.5)"
+										/></svg
+								></span>
+								<span class="nav-item__label">Administration</span>
+							</a>
+							<a
+								href="configuration.html"
+								class="nav-item active"
+								data-module="configuration"
+								data-tooltip="Configuration"
+							>
+								<span class="nav-item__icon"
+									><svg
+										width="20"
+										height="20"
+										viewBox="0 0 20 20"
+										fill="none"
+										stroke="currentColor"
+										stroke-width="1.8"
+										stroke-linecap="round"
+									>
+										<line x1="3" y1="5" x2="17" y2="5" />
+										<line x1="3" y1="10" x2="17" y2="10" />
+										<line x1="3" y1="15" x2="17" y2="15" />
+										<circle cx="13" cy="5" r="2" fill="currentColor" />
+										<circle cx="7" cy="10" r="2" fill="currentColor" />
+										<circle cx="11" cy="15" r="2" fill="currentColor" /></svg
+								></span>
+								<span class="nav-item__label">Configuration</span>
+							</a>
+						</details>
+					</div>
+				</nav>
+
+				<div class="sidebar__footer">
+					<div class="sidebar__user">
+						<div class="sidebar__user-avatar">AD</div>
+						<div class="sidebar__user-info">
+							<div class="sidebar__user-name">Aminata Diabaté</div>
+							<div class="sidebar__user-role">Gestionnaire santé</div>
+						</div>
+						<a
+							href="../login.html"
+							style="color: rgba(255, 255, 255, 0.4); margin-left: auto"
+							title="Déconnexion"
+						>
+							<svg
+								width="18"
+								height="18"
+								viewBox="0 0 18 18"
+								fill="none"
+								stroke="currentColor"
+								stroke-width="1.8"
+								stroke-linecap="round"
+							>
+								<path d="M6 15H4a2 2 0 01-2-2V5a2 2 0 012-2h2" />
+								<polyline points="11,13 15,9 11,5" />
+								<line x1="15" y1="9" x2="6" y2="9" />
+							</svg>
+						</a>
+					</div>
+				</div>
+			</aside>
+
+			<!-- ===== MAIN CONTENT ===== -->
+			<main class="app-main">
+				<!-- Top Bar v2 -->
+				<header class="topbar">
+					<button
+						class="topbar__hamburger"
+						onclick="toggleSidebar()"
+						title="Menu"
+					>
+						<svg
+							width="20"
+							height="20"
+							viewBox="0 0 20 20"
+							fill="none"
+							stroke="currentColor"
+							stroke-width="1.8"
+							stroke-linecap="round"
+						>
+							<line x1="3" y1="5" x2="17" y2="5" />
+							<line x1="3" y1="10" x2="17" y2="10" />
+							<line x1="3" y1="15" x2="17" y2="15" />
+						</svg>
+					</button>
+
+					<nav class="topbar__breadcrumb">
+						<a href="dashboard.html">Accueil</a>
+						<span class="separator">/</span>
+						<span class="current">Configuration</span>
+					</nav>
+
+					<div class="topbar__search">
+						<span class="topbar__search-icon">
+							<svg
+								width="18"
+								height="18"
+								viewBox="0 0 18 18"
+								fill="none"
+								stroke="currentColor"
+								stroke-width="1.8"
+								stroke-linecap="round"
+							>
+								<circle cx="8" cy="8" r="5.5" />
+								<line x1="12.5" y1="12.5" x2="16" y2="16" />
+							</svg>
+						</span>
+						<input
+							type="text"
+							class="topbar__search-input"
+							placeholder="Rechercher un contrat, un assuré, un prestataire..."
+						/>
+						<div class="topbar__search-shortcut">
+							<kbd>Ctrl</kbd><kbd>K</kbd>
+						</div>
+					</div>
+
+					<div class="topbar__role-indicator">
+						<button class="topbar__role-badge" data-dropdown>
+							<span class="badge badge--primary" id="topbar-role-label"
+								>Gestionnaire</span
+							>
+							<svg
+								width="14"
+								height="14"
+								viewBox="0 0 14 14"
+								fill="none"
+								stroke="currentColor"
+								stroke-width="2"
+							>
+								<polyline points="4,5 7,8 10,5" />
+							</svg>
+						</button>
+						<div
+							class="dropdown-menu topbar__role-dropdown"
+							id="role-switcher"
+						></div>
+					</div>
+
+					<div class="topbar__actions">
+						<button class="topbar__action-btn" title="Aide">
+							<svg
+								width="20"
+								height="20"
+								viewBox="0 0 20 20"
+								fill="none"
+								stroke="currentColor"
+								stroke-width="1.8"
+								stroke-linecap="round"
+								stroke-linejoin="round"
+							>
+								<circle cx="10" cy="10" r="8" />
+								<path d="M7.5 7.5a2.5 2.5 0 014.87.83c0 1.67-2.5 2.5-2.5 2.5" />
+								<circle cx="10" cy="14" r="0.5" fill="currentColor" />
+							</svg>
+						</button>
+						<div class="topbar__notif-wrapper">
+							<button
+								class="topbar__action-btn topbar__notif-toggle"
+								title="Notifications"
+							>
+								<svg
+									width="20"
+									height="20"
+									viewBox="0 0 20 20"
+									fill="none"
+									stroke="currentColor"
+									stroke-width="1.8"
+									stroke-linecap="round"
+									stroke-linejoin="round"
+								>
+									<path
+										d="M15 7a5 5 0 00-10 0c0 5-2.5 7-2.5 7h15S15 12 15 7z"
+									/>
+									<path d="M8.5 17a1.5 1.5 0 003 0" />
+								</svg>
+								<span class="badge-dot"></span>
+							</button>
+							<div class="topbar__notif-dropdown">
+								<div class="topbar__notif-header">
+									<h4>Notifications</h4>
+									<span class="topbar__notif-count">3 nouvelles</span>
+								</div>
+								<div class="topbar__notif-list">
+									<div class="topbar__notif-item unread">
+										<div class="topbar__notif-icon topbar__notif-icon--success">
+											<svg
+												width="16"
+												height="16"
+												viewBox="0 0 16 16"
+												fill="none"
+												stroke="currentColor"
+												stroke-width="2"
+											>
+												<polyline points="3,8 6,11 13,4" />
+											</svg>
+										</div>
+										<div class="topbar__notif-content">
+											<div class="topbar__notif-title">
+												Contrat CTR-2026-1847 validé par le superviseur
+											</div>
+											<div class="topbar__notif-meta">Il y a 15 min</div>
+										</div>
+									</div>
+									<div class="topbar__notif-item unread">
+										<div class="topbar__notif-icon topbar__notif-icon--warning">
+											<svg
+												width="16"
+												height="16"
+												viewBox="0 0 16 16"
+												fill="none"
+												stroke="currentColor"
+												stroke-width="2"
+											>
+												<path d="M8 3v5" />
+												<circle cx="8" cy="11" r="0.5" fill="currentColor" />
+											</svg>
+										</div>
+										<div class="topbar__notif-content">
+											<div class="topbar__notif-title">
+												Alerte fraude : doublon détecté — Pharmacie Salama
+											</div>
+											<div class="topbar__notif-meta">Il y a 1h</div>
+										</div>
+									</div>
+									<div class="topbar__notif-item unread">
+										<div class="topbar__notif-icon topbar__notif-icon--info">
+											<svg
+												width="16"
+												height="16"
+												viewBox="0 0 16 16"
+												fill="none"
+												stroke="currentColor"
+												stroke-width="2"
+											>
+												<circle cx="8" cy="8" r="6" />
+												<line x1="8" y1="5" x2="8" y2="8" />
+												<line x1="8" y1="8" x2="10" y2="10" />
+											</svg>
+										</div>
+										<div class="topbar__notif-content">
+											<div class="topbar__notif-title">
+												Échéance renouvellement SOTRA CI dans 15 jours
+											</div>
+											<div class="topbar__notif-meta">Il y a 3h</div>
+										</div>
+									</div>
+								</div>
+								<div class="topbar__notif-footer">
+									<a href="#">Voir toutes les notifications</a>
+								</div>
+							</div>
+						</div>
+					</div>
+
+					<button class="topbar__user">
+						<div class="topbar__user-avatar-top">AD</div>
+						<span class="topbar__user-name-top">Aminata</span>
+						<svg
+							class="topbar__user-chevron"
+							width="14"
+							height="14"
+							viewBox="0 0 14 14"
+							fill="none"
+							stroke="currentColor"
+							stroke-width="2"
+						>
+							<polyline points="4,5 7,8 10,5" />
+						</svg>
+					</button>
+					<div class="topbar__user-dropdown">
+						<div class="topbar__user-dropdown__info">
+							<div class="topbar__user-dropdown__name">Aminata Diabaté</div>
+							<div class="topbar__user-dropdown__role">Gestionnaire santé</div>
+						</div>
+						<a href="profil.html" class="topbar__user-dropdown__item">
+							<svg
+								width="16"
+								height="16"
+								viewBox="0 0 16 16"
+								fill="none"
+								stroke="currentColor"
+								stroke-width="1.8"
+							>
+								<circle cx="8" cy="5" r="3" />
+								<path d="M2 15v-1a6 6 0 0112 0v1" />
+							</svg>
+							Mon profil
+						</a>
+						<a href="configuration.html" class="topbar__user-dropdown__item">
+							<svg
+								width="16"
+								height="16"
+								viewBox="0 0 16 16"
+								fill="none"
+								stroke="currentColor"
+								stroke-width="1.8"
+							>
+								<circle cx="8" cy="8" r="2.5" />
+								<path d="M13.5 8a5.5 5.5 0 01-.3 1.8" />
+							</svg>
+							Paramètres
+						</a>
+						<hr class="topbar__user-dropdown__divider" />
+						<a
+							href="../login.html"
+							class="topbar__user-dropdown__item topbar__user-dropdown__item--danger"
+						>
+							<svg
+								width="16"
+								height="16"
+								viewBox="0 0 16 16"
+								fill="none"
+								stroke="currentColor"
+								stroke-width="1.8"
+								stroke-linecap="round"
+							>
+								<path
+									d="M5 13H3.5a1.5 1.5 0 01-1.5-1.5v-7A1.5 1.5 0 013.5 3H5"
+								/>
+								<polyline points="9,11 13,8 9,5" />
+								<line x1="13" y1="8" x2="5" y2="8" />
+							</svg>
+							Déconnexion
+						</a>
+					</div>
+				</header>
+
+				<!-- Page Content -->
+				<div class="app-content">
+					<!-- Page Header -->
+					<div class="page-header animate-in">
+						<div class="page-header__top">
+							<div>
+								<h1 class="page-header__title">Configuration</h1>
+								<p class="page-header__subtitle">
+									Paramétrage du système, actes médicaux, tarification et
+									barèmes
+								</p>
+							</div>
+							<div class="page-header__actions">
+								<button class="btn btn-primary btn-sm">
+									<svg
+										width="16"
+										height="16"
+										viewBox="0 0 16 16"
+										fill="none"
+										stroke="currentColor"
+										stroke-width="2"
+										stroke-linecap="round"
+									>
+										<line x1="8" y1="3" x2="8" y2="13" />
+										<line x1="3" y1="8" x2="13" y2="8" />
+									</svg>
+									Importer des actes
+								</button>
+							</div>
+						</div>
+					</div>
+
+					<!-- KPI Cards -->
+					<div class="grid grid-3 mb-6">
+						<div class="card stat-card animate-in animate-in-delay-1">
+							<div class="stat-card__header">
+								<div class="stat-card__icon stat-card__icon--primary">
+									<svg
+										width="22"
+										height="22"
+										viewBox="0 0 20 20"
+										fill="none"
+										stroke="currentColor"
+										stroke-width="1.8"
+									>
+										<path
+											d="M12 2H5a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7l-5-5z"
+										/>
+										<path d="M12 2v5h5" />
+										<line x1="7" y1="10" x2="13" y2="10" />
+										<line x1="7" y1="13" x2="11" y2="13" />
+									</svg>
+								</div>
+								<span class="stat-card__menu">⋯</span>
+							</div>
+							<div class="stat-card__value" data-count="342">0</div>
+							<div class="stat-card__label">Actes médicaux</div>
+						</div>
+
+						<div class="card stat-card animate-in animate-in-delay-2">
+							<div class="stat-card__header">
+								<div class="stat-card__icon stat-card__icon--secondary">
+									<svg
+										width="22"
+										height="22"
+										viewBox="0 0 20 20"
+										fill="none"
+										stroke="currentColor"
+										stroke-width="1.8"
+									>
+										<path
+											d="M18 16V6a2 2 0 00-2-2H9L7 2H4a2 2 0 00-2 2v12a2 2 0 002 2h12a2 2 0 002-2z"
+										/>
+									</svg>
+								</div>
+								<span class="stat-card__menu">⋯</span>
+							</div>
+							<div class="stat-card__value" data-count="156">0</div>
+							<div class="stat-card__label">Structures sanitaires</div>
+						</div>
+
+						<div class="card stat-card animate-in animate-in-delay-3">
+							<div class="stat-card__header">
+								<div class="stat-card__icon stat-card__icon--accent">
+									<svg
+										width="22"
+										height="22"
+										viewBox="0 0 20 20"
+										fill="none"
+										stroke="currentColor"
+										stroke-width="1.8"
+									>
+										<line x1="3" y1="5" x2="17" y2="5" />
+										<line x1="3" y1="10" x2="17" y2="10" />
+										<line x1="3" y1="15" x2="17" y2="15" />
+										<circle cx="13" cy="5" r="2" fill="currentColor" />
+										<circle cx="7" cy="10" r="2" fill="currentColor" />
+										<circle cx="11" cy="15" r="2" fill="currentColor" />
+									</svg>
+								</div>
+								<span class="stat-card__menu">⋯</span>
+							</div>
+							<div class="stat-card__value" data-count="28">0</div>
+							<div class="stat-card__label">Règles de tarification</div>
+						</div>
+					</div>
+
+					<!-- Tabs -->
+					<div class="card animate-in animate-in-delay-4">
+						<div class="tabs">
+							<button class="tab active" data-tab="actes">
+								Actes médicaux
+							</button>
+							<button class="tab" data-tab="specialites">Spécialités</button>
+							<button class="tab" data-tab="structures">
+								Structures sanitaires
+							</button>
+							<button class="tab" data-tab="tarifs">Tarifs</button>
+							<button class="tab" data-tab="organisation">Organisation</button>
+							<button class="tab" data-tab="types-contrats">
+								Types contrats
+							</button>
+							<button class="tab" data-tab="tarification">Tarification</button>
+							<button class="tab" data-tab="baremes">Barèmes</button>
+							<button class="tab" data-tab="antifraude">Anti-fraude</button>
+							<button class="tab" data-tab="commissions">Commissions</button>
+							<button class="tab" data-tab="regles-production">
+								Règles Production
+							</button>
+						</div>
+						<!-- Tab: Actes médicaux -->
+						<div class="tab-panel" id="actes" style="display: block">
+							<div style="padding: var(--space-4)">
+								<div
+									style="
+										display: flex;
+										gap: var(--space-3);
+										align-items: center;
+										margin-bottom: var(--space-4);
+										flex-wrap: wrap;
+									"
+								>
+									<input
+										type="text"
+										class="form-input"
+										placeholder="Rechercher un acte..."
+										style="flex: 1; min-width: 200px"
+										data-filter-table="actes-table"
+									/>
+									<select class="form-select" style="width: 180px">
+										<option>Toutes catégories</option>
+										<option>Consultation</option>
+										<option>Chirurgie</option>
+										<option>Imagerie</option>
+										<option>Biologie</option>
+										<option>Pharmacie</option>
+										<option>Hospitalisation</option>
+									</select>
+								</div>
+								<table class="table" id="actes-table">
+									<thead>
+										<tr>
+											<th>Code acte</th>
+											<th>Libellé</th>
+											<th>Catégorie</th>
+											<th>Tarif base (FCFA)</th>
+											<th>Taux couverture</th>
+											<th>Statut</th>
+											<th>Actions</th>
+										</tr>
+									</thead>
+									<tbody>
+										<tr>
+											<td
+												style="
+													font-family: var(--font-mono);
+													font-weight: 600;
+													color: var(--iips-primary);
+												"
+											>
+												CONS-001
+											</td>
+											<td>Consultation généraliste</td>
+											<td>
+												<span class="badge badge--primary">Consultation</span>
+											</td>
+											<td
+												style="font-family: var(--font-mono); font-weight: 600"
+											>
+												5 000
+											</td>
+											<td>80%</td>
+											<td><span class="badge badge--success">Actif</span></td>
+											<td>
+												<button class="btn btn-ghost btn-sm">Modifier</button>
+											</td>
+										</tr>
+										<tr>
+											<td
+												style="
+													font-family: var(--font-mono);
+													font-weight: 600;
+													color: var(--iips-primary);
+												"
+											>
+												CONS-002
+											</td>
+											<td>Consultation spécialiste</td>
+											<td>
+												<span class="badge badge--primary">Consultation</span>
+											</td>
+											<td
+												style="font-family: var(--font-mono); font-weight: 600"
+											>
+												15 000
+											</td>
+											<td>70%</td>
+											<td><span class="badge badge--success">Actif</span></td>
+											<td>
+												<button class="btn btn-ghost btn-sm">Modifier</button>
+											</td>
+										</tr>
+										<tr>
+											<td
+												style="
+													font-family: var(--font-mono);
+													font-weight: 600;
+													color: var(--iips-primary);
+												"
+											>
+												CONS-003
+											</td>
+											<td>Consultation dentaire</td>
+											<td>
+												<span class="badge badge--primary">Consultation</span>
+											</td>
+											<td
+												style="font-family: var(--font-mono); font-weight: 600"
+											>
+												10 000
+											</td>
+											<td>60%</td>
+											<td><span class="badge badge--success">Actif</span></td>
+											<td>
+												<button class="btn btn-ghost btn-sm">Modifier</button>
+											</td>
+										</tr>
+										<tr>
+											<td
+												style="
+													font-family: var(--font-mono);
+													font-weight: 600;
+													color: var(--iips-primary);
+												"
+											>
+												CHIR-001
+											</td>
+											<td>Appendicectomie</td>
+											<td>
+												<span class="badge badge--danger">Chirurgie</span>
+											</td>
+											<td
+												style="font-family: var(--font-mono); font-weight: 600"
+											>
+												350 000
+											</td>
+											<td>80%</td>
+											<td><span class="badge badge--success">Actif</span></td>
+											<td>
+												<button class="btn btn-ghost btn-sm">Modifier</button>
+											</td>
+										</tr>
+										<tr>
+											<td
+												style="
+													font-family: var(--font-mono);
+													font-weight: 600;
+													color: var(--iips-primary);
+												"
+											>
+												CHIR-002
+											</td>
+											<td>Césarienne</td>
+											<td>
+												<span class="badge badge--danger">Chirurgie</span>
+											</td>
+											<td
+												style="font-family: var(--font-mono); font-weight: 600"
+											>
+												500 000
+											</td>
+											<td>90%</td>
+											<td><span class="badge badge--success">Actif</span></td>
+											<td>
+												<button class="btn btn-ghost btn-sm">Modifier</button>
+											</td>
+										</tr>
+										<tr>
+											<td
+												style="
+													font-family: var(--font-mono);
+													font-weight: 600;
+													color: var(--iips-primary);
+												"
+											>
+												CHIR-003
+											</td>
+											<td>Hernie inguinale</td>
+											<td>
+												<span class="badge badge--danger">Chirurgie</span>
+											</td>
+											<td
+												style="font-family: var(--font-mono); font-weight: 600"
+											>
+												280 000
+											</td>
+											<td>75%</td>
+											<td><span class="badge badge--success">Actif</span></td>
+											<td>
+												<button class="btn btn-ghost btn-sm">Modifier</button>
+											</td>
+										</tr>
+										<tr>
+											<td
+												style="
+													font-family: var(--font-mono);
+													font-weight: 600;
+													color: var(--iips-primary);
+												"
+											>
+												IMG-001
+											</td>
+											<td>Radiographie standard</td>
+											<td>
+												<span class="badge badge--secondary">Imagerie</span>
+											</td>
+											<td
+												style="font-family: var(--font-mono); font-weight: 600"
+											>
+												25 000
+											</td>
+											<td>70%</td>
+											<td><span class="badge badge--success">Actif</span></td>
+											<td>
+												<button class="btn btn-ghost btn-sm">Modifier</button>
+											</td>
+										</tr>
+										<tr>
+											<td
+												style="
+													font-family: var(--font-mono);
+													font-weight: 600;
+													color: var(--iips-primary);
+												"
+											>
+												IMG-002
+											</td>
+											<td>Échographie abdominale</td>
+											<td>
+												<span class="badge badge--secondary">Imagerie</span>
+											</td>
+											<td
+												style="font-family: var(--font-mono); font-weight: 600"
+											>
+												35 000
+											</td>
+											<td>70%</td>
+											<td><span class="badge badge--success">Actif</span></td>
+											<td>
+												<button class="btn btn-ghost btn-sm">Modifier</button>
+											</td>
+										</tr>
+										<tr>
+											<td
+												style="
+													font-family: var(--font-mono);
+													font-weight: 600;
+													color: var(--iips-primary);
+												"
+											>
+												IMG-003
+											</td>
+											<td>Scanner (TDM)</td>
+											<td>
+												<span class="badge badge--secondary">Imagerie</span>
+											</td>
+											<td
+												style="font-family: var(--font-mono); font-weight: 600"
+											>
+												120 000
+											</td>
+											<td>60%</td>
+											<td><span class="badge badge--success">Actif</span></td>
+											<td>
+												<button class="btn btn-ghost btn-sm">Modifier</button>
+											</td>
+										</tr>
+										<tr>
+											<td
+												style="
+													font-family: var(--font-mono);
+													font-weight: 600;
+													color: var(--iips-primary);
+												"
+											>
+												BIO-001
+											</td>
+											<td>Numération Formule Sanguine</td>
+											<td>
+												<span class="badge badge--warning">Biologie</span>
+											</td>
+											<td
+												style="font-family: var(--font-mono); font-weight: 600"
+											>
+												8 000
+											</td>
+											<td>80%</td>
+											<td><span class="badge badge--success">Actif</span></td>
+											<td>
+												<button class="btn btn-ghost btn-sm">Modifier</button>
+											</td>
+										</tr>
+										<tr>
+											<td
+												style="
+													font-family: var(--font-mono);
+													font-weight: 600;
+													color: var(--iips-primary);
+												"
+											>
+												BIO-002
+											</td>
+											<td>Glycémie à jeun</td>
+											<td>
+												<span class="badge badge--warning">Biologie</span>
+											</td>
+											<td
+												style="font-family: var(--font-mono); font-weight: 600"
+											>
+												5 000
+											</td>
+											<td>80%</td>
+											<td><span class="badge badge--success">Actif</span></td>
+											<td>
+												<button class="btn btn-ghost btn-sm">Modifier</button>
+											</td>
+										</tr>
+										<tr>
+											<td
+												style="
+													font-family: var(--font-mono);
+													font-weight: 600;
+													color: var(--iips-primary);
+												"
+											>
+												HOSP-001
+											</td>
+											<td>Hospitalisation (jour)</td>
+											<td>
+												<span
+													class="badge"
+													style="background: #e0e7ff; color: #4338ca"
+													>Hospitalisation</span
+												>
+											</td>
+											<td
+												style="font-family: var(--font-mono); font-weight: 600"
+											>
+												45 000
+											</td>
+											<td>70%</td>
+											<td><span class="badge badge--warning">Inactif</span></td>
+											<td>
+												<button class="btn btn-ghost btn-sm">Modifier</button>
+											</td>
+										</tr>
+									</tbody>
+								</table>
+								<div
+									style="
+										display: flex;
+										justify-content: space-between;
+										align-items: center;
+										padding: var(--space-4) 0 0 0;
+									"
+								>
+									<span
+										style="font-size: var(--text-sm); color: var(--gray-500)"
+										>Affichage 1-12 sur 342 actes</span
+									>
+									<div style="display: flex; gap: var(--space-1)">
+										<button class="btn btn-ghost btn-sm" disabled>←</button
+										><button class="btn btn-primary btn-sm">1</button
+										><button class="btn btn-ghost btn-sm">2</button
+										><button class="btn btn-ghost btn-sm">3</button
+										><button class="btn btn-ghost btn-sm">...</button
+										><button class="btn btn-ghost btn-sm">29</button
+										><button class="btn btn-ghost btn-sm">→</button>
+									</div>
+								</div>
+							</div>
+						</div>
+
+						<!-- Tab: Spécialités -->
+						<div class="tab-panel" id="specialites" style="display: none">
+							<div
+								style="
+									display: grid;
+									grid-template-columns: 1fr 1fr;
+									gap: var(--space-4);
+									padding: var(--space-4);
+								"
+							>
+								<div
+									style="
+										border: 1px solid var(--gray-200);
+										border-radius: var(--radius-lg);
+										padding: var(--space-4);
+										display: flex;
+										align-items: center;
+										gap: var(--space-4);
+									"
+								>
+									<div
+										style="
+											width: 48px;
+											height: 48px;
+											border-radius: var(--radius-full);
+											background: #ecfdf5;
+											color: #059669;
+											display: flex;
+											align-items: center;
+											justify-content: center;
+											flex-shrink: 0;
+										"
+									>
+										<svg
+											width="22"
+											height="22"
+											viewBox="0 0 20 20"
+											fill="none"
+											stroke="currentColor"
+											stroke-width="1.8"
+										>
+											<circle cx="10" cy="7" r="4" />
+											<path d="M3 18v-1a7 7 0 0114 0v1" />
+										</svg>
+									</div>
+									<div>
+										<div style="font-weight: 700; color: var(--gray-900)">
+											Médecine générale
+										</div>
+										<div style="font-size: 13px; color: var(--gray-500)">
+											45 praticiens — 28 actes
+										</div>
+									</div>
+								</div>
+								<div
+									style="
+										border: 1px solid var(--gray-200);
+										border-radius: var(--radius-lg);
+										padding: var(--space-4);
+										display: flex;
+										align-items: center;
+										gap: var(--space-4);
+									"
+								>
+									<div
+										style="
+											width: 48px;
+											height: 48px;
+											border-radius: var(--radius-full);
+											background: #fef3c7;
+											color: #d97706;
+											display: flex;
+											align-items: center;
+											justify-content: center;
+											flex-shrink: 0;
+										"
+									>
+										<svg
+											width="22"
+											height="22"
+											viewBox="0 0 20 20"
+											fill="none"
+											stroke="currentColor"
+											stroke-width="1.8"
+										>
+											<circle cx="10" cy="7" r="4" />
+											<path d="M3 18v-1a7 7 0 0114 0v1" />
+										</svg>
+									</div>
+									<div>
+										<div style="font-weight: 700; color: var(--gray-900)">
+											Pédiatrie
+										</div>
+										<div style="font-size: 13px; color: var(--gray-500)">
+											18 praticiens — 22 actes
+										</div>
+									</div>
+								</div>
+								<div
+									style="
+										border: 1px solid var(--gray-200);
+										border-radius: var(--radius-lg);
+										padding: var(--space-4);
+										display: flex;
+										align-items: center;
+										gap: var(--space-4);
+									"
+								>
+									<div
+										style="
+											width: 48px;
+											height: 48px;
+											border-radius: var(--radius-full);
+											background: #fce7f3;
+											color: #db2777;
+											display: flex;
+											align-items: center;
+											justify-content: center;
+											flex-shrink: 0;
+										"
+									>
+										<svg
+											width="22"
+											height="22"
+											viewBox="0 0 20 20"
+											fill="none"
+											stroke="currentColor"
+											stroke-width="1.8"
+										>
+											<circle cx="10" cy="7" r="4" />
+											<path d="M3 18v-1a7 7 0 0114 0v1" />
+										</svg>
+									</div>
+									<div>
+										<div style="font-weight: 700; color: var(--gray-900)">
+											Gynécologie-Obstétrique
+										</div>
+										<div style="font-size: 13px; color: var(--gray-500)">
+											12 praticiens — 35 actes
+										</div>
+									</div>
+								</div>
+								<div
+									style="
+										border: 1px solid var(--gray-200);
+										border-radius: var(--radius-lg);
+										padding: var(--space-4);
+										display: flex;
+										align-items: center;
+										gap: var(--space-4);
+									"
+								>
+									<div
+										style="
+											width: 48px;
+											height: 48px;
+											border-radius: var(--radius-full);
+											background: #fef2f2;
+											color: #ef4444;
+											display: flex;
+											align-items: center;
+											justify-content: center;
+											flex-shrink: 0;
+										"
+									>
+										<svg
+											width="22"
+											height="22"
+											viewBox="0 0 20 20"
+											fill="none"
+											stroke="currentColor"
+											stroke-width="1.8"
+										>
+											<circle cx="10" cy="7" r="4" />
+											<path d="M3 18v-1a7 7 0 0114 0v1" />
+										</svg>
+									</div>
+									<div>
+										<div style="font-weight: 700; color: var(--gray-900)">
+											Chirurgie générale
+										</div>
+										<div style="font-size: 13px; color: var(--gray-500)">
+											8 praticiens — 42 actes
+										</div>
+									</div>
+								</div>
+								<div
+									style="
+										border: 1px solid var(--gray-200);
+										border-radius: var(--radius-lg);
+										padding: var(--space-4);
+										display: flex;
+										align-items: center;
+										gap: var(--space-4);
+									"
+								>
+									<div
+										style="
+											width: 48px;
+											height: 48px;
+											border-radius: var(--radius-full);
+											background: #dbeafe;
+											color: #2563eb;
+											display: flex;
+											align-items: center;
+											justify-content: center;
+											flex-shrink: 0;
+										"
+									>
+										<svg
+											width="22"
+											height="22"
+											viewBox="0 0 20 20"
+											fill="none"
+											stroke="currentColor"
+											stroke-width="1.8"
+										>
+											<circle cx="10" cy="7" r="4" />
+											<path d="M3 18v-1a7 7 0 0114 0v1" />
+										</svg>
+									</div>
+									<div>
+										<div style="font-weight: 700; color: var(--gray-900)">
+											Cardiologie
+										</div>
+										<div style="font-size: 13px; color: var(--gray-500)">
+											6 praticiens — 18 actes
+										</div>
+									</div>
+								</div>
+								<div
+									style="
+										border: 1px solid var(--gray-200);
+										border-radius: var(--radius-lg);
+										padding: var(--space-4);
+										display: flex;
+										align-items: center;
+										gap: var(--space-4);
+									"
+								>
+									<div
+										style="
+											width: 48px;
+											height: 48px;
+											border-radius: var(--radius-full);
+											background: #ecfeff;
+											color: #0891b2;
+											display: flex;
+											align-items: center;
+											justify-content: center;
+											flex-shrink: 0;
+										"
+									>
+										<svg
+											width="22"
+											height="22"
+											viewBox="0 0 20 20"
+											fill="none"
+											stroke="currentColor"
+											stroke-width="1.8"
+										>
+											<circle cx="10" cy="7" r="4" />
+											<path d="M3 18v-1a7 7 0 0114 0v1" />
+										</svg>
+									</div>
+									<div>
+										<div style="font-weight: 700; color: var(--gray-900)">
+											Ophtalmologie
+										</div>
+										<div style="font-size: 13px; color: var(--gray-500)">
+											10 praticiens — 15 actes
+										</div>
+									</div>
+								</div>
+								<div
+									style="
+										border: 1px solid var(--gray-200);
+										border-radius: var(--radius-lg);
+										padding: var(--space-4);
+										display: flex;
+										align-items: center;
+										gap: var(--space-4);
+									"
+								>
+									<div
+										style="
+											width: 48px;
+											height: 48px;
+											border-radius: var(--radius-full);
+											background: #ede9fe;
+											color: #7c3aed;
+											display: flex;
+											align-items: center;
+											justify-content: center;
+											flex-shrink: 0;
+										"
+									>
+										<svg
+											width="22"
+											height="22"
+											viewBox="0 0 20 20"
+											fill="none"
+											stroke="currentColor"
+											stroke-width="1.8"
+										>
+											<circle cx="10" cy="7" r="4" />
+											<path d="M3 18v-1a7 7 0 0114 0v1" />
+										</svg>
+									</div>
+									<div>
+										<div style="font-weight: 700; color: var(--gray-900)">
+											ORL
+										</div>
+										<div style="font-size: 13px; color: var(--gray-500)">
+											7 praticiens — 12 actes
+										</div>
+									</div>
+								</div>
+								<div
+									style="
+										border: 1px solid var(--gray-200);
+										border-radius: var(--radius-lg);
+										padding: var(--space-4);
+										display: flex;
+										align-items: center;
+										gap: var(--space-4);
+									"
+								>
+									<div
+										style="
+											width: 48px;
+											height: 48px;
+											border-radius: var(--radius-full);
+											background: #f0fdf4;
+											color: #16a34a;
+											display: flex;
+											align-items: center;
+											justify-content: center;
+											flex-shrink: 0;
+										"
+									>
+										<svg
+											width="22"
+											height="22"
+											viewBox="0 0 20 20"
+											fill="none"
+											stroke="currentColor"
+											stroke-width="1.8"
+										>
+											<circle cx="10" cy="7" r="4" />
+											<path d="M3 18v-1a7 7 0 0114 0v1" />
+										</svg>
+									</div>
+									<div>
+										<div style="font-weight: 700; color: var(--gray-900)">
+											Dermatologie
+										</div>
+										<div style="font-size: 13px; color: var(--gray-500)">
+											5 praticiens — 10 actes
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+
+						<!-- Tab: Structures sanitaires -->
+						<div class="tab-panel" id="structures" style="display: none">
+							<div style="padding: var(--space-4)">
+								<div
+									style="
+										display: flex;
+										gap: var(--space-3);
+										align-items: center;
+										margin-bottom: var(--space-4);
+										flex-wrap: wrap;
+									"
+								>
+									<input
+										type="text"
+										class="form-input"
+										placeholder="Rechercher une structure..."
+										style="flex: 1; min-width: 200px"
+									/>
+									<select class="form-select" style="width: 160px">
+										<option>Tous les types</option>
+										<option>Hôpital</option>
+										<option>Clinique</option>
+										<option>Centre de santé</option>
+										<option>Laboratoire</option>
+										<option>Pharmacie</option>
+									</select>
+									<select class="form-select" style="width: 160px">
+										<option>Toutes les villes</option>
+										<option>Abidjan</option>
+										<option>Yamoussoukro</option>
+										<option>Bouaké</option>
+										<option>San Pedro</option>
+										<option>Korhogo</option>
+									</select>
+								</div>
+								<table class="table">
+									<thead>
+										<tr>
+											<th>Code</th>
+											<th>Nom</th>
+											<th>Type</th>
+											<th>Ville</th>
+											<th>Convention</th>
+											<th>Capacité</th>
+											<th>Statut</th>
+										</tr>
+									</thead>
+									<tbody>
+										<tr>
+											<td
+												style="
+													font-family: var(--font-mono);
+													font-weight: 600;
+													color: var(--iips-primary);
+												"
+											>
+												STR-001
+											</td>
+											<td style="font-weight: 500">CHU de Cocody</td>
+											<td>Hôpital</td>
+											<td>Abidjan</td>
+											<td>
+												<span class="badge badge--success">Conventionné</span>
+											</td>
+											<td>850 lits</td>
+											<td><span class="badge badge--success">Actif</span></td>
+										</tr>
+										<tr>
+											<td
+												style="
+													font-family: var(--font-mono);
+													font-weight: 600;
+													color: var(--iips-primary);
+												"
+											>
+												STR-002
+											</td>
+											<td style="font-weight: 500">CHU de Yopougon</td>
+											<td>Hôpital</td>
+											<td>Abidjan</td>
+											<td>
+												<span class="badge badge--success">Conventionné</span>
+											</td>
+											<td>620 lits</td>
+											<td><span class="badge badge--success">Actif</span></td>
+										</tr>
+										<tr>
+											<td
+												style="
+													font-family: var(--font-mono);
+													font-weight: 600;
+													color: var(--iips-primary);
+												"
+											>
+												STR-003
+											</td>
+											<td style="font-weight: 500">Clinique La Providence</td>
+											<td>Clinique</td>
+											<td>Abidjan</td>
+											<td>
+												<span class="badge badge--success">Conventionné</span>
+											</td>
+											<td>120 lits</td>
+											<td><span class="badge badge--success">Actif</span></td>
+										</tr>
+										<tr>
+											<td
+												style="
+													font-family: var(--font-mono);
+													font-weight: 600;
+													color: var(--iips-primary);
+												"
+											>
+												STR-004
+											</td>
+											<td style="font-weight: 500">
+												Polyclinique Sainte Anne-Marie
+											</td>
+											<td>Clinique</td>
+											<td>Abidjan</td>
+											<td>
+												<span class="badge badge--success">Conventionné</span>
+											</td>
+											<td>200 lits</td>
+											<td><span class="badge badge--success">Actif</span></td>
+										</tr>
+										<tr>
+											<td
+												style="
+													font-family: var(--font-mono);
+													font-weight: 600;
+													color: var(--iips-primary);
+												"
+											>
+												STR-005
+											</td>
+											<td style="font-weight: 500">CHR de Bouaké</td>
+											<td>Hôpital</td>
+											<td>Bouaké</td>
+											<td>
+												<span class="badge badge--success">Conventionné</span>
+											</td>
+											<td>450 lits</td>
+											<td><span class="badge badge--success">Actif</span></td>
+										</tr>
+										<tr>
+											<td
+												style="
+													font-family: var(--font-mono);
+													font-weight: 600;
+													color: var(--iips-primary);
+												"
+											>
+												STR-006
+											</td>
+											<td style="font-weight: 500">
+												Centre de Santé de Marcory
+											</td>
+											<td>Centre de santé</td>
+											<td>Abidjan</td>
+											<td>
+												<span class="badge badge--success">Conventionné</span>
+											</td>
+											<td>30 lits</td>
+											<td><span class="badge badge--success">Actif</span></td>
+										</tr>
+										<tr>
+											<td
+												style="
+													font-family: var(--font-mono);
+													font-weight: 600;
+													color: var(--iips-primary);
+												"
+											>
+												STR-007
+											</td>
+											<td style="font-weight: 500">Laboratoire BioMed</td>
+											<td>Laboratoire</td>
+											<td>Abidjan</td>
+											<td>
+												<span class="badge badge--success">Conventionné</span>
+											</td>
+											<td>—</td>
+											<td><span class="badge badge--success">Actif</span></td>
+										</tr>
+										<tr>
+											<td
+												style="
+													font-family: var(--font-mono);
+													font-weight: 600;
+													color: var(--iips-primary);
+												"
+											>
+												STR-008
+											</td>
+											<td style="font-weight: 500">Pharmacie du Plateau</td>
+											<td>Pharmacie</td>
+											<td>Abidjan</td>
+											<td>
+												<span class="badge badge--success">Conventionné</span>
+											</td>
+											<td>—</td>
+											<td><span class="badge badge--success">Actif</span></td>
+										</tr>
+										<tr>
+											<td
+												style="
+													font-family: var(--font-mono);
+													font-weight: 600;
+													color: var(--iips-primary);
+												"
+											>
+												STR-009
+											</td>
+											<td style="font-weight: 500">CHR de Korhogo</td>
+											<td>Hôpital</td>
+											<td>Korhogo</td>
+											<td>
+												<span class="badge badge--success">Conventionné</span>
+											</td>
+											<td>320 lits</td>
+											<td><span class="badge badge--success">Actif</span></td>
+										</tr>
+										<tr>
+											<td
+												style="
+													font-family: var(--font-mono);
+													font-weight: 600;
+													color: var(--iips-primary);
+												"
+											>
+												STR-010
+											</td>
+											<td style="font-weight: 500">Clinique Procréa</td>
+											<td>Clinique</td>
+											<td>Abidjan</td>
+											<td>
+												<span class="badge badge--warning">En attente</span>
+											</td>
+											<td>80 lits</td>
+											<td>
+												<span class="badge badge--warning">En cours</span>
+											</td>
+										</tr>
+									</tbody>
+								</table>
+								<div
+									style="
+										display: flex;
+										justify-content: space-between;
+										align-items: center;
+										padding: var(--space-4) 0 0 0;
+									"
+								>
+									<span
+										style="font-size: var(--text-sm); color: var(--gray-500)"
+										>Affichage 1-10 sur 156 structures</span
+									>
+									<div style="display: flex; gap: var(--space-1)">
+										<button class="btn btn-ghost btn-sm" disabled>←</button
+										><button class="btn btn-primary btn-sm">1</button
+										><button class="btn btn-ghost btn-sm">2</button
+										><button class="btn btn-ghost btn-sm">...</button
+										><button class="btn btn-ghost btn-sm">16</button
+										><button class="btn btn-ghost btn-sm">→</button>
+									</div>
+								</div>
+							</div>
+						</div>
+
+						<!-- Tab: Tarifs -->
+						<div class="tab-panel" id="tarifs" style="display: none">
+							<div style="padding: var(--space-4)">
+								<table class="table">
+									<thead>
+										<tr>
+											<th>Grille tarifaire</th>
+											<th>Zone</th>
+											<th>Applicable depuis</th>
+											<th>Nb actes</th>
+											<th>Révision prévue</th>
+											<th>Statut</th>
+										</tr>
+									</thead>
+									<tbody>
+										<tr>
+											<td style="font-weight: 600">Grille Abidjan Premium</td>
+											<td>Abidjan</td>
+											<td>01/01/2026</td>
+											<td>342 actes</td>
+											<td>01/07/2026</td>
+											<td><span class="badge badge--success">Active</span></td>
+										</tr>
+										<tr>
+											<td style="font-weight: 600">Grille Abidjan Standard</td>
+											<td>Abidjan</td>
+											<td>01/01/2026</td>
+											<td>342 actes</td>
+											<td>01/07/2026</td>
+											<td><span class="badge badge--success">Active</span></td>
+										</tr>
+										<tr>
+											<td style="font-weight: 600">Grille Intérieur</td>
+											<td>Hors Abidjan</td>
+											<td>01/01/2026</td>
+											<td>285 actes</td>
+											<td>01/07/2026</td>
+											<td><span class="badge badge--success">Active</span></td>
+										</tr>
+										<tr>
+											<td style="font-weight: 600">Grille Urgences</td>
+											<td>Nationale</td>
+											<td>15/03/2025</td>
+											<td>78 actes</td>
+											<td>15/03/2026</td>
+											<td><span class="badge badge--success">Active</span></td>
+										</tr>
+										<tr>
+											<td style="font-weight: 600">Grille Maternité</td>
+											<td>Nationale</td>
+											<td>01/06/2025</td>
+											<td>35 actes</td>
+											<td>01/06/2026</td>
+											<td><span class="badge badge--success">Active</span></td>
+										</tr>
+										<tr>
+											<td style="font-weight: 600">Grille 2025 (archive)</td>
+											<td>Nationale</td>
+											<td>01/01/2025</td>
+											<td>310 actes</td>
+											<td>—</td>
+											<td>
+												<span class="badge badge--secondary">Archivée</span>
+											</td>
+										</tr>
+									</tbody>
+								</table>
+							</div>
+						</div>
+
+						<!-- Tab: Organisation -->
+						<div class="tab-panel" id="organisation" style="display: none">
+							<div style="padding: var(--space-4)">
+								<div
+									style="
+										border-left: 3px solid var(--iips-primary);
+										padding-left: var(--space-4);
+										margin-bottom: var(--space-4);
+									"
+								>
+									<div
+										style="
+											font-weight: 700;
+											font-size: var(--text-md);
+											color: var(--gray-900);
+											margin-bottom: var(--space-2);
+										"
+									>
+										Direction Générale
+									</div>
+									<div style="font-size: 13px; color: var(--gray-500)">
+										Yao Adjoumani — Directeur Général
+									</div>
+								</div>
+								<div style="margin-left: var(--space-6)">
+									<div
+										style="
+											border-left: 3px solid var(--iips-secondary);
+											padding-left: var(--space-4);
+											margin-bottom: var(--space-4);
+										"
+									>
+										<div
+											style="
+												font-weight: 600;
+												color: var(--gray-900);
+												margin-bottom: var(--space-2);
+											"
+										>
+											Direction des Opérations
+										</div>
+										<div
+											style="
+												margin-left: var(--space-4);
+												display: flex;
+												flex-direction: column;
+												gap: var(--space-2);
+												font-size: 13px;
+												color: var(--gray-600);
+											"
+										>
+											<div
+												style="
+													padding: var(--space-2) var(--space-3);
+													background: var(--gray-50);
+													border-radius: var(--radius-md);
+												"
+											>
+												Service Production — 4 agents
+											</div>
+											<div
+												style="
+													padding: var(--space-2) var(--space-3);
+													background: var(--gray-50);
+													border-radius: var(--radius-md);
+												"
+											>
+												Service Souscriptions — 3 agents
+											</div>
+											<div
+												style="
+													padding: var(--space-2) var(--space-3);
+													background: var(--gray-50);
+													border-radius: var(--radius-md);
+												"
+											>
+												Service Sinistres — 5 agents
+											</div>
+										</div>
+									</div>
+									<div
+										style="
+											border-left: 3px solid var(--iips-accent);
+											padding-left: var(--space-4);
+											margin-bottom: var(--space-4);
+										"
+									>
+										<div
+											style="
+												font-weight: 600;
+												color: var(--gray-900);
+												margin-bottom: var(--space-2);
+											"
+										>
+											Direction Commerciale
+										</div>
+										<div
+											style="
+												margin-left: var(--space-4);
+												display: flex;
+												flex-direction: column;
+												gap: var(--space-2);
+												font-size: 13px;
+												color: var(--gray-600);
+											"
+										>
+											<div
+												style="
+													padding: var(--space-2) var(--space-3);
+													background: var(--gray-50);
+													border-radius: var(--radius-md);
+												"
+											>
+												Service CRM & Prospection — 3 agents
+											</div>
+											<div
+												style="
+													padding: var(--space-2) var(--space-3);
+													background: var(--gray-50);
+													border-radius: var(--radius-md);
+												"
+											>
+												Service Grands Comptes — 2 agents
+											</div>
+										</div>
+									</div>
+									<div
+										style="
+											border-left: 3px solid #2563eb;
+											padding-left: var(--space-4);
+											margin-bottom: var(--space-4);
+										"
+									>
+										<div
+											style="
+												font-weight: 600;
+												color: var(--gray-900);
+												margin-bottom: var(--space-2);
+											"
+										>
+											Direction Financière
+										</div>
+										<div
+											style="
+												margin-left: var(--space-4);
+												display: flex;
+												flex-direction: column;
+												gap: var(--space-2);
+												font-size: 13px;
+												color: var(--gray-600);
+											"
+										>
+											<div
+												style="
+													padding: var(--space-2) var(--space-3);
+													background: var(--gray-50);
+													border-radius: var(--radius-md);
+												"
+											>
+												Service Comptabilité — 3 agents
+											</div>
+											<div
+												style="
+													padding: var(--space-2) var(--space-3);
+													background: var(--gray-50);
+													border-radius: var(--radius-md);
+												"
+											>
+												Service Paiements & Trésorerie — 2 agents
+											</div>
+										</div>
+									</div>
+									<div
+										style="
+											border-left: 3px solid #7c3aed;
+											padding-left: var(--space-4);
+											margin-bottom: var(--space-4);
+										"
+									>
+										<div
+											style="
+												font-weight: 600;
+												color: var(--gray-900);
+												margin-bottom: var(--space-2);
+											"
+										>
+											Direction des Systèmes d'Information
+										</div>
+										<div
+											style="
+												margin-left: var(--space-4);
+												display: flex;
+												flex-direction: column;
+												gap: var(--space-2);
+												font-size: 13px;
+												color: var(--gray-600);
+											"
+										>
+											<div
+												style="
+													padding: var(--space-2) var(--space-3);
+													background: var(--gray-50);
+													border-radius: var(--radius-md);
+												"
+											>
+												Service Infrastructure — 2 agents
+											</div>
+											<div
+												style="
+													padding: var(--space-2) var(--space-3);
+													background: var(--gray-50);
+													border-radius: var(--radius-md);
+												"
+											>
+												Service Applications — 3 agents
+											</div>
+										</div>
+									</div>
+									<div
+										style="
+											border-left: 3px solid #059669;
+											padding-left: var(--space-4);
+											margin-bottom: var(--space-4);
+										"
+									>
+										<div
+											style="
+												font-weight: 600;
+												color: var(--gray-900);
+												margin-bottom: var(--space-2);
+											"
+										>
+											Direction Administrative
+										</div>
+										<div
+											style="
+												margin-left: var(--space-4);
+												display: flex;
+												flex-direction: column;
+												gap: var(--space-2);
+												font-size: 13px;
+												color: var(--gray-600);
+											"
+										>
+											<div
+												style="
+													padding: var(--space-2) var(--space-3);
+													background: var(--gray-50);
+													border-radius: var(--radius-md);
+												"
+											>
+												Service RH — 2 agents
+											</div>
+											<div
+												style="
+													padding: var(--space-2) var(--space-3);
+													background: var(--gray-50);
+													border-radius: var(--radius-md);
+												"
+											>
+												Service Archives & GED — 1 agent
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+
+						<!-- Tab: Types contrats -->
+						<div class="tab-panel" id="types-contrats" style="display: none">
+							<div style="padding: var(--space-4)">
+								<table class="table">
+									<thead>
+										<tr>
+											<th>Code</th>
+											<th>Libellé</th>
+											<th>Catégorie</th>
+											<th>Couverture</th>
+											<th>Prime min (FCFA)</th>
+											<th>Durée min</th>
+											<th>Statut</th>
+										</tr>
+									</thead>
+									<tbody>
+										<tr>
+											<td
+												style="
+													font-family: var(--font-mono);
+													font-weight: 600;
+													color: var(--iips-primary);
+												"
+											>
+												ALPHA-1
+											</td>
+											<td style="font-weight: 500">Garantie Alpha 1</td>
+											<td>
+												<span
+													class="badge"
+													style="background: #dbeafe; color: #1d4ed8"
+													>Fonctionnaire</span
+												>
+											</td>
+											<td>80%</td>
+											<td style="font-family: var(--font-mono)">
+												22 125 – 36 078
+											</td>
+											<td>12 mois</td>
+											<td><span class="badge badge--success">Actif</span></td>
+										</tr>
+										<tr>
+											<td
+												style="
+													font-family: var(--font-mono);
+													font-weight: 600;
+													color: var(--iips-primary);
+												"
+											>
+												ALPHA-2
+											</td>
+											<td style="font-weight: 500">Garantie Alpha 2</td>
+											<td>
+												<span
+													class="badge"
+													style="background: #dbeafe; color: #1d4ed8"
+													>Fonctionnaire</span
+												>
+											</td>
+											<td>80% (pharma 70%)</td>
+											<td style="font-family: var(--font-mono)">
+												20 000 – 33 400
+											</td>
+											<td>12 mois</td>
+											<td><span class="badge badge--success">Actif</span></td>
+										</tr>
+										<tr>
+											<td
+												style="
+													font-family: var(--font-mono);
+													font-weight: 600;
+													color: var(--iips-primary);
+												"
+											>
+												BETHA
+											</td>
+											<td style="font-weight: 500">Garantie Betha</td>
+											<td>
+												<span
+													class="badge"
+													style="background: #dbeafe; color: #1d4ed8"
+													>Fonctionnaire</span
+												>
+											</td>
+											<td>70%</td>
+											<td style="font-family: var(--font-mono)">
+												16 965 – 27 461
+											</td>
+											<td>12 mois</td>
+											<td><span class="badge badge--success">Actif</span></td>
+										</tr>
+										<tr>
+											<td
+												style="
+													font-family: var(--font-mono);
+													font-weight: 600;
+													color: var(--iips-primary);
+												"
+											>
+												BETHA-CL
+											</td>
+											<td style="font-weight: 500">Garantie Betha Classique</td>
+											<td>
+												<span
+													class="badge"
+													style="background: #dbeafe; color: #1d4ed8"
+													>Fonctionnaire</span
+												>
+											</td>
+											<td>70%</td>
+											<td style="font-family: var(--font-mono)">
+												14 783 – 24 688
+											</td>
+											<td>12 mois</td>
+											<td><span class="badge badge--success">Actif</span></td>
+										</tr>
+										<tr>
+											<td
+												style="
+													font-family: var(--font-mono);
+													font-weight: 600;
+													color: var(--iips-primary);
+												"
+											>
+												ENSEIGNANT
+											</td>
+											<td style="font-weight: 500">Garantie Enseignant</td>
+											<td>
+												<span
+													class="badge"
+													style="background: #dbeafe; color: #1d4ed8"
+													>Fonctionnaire</span
+												>
+											</td>
+											<td>70%</td>
+											<td style="font-family: var(--font-mono)">
+												11 650 – 19 455
+											</td>
+											<td>12 mois</td>
+											<td><span class="badge badge--success">Actif</span></td>
+										</tr>
+										<tr>
+											<td
+												style="
+													font-family: var(--font-mono);
+													font-weight: 600;
+													color: var(--iips-primary);
+												"
+											>
+												CONFORT+
+											</td>
+											<td style="font-weight: 500">Garantie Confort Plus</td>
+											<td>
+												<span class="badge badge--primary">Particulier</span>
+											</td>
+											<td>80% (pharma 70%)</td>
+											<td style="font-family: var(--font-mono)">
+												21 995 – 36 732
+											</td>
+											<td>12 mois</td>
+											<td><span class="badge badge--success">Actif</span></td>
+										</tr>
+										<tr>
+											<td
+												style="
+													font-family: var(--font-mono);
+													font-weight: 600;
+													color: var(--iips-primary);
+												"
+											>
+												CONFORT-CL
+											</td>
+											<td style="font-weight: 500">
+												Garantie Confort Classique
+											</td>
+											<td>
+												<span class="badge badge--primary">Particulier</span>
+											</td>
+											<td>70%</td>
+											<td style="font-family: var(--font-mono)">
+												16 995 – 28 382
+											</td>
+											<td>12 mois</td>
+											<td><span class="badge badge--success">Actif</span></td>
+										</tr>
+										<tr>
+											<td
+												style="
+													font-family: var(--font-mono);
+													font-weight: 600;
+													color: var(--iips-primary);
+												"
+											>
+												GROUPE
+											</td>
+											<td style="font-weight: 500">Garantie Groupe IIPS</td>
+											<td><span class="badge badge--warning">Groupe</span></td>
+											<td>80%</td>
+											<td style="font-family: var(--font-mono)">12 295</td>
+											<td>12 mois</td>
+											<td><span class="badge badge--success">Actif</span></td>
+										</tr>
+										<tr>
+											<td
+												style="
+													font-family: var(--font-mono);
+													font-weight: 600;
+													color: var(--iips-primary);
+												"
+											>
+												GROUPE-CL
+											</td>
+											<td style="font-weight: 500">
+												Garantie Groupe Classique
+											</td>
+											<td><span class="badge badge--warning">Groupe</span></td>
+											<td>70%</td>
+											<td style="font-family: var(--font-mono)">10 500</td>
+											<td>12 mois</td>
+											<td><span class="badge badge--success">Actif</span></td>
+										</tr>
+										<tr>
+											<td
+												style="
+													font-family: var(--font-mono);
+													font-weight: 600;
+													color: var(--iips-primary);
+												"
+											>
+												AUTOGESTION
+											</td>
+											<td style="font-weight: 500">Auto Gestion</td>
+											<td><span class="badge badge--warning">Groupe</span></td>
+											<td>80%</td>
+											<td style="font-family: var(--font-mono)">Sur devis</td>
+											<td>12 mois</td>
+											<td><span class="badge badge--success">Actif</span></td>
+										</tr>
+										<tr>
+											<td
+												style="
+													font-family: var(--font-mono);
+													font-weight: 600;
+													color: var(--iips-primary);
+												"
+											>
+												SYLEG
+											</td>
+											<td style="font-weight: 500">Garantie Syleg</td>
+											<td>
+												<span class="badge badge--primary">Particulier</span>
+											</td>
+											<td>70%</td>
+											<td style="font-family: var(--font-mono)">
+												14 500 – 24 200
+											</td>
+											<td>12 mois</td>
+											<td><span class="badge badge--success">Actif</span></td>
+										</tr>
+										<tr>
+											<td
+												style="
+													font-family: var(--font-mono);
+													font-weight: 600;
+													color: var(--iips-primary);
+												"
+											>
+												SOLIDARITE-1
+											</td>
+											<td style="font-weight: 500">Garantie Solidarité 1</td>
+											<td>
+												<span class="badge badge--primary">Particulier</span>
+											</td>
+											<td>70%</td>
+											<td style="font-family: var(--font-mono)">
+												9 800 – 16 350
+											</td>
+											<td>12 mois</td>
+											<td><span class="badge badge--success">Actif</span></td>
+										</tr>
+										<tr>
+											<td
+												style="
+													font-family: var(--font-mono);
+													font-weight: 600;
+													color: var(--iips-primary);
+												"
+											>
+												SOLIDARITE-2
+											</td>
+											<td style="font-weight: 500">Garantie Solidarité 2</td>
+											<td>
+												<span class="badge badge--primary">Particulier</span>
+											</td>
+											<td>60%</td>
+											<td style="font-family: var(--font-mono)">
+												7 500 – 12 500
+											</td>
+											<td>12 mois</td>
+											<td><span class="badge badge--success">Actif</span></td>
+										</tr>
+									</tbody>
+								</table>
+
+								<!-- Frais de dossier par type de contrat -->
+								<div
+									style="
+										margin-top: var(--space-5);
+										border-top: 2px solid var(--gray-200);
+										padding-top: var(--space-5);
+									"
+								>
+									<h3
+										style="
+											font-weight: 700;
+											color: var(--gray-900);
+											margin-bottom: var(--space-1);
+											font-size: var(--text-base);
+										"
+									>
+										Frais de dossier par type de contrat
+									</h3>
+									<p
+										style="
+											font-size: 13px;
+											color: var(--gray-500);
+											margin-bottom: var(--space-4);
+										"
+									>
+										Montants des frais de dossier appliqués à la souscription
+										selon le type de contrat
+									</p>
+									<div
+										style="
+											display: grid;
+											grid-template-columns: repeat(4, 1fr);
+											gap: var(--space-3);
+										"
+									>
+										<div
+											style="
+												border: 1px solid var(--gray-200);
+												border-radius: var(--radius-lg);
+												padding: var(--space-4);
+												text-align: center;
+											"
+										>
+											<div
+												style="
+													font-weight: 700;
+													color: var(--gray-900);
+													margin-bottom: var(--space-1);
+												"
+											>
+												Alpha 1
+											</div>
+											<div
+												style="
+													font-family: var(--font-mono);
+													font-weight: 700;
+													font-size: var(--text-lg);
+													color: var(--iips-primary);
+												"
+											>
+												21 705 F
+											</div>
+										</div>
+										<div
+											style="
+												border: 1px solid var(--gray-200);
+												border-radius: var(--radius-lg);
+												padding: var(--space-4);
+												text-align: center;
+											"
+										>
+											<div
+												style="
+													font-weight: 700;
+													color: var(--gray-900);
+													margin-bottom: var(--space-1);
+												"
+											>
+												Alpha 2
+											</div>
+											<div
+												style="
+													font-family: var(--font-mono);
+													font-weight: 700;
+													font-size: var(--text-lg);
+													color: var(--iips-primary);
+												"
+											>
+												14 000 F
+											</div>
+										</div>
+										<div
+											style="
+												border: 1px solid var(--gray-200);
+												border-radius: var(--radius-lg);
+												padding: var(--space-4);
+												text-align: center;
+											"
+										>
+											<div
+												style="
+													font-weight: 700;
+													color: var(--gray-900);
+													margin-bottom: var(--space-1);
+												"
+											>
+												Betha
+											</div>
+											<div
+												style="
+													font-family: var(--font-mono);
+													font-weight: 700;
+													font-size: var(--text-lg);
+													color: var(--iips-primary);
+												"
+											>
+												21 705 F
+											</div>
+										</div>
+										<div
+											style="
+												border: 1px solid var(--gray-200);
+												border-radius: var(--radius-lg);
+												padding: var(--space-4);
+												text-align: center;
+											"
+										>
+											<div
+												style="
+													font-weight: 700;
+													color: var(--gray-900);
+													margin-bottom: var(--space-1);
+												"
+											>
+												Betha CL
+											</div>
+											<div
+												style="
+													font-family: var(--font-mono);
+													font-weight: 700;
+													font-size: var(--text-lg);
+													color: var(--iips-primary);
+												"
+											>
+												14 000 F
+											</div>
+										</div>
+										<div
+											style="
+												border: 1px solid var(--gray-200);
+												border-radius: var(--radius-lg);
+												padding: var(--space-4);
+												text-align: center;
+											"
+										>
+											<div
+												style="
+													font-weight: 700;
+													color: var(--gray-900);
+													margin-bottom: var(--space-1);
+												"
+											>
+												Enseignant
+											</div>
+											<div
+												style="
+													font-family: var(--font-mono);
+													font-weight: 700;
+													font-size: var(--text-lg);
+													color: var(--iips-primary);
+												"
+											>
+												10 000 F
+											</div>
+										</div>
+										<div
+											style="
+												border: 1px solid var(--gray-200);
+												border-radius: var(--radius-lg);
+												padding: var(--space-4);
+												text-align: center;
+											"
+										>
+											<div
+												style="
+													font-weight: 700;
+													color: var(--gray-900);
+													margin-bottom: var(--space-1);
+												"
+											>
+												Confort+
+											</div>
+											<div
+												style="
+													font-family: var(--font-mono);
+													font-weight: 700;
+													font-size: var(--text-lg);
+													color: var(--iips-primary);
+												"
+											>
+												15 000 F
+											</div>
+										</div>
+										<div
+											style="
+												border: 1px solid var(--gray-200);
+												border-radius: var(--radius-lg);
+												padding: var(--space-4);
+												text-align: center;
+											"
+										>
+											<div
+												style="
+													font-weight: 700;
+													color: var(--gray-900);
+													margin-bottom: var(--space-1);
+												"
+											>
+												Confort CL
+											</div>
+											<div
+												style="
+													font-family: var(--font-mono);
+													font-weight: 700;
+													font-size: var(--text-lg);
+													color: var(--iips-primary);
+												"
+											>
+												15 000 F
+											</div>
+										</div>
+										<div
+											style="
+												border: 1px solid var(--gray-200);
+												border-radius: var(--radius-lg);
+												padding: var(--space-4);
+												text-align: center;
+											"
+										>
+											<div
+												style="
+													font-weight: 700;
+													color: var(--gray-900);
+													margin-bottom: var(--space-1);
+												"
+											>
+												Groupe
+											</div>
+											<div
+												style="
+													font-family: var(--font-mono);
+													font-weight: 700;
+													font-size: var(--text-lg);
+													color: var(--color-success);
+												"
+											>
+												0 F
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+
+						<!-- Tab: Tarification -->
+						<div class="tab-panel" id="tarification" style="display: none">
+							<div
+								style="
+									padding: var(--space-4);
+									display: flex;
+									flex-direction: column;
+									gap: var(--space-4);
+								"
+							>
+								<div
+									style="
+										border: 1px solid var(--gray-200);
+										border-radius: var(--radius-lg);
+										padding: var(--space-4);
+									"
+								>
+									<div
+										style="
+											display: flex;
+											justify-content: space-between;
+											align-items: center;
+										"
+									>
+										<div>
+											<div style="font-weight: 700; color: var(--gray-900)">
+												Règle d'âge
+											</div>
+											<div
+												style="
+													font-size: 13px;
+													color: var(--gray-500);
+													margin-top: var(--space-1);
+												"
+											>
+												Majoration +15% pour les assurés de plus de 60 ans
+											</div>
+										</div>
+										<span class="badge badge--success">Active</span>
+									</div>
+								</div>
+								<div
+									style="
+										border: 1px solid var(--gray-200);
+										border-radius: var(--radius-lg);
+										padding: var(--space-4);
+									"
+								>
+									<div
+										style="
+											display: flex;
+											justify-content: space-between;
+											align-items: center;
+										"
+									>
+										<div>
+											<div style="font-weight: 700; color: var(--gray-900)">
+												Règle zone géographique
+											</div>
+											<div
+												style="
+													font-size: 13px;
+													color: var(--gray-500);
+													margin-top: var(--space-1);
+												"
+											>
+												Réduction -10% pour les zones hors Abidjan
+											</div>
+										</div>
+										<span class="badge badge--success">Active</span>
+									</div>
+								</div>
+								<div
+									style="
+										border: 1px solid var(--gray-200);
+										border-radius: var(--radius-lg);
+										padding: var(--space-4);
+									"
+								>
+									<div
+										style="
+											display: flex;
+											justify-content: space-between;
+											align-items: center;
+										"
+									>
+										<div>
+											<div style="font-weight: 700; color: var(--gray-900)">
+												Règle groupe
+											</div>
+											<div
+												style="
+													font-size: 13px;
+													color: var(--gray-500);
+													margin-top: var(--space-1);
+												"
+											>
+												Réduction progressive: -5% (10-50 pers), -10% (51-200),
+												-15% (200+)
+											</div>
+										</div>
+										<span class="badge badge--success">Active</span>
+									</div>
+								</div>
+								<div
+									style="
+										border: 1px solid var(--gray-200);
+										border-radius: var(--radius-lg);
+										padding: var(--space-4);
+									"
+								>
+									<div
+										style="
+											display: flex;
+											justify-content: space-between;
+											align-items: center;
+										"
+									>
+										<div>
+											<div style="font-weight: 700; color: var(--gray-900)">
+												Règle ancienneté
+											</div>
+											<div
+												style="
+													font-size: 13px;
+													color: var(--gray-500);
+													margin-top: var(--space-1);
+												"
+											>
+												Réduction -5% après 3 ans de fidélité
+											</div>
+										</div>
+										<span class="badge badge--success">Active</span>
+									</div>
+								</div>
+								<div
+									style="
+										border: 1px solid var(--gray-200);
+										border-radius: var(--radius-lg);
+										padding: var(--space-4);
+									"
+								>
+									<div
+										style="
+											display: flex;
+											justify-content: space-between;
+											align-items: center;
+										"
+									>
+										<div>
+											<div style="font-weight: 700; color: var(--gray-900)">
+												Règle sinistralité
+											</div>
+											<div
+												style="
+													font-size: 13px;
+													color: var(--gray-500);
+													margin-top: var(--space-1);
+												"
+											>
+												Majoration si S/P > 80% : +10% | si S/P > 100% : +25%
+											</div>
+										</div>
+										<span class="badge badge--success">Active</span>
+									</div>
+								</div>
+
+								<!-- Surcotisations maladies chroniques -->
+								<div
+									style="
+										margin-top: var(--space-5);
+										border-top: 2px solid var(--gray-200);
+										padding-top: var(--space-5);
+									"
+								>
+									<h3
+										style="
+											font-weight: 700;
+											color: var(--gray-900);
+											margin-bottom: var(--space-1);
+											font-size: var(--text-base);
+										"
+									>
+										Surcotisations maladies chroniques
+									</h3>
+									<p
+										style="
+											font-size: 13px;
+											color: var(--gray-500);
+											margin-bottom: var(--space-4);
+										"
+									>
+										Cotisations supplémentaires appliquées pour les
+										bénéficiaires atteints de maladies chroniques déclarées
+									</p>
+									<table class="table">
+										<thead>
+											<tr>
+												<th>Maladie</th>
+												<th>Annuelle (FCFA)</th>
+												<th>Mensuelle (FCFA)</th>
+												<th>Trimestrielle (FCFA)</th>
+												<th>Semestrielle (FCFA)</th>
+												<th>Statut</th>
+											</tr>
+										</thead>
+										<tbody>
+											<tr>
+												<td style="font-weight: 600">Diabète</td>
+												<td style="font-family: var(--font-mono)">260 395</td>
+												<td style="font-family: var(--font-mono)">23 436</td>
+												<td style="font-family: var(--font-mono)">67 703</td>
+												<td style="font-family: var(--font-mono)">132 801</td>
+												<td><span class="badge badge--success">Actif</span></td>
+											</tr>
+											<tr>
+												<td style="font-weight: 600">Tension artérielle</td>
+												<td style="font-family: var(--font-mono)">197 385</td>
+												<td style="font-family: var(--font-mono)">17 765</td>
+												<td style="font-family: var(--font-mono)">51 320</td>
+												<td style="font-family: var(--font-mono)">100 666</td>
+												<td><span class="badge badge--success">Actif</span></td>
+											</tr>
+											<tr>
+												<td style="font-weight: 600">Asthme</td>
+												<td style="font-family: var(--font-mono)">194 760</td>
+												<td style="font-family: var(--font-mono)">17 528</td>
+												<td style="font-family: var(--font-mono)">50 638</td>
+												<td style="font-family: var(--font-mono)">99 328</td>
+												<td><span class="badge badge--success">Actif</span></td>
+											</tr>
+											<tr>
+												<td style="font-weight: 600">Épilepsie</td>
+												<td style="font-family: var(--font-mono)">247 944</td>
+												<td style="font-family: var(--font-mono)">22 315</td>
+												<td style="font-family: var(--font-mono)">64 465</td>
+												<td style="font-family: var(--font-mono)">126 451</td>
+												<td><span class="badge badge--success">Actif</span></td>
+											</tr>
+										</tbody>
+									</table>
+								</div>
+
+								<!-- Règles de cotisation supplémentaire -->
+								<div
+									style="
+										margin-top: var(--space-5);
+										border-top: 2px solid var(--gray-200);
+										padding-top: var(--space-5);
+									"
+								>
+									<h3
+										style="
+											font-weight: 700;
+											color: var(--gray-900);
+											margin-bottom: var(--space-1);
+											font-size: var(--text-base);
+										"
+									>
+										Règles de cotisation supplémentaire
+									</h3>
+									<p
+										style="
+											font-size: 13px;
+											color: var(--gray-500);
+											margin-bottom: var(--space-4);
+										"
+									>
+										Majorations applicables selon la composition familiale et
+										l'âge des bénéficiaires
+									</p>
+									<div
+										style="
+											display: grid;
+											grid-template-columns: 1fr 1fr;
+											gap: var(--space-3);
+										"
+									>
+										<div
+											style="
+												border: 1px solid var(--gray-200);
+												border-radius: var(--radius-lg);
+												padding: var(--space-4);
+											"
+										>
+											<div
+												style="
+													display: flex;
+													justify-content: space-between;
+													align-items: center;
+												"
+											>
+												<div>
+													<div style="font-weight: 700; color: var(--gray-900)">
+														Enfant étudiant 20-25 ans
+													</div>
+													<div
+														style="
+															font-size: 13px;
+															color: var(--gray-500);
+															margin-top: var(--space-1);
+														"
+													>
+														Majoration de la cotisation de base
+													</div>
+												</div>
+												<span
+													class="badge badge--warning"
+													style="font-size: 14px; font-weight: 700"
+													>+31%</span
+												>
+											</div>
+										</div>
+										<div
+											style="
+												border: 1px solid var(--gray-200);
+												border-radius: var(--radius-lg);
+												padding: var(--space-4);
+											"
+										>
+											<div
+												style="
+													display: flex;
+													justify-content: space-between;
+													align-items: center;
+												"
+											>
+												<div>
+													<div style="font-weight: 700; color: var(--gray-900)">
+														Enfant supplémentaire &lt;20 ans
+													</div>
+													<div
+														style="
+															font-size: 13px;
+															color: var(--gray-500);
+															margin-top: var(--space-1);
+														"
+													>
+														Par enfant au-delà du 4ème
+													</div>
+												</div>
+												<span
+													class="badge badge--warning"
+													style="font-size: 14px; font-weight: 700"
+													>+27%</span
+												>
+											</div>
+										</div>
+										<div
+											style="
+												border: 1px solid var(--gray-200);
+												border-radius: var(--radius-lg);
+												padding: var(--space-4);
+											"
+										>
+											<div
+												style="
+													display: flex;
+													justify-content: space-between;
+													align-items: center;
+												"
+											>
+												<div>
+													<div style="font-weight: 700; color: var(--gray-900)">
+														Adhérent/Conjoint 55-60 ans
+													</div>
+													<div
+														style="
+															font-size: 13px;
+															color: var(--gray-500);
+															margin-top: var(--space-1);
+														"
+													>
+														Majoration senior tranche 1
+													</div>
+												</div>
+												<span
+													class="badge badge--warning"
+													style="font-size: 14px; font-weight: 700"
+													>+33%</span
+												>
+											</div>
+										</div>
+										<div
+											style="
+												border: 1px solid var(--gray-200);
+												border-radius: var(--radius-lg);
+												padding: var(--space-4);
+											"
+										>
+											<div
+												style="
+													display: flex;
+													justify-content: space-between;
+													align-items: center;
+												"
+											>
+												<div>
+													<div style="font-weight: 700; color: var(--gray-900)">
+														Adhérent/Conjoint 60-65 ans
+													</div>
+													<div
+														style="
+															font-size: 13px;
+															color: var(--gray-500);
+															margin-top: var(--space-1);
+														"
+													>
+														Majoration senior tranche 2
+													</div>
+												</div>
+												<span
+													class="badge badge--danger"
+													style="font-size: 14px; font-weight: 700"
+													>+67%</span
+												>
+											</div>
+										</div>
+										<div
+											style="
+												border: 1px solid var(--gray-200);
+												border-radius: var(--radius-lg);
+												padding: var(--space-4);
+											"
+										>
+											<div
+												style="
+													display: flex;
+													justify-content: space-between;
+													align-items: center;
+												"
+											>
+												<div>
+													<div style="font-weight: 700; color: var(--gray-900)">
+														Seconde épouse
+													</div>
+													<div
+														style="
+															font-size: 13px;
+															color: var(--gray-500);
+															margin-top: var(--space-1);
+														"
+													>
+														Conjoint additionnel
+													</div>
+												</div>
+												<span
+													class="badge badge--danger"
+													style="font-size: 14px; font-weight: 700"
+													>+50%</span
+												>
+											</div>
+										</div>
+									</div>
+								</div>
+
+								<!-- Délais de carence -->
+								<div
+									style="
+										margin-top: var(--space-5);
+										border-top: 2px solid var(--gray-200);
+										padding-top: var(--space-5);
+									"
+								>
+									<h3
+										style="
+											font-weight: 700;
+											color: var(--gray-900);
+											margin-bottom: var(--space-1);
+											font-size: var(--text-base);
+										"
+									>
+										Délais de carence
+									</h3>
+									<p
+										style="
+											font-size: 13px;
+											color: var(--gray-500);
+											margin-bottom: var(--space-4);
+										"
+									>
+										Période d'attente avant la prise en charge effective selon
+										la nature du risque
+									</p>
+									<div
+										style="
+											display: grid;
+											grid-template-columns: repeat(4, 1fr);
+											gap: var(--space-3);
+										"
+									>
+										<div
+											style="
+												border: 1px solid var(--gray-200);
+												border-radius: var(--radius-lg);
+												padding: var(--space-4);
+												text-align: center;
+											"
+										>
+											<div
+												style="
+													width: 48px;
+													height: 48px;
+													border-radius: 50%;
+													background: #dbeafe;
+													display: flex;
+													align-items: center;
+													justify-content: center;
+													margin: 0 auto var(--space-3);
+												"
+											>
+												<svg
+													width="24"
+													height="24"
+													viewBox="0 0 24 24"
+													fill="none"
+													stroke="#1D4ED8"
+													stroke-width="1.8"
+													stroke-linecap="round"
+												>
+													<path d="M22 12h-4l-3 9L9 3l-3 9H2" />
+												</svg>
+											</div>
+											<div
+												style="
+													font-weight: 700;
+													color: var(--gray-900);
+													margin-bottom: var(--space-1);
+												"
+											>
+												Maladies courantes
+											</div>
+											<div
+												style="
+													font-family: var(--font-mono);
+													font-weight: 800;
+													font-size: var(--text-2xl);
+													color: var(--iips-primary);
+												"
+											>
+												3 mois
+											</div>
+											<div
+												style="
+													font-size: 12px;
+													color: var(--gray-400);
+													margin-top: var(--space-1);
+												"
+											>
+												Consultations, pharmacie
+											</div>
+										</div>
+										<div
+											style="
+												border: 1px solid var(--gray-200);
+												border-radius: var(--radius-lg);
+												padding: var(--space-4);
+												text-align: center;
+											"
+										>
+											<div
+												style="
+													width: 48px;
+													height: 48px;
+													border-radius: 50%;
+													background: #d1fae5;
+													display: flex;
+													align-items: center;
+													justify-content: center;
+													margin: 0 auto var(--space-3);
+												"
+											>
+												<svg
+													width="24"
+													height="24"
+													viewBox="0 0 24 24"
+													fill="none"
+													stroke="#059669"
+													stroke-width="1.8"
+													stroke-linecap="round"
+												>
+													<polyline
+														points="13,2 3,14 12,14 11,22 21,10 12,10 13,2"
+													/>
+												</svg>
+											</div>
+											<div
+												style="
+													font-weight: 700;
+													color: var(--gray-900);
+													margin-bottom: var(--space-1);
+												"
+											>
+												Accidents
+											</div>
+											<div
+												style="
+													font-family: var(--font-mono);
+													font-weight: 800;
+													font-size: var(--text-2xl);
+													color: var(--color-success);
+												"
+											>
+												0 jour
+											</div>
+											<div
+												style="
+													font-size: 12px;
+													color: var(--gray-400);
+													margin-top: var(--space-1);
+												"
+											>
+												Prise en charge immédiate
+											</div>
+										</div>
+										<div
+											style="
+												border: 1px solid var(--gray-200);
+												border-radius: var(--radius-lg);
+												padding: var(--space-4);
+												text-align: center;
+											"
+										>
+											<div
+												style="
+													width: 48px;
+													height: 48px;
+													border-radius: 50%;
+													background: #fce7f3;
+													display: flex;
+													align-items: center;
+													justify-content: center;
+													margin: 0 auto var(--space-3);
+												"
+											>
+												<svg
+													width="24"
+													height="24"
+													viewBox="0 0 24 24"
+													fill="none"
+													stroke="#DB2777"
+													stroke-width="1.8"
+													stroke-linecap="round"
+												>
+													<path
+														d="M20.84 4.61a5.5 5.5 0 00-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 00-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 000-7.78z"
+													/>
+												</svg>
+											</div>
+											<div
+												style="
+													font-weight: 700;
+													color: var(--gray-900);
+													margin-bottom: var(--space-1);
+												"
+											>
+												Maternité
+											</div>
+											<div
+												style="
+													font-family: var(--font-mono);
+													font-weight: 800;
+													font-size: var(--text-2xl);
+													color: var(--color-warning);
+												"
+											>
+												12 mois
+											</div>
+											<div
+												style="
+													font-size: 12px;
+													color: var(--gray-400);
+													margin-top: var(--space-1);
+												"
+											>
+												Grossesse, accouchement
+											</div>
+										</div>
+										<div
+											style="
+												border: 1px solid var(--gray-200);
+												border-radius: var(--radius-lg);
+												padding: var(--space-4);
+												text-align: center;
+											"
+										>
+											<div
+												style="
+													width: 48px;
+													height: 48px;
+													border-radius: 50%;
+													background: #fee2e2;
+													display: flex;
+													align-items: center;
+													justify-content: center;
+													margin: 0 auto var(--space-3);
+												"
+											>
+												<svg
+													width="24"
+													height="24"
+													viewBox="0 0 24 24"
+													fill="none"
+													stroke="#DC2626"
+													stroke-width="1.8"
+													stroke-linecap="round"
+												>
+													<circle cx="12" cy="12" r="10" />
+													<path d="M12 8v4" />
+													<circle cx="12" cy="16" r="0.5" fill="#DC2626" />
+												</svg>
+											</div>
+											<div
+												style="
+													font-weight: 700;
+													color: var(--gray-900);
+													margin-bottom: var(--space-1);
+												"
+											>
+												Maladies chroniques
+											</div>
+											<div
+												style="
+													font-family: var(--font-mono);
+													font-weight: 800;
+													font-size: var(--text-2xl);
+													color: var(--color-error);
+												"
+											>
+												6 mois
+											</div>
+											<div
+												style="
+													font-size: 12px;
+													color: var(--gray-400);
+													margin-top: var(--space-1);
+												"
+											>
+												Diabète, hypertension, etc.
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+
+						<!-- Tab: Barèmes -->
+						<div class="tab-panel" id="baremes" style="display: none">
+							<div style="padding: var(--space-4)">
+								<table class="table">
+									<thead>
+										<tr>
+											<th>Code</th>
+											<th>Libellé</th>
+											<th>Catégorie</th>
+											<th>Base remboursement</th>
+											<th>Plafond annuel</th>
+											<th>Franchise</th>
+										</tr>
+									</thead>
+									<tbody>
+										<tr>
+											<td
+												style="font-family: var(--font-mono); font-weight: 600"
+											>
+												BAR-001
+											</td>
+											<td>Consultation médecin</td>
+											<td>
+												<span class="badge badge--primary">Ambulatoire</span>
+											</td>
+											<td>80% du tarif conventionné</td>
+											<td style="font-family: var(--font-mono)">
+												500 000 FCFA
+											</td>
+											<td>Aucune</td>
+										</tr>
+										<tr>
+											<td
+												style="font-family: var(--font-mono); font-weight: 600"
+											>
+												BAR-002
+											</td>
+											<td>Pharmacie</td>
+											<td>
+												<span class="badge badge--primary">Ambulatoire</span>
+											</td>
+											<td>70% du tarif</td>
+											<td style="font-family: var(--font-mono)">
+												300 000 FCFA
+											</td>
+											<td style="font-family: var(--font-mono)">2 000 FCFA</td>
+										</tr>
+										<tr>
+											<td
+												style="font-family: var(--font-mono); font-weight: 600"
+											>
+												BAR-003
+											</td>
+											<td>Hospitalisation</td>
+											<td>
+												<span class="badge badge--danger">Hospitalier</span>
+											</td>
+											<td>80% des frais réels</td>
+											<td style="font-family: var(--font-mono)">
+												5 000 000 FCFA
+											</td>
+											<td style="font-family: var(--font-mono)">25 000 FCFA</td>
+										</tr>
+										<tr>
+											<td
+												style="font-family: var(--font-mono); font-weight: 600"
+											>
+												BAR-004
+											</td>
+											<td>Chirurgie</td>
+											<td>
+												<span class="badge badge--danger">Hospitalier</span>
+											</td>
+											<td>80% du tarif conventionné</td>
+											<td style="font-family: var(--font-mono)">
+												3 000 000 FCFA
+											</td>
+											<td style="font-family: var(--font-mono)">50 000 FCFA</td>
+										</tr>
+										<tr>
+											<td
+												style="font-family: var(--font-mono); font-weight: 600"
+											>
+												BAR-005
+											</td>
+											<td>Maternité</td>
+											<td>
+												<span
+													class="badge"
+													style="background: #fce7f3; color: #db2777"
+													>Maternité</span
+												>
+											</td>
+											<td>90% des frais</td>
+											<td style="font-family: var(--font-mono)">
+												2 000 000 FCFA
+											</td>
+											<td>Aucune</td>
+										</tr>
+										<tr>
+											<td
+												style="font-family: var(--font-mono); font-weight: 600"
+											>
+												BAR-006
+											</td>
+											<td>Dentaire</td>
+											<td>
+												<span class="badge badge--primary">Ambulatoire</span>
+											</td>
+											<td>60% du tarif</td>
+											<td style="font-family: var(--font-mono)">
+												200 000 FCFA
+											</td>
+											<td style="font-family: var(--font-mono)">5 000 FCFA</td>
+										</tr>
+										<tr>
+											<td
+												style="font-family: var(--font-mono); font-weight: 600"
+											>
+												BAR-007
+											</td>
+											<td>Optique</td>
+											<td>
+												<span class="badge badge--primary">Ambulatoire</span>
+											</td>
+											<td>50% du tarif</td>
+											<td style="font-family: var(--font-mono)">
+												150 000 FCFA
+											</td>
+											<td style="font-family: var(--font-mono)">10 000 FCFA</td>
+										</tr>
+										<tr>
+											<td
+												style="font-family: var(--font-mono); font-weight: 600"
+											>
+												BAR-008
+											</td>
+											<td>Imagerie médicale</td>
+											<td>
+												<span class="badge badge--primary">Ambulatoire</span>
+											</td>
+											<td>70% du tarif conventionné</td>
+											<td style="font-family: var(--font-mono)">
+												800 000 FCFA
+											</td>
+											<td style="font-family: var(--font-mono)">5 000 FCFA</td>
+										</tr>
+									</tbody>
+								</table>
+
+								<!-- Barème prestations par type de contrat -->
+								<div
+									style="
+										margin-top: var(--space-5);
+										border-top: 2px solid var(--gray-200);
+										padding-top: var(--space-5);
+									"
+								>
+									<h3
+										style="
+											font-weight: 700;
+											color: var(--gray-900);
+											margin-bottom: var(--space-1);
+											font-size: var(--text-base);
+										"
+									>
+										Barème prestations par type de contrat
+									</h3>
+									<p
+										style="
+											font-size: 13px;
+											color: var(--gray-500);
+											margin-bottom: var(--space-4);
+										"
+									>
+										Plafonds annuels Lunetterie & Dentaire et Analyses & Radio
+										selon le type de contrat
+									</p>
+									<table class="table">
+										<thead>
+											<tr>
+												<th>Type de contrat</th>
+												<th>Lunetterie & Dentaire (FCFA/an)</th>
+												<th>Analyses & Radio (FCFA/an)</th>
+											</tr>
+										</thead>
+										<tbody>
+											<tr>
+												<td style="font-weight: 600">IIPS (Groupe)</td>
+												<td
+													style="
+														font-family: var(--font-mono);
+														font-weight: 600;
+														color: var(--iips-primary);
+													"
+												>
+													75 000
+												</td>
+												<td
+													style="
+														font-family: var(--font-mono);
+														font-weight: 600;
+														color: var(--iips-primary);
+													"
+												>
+													75 000
+												</td>
+											</tr>
+											<tr>
+												<td style="font-weight: 600">Alpha / Confort Plus</td>
+												<td
+													style="
+														font-family: var(--font-mono);
+														font-weight: 600;
+														color: var(--iips-primary);
+													"
+												>
+													75 000
+												</td>
+												<td
+													style="
+														font-family: var(--font-mono);
+														font-weight: 600;
+														color: var(--iips-primary);
+													"
+												>
+													75 000
+												</td>
+											</tr>
+											<tr>
+												<td style="font-weight: 600">Syleg</td>
+												<td
+													style="
+														font-family: var(--font-mono);
+														font-weight: 600;
+													"
+												>
+													50 000
+												</td>
+												<td
+													style="
+														font-family: var(--font-mono);
+														font-weight: 600;
+													"
+												>
+													50 000
+												</td>
+											</tr>
+											<tr>
+												<td style="font-weight: 600">Betha</td>
+												<td
+													style="
+														font-family: var(--font-mono);
+														font-weight: 600;
+													"
+												>
+													50 000
+												</td>
+												<td
+													style="
+														font-family: var(--font-mono);
+														font-weight: 600;
+													"
+												>
+													50 000
+												</td>
+											</tr>
+											<tr>
+												<td style="font-weight: 600">Betha CL / Confort CL</td>
+												<td
+													style="
+														font-family: var(--font-mono);
+														font-weight: 600;
+													"
+												>
+													50 000
+												</td>
+												<td
+													style="
+														font-family: var(--font-mono);
+														font-weight: 600;
+													"
+												>
+													50 000
+												</td>
+											</tr>
+											<tr>
+												<td style="font-weight: 600">Solidarité 1</td>
+												<td
+													style="
+														font-family: var(--font-mono);
+														font-weight: 600;
+													"
+												>
+													50 000
+												</td>
+												<td
+													style="
+														font-family: var(--font-mono);
+														font-weight: 600;
+													"
+												>
+													50 000
+												</td>
+											</tr>
+											<tr>
+												<td style="font-weight: 600">Solidarité 2</td>
+												<td
+													style="
+														font-family: var(--font-mono);
+														font-weight: 600;
+														color: var(--gray-500);
+													"
+												>
+													40 000
+												</td>
+												<td
+													style="
+														font-family: var(--font-mono);
+														font-weight: 600;
+														color: var(--gray-500);
+													"
+												>
+													40 000
+												</td>
+											</tr>
+											<tr>
+												<td style="font-weight: 600">Enseignant</td>
+												<td
+													style="
+														font-family: var(--font-mono);
+														font-weight: 600;
+														color: var(--gray-500);
+													"
+												>
+													40 000
+												</td>
+												<td
+													style="
+														font-family: var(--font-mono);
+														font-weight: 600;
+														color: var(--gray-500);
+													"
+												>
+													40 000
+												</td>
+											</tr>
+										</tbody>
+									</table>
+								</div>
+							</div>
+						</div>
+
+						<!-- Tab: Anti-fraude (G-109) -->
+						<div class="tab-panel" id="antifraude" style="display: none">
+							<div style="padding: var(--space-4)">
+								<div
+									style="
+										display: flex;
+										justify-content: space-between;
+										align-items: center;
+										margin-bottom: var(--space-4);
+									"
+								>
+									<div>
+										<h3
+											style="
+												font-weight: 700;
+												color: var(--gray-900);
+												margin-bottom: var(--space-1);
+											"
+										>
+											Moteur anti-fraude — Règles paramétrables
+										</h3>
+										<p style="font-size: 13px; color: var(--gray-500)">
+											Configuration des seuils de détection, alertes et blocages
+											automatiques
+										</p>
+									</div>
+									<button
+										class="btn btn-primary btn-sm"
+										onclick="showToast('Nouvelle règle ajoutée', 'success')"
+									>
+										<svg
+											width="16"
+											height="16"
+											viewBox="0 0 16 16"
+											fill="none"
+											stroke="currentColor"
+											stroke-width="2"
+											stroke-linecap="round"
+										>
+											<line x1="8" y1="3" x2="8" y2="13" />
+											<line x1="3" y1="8" x2="13" y2="8" />
+										</svg>
+										Ajouter une règle
+									</button>
+								</div>
+								<table class="table">
+									<thead>
+										<tr>
+											<th>Domaine</th>
+											<th>Règle</th>
+											<th>Seuil / Config</th>
+											<th>Type contrôle</th>
+											<th>Actif</th>
+											<th>Actions</th>
+										</tr>
+									</thead>
+									<tbody>
+										<tr>
+											<td>
+												<span class="badge badge--primary">Pharmacie</span>
+											</td>
+											<td style="font-weight: 500">
+												Seuil ordonnances pharmacie / mois
+											</td>
+											<td
+												style="font-family: var(--font-mono); font-weight: 600"
+											>
+												4 ordonnances
+											</td>
+											<td><span class="badge badge--danger">Bloquant</span></td>
+											<td>
+												<div
+													style="
+														width: 36px;
+														height: 20px;
+														border-radius: 10px;
+														background: var(--iips-primary);
+														position: relative;
+														cursor: pointer;
+													"
+												>
+													<div
+														style="
+															width: 16px;
+															height: 16px;
+															border-radius: 50%;
+															background: #fff;
+															position: absolute;
+															top: 2px;
+															right: 2px;
+														"
+													></div>
+												</div>
+											</td>
+											<td>
+												<button class="btn btn-ghost btn-sm">Modifier</button>
+											</td>
+										</tr>
+										<tr>
+											<td>
+												<span class="badge badge--primary">Pharmacie</span>
+											</td>
+											<td style="font-weight: 500">
+												Seuil montant cumulé pharmacie mensuel
+											</td>
+											<td
+												style="font-family: var(--font-mono); font-weight: 600"
+											>
+												500 000 FCFA
+											</td>
+											<td><span class="badge badge--warning">Alerte</span></td>
+											<td>
+												<div
+													style="
+														width: 36px;
+														height: 20px;
+														border-radius: 10px;
+														background: var(--iips-primary);
+														position: relative;
+														cursor: pointer;
+													"
+												>
+													<div
+														style="
+															width: 16px;
+															height: 16px;
+															border-radius: 50%;
+															background: #fff;
+															position: absolute;
+															top: 2px;
+															right: 2px;
+														"
+													></div>
+												</div>
+											</td>
+											<td>
+												<button class="btn btn-ghost btn-sm">Modifier</button>
+											</td>
+										</tr>
+										<tr>
+											<td>
+												<span class="badge badge--secondary">Consultation</span>
+											</td>
+											<td style="font-weight: 500">
+												Seuil consultations spécialiste / mois
+											</td>
+											<td
+												style="font-family: var(--font-mono); font-weight: 600"
+											>
+												6 consultations
+											</td>
+											<td><span class="badge badge--warning">Alerte</span></td>
+											<td>
+												<div
+													style="
+														width: 36px;
+														height: 20px;
+														border-radius: 10px;
+														background: var(--iips-primary);
+														position: relative;
+														cursor: pointer;
+													"
+												>
+													<div
+														style="
+															width: 16px;
+															height: 16px;
+															border-radius: 50%;
+															background: #fff;
+															position: absolute;
+															top: 2px;
+															right: 2px;
+														"
+													></div>
+												</div>
+											</td>
+											<td>
+												<button class="btn btn-ghost btn-sm">Modifier</button>
+											</td>
+										</tr>
+										<tr>
+											<td>
+												<span class="badge badge--danger">Facturation</span>
+											</td>
+											<td style="font-weight: 500">
+												Détection double facturation
+											</td>
+											<td
+												style="font-family: var(--font-mono); font-weight: 600"
+											>
+												Même acte / même jour / même prestataire
+											</td>
+											<td><span class="badge badge--danger">Bloquant</span></td>
+											<td>
+												<div
+													style="
+														width: 36px;
+														height: 20px;
+														border-radius: 10px;
+														background: var(--iips-primary);
+														position: relative;
+														cursor: pointer;
+													"
+												>
+													<div
+														style="
+															width: 16px;
+															height: 16px;
+															border-radius: 50%;
+															background: #fff;
+															position: absolute;
+															top: 2px;
+															right: 2px;
+														"
+													></div>
+												</div>
+											</td>
+											<td>
+												<button class="btn btn-ghost btn-sm">Modifier</button>
+											</td>
+										</tr>
+										<tr>
+											<td>
+												<span class="badge badge--danger">Facturation</span>
+											</td>
+											<td style="font-weight: 500">
+												Compatibilité acte / sexe
+											</td>
+											<td
+												style="font-family: var(--font-mono); font-weight: 600"
+											>
+												Vérification automatique
+											</td>
+											<td><span class="badge badge--danger">Bloquant</span></td>
+											<td>
+												<div
+													style="
+														width: 36px;
+														height: 20px;
+														border-radius: 10px;
+														background: var(--iips-primary);
+														position: relative;
+														cursor: pointer;
+													"
+												>
+													<div
+														style="
+															width: 16px;
+															height: 16px;
+															border-radius: 50%;
+															background: #fff;
+															position: absolute;
+															top: 2px;
+															right: 2px;
+														"
+													></div>
+												</div>
+											</td>
+											<td>
+												<button class="btn btn-ghost btn-sm">Modifier</button>
+											</td>
+										</tr>
+										<tr>
+											<td>
+												<span class="badge badge--primary">Pharmacie</span>
+											</td>
+											<td style="font-weight: 500">
+												Interaction médicamenteuse
+											</td>
+											<td
+												style="font-family: var(--font-mono); font-weight: 600"
+											>
+												Base Thériaque / Vidal
+											</td>
+											<td><span class="badge badge--warning">Alerte</span></td>
+											<td>
+												<div
+													style="
+														width: 36px;
+														height: 20px;
+														border-radius: 10px;
+														background: var(--iips-primary);
+														position: relative;
+														cursor: pointer;
+													"
+												>
+													<div
+														style="
+															width: 16px;
+															height: 16px;
+															border-radius: 50%;
+															background: #fff;
+															position: absolute;
+															top: 2px;
+															right: 2px;
+														"
+													></div>
+												</div>
+											</td>
+											<td>
+												<button class="btn btn-ghost btn-sm">Modifier</button>
+											</td>
+										</tr>
+										<tr>
+											<td>
+												<span
+													class="badge"
+													style="background: #e0e7ff; color: #4338ca"
+													>Scoring</span
+												>
+											</td>
+											<td style="font-weight: 500">Scoring risque dynamique</td>
+											<td
+												style="font-family: var(--font-mono); font-weight: 600"
+											>
+												Score multicritères (0-100)
+											</td>
+											<td>
+												<span
+													class="badge"
+													style="background: #fef3c7; color: #92400e"
+													>Score</span
+												>
+											</td>
+											<td>
+												<div
+													style="
+														width: 36px;
+														height: 20px;
+														border-radius: 10px;
+														background: var(--iips-primary);
+														position: relative;
+														cursor: pointer;
+													"
+												>
+													<div
+														style="
+															width: 16px;
+															height: 16px;
+															border-radius: 50%;
+															background: #fff;
+															position: absolute;
+															top: 2px;
+															right: 2px;
+														"
+													></div>
+												</div>
+											</td>
+											<td>
+												<button class="btn btn-ghost btn-sm">Modifier</button>
+											</td>
+										</tr>
+										<tr>
+											<td>
+												<span
+													class="badge"
+													style="background: #e0e7ff; color: #4338ca"
+													>Identité</span
+												>
+											</td>
+											<td style="font-weight: 500">
+												Détection doublons bénéficiaires
+											</td>
+											<td
+												style="font-family: var(--font-mono); font-weight: 600"
+											>
+												Nom + Date naissance + Employeur
+											</td>
+											<td><span class="badge badge--danger">Bloquant</span></td>
+											<td>
+												<div
+													style="
+														width: 36px;
+														height: 20px;
+														border-radius: 10px;
+														background: var(--iips-primary);
+														position: relative;
+														cursor: pointer;
+													"
+												>
+													<div
+														style="
+															width: 16px;
+															height: 16px;
+															border-radius: 50%;
+															background: #fff;
+															position: absolute;
+															top: 2px;
+															right: 2px;
+														"
+													></div>
+												</div>
+											</td>
+											<td>
+												<button class="btn btn-ghost btn-sm">Modifier</button>
+											</td>
+										</tr>
+										<!-- 8 nouvelles règles anti-fraude -->
+										<tr>
+											<td>
+												<span
+													class="badge"
+													style="background: #fef3c7; color: #92400e"
+													>Âge</span
+												>
+											</td>
+											<td style="font-weight: 500">
+												Restriction d'âge des bénéficiaires
+											</td>
+											<td
+												style="font-family: var(--font-mono); font-weight: 600"
+											>
+												Enfant > 21 ans (ou 25 si étudiant)
+											</td>
+											<td><span class="badge badge--danger">Bloquant</span></td>
+											<td>
+												<div
+													style="
+														width: 36px;
+														height: 20px;
+														border-radius: 10px;
+														background: var(--iips-primary);
+														position: relative;
+														cursor: pointer;
+													"
+												>
+													<div
+														style="
+															width: 16px;
+															height: 16px;
+															border-radius: 50%;
+															background: #fff;
+															position: absolute;
+															top: 2px;
+															right: 2px;
+														"
+													></div>
+												</div>
+											</td>
+											<td>
+												<button class="btn btn-ghost btn-sm">Modifier</button>
+											</td>
+										</tr>
+										<tr>
+											<td>
+												<span
+													class="badge"
+													style="background: #dbeafe; color: #1d4ed8"
+													>Temporel</span
+												>
+											</td>
+											<td style="font-weight: 500">
+												Délai minimum entre actes identiques
+											</td>
+											<td
+												style="font-family: var(--font-mono); font-weight: 600"
+											>
+												48h min entre 2 consultations
+											</td>
+											<td><span class="badge badge--warning">Alerte</span></td>
+											<td>
+												<div
+													style="
+														width: 36px;
+														height: 20px;
+														border-radius: 10px;
+														background: var(--iips-primary);
+														position: relative;
+														cursor: pointer;
+													"
+												>
+													<div
+														style="
+															width: 16px;
+															height: 16px;
+															border-radius: 50%;
+															background: #fff;
+															position: absolute;
+															top: 2px;
+															right: 2px;
+														"
+													></div>
+												</div>
+											</td>
+											<td>
+												<button class="btn btn-ghost btn-sm">Modifier</button>
+											</td>
+										</tr>
+										<tr>
+											<td>
+												<span
+													class="badge"
+													style="background: #dbeafe; color: #1d4ed8"
+													>Médical</span
+												>
+											</td>
+											<td style="font-weight: 500">
+												Lien CIM-10 / acte prescrit
+											</td>
+											<td
+												style="font-family: var(--font-mono); font-weight: 600"
+											>
+												Cohérence diagnostic ↔ traitement
+											</td>
+											<td><span class="badge badge--warning">Alerte</span></td>
+											<td>
+												<div
+													style="
+														width: 36px;
+														height: 20px;
+														border-radius: 10px;
+														background: var(--iips-primary);
+														position: relative;
+														cursor: pointer;
+													"
+												>
+													<div
+														style="
+															width: 16px;
+															height: 16px;
+															border-radius: 50%;
+															background: #fff;
+															position: absolute;
+															top: 2px;
+															right: 2px;
+														"
+													></div>
+												</div>
+											</td>
+											<td>
+												<button class="btn btn-ghost btn-sm">Modifier</button>
+											</td>
+										</tr>
+										<tr>
+											<td>
+												<span class="badge badge--primary">Pharmacie</span>
+											</td>
+											<td style="font-weight: 500">
+												Quantité maximale médicaments
+											</td>
+											<td
+												style="font-family: var(--font-mono); font-weight: 600"
+											>
+												Max 3 boîtes par spécialité / ordonnance
+											</td>
+											<td><span class="badge badge--danger">Bloquant</span></td>
+											<td>
+												<div
+													style="
+														width: 36px;
+														height: 20px;
+														border-radius: 10px;
+														background: var(--iips-primary);
+														position: relative;
+														cursor: pointer;
+													"
+												>
+													<div
+														style="
+															width: 16px;
+															height: 16px;
+															border-radius: 50%;
+															background: #fff;
+															position: absolute;
+															top: 2px;
+															right: 2px;
+														"
+													></div>
+												</div>
+											</td>
+											<td>
+												<button class="btn btn-ghost btn-sm">Modifier</button>
+											</td>
+										</tr>
+										<tr>
+											<td>
+												<span class="badge badge--primary">Pharmacie</span>
+											</td>
+											<td style="font-weight: 500">
+												Durée maximale traitement
+											</td>
+											<td
+												style="font-family: var(--font-mono); font-weight: 600"
+											>
+												30 jours max par ordonnance
+											</td>
+											<td><span class="badge badge--warning">Alerte</span></td>
+											<td>
+												<div
+													style="
+														width: 36px;
+														height: 20px;
+														border-radius: 10px;
+														background: var(--iips-primary);
+														position: relative;
+														cursor: pointer;
+													"
+												>
+													<div
+														style="
+															width: 16px;
+															height: 16px;
+															border-radius: 50%;
+															background: #fff;
+															position: absolute;
+															top: 2px;
+															right: 2px;
+														"
+													></div>
+												</div>
+											</td>
+											<td>
+												<button class="btn btn-ghost btn-sm">Modifier</button>
+											</td>
+										</tr>
+										<tr>
+											<td>
+												<span
+													class="badge"
+													style="background: #fee2e2; color: #991b1b"
+													>Prestataire</span
+												>
+											</td>
+											<td style="font-weight: 500">
+												Seuil facturation prestataire
+											</td>
+											<td
+												style="font-family: var(--font-mono); font-weight: 600"
+											>
+												Alerte si > 150% moyenne réseau
+											</td>
+											<td><span class="badge badge--warning">Alerte</span></td>
+											<td>
+												<div
+													style="
+														width: 36px;
+														height: 20px;
+														border-radius: 10px;
+														background: var(--iips-primary);
+														position: relative;
+														cursor: pointer;
+													"
+												>
+													<div
+														style="
+															width: 16px;
+															height: 16px;
+															border-radius: 50%;
+															background: #fff;
+															position: absolute;
+															top: 2px;
+															right: 2px;
+														"
+													></div>
+												</div>
+											</td>
+											<td>
+												<button class="btn btn-ghost btn-sm">Modifier</button>
+											</td>
+										</tr>
+										<tr>
+											<td>
+												<span
+													class="badge"
+													style="background: #fee2e2; color: #991b1b"
+													>Prestataire</span
+												>
+											</td>
+											<td style="font-weight: 500">
+												Vérification agrément prestataire
+											</td>
+											<td
+												style="font-family: var(--font-mono); font-weight: 600"
+											>
+												Convention active obligatoire
+											</td>
+											<td><span class="badge badge--danger">Bloquant</span></td>
+											<td>
+												<div
+													style="
+														width: 36px;
+														height: 20px;
+														border-radius: 10px;
+														background: var(--iips-primary);
+														position: relative;
+														cursor: pointer;
+													"
+												>
+													<div
+														style="
+															width: 16px;
+															height: 16px;
+															border-radius: 50%;
+															background: #fff;
+															position: absolute;
+															top: 2px;
+															right: 2px;
+														"
+													></div>
+												</div>
+											</td>
+											<td>
+												<button class="btn btn-ghost btn-sm">Modifier</button>
+											</td>
+										</tr>
+										<tr>
+											<td>
+												<span
+													class="badge"
+													style="background: #e0e7ff; color: #4338ca"
+													>Géographique</span
+												>
+											</td>
+											<td style="font-weight: 500">
+												Contrôle géographique assuré/prestataire
+											</td>
+											<td
+												style="font-family: var(--font-mono); font-weight: 600"
+											>
+												Alerte si distance > 200 km
+											</td>
+											<td><span class="badge badge--warning">Alerte</span></td>
+											<td>
+												<div
+													style="
+														width: 36px;
+														height: 20px;
+														border-radius: 10px;
+														background: var(--iips-primary);
+														position: relative;
+														cursor: pointer;
+													"
+												>
+													<div
+														style="
+															width: 16px;
+															height: 16px;
+															border-radius: 50%;
+															background: #fff;
+															position: absolute;
+															top: 2px;
+															right: 2px;
+														"
+													></div>
+												</div>
+											</td>
+											<td>
+												<button class="btn btn-ghost btn-sm">Modifier</button>
+											</td>
+										</tr>
+									</tbody>
+								</table>
+								<div
+									style="
+										margin-top: var(--space-4);
+										padding: var(--space-3) var(--space-4);
+										background: #f0fdf4;
+										border: 1px solid #bbf7d0;
+										border-radius: var(--radius-lg);
+										display: flex;
+										gap: var(--space-3);
+										align-items: center;
+									"
+								>
+									<svg
+										width="20"
+										height="20"
+										viewBox="0 0 20 20"
+										fill="none"
+										stroke="#059669"
+										stroke-width="1.8"
+									>
+										<circle cx="10" cy="10" r="8" />
+										<path d="M10 6v4" />
+										<circle cx="10" cy="13" r="0.5" fill="#059669" />
+									</svg>
+									<div style="font-size: 13px; color: #166534">
+										<strong>16 règles actives</strong> — Dernière mise à jour :
+										26/02/2026 par Yao Patrick (Admin). Les règles bloquantes
+										empêchent la validation du dossier. Les alertes génèrent une
+										notification dans le module Alertes fraudes.
+									</div>
+								</div>
+							</div>
+						</div>
+
+						<!-- Tab: Commissions (G-105) -->
+						<div class="tab-panel" id="commissions" style="display: none">
+							<div
+								style="
+									padding: var(--space-4);
+									display: flex;
+									flex-direction: column;
+									gap: var(--space-5);
+								"
+							>
+								<!-- Règles de commission standard -->
+								<div>
+									<h3
+										style="
+											font-weight: 700;
+											color: var(--gray-900);
+											margin-bottom: var(--space-1);
+											font-size: var(--text-base);
+										"
+									>
+										Barème des commissions commerciales
+									</h3>
+									<p
+										style="
+											font-size: 13px;
+											color: var(--gray-500);
+											margin-bottom: var(--space-4);
+										"
+									>
+										Règles de rémunération applicables aux commerciaux et chefs
+										d'équipe IIPS
+									</p>
+									<table class="table">
+										<thead>
+											<tr>
+												<th>Type</th>
+												<th>Description</th>
+												<th>Montant / Taux</th>
+												<th>Condition</th>
+												<th>Statut</th>
+											</tr>
+										</thead>
+										<tbody>
+											<tr>
+												<td>
+													<span class="badge badge--primary">Commission</span>
+												</td>
+												<td style="font-weight: 500">
+													Commission standard par contrat
+												</td>
+												<td
+													style="
+														font-family: var(--font-mono);
+														font-weight: 700;
+														color: var(--iips-primary);
+													"
+												>
+													10%
+												</td>
+												<td style="font-size: 13px; color: var(--gray-500)">
+													Sur prime encaissée, par contrat validé
+												</td>
+												<td><span class="badge badge--success">Actif</span></td>
+											</tr>
+											<tr>
+												<td>
+													<span class="badge badge--secondary">Prime</span>
+												</td>
+												<td style="font-weight: 500">Prime de transport</td>
+												<td
+													style="
+														font-family: var(--font-mono);
+														font-weight: 700;
+														color: var(--iips-primary);
+													"
+												>
+													30 000 FCFA
+												</td>
+												<td style="font-size: 13px; color: var(--gray-500)">
+													Dès 10 ventes validées dans le mois
+												</td>
+												<td><span class="badge badge--success">Actif</span></td>
+											</tr>
+											<tr>
+												<td>
+													<span class="badge badge--warning"
+														>Préfinancement</span
+													>
+												</td>
+												<td style="font-weight: 500">
+													Préfinancement chef d'équipe — Tranche 1
+												</td>
+												<td
+													style="
+														font-family: var(--font-mono);
+														font-weight: 700;
+														color: var(--iips-primary);
+													"
+												>
+													40 000 FCFA
+												</td>
+												<td style="font-size: 13px; color: var(--gray-500)">
+													Équipe de 3-5 commerciaux actifs
+												</td>
+												<td><span class="badge badge--success">Actif</span></td>
+											</tr>
+											<tr>
+												<td>
+													<span class="badge badge--warning"
+														>Préfinancement</span
+													>
+												</td>
+												<td style="font-weight: 500">
+													Préfinancement chef d'équipe — Tranche 2
+												</td>
+												<td
+													style="
+														font-family: var(--font-mono);
+														font-weight: 700;
+														color: var(--iips-primary);
+													"
+												>
+													80 000 FCFA
+												</td>
+												<td style="font-size: 13px; color: var(--gray-500)">
+													Équipe de 6-10 commerciaux actifs
+												</td>
+												<td><span class="badge badge--success">Actif</span></td>
+											</tr>
+											<tr>
+												<td>
+													<span class="badge badge--warning"
+														>Préfinancement</span
+													>
+												</td>
+												<td style="font-weight: 500">
+													Préfinancement chef d'équipe — Tranche 3
+												</td>
+												<td
+													style="
+														font-family: var(--font-mono);
+														font-weight: 700;
+														color: var(--iips-primary);
+													"
+												>
+													150 000 FCFA
+												</td>
+												<td style="font-size: 13px; color: var(--gray-500)">
+													Équipe de plus de 10 commerciaux actifs
+												</td>
+												<td><span class="badge badge--success">Actif</span></td>
+											</tr>
+										</tbody>
+									</table>
+								</div>
+
+								<!-- Paliers de performance -->
+								<div
+									style="
+										border-top: 2px solid var(--gray-200);
+										padding-top: var(--space-5);
+									"
+								>
+									<h3
+										style="
+											font-weight: 700;
+											color: var(--gray-900);
+											margin-bottom: var(--space-1);
+											font-size: var(--text-base);
+										"
+									>
+										Paliers de performance
+									</h3>
+									<p
+										style="
+											font-size: 13px;
+											color: var(--gray-500);
+											margin-bottom: var(--space-4);
+										"
+									>
+										Bonifications automatiques selon le volume de ventes mensuel
+									</p>
+									<div
+										style="
+											display: grid;
+											grid-template-columns: repeat(3, 1fr);
+											gap: var(--space-3);
+										"
+									>
+										<div
+											style="
+												border: 1px solid var(--gray-200);
+												border-radius: var(--radius-lg);
+												padding: var(--space-4);
+												text-align: center;
+											"
+										>
+											<div
+												style="
+													font-size: var(--text-sm);
+													color: var(--gray-500);
+													margin-bottom: var(--space-1);
+												"
+											>
+												Bronze
+											</div>
+											<div
+												style="
+													font-weight: 700;
+													font-size: var(--text-lg);
+													color: var(--gray-900);
+												"
+											>
+												5-9 contrats
+											</div>
+											<div
+												style="
+													font-family: var(--font-mono);
+													font-weight: 700;
+													color: var(--iips-primary);
+													margin-top: var(--space-2);
+												"
+											>
+												Commission : 10%
+											</div>
+										</div>
+										<div
+											style="
+												border: 2px solid var(--iips-primary);
+												border-radius: var(--radius-lg);
+												padding: var(--space-4);
+												text-align: center;
+												background: #f0fdf4;
+											"
+										>
+											<div
+												style="
+													font-size: var(--text-sm);
+													color: var(--iips-primary);
+													font-weight: 600;
+													margin-bottom: var(--space-1);
+												"
+											>
+												Argent
+											</div>
+											<div
+												style="
+													font-weight: 700;
+													font-size: var(--text-lg);
+													color: var(--gray-900);
+												"
+											>
+												10-19 contrats
+											</div>
+											<div
+												style="
+													font-family: var(--font-mono);
+													font-weight: 700;
+													color: var(--iips-primary);
+													margin-top: var(--space-2);
+												"
+											>
+												Commission : 10% + Transport
+											</div>
+										</div>
+										<div
+											style="
+												border: 1px solid #f59e0b;
+												border-radius: var(--radius-lg);
+												padding: var(--space-4);
+												text-align: center;
+												background: #fffbeb;
+											"
+										>
+											<div
+												style="
+													font-size: var(--text-sm);
+													color: #b45309;
+													font-weight: 600;
+													margin-bottom: var(--space-1);
+												"
+											>
+												Or
+											</div>
+											<div
+												style="
+													font-weight: 700;
+													font-size: var(--text-lg);
+													color: var(--gray-900);
+												"
+											>
+												20+ contrats
+											</div>
+											<div
+												style="
+													font-family: var(--font-mono);
+													font-weight: 700;
+													color: #b45309;
+													margin-top: var(--space-2);
+												"
+											>
+												Commission : 12% + Transport
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+
+						<!-- Tab: Règles Production (G-110) -->
+						<div class="tab-panel" id="regles-production" style="display: none">
+							<div
+								style="
+									padding: var(--space-4);
+									display: flex;
+									flex-direction: column;
+									gap: var(--space-5);
+								"
+							>
+								<!-- Opérations contractuelles -->
+								<div>
+									<h3
+										style="
+											font-weight: 700;
+											color: var(--gray-900);
+											margin-bottom: var(--space-1);
+											font-size: var(--text-base);
+										"
+									>
+										Opérations contractuelles
+									</h3>
+									<p
+										style="
+											font-size: 13px;
+											color: var(--gray-500);
+											margin-bottom: var(--space-4);
+										"
+									>
+										Frais et règles applicables aux modifications de contrats et
+										polices
+									</p>
+									<table class="table">
+										<thead>
+											<tr>
+												<th>Opération</th>
+												<th>Frais (FCFA)</th>
+												<th>Règle</th>
+												<th>Validateur</th>
+												<th>Statut</th>
+											</tr>
+										</thead>
+										<tbody>
+											<tr>
+												<td style="font-weight: 600">Changement de contrat</td>
+												<td
+													style="
+														font-family: var(--font-mono);
+														font-weight: 700;
+														color: var(--iips-primary);
+													"
+												>
+													7 500
+												</td>
+												<td style="font-size: 13px; color: var(--gray-500)">
+													Nouveau n° de police attribué automatiquement. Ancien
+													contrat clôturé.
+												</td>
+												<td>
+													<span class="badge badge--secondary"
+														>Service Exploitation</span
+													>
+												</td>
+												<td><span class="badge badge--success">Actif</span></td>
+											</tr>
+											<tr>
+												<td style="font-weight: 600">Réédition de carte</td>
+												<td
+													style="
+														font-family: var(--font-mono);
+														font-weight: 700;
+														color: var(--iips-primary);
+													"
+												>
+													3 000 / carte
+												</td>
+												<td style="font-size: 13px; color: var(--gray-500)">
+													Perte, vol ou détérioration. Délai de fabrication :
+													48h ouvrées.
+												</td>
+												<td>
+													<span class="badge badge--secondary"
+														>Service Exploitation</span
+													>
+												</td>
+												<td><span class="badge badge--success">Actif</span></td>
+											</tr>
+											<tr>
+												<td style="font-weight: 600">Ajout bénéficiaire</td>
+												<td
+													style="
+														font-family: var(--font-mono);
+														font-weight: 700;
+														color: var(--iips-primary);
+													"
+												>
+													3 000
+												</td>
+												<td style="font-size: 13px; color: var(--gray-500)">
+													Frais de carte + recalcul cotisation au prorata. Effet
+													immédiat après validation.
+												</td>
+												<td>
+													<span class="badge badge--secondary"
+														>Service Exploitation</span
+													>
+												</td>
+												<td><span class="badge badge--success">Actif</span></td>
+											</tr>
+											<tr>
+												<td style="font-weight: 600">Retrait bénéficiaire</td>
+												<td
+													style="
+														font-family: var(--font-mono);
+														font-weight: 700;
+														color: var(--iips-primary);
+													"
+												>
+													Gratuit
+												</td>
+												<td style="font-size: 13px; color: var(--gray-500)">
+													Carte désactivée immédiatement. Recalcul cotisation au
+													prorata.
+												</td>
+												<td>
+													<span class="badge badge--secondary"
+														>Service Exploitation</span
+													>
+												</td>
+												<td><span class="badge badge--success">Actif</span></td>
+											</tr>
+										</tbody>
+									</table>
+								</div>
+
+								<!-- Suspension & Résiliation -->
+								<div
+									style="
+										border-top: 2px solid var(--gray-200);
+										padding-top: var(--space-5);
+									"
+								>
+									<h3
+										style="
+											font-weight: 700;
+											color: var(--gray-900);
+											margin-bottom: var(--space-1);
+											font-size: var(--text-base);
+										"
+									>
+										Suspension &amp; Résiliation
+									</h3>
+									<p
+										style="
+											font-size: 13px;
+											color: var(--gray-500);
+											margin-bottom: var(--space-4);
+										"
+									>
+										Règles de gestion des suspensions et résiliations de
+										contrats
+									</p>
+									<div
+										style="
+											display: grid;
+											grid-template-columns: 1fr 1fr;
+											gap: var(--space-4);
+										"
+									>
+										<div
+											style="
+												border: 1px solid #fde68a;
+												border-radius: var(--radius-lg);
+												padding: var(--space-4);
+												background: #fffbeb;
+											"
+										>
+											<div
+												style="
+													display: flex;
+													align-items: center;
+													gap: var(--space-2);
+													margin-bottom: var(--space-3);
+												"
+											>
+												<svg
+													width="20"
+													height="20"
+													viewBox="0 0 20 20"
+													fill="none"
+													stroke="#B45309"
+													stroke-width="1.8"
+												>
+													<circle cx="10" cy="10" r="8" />
+													<line x1="8" y1="7" x2="8" y2="13" />
+													<line x1="12" y1="7" x2="12" y2="13" />
+												</svg>
+												<span
+													style="
+														font-weight: 700;
+														color: #92400e;
+														font-size: var(--text-base);
+													"
+													>Suspension</span
+												>
+											</div>
+											<div
+												style="
+													display: flex;
+													flex-direction: column;
+													gap: var(--space-2);
+													font-size: 13px;
+												"
+											>
+												<div
+													style="
+														display: flex;
+														justify-content: space-between;
+														padding: var(--space-2) 0;
+														border-bottom: 1px solid #fde68a;
+													"
+												>
+													<span style="color: var(--gray-600)"
+														>Durée maximale</span
+													><span style="font-weight: 600; color: #92400e"
+														>3 mois</span
+													>
+												</div>
+												<div
+													style="
+														display: flex;
+														justify-content: space-between;
+														padding: var(--space-2) 0;
+														border-bottom: 1px solid #fde68a;
+													"
+												>
+													<span style="color: var(--gray-600)"
+														>Renouvellement</span
+													><span style="font-weight: 600; color: #92400e"
+														>1 fois / an</span
+													>
+												</div>
+												<div
+													style="
+														display: flex;
+														justify-content: space-between;
+														padding: var(--space-2) 0;
+														border-bottom: 1px solid #fde68a;
+													"
+												>
+													<span style="color: var(--gray-600)"
+														>Effet sur cartes</span
+													><span style="font-weight: 600; color: #92400e"
+														>Bloquées immédiatement</span
+													>
+												</div>
+												<div
+													style="
+														display: flex;
+														justify-content: space-between;
+														padding: var(--space-2) 0;
+													"
+												>
+													<span style="color: var(--gray-600)">Demandeur</span
+													><span style="font-weight: 600; color: #92400e"
+														>Assuré ou Gestionnaire</span
+													>
+												</div>
+											</div>
+										</div>
+										<div
+											style="
+												border: 1px solid #fecaca;
+												border-radius: var(--radius-lg);
+												padding: var(--space-4);
+												background: #fef2f2;
+											"
+										>
+											<div
+												style="
+													display: flex;
+													align-items: center;
+													gap: var(--space-2);
+													margin-bottom: var(--space-3);
+												"
+											>
+												<svg
+													width="20"
+													height="20"
+													viewBox="0 0 20 20"
+													fill="none"
+													stroke="#DC2626"
+													stroke-width="1.8"
+												>
+													<circle cx="10" cy="10" r="8" />
+													<line x1="7" y1="7" x2="13" y2="13" />
+													<line x1="13" y1="7" x2="7" y2="13" />
+												</svg>
+												<span
+													style="
+														font-weight: 700;
+														color: #991b1b;
+														font-size: var(--text-base);
+													"
+													>Résiliation</span
+												>
+											</div>
+											<div
+												style="
+													display: flex;
+													flex-direction: column;
+													gap: var(--space-2);
+													font-size: 13px;
+												"
+											>
+												<div
+													style="
+														display: flex;
+														justify-content: space-between;
+														padding: var(--space-2) 0;
+														border-bottom: 1px solid #fecaca;
+													"
+												>
+													<span style="color: var(--gray-600)"
+														>Autorisation requise</span
+													><span style="font-weight: 600; color: #991b1b"
+														>Direction Production</span
+													>
+												</div>
+												<div
+													style="
+														display: flex;
+														justify-content: space-between;
+														padding: var(--space-2) 0;
+														border-bottom: 1px solid #fecaca;
+													"
+												>
+													<span style="color: var(--gray-600)"
+														>Motifs acceptés</span
+													><span style="font-weight: 600; color: #991b1b"
+														>Impayés, fraude, décès</span
+													>
+												</div>
+												<div
+													style="
+														display: flex;
+														justify-content: space-between;
+														padding: var(--space-2) 0;
+														border-bottom: 1px solid #fecaca;
+													"
+												>
+													<span style="color: var(--gray-600)">Préavis</span
+													><span style="font-weight: 600; color: #991b1b"
+														>30 jours</span
+													>
+												</div>
+												<div
+													style="
+														display: flex;
+														justify-content: space-between;
+														padding: var(--space-2) 0;
+													"
+												>
+													<span style="color: var(--gray-600)"
+														>Remboursement</span
+													><span style="font-weight: 600; color: #991b1b"
+														>Prorata temporis</span
+													>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+
+								<!-- Délais de traitement -->
+								<div
+									style="
+										border-top: 2px solid var(--gray-200);
+										padding-top: var(--space-5);
+									"
+								>
+									<h3
+										style="
+											font-weight: 700;
+											color: var(--gray-900);
+											margin-bottom: var(--space-1);
+											font-size: var(--text-base);
+										"
+									>
+										Délais de traitement réglementaires
+									</h3>
+									<p
+										style="
+											font-size: 13px;
+											color: var(--gray-500);
+											margin-bottom: var(--space-4);
+										"
+									>
+										Engagements de service pour le traitement des dossiers
+										production
+									</p>
+									<div
+										style="
+											display: grid;
+											grid-template-columns: repeat(4, 1fr);
+											gap: var(--space-3);
+										"
+									>
+										<div
+											style="
+												border: 1px solid var(--gray-200);
+												border-radius: var(--radius-lg);
+												padding: var(--space-4);
+												text-align: center;
+											"
+										>
+											<div
+												style="
+													font-size: var(--text-2xl);
+													font-weight: 800;
+													color: var(--iips-primary);
+													font-family: var(--font-mono);
+												"
+											>
+												48h
+											</div>
+											<div
+												style="
+													font-size: 12px;
+													color: var(--gray-500);
+													margin-top: var(--space-1);
+												"
+											>
+												Accusé réception souscription
+											</div>
+										</div>
+										<div
+											style="
+												border: 1px solid var(--gray-200);
+												border-radius: var(--radius-lg);
+												padding: var(--space-4);
+												text-align: center;
+											"
+										>
+											<div
+												style="
+													font-size: var(--text-2xl);
+													font-weight: 800;
+													color: var(--iips-primary);
+													font-family: var(--font-mono);
+												"
+											>
+												5j
+											</div>
+											<div
+												style="
+													font-size: 12px;
+													color: var(--gray-500);
+													margin-top: var(--space-1);
+												"
+											>
+												Validation complète (4 niveaux)
+											</div>
+										</div>
+										<div
+											style="
+												border: 1px solid var(--gray-200);
+												border-radius: var(--radius-lg);
+												padding: var(--space-4);
+												text-align: center;
+											"
+										>
+											<div
+												style="
+													font-size: var(--text-2xl);
+													font-weight: 800;
+													color: var(--iips-primary);
+													font-family: var(--font-mono);
+												"
+											>
+												24h
+											</div>
+											<div
+												style="
+													font-size: 12px;
+													color: var(--gray-500);
+													margin-top: var(--space-1);
+												"
+											>
+												Émission cartes après validation
+											</div>
+										</div>
+										<div
+											style="
+												border: 1px solid var(--gray-200);
+												border-radius: var(--radius-lg);
+												padding: var(--space-4);
+												text-align: center;
+											"
+										>
+											<div
+												style="
+													font-size: var(--text-2xl);
+													font-weight: 800;
+													color: var(--iips-primary);
+													font-family: var(--font-mono);
+												"
+											>
+												90j
+											</div>
+											<div
+												style="
+													font-size: 12px;
+													color: var(--gray-500);
+													margin-top: var(--space-1);
+												"
+											>
+												Délai max traitement global
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</main>
+		</div>
+
+		<script src="../../js/roles.js"></script>
+		<script src="../../js/main.js"></script>
+		<script src="../../js/main-v2.js"></script>
+	</body>
+</html>

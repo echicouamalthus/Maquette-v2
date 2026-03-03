@@ -1,0 +1,648 @@
+/* ==========================================================================
+   SOCIETE.CSS — Espace Société (Portail Client Entreprise)
+   Theme: Violet #7C3AED
+   ========================================================================== */
+
+/* --------------------------------------------------------------------------
+   1. SIDEBAR THEME OVERRIDE
+   -------------------------------------------------------------------------- */
+.sidebar {
+  background: linear-gradient(180deg, #3F3F46 0%, #27272A 100%);
+}
+.nav-item.active {
+  background: rgba(168,85,247,0.15);
+}
+.nav-item.active::before {
+  background: #A855F7;
+}
+.sidebar__brand-logo {
+  background: #7C3AED;
+}
+.sidebar__user-avatar {
+  background: #7C3AED;
+}
+
+/* --------------------------------------------------------------------------
+   2. BUTTON PRIMARY OVERRIDE
+   -------------------------------------------------------------------------- */
+.btn-primary {
+  background: #7C3AED;
+}
+.btn-primary:hover {
+  background: #6D28D9;
+}
+
+/* --------------------------------------------------------------------------
+   3. CONTRACT SUMMARY CARD
+   -------------------------------------------------------------------------- */
+.contract-summary {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--space-6);
+  padding: var(--space-6);
+  background: linear-gradient(135deg, #FAF5FF 0%, #F3E8FF 100%);
+  border: 1px solid #E9D5FF;
+  border-radius: var(--radius-xl);
+  margin-bottom: var(--space-6);
+}
+.contract-summary__left h3 {
+  font-size: var(--text-lg);
+  font-weight: 700;
+  margin-bottom: var(--space-1);
+}
+.contract-summary__left p {
+  font-size: var(--text-sm);
+  color: var(--gray-500);
+}
+.contract-summary__details {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: var(--space-4);
+  margin-top: var(--space-4);
+}
+.contract-summary__detail label {
+  font-size: 11px;
+  color: var(--gray-400);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+.contract-summary__detail p {
+  font-size: var(--text-sm);
+  font-weight: 600;
+  color: var(--gray-800);
+  margin-top: 2px;
+}
+.contract-summary__right {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+.contract-summary__amount {
+  font-family: var(--font-display);
+  font-size: 36px;
+  font-weight: 800;
+  color: #7C3AED;
+}
+.contract-summary__amount-label {
+  font-size: 13px;
+  color: var(--gray-500);
+  margin-top: 4px;
+}
+
+/* --------------------------------------------------------------------------
+   4. ROW ACTIONS (table hover)
+   -------------------------------------------------------------------------- */
+.row-actions {
+  display: flex;
+  gap: 4px;
+  opacity: 0;
+  transition: opacity var(--transition-fast);
+}
+.table tbody tr:hover .row-actions {
+  opacity: 1;
+}
+.row-action-btn {
+  width: 30px;
+  height: 30px;
+  border-radius: var(--radius-sm);
+  border: none;
+  background: transparent;
+  color: var(--gray-400);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+.row-action-btn:hover {
+  background: var(--gray-100);
+  color: var(--gray-700);
+}
+
+/* --------------------------------------------------------------------------
+   5. STAT CARD — SOCIETE VARIANT
+   -------------------------------------------------------------------------- */
+.stat-card--societe {
+  padding: var(--space-4) var(--space-5);
+}
+.stat-card--societe .stat-card__value {
+  font-size: var(--text-2xl);
+}
+.stat-card--violet { border-top: 3px solid #7C3AED; }
+
+/* --------------------------------------------------------------------------
+   6. STATUS TABS OVERRIDE
+   -------------------------------------------------------------------------- */
+.status-tabs {
+  display: flex;
+  gap: var(--space-2);
+  margin-bottom: var(--space-5);
+  border-bottom: 2px solid var(--gray-100);
+  padding-bottom: 0;
+}
+.status-tab {
+  padding: var(--space-2) var(--space-4);
+  font-size: var(--text-sm);
+  font-weight: 500;
+  color: var(--gray-500);
+  background: none;
+  border: none;
+  cursor: pointer;
+  border-bottom: 2px solid transparent;
+  margin-bottom: -2px;
+  transition: all var(--transition-fast);
+}
+.status-tab:hover {
+  color: var(--gray-700);
+}
+.status-tab.active {
+  color: #7C3AED;
+  border-bottom-color: #7C3AED;
+  font-weight: 600;
+}
+.status-tab__count {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 20px;
+  height: 20px;
+  padding: 0 6px;
+  border-radius: var(--radius-full);
+  background: var(--gray-100);
+  font-size: 11px;
+  font-weight: 600;
+  margin-left: var(--space-1);
+}
+.status-tab.active .status-tab__count {
+  background: #EDE9FE;
+  color: #7C3AED;
+}
+
+/* --------------------------------------------------------------------------
+   7. CONTRACT INFO GRID (contrats detail)
+   -------------------------------------------------------------------------- */
+.contract-info-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: var(--space-4);
+}
+.contract-info-grid__item {
+  padding: var(--space-4);
+  background: var(--gray-50);
+  border-radius: var(--radius-md);
+}
+.contract-info-grid__label {
+  font-size: 11px;
+  color: var(--gray-400);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  margin-bottom: var(--space-1);
+}
+.contract-info-grid__value {
+  font-size: var(--text-sm);
+  font-weight: 600;
+  color: var(--gray-800);
+}
+
+/* --------------------------------------------------------------------------
+   8. AVENANT CARD
+   -------------------------------------------------------------------------- */
+.avenant-card {
+  background: #fff;
+  border: var(--border-light);
+  border-radius: var(--radius-lg);
+  padding: var(--space-5);
+  margin-bottom: var(--space-4);
+  transition: box-shadow var(--transition-fast);
+}
+.avenant-card:hover {
+  box-shadow: var(--shadow-md);
+}
+.avenant-card__header {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  margin-bottom: var(--space-3);
+}
+.avenant-card__ref {
+  font-family: var(--font-mono);
+  font-weight: 600;
+  color: #7C3AED;
+  font-size: var(--text-sm);
+}
+.avenant-card__title {
+  font-weight: 600;
+  font-size: var(--text-md);
+  color: var(--gray-900);
+  margin-top: var(--space-1);
+}
+.avenant-card__body {
+  font-size: var(--text-sm);
+  color: var(--gray-600);
+  line-height: 1.6;
+  margin-bottom: var(--space-3);
+}
+.avenant-card__footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-top: var(--space-3);
+  border-top: var(--border-light);
+}
+.avenant-card__date {
+  font-size: var(--text-xs);
+  color: var(--gray-400);
+}
+
+/* --------------------------------------------------------------------------
+   9. DOCUMENT LIST
+   -------------------------------------------------------------------------- */
+.doc-item {
+  display: flex;
+  align-items: center;
+  gap: var(--space-4);
+  padding: var(--space-4) 0;
+  border-bottom: var(--border-light);
+}
+.doc-item:last-child {
+  border-bottom: none;
+}
+.doc-item__icon {
+  width: 44px;
+  height: 44px;
+  border-radius: var(--radius-md);
+  background: #F5F3FF;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 20px;
+  flex-shrink: 0;
+}
+.doc-item__info {
+  flex: 1;
+}
+.doc-item__name {
+  font-weight: 600;
+  font-size: var(--text-sm);
+  color: var(--gray-800);
+}
+.doc-item__meta {
+  font-size: var(--text-xs);
+  color: var(--gray-400);
+  margin-top: 2px;
+}
+.doc-item__actions {
+  margin-left: auto;
+}
+
+/* --------------------------------------------------------------------------
+   10. SUMMARY GRID (réutilisé sur adherents, primes, etats-prestations)
+   -------------------------------------------------------------------------- */
+.soc-summary {
+  display: grid;
+  gap: var(--space-4);
+  margin-bottom: var(--space-6);
+}
+.soc-summary--3 {
+  grid-template-columns: repeat(3, 1fr);
+}
+.soc-summary--4 {
+  grid-template-columns: repeat(4, 1fr);
+}
+.soc-summary__item {
+  padding: var(--space-5);
+  background: #fff;
+  border-radius: var(--radius-lg);
+  border: var(--border-light);
+  text-align: center;
+}
+.soc-summary__value {
+  font-family: var(--font-display);
+  font-size: var(--text-2xl);
+  font-weight: 700;
+  color: var(--gray-900);
+}
+.soc-summary__label {
+  font-size: var(--text-xs);
+  color: var(--gray-500);
+  margin-top: var(--space-1);
+}
+
+/* --------------------------------------------------------------------------
+   11. ACTE TAGS
+   -------------------------------------------------------------------------- */
+.acte-tag {
+  display: inline-block;
+  padding: 2px 8px;
+  border-radius: var(--radius-full);
+  font-size: 11px;
+  font-weight: 600;
+}
+.acte-tag.consultation { background: #DBEAFE; color: #1D4ED8; }
+.acte-tag.pharmacie { background: #D1FAE5; color: #065F46; }
+.acte-tag.hospitalisation { background: #FEE2E2; color: #991B1B; }
+.acte-tag.analyse { background: #EDE9FE; color: #6D28D9; }
+.acte-tag.optique { background: #FEF3C7; color: #92400E; }
+.acte-tag.dentaire { background: #FCE7F3; color: #9D174D; }
+
+/* --------------------------------------------------------------------------
+   12. REF LINK
+   -------------------------------------------------------------------------- */
+.ref-link {
+  color: #7C3AED;
+  font-weight: 600;
+  font-family: var(--font-mono);
+}
+
+/* --------------------------------------------------------------------------
+   13. RÉCLAMATION CARD
+   -------------------------------------------------------------------------- */
+.reclamation-card {
+  background: #fff;
+  border: var(--border-light);
+  border-radius: var(--radius-lg);
+  padding: var(--space-5);
+  margin-bottom: var(--space-4);
+  transition: box-shadow var(--transition-fast);
+}
+.reclamation-card:hover {
+  box-shadow: var(--shadow-md);
+}
+.reclamation-card__header {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  margin-bottom: var(--space-3);
+}
+.reclamation-card__ref {
+  font-family: var(--font-mono);
+  font-weight: 600;
+  color: #7C3AED;
+  font-size: var(--text-sm);
+}
+.reclamation-card__title {
+  font-weight: 600;
+  font-size: var(--text-md);
+  color: var(--gray-900);
+  margin-top: var(--space-1);
+}
+.reclamation-card__body {
+  font-size: var(--text-sm);
+  color: var(--gray-600);
+  line-height: 1.6;
+  margin-bottom: var(--space-3);
+}
+.reclamation-card__footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-top: var(--space-3);
+  border-top: var(--border-light);
+}
+.reclamation-card__date {
+  font-size: var(--text-xs);
+  color: var(--gray-400);
+}
+
+/* --------------------------------------------------------------------------
+   14. UPLOAD ZONE
+   -------------------------------------------------------------------------- */
+.soc-upload {
+  padding: var(--space-5);
+  border: 2px dashed var(--gray-300);
+  border-radius: var(--radius-lg);
+  text-align: center;
+  cursor: pointer;
+  transition: border-color var(--transition-fast);
+}
+.soc-upload:hover {
+  border-color: #7C3AED;
+}
+.soc-upload__icon {
+  font-size: 24px;
+  margin-bottom: var(--space-2);
+}
+.soc-upload__text {
+  font-size: var(--text-sm);
+  color: var(--gray-500);
+}
+
+/* --------------------------------------------------------------------------
+   15. MESSAGERIE DESKTOP (2-column layout)
+   -------------------------------------------------------------------------- */
+.msg-layout {
+  display: grid;
+  grid-template-columns: 340px 1fr;
+  height: calc(100vh - 180px);
+  border: var(--border-light);
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  background: #fff;
+}
+
+/* Left panel */
+.msg-list {
+  border-right: var(--border-light);
+  display: flex;
+  flex-direction: column;
+  background: var(--gray-50);
+}
+.msg-list__header {
+  padding: var(--space-4) var(--space-5);
+  border-bottom: var(--border-light);
+  background: #fff;
+}
+.msg-list__search {
+  width: 100%;
+  height: 38px;
+  padding: 0 var(--space-4);
+  border: var(--border-light);
+  border-radius: var(--radius-md);
+  font-size: var(--text-sm);
+  background: var(--gray-50);
+}
+.msg-list__items {
+  flex: 1;
+  overflow-y: auto;
+}
+.msg-preview {
+  display: flex;
+  align-items: center;
+  gap: var(--space-3);
+  padding: var(--space-4) var(--space-5);
+  cursor: pointer;
+  border-bottom: 1px solid var(--gray-100);
+  transition: background var(--transition-fast);
+}
+.msg-preview:hover {
+  background: #F5F3FF;
+}
+.msg-preview.active {
+  background: #F5F3FF;
+  border-left: 3px solid #7C3AED;
+}
+.msg-preview__avatar {
+  width: 40px;
+  height: 40px;
+  border-radius: var(--radius-full);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  font-weight: 600;
+  font-size: var(--text-sm);
+  flex-shrink: 0;
+}
+.msg-preview__content {
+  flex: 1;
+  min-width: 0;
+}
+.msg-preview__name {
+  font-weight: 600;
+  font-size: var(--text-sm);
+  color: var(--gray-900);
+}
+.msg-preview__text {
+  font-size: 12px;
+  color: var(--gray-500);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.msg-preview__meta {
+  text-align: right;
+  flex-shrink: 0;
+}
+.msg-preview__time {
+  font-size: 11px;
+  color: var(--gray-400);
+}
+.msg-preview__unread {
+  display: inline-block;
+  width: 8px;
+  height: 8px;
+  border-radius: var(--radius-full);
+  background: #7C3AED;
+  margin-top: var(--space-1);
+}
+.msg-preview__badge {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 20px;
+  height: 20px;
+  padding: 0 6px;
+  border-radius: var(--radius-full);
+  background: #7C3AED;
+  color: #fff;
+  font-size: 11px;
+  font-weight: 700;
+}
+
+/* Right panel */
+.msg-detail {
+  display: flex;
+  flex-direction: column;
+}
+.msg-detail__conv {
+  display: none;
+  flex-direction: column;
+  flex: 1;
+  min-height: 0;
+}
+.msg-detail__conv.active {
+  display: flex;
+}
+.msg-detail__header {
+  display: flex;
+  align-items: center;
+  gap: var(--space-3);
+  padding: var(--space-4) var(--space-5);
+  border-bottom: var(--border-light);
+  background: #fff;
+}
+.msg-detail__name {
+  font-weight: 600;
+  font-size: var(--text-md);
+}
+.msg-detail__status {
+  font-size: var(--text-xs);
+  color: var(--gray-500);
+}
+.msg-detail__messages {
+  flex: 1;
+  overflow-y: auto;
+  padding: var(--space-5);
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-4);
+}
+.msg-bubble {
+  max-width: 65%;
+  padding: var(--space-3) var(--space-4);
+  border-radius: var(--radius-lg);
+  font-size: var(--text-sm);
+  line-height: 1.5;
+}
+.msg-bubble--received {
+  background: var(--gray-100);
+  color: var(--gray-800);
+  align-self: flex-start;
+  border-bottom-left-radius: 4px;
+}
+.msg-bubble--sent {
+  background: #7C3AED;
+  color: #fff;
+  align-self: flex-end;
+  border-bottom-right-radius: 4px;
+}
+.msg-bubble__time {
+  font-size: 11px;
+  margin-top: var(--space-1);
+  opacity: 0.6;
+}
+.msg-input {
+  display: flex;
+  gap: var(--space-3);
+  padding: var(--space-4) var(--space-5);
+  border-top: var(--border-light);
+  background: #fff;
+}
+.msg-input__field {
+  flex: 1;
+  height: 42px;
+  padding: 0 var(--space-4);
+  border: var(--border-light);
+  border-radius: var(--radius-lg);
+  font-size: var(--text-sm);
+}
+.msg-input__field:focus {
+  border-color: #7C3AED;
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(124,58,237,0.1);
+}
+.msg-input__send {
+  width: 42px;
+  height: 42px;
+  border-radius: var(--radius-lg);
+  border: none;
+  background: #7C3AED;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: background var(--transition-fast);
+}
+.msg-input__send:hover {
+  background: #6D28D9;
+}
+
+/* --------------------------------------------------------------------------
+   16. UTILITY
+   -------------------------------------------------------------------------- */
+.text-societe-primary { color: #7C3AED; }
+.text-success { color: var(--color-success); }
+.text-warning { color: var(--color-warning); }
+.text-error { color: var(--color-error); }

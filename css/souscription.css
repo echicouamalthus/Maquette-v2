@@ -1,0 +1,214 @@
+/* ============================================================
+   IIPS — Module Souscription
+   Styles spécifiques aux pages G-020 à G-025
+   ============================================================ */
+
+/* --- Workflow Badge (Liste souscriptions G-020) --- */
+.workflow-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 4px 12px;
+  border-radius: var(--radius-full);
+  font-size: 11px;
+  font-weight: 600;
+}
+.workflow-badge .step-num {
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 10px;
+  font-weight: 700;
+}
+.workflow-badge--pending { background: #FEF3C7; color: #92400E; }
+.workflow-badge--pending .step-num { background: #F59E0B; color: #fff; }
+.workflow-badge--review { background: #DBEAFE; color: #1D4ED8; }
+.workflow-badge--review .step-num { background: #3B82F6; color: #fff; }
+.workflow-badge--director { background: #EDE9FE; color: #6D28D9; }
+.workflow-badge--director .step-num { background: #7C3AED; color: #fff; }
+.workflow-badge--approved { background: #D1FAE5; color: #065F46; }
+.workflow-badge--approved .step-num { background: #10B981; color: #fff; }
+.workflow-badge--rejected { background: #FEE2E2; color: #991B1B; }
+.workflow-badge--rejected .step-num { background: #EF4444; color: #fff; }
+
+/* --- Pièces Jointes Count --- */
+.pj-count {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  font-size: 11px;
+  color: var(--gray-500);
+}
+.pj-count svg { color: var(--gray-400); }
+.pj-count--complete { color: var(--color-success); }
+.pj-count--complete svg { color: var(--color-success); }
+
+/* --- Document Checklist (Détail souscription G-022) --- */
+.doc-checklist {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2);
+}
+.doc-checklist-item {
+  display: flex;
+  align-items: center;
+  gap: var(--space-3);
+  padding: var(--space-3) var(--space-4);
+  border: var(--border-light);
+  border-radius: var(--radius-md);
+  transition: all var(--transition-fast);
+}
+.doc-checklist-item:hover {
+  background: var(--gray-25);
+}
+.doc-checklist-item__check {
+  width: 24px;
+  height: 24px;
+  border-radius: var(--radius-full);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+.doc-checklist-item__check--ok {
+  background: var(--color-success-light);
+  color: var(--color-success);
+}
+.doc-checklist-item__check--missing {
+  background: var(--color-warning-light);
+  color: var(--color-warning);
+}
+.doc-checklist-item__check--rejected {
+  background: var(--color-error-light);
+  color: var(--color-error);
+}
+.doc-checklist-item__info {
+  flex: 1;
+  min-width: 0;
+}
+.doc-checklist-item__name {
+  font-size: var(--text-sm);
+  font-weight: 500;
+  color: var(--gray-900);
+}
+.doc-checklist-item__meta {
+  font-size: var(--text-xs);
+  color: var(--gray-500);
+  margin-top: 2px;
+}
+.doc-checklist-item__actions {
+  display: flex;
+  gap: var(--space-1);
+}
+
+/* --- Workflow Stepper Vertical (Détail souscription G-024) --- */
+.workflow-stepper {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+  position: relative;
+}
+.workflow-step-card {
+  display: flex;
+  gap: var(--space-4);
+  padding: var(--space-5);
+  position: relative;
+}
+.workflow-step-card::before {
+  content: '';
+  position: absolute;
+  left: 36px;
+  top: 56px;
+  bottom: -4px;
+  width: 2px;
+  background: var(--gray-200);
+}
+.workflow-step-card:last-child::before {
+  display: none;
+}
+.workflow-step-card__indicator {
+  width: 42px;
+  height: 42px;
+  border-radius: var(--radius-full);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  font-weight: 700;
+  font-size: var(--text-sm);
+  z-index: 1;
+}
+.workflow-step-card__indicator--completed {
+  background: var(--color-success);
+  color: #fff;
+}
+.workflow-step-card__indicator--active {
+  background: var(--color-info);
+  color: #fff;
+  box-shadow: 0 0 0 4px rgba(59, 130, 246, 0.2);
+}
+.workflow-step-card__indicator--pending {
+  background: var(--gray-100);
+  color: var(--gray-400);
+  border: 2px solid var(--gray-300);
+}
+.workflow-step-card__content {
+  flex: 1;
+  min-width: 0;
+}
+.workflow-step-card__title {
+  font-size: var(--text-sm);
+  font-weight: 600;
+  color: var(--gray-900);
+  margin-bottom: var(--space-1);
+}
+.workflow-step-card__desc {
+  font-size: var(--text-sm);
+  color: var(--gray-600);
+  line-height: var(--leading-relaxed);
+}
+.workflow-step-card__meta {
+  font-size: var(--text-xs);
+  color: var(--gray-500);
+  margin-top: var(--space-2);
+  display: flex;
+  align-items: center;
+  gap: var(--space-3);
+}
+.workflow-step-card--completed .workflow-step-card__title { color: var(--color-success-dark); }
+.workflow-step-card--completed::before { background: var(--color-success); }
+.workflow-step-card--active { background: var(--color-info-light); border-radius: var(--radius-lg); }
+
+/* --- Validation Actions Card --- */
+.validation-actions {
+  padding: var(--space-5);
+  background: var(--gray-50);
+  border-radius: var(--radius-lg);
+  border: 2px solid var(--gray-200);
+}
+.validation-actions__title {
+  font-size: var(--text-sm);
+  font-weight: 600;
+  color: var(--gray-900);
+  margin-bottom: var(--space-4);
+}
+
+/* --- Souscription Header Badge --- */
+.souscription-type {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-size: var(--text-xs);
+  font-weight: 600;
+  padding: 3px 10px;
+  border-radius: var(--radius-full);
+}
+.souscription-type--individuel { background: #FEF3C7; color: #92400E; }
+.souscription-type--groupe { background: #D1FAE5; color: #065F46; }
+
+/* --- Reuse shared styles from Production if not already loaded --- */
+/* form-section, tarif-preview, alert-box, form-footer, info-grid, info-block,
+   diff-row, tab-panel, contract-type, etc. are in production.css */

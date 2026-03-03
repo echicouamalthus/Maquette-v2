@@ -1,0 +1,687 @@
+/* ============================================================
+   IIPS — Module Production (Contrats)
+   Styles spécifiques aux pages G-010 à G-018
+   ============================================================ */
+
+/* --- Filter Bar (Liste contrats G-010) --- */
+.filter-bar {
+  display: flex;
+  align-items: center;
+  gap: var(--space-3);
+  margin-bottom: var(--space-6);
+  flex-wrap: wrap;
+}
+.filter-bar .form-select {
+  width: auto;
+  min-width: 160px;
+  height: 38px;
+  font-size: var(--text-sm);
+  border-radius: var(--radius-md);
+}
+.filter-bar .form-input {
+  width: 280px;
+  height: 38px;
+  font-size: var(--text-sm);
+}
+
+/* --- Table Toolbar --- */
+.table-toolbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: var(--space-4) var(--space-6);
+  border-bottom: var(--border-light);
+}
+.table-toolbar__left {
+  display: flex;
+  align-items: center;
+  gap: var(--space-3);
+}
+.table-toolbar__count {
+  font-size: var(--text-sm);
+  color: var(--gray-500);
+}
+.table-toolbar__count strong {
+  color: var(--gray-900);
+}
+
+/* --- Status Tabs --- */
+.status-tabs {
+  display: flex;
+  gap: var(--space-1);
+  background: var(--gray-100);
+  padding: 3px;
+  border-radius: var(--radius-md);
+}
+.status-tab {
+  padding: 6px 14px;
+  font-size: var(--text-xs);
+  font-weight: 600;
+  border: none;
+  background: transparent;
+  color: var(--gray-500);
+  border-radius: 6px;
+  cursor: pointer;
+  transition: all var(--transition-fast);
+}
+.status-tab:hover { color: var(--gray-700); }
+.status-tab.active {
+  background: #fff;
+  color: var(--gray-900);
+  box-shadow: var(--shadow-xs);
+}
+
+/* --- Contract Type Badge --- */
+.contract-type {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-size: var(--text-xs);
+  font-weight: 600;
+  padding: 3px 10px;
+  border-radius: var(--radius-full);
+  background: var(--gray-100);
+  color: var(--gray-700);
+}
+.contract-type.alpha1 { background: #EDE9FE; color: #6D28D9; }
+.contract-type.alpha2 { background: #DBEAFE; color: #1D4ED8; }
+.contract-type.groupe { background: #D1FAE5; color: #065F46; }
+.contract-type.individuel { background: #FEF3C7; color: #92400E; }
+
+/* --- Row Actions --- */
+.row-actions {
+  display: flex;
+  gap: 4px;
+  opacity: 0;
+  transition: opacity var(--transition-fast);
+}
+.table tbody tr:hover .row-actions { opacity: 1; }
+.row-action-btn {
+  width: 30px;
+  height: 30px;
+  border-radius: var(--radius-sm);
+  border: none;
+  background: transparent;
+  color: var(--gray-400);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all var(--transition-fast);
+}
+.row-action-btn:hover {
+  background: var(--gray-100);
+  color: var(--gray-700);
+}
+.row-action-btn:hover.edit { color: var(--iips-primary); }
+.row-action-btn:hover.delete { color: var(--color-error); }
+
+/* --- Form Sections (Nouveau contrat G-011) --- */
+.form-section {
+  margin-bottom: var(--space-8);
+}
+.form-section__title {
+  font-size: var(--text-md);
+  font-weight: 600;
+  color: var(--gray-900);
+  margin-bottom: var(--space-1);
+}
+.form-section__desc {
+  font-size: var(--text-sm);
+  color: var(--gray-500);
+  margin-bottom: var(--space-5);
+}
+.form-section__divider {
+  border: none;
+  border-top: var(--border-light);
+  margin: var(--space-8) 0;
+}
+
+/* --- Tarif Preview (Nouveau contrat G-011) --- */
+.tarif-preview {
+  background: linear-gradient(135deg, var(--iips-primary-50) 0%, #EBF5FF 100%);
+  border: 2px solid var(--iips-primary-200);
+  border-radius: var(--radius-lg);
+  padding: var(--space-6);
+}
+.tarif-preview__title {
+  font-size: var(--text-sm);
+  font-weight: 600;
+  color: var(--iips-primary-dark);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  margin-bottom: var(--space-4);
+}
+.tarif-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: var(--space-2) 0;
+  font-size: var(--text-sm);
+}
+.tarif-row__label { color: var(--gray-600); }
+.tarif-row__value { font-weight: 600; color: var(--gray-900); }
+.tarif-row.total {
+  border-top: 2px solid var(--iips-primary-200);
+  margin-top: var(--space-3);
+  padding-top: var(--space-3);
+}
+.tarif-row.total .tarif-row__value {
+  font-size: var(--text-xl);
+  color: var(--iips-primary);
+  font-family: var(--font-display);
+}
+
+/* --- Alert Box --- */
+.alert-box {
+  display: flex;
+  gap: var(--space-3);
+  padding: var(--space-4);
+  border-radius: var(--radius-md);
+  font-size: var(--text-sm);
+  margin-bottom: var(--space-5);
+}
+.alert-box--info {
+  background: var(--color-info-light);
+  color: var(--color-info-dark);
+  border: 1px solid #B2DDFF;
+}
+.alert-box--warning {
+  background: var(--color-warning-light);
+  color: var(--color-warning-dark);
+  border: 1px solid #FEDF89;
+}
+
+/* --- Form Footer --- */
+.form-footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-top: var(--space-6);
+  border-top: var(--border-light);
+  margin-top: var(--space-6);
+}
+
+/* --- Adherent Add / Row (Nouveau contrat G-011) --- */
+.adherent-add {
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+  padding: var(--space-3) var(--space-4);
+  border: 2px dashed var(--gray-300);
+  border-radius: var(--radius-md);
+  color: var(--gray-500);
+  font-size: var(--text-sm);
+  font-weight: 500;
+  cursor: pointer;
+  transition: all var(--transition-fast);
+  background: transparent;
+  width: 100%;
+}
+.adherent-add:hover {
+  border-color: var(--iips-primary);
+  color: var(--iips-primary);
+  background: var(--iips-primary-50);
+}
+.adherent-row {
+  display: grid;
+  grid-template-columns: 2fr 2fr 1.5fr 1fr auto;
+  gap: var(--space-3);
+  align-items: center;
+  padding: var(--space-3) var(--space-4);
+  background: var(--gray-50);
+  border-radius: var(--radius-md);
+  margin-bottom: var(--space-2);
+  font-size: var(--text-sm);
+}
+.adherent-row__name { font-weight: 600; color: var(--gray-800); }
+.adherent-row__relation { color: var(--gray-500); }
+.remove-btn {
+  width: 28px; height: 28px;
+  border-radius: var(--radius-sm);
+  border: none;
+  background: transparent;
+  color: var(--gray-400);
+  cursor: pointer;
+  display: flex; align-items: center; justify-content: center;
+}
+.remove-btn:hover { background: var(--color-error-light); color: var(--color-error); }
+
+
+/* ============================================================
+   DÉTAIL CONTRAT (G-012 à G-016)
+   ============================================================ */
+
+/* --- Contract Header Card --- */
+.contract-header {
+  display: flex;
+  align-items: flex-start;
+  gap: var(--space-6);
+  padding: var(--space-6);
+}
+.contract-header__main {
+  flex: 1;
+}
+.contract-header__ref {
+  font-family: var(--font-mono);
+  font-size: var(--text-xl);
+  font-weight: 700;
+  color: var(--iips-primary);
+}
+.contract-header__meta {
+  display: flex;
+  align-items: center;
+  gap: var(--space-3);
+  margin-top: var(--space-2);
+}
+
+/* --- Info Grid (Détail contrat G-012) --- */
+.info-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: var(--space-6);
+}
+.info-grid--3 {
+  grid-template-columns: repeat(3, 1fr);
+}
+.info-block {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-1);
+}
+.info-block__label {
+  font-size: var(--text-xs);
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: var(--gray-500);
+}
+.info-block__value {
+  font-size: var(--text-sm);
+  font-weight: 500;
+  color: var(--gray-900);
+}
+.info-block__value--mono {
+  font-family: var(--font-mono);
+}
+.info-block__value--primary {
+  color: var(--iips-primary);
+  font-weight: 600;
+}
+.info-block__value--large {
+  font-family: var(--font-display);
+  font-size: var(--text-lg);
+  font-weight: 700;
+}
+
+/* --- Summary Bar --- */
+.summary-bar {
+  display: flex;
+  align-items: center;
+  gap: var(--space-6);
+  padding: var(--space-4) var(--space-6);
+  background: var(--gray-50);
+  border-radius: var(--radius-md);
+}
+.summary-bar__item {
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+  font-size: var(--text-sm);
+  color: var(--gray-600);
+}
+.summary-bar__item strong {
+  color: var(--gray-900);
+  font-weight: 700;
+}
+.summary-bar__divider {
+  width: 1px;
+  height: 20px;
+  background: var(--gray-300);
+}
+
+/* --- Progress Bar --- */
+.progress-bar {
+  height: 6px;
+  background: var(--gray-100);
+  border-radius: var(--radius-full);
+  overflow: hidden;
+}
+.progress-bar__fill {
+  height: 100%;
+  border-radius: var(--radius-full);
+  transition: width var(--transition-slow);
+}
+
+/* --- Guarantee Card (Garanties G-013) --- */
+.guarantee-card {
+  border: var(--border-light);
+  border-radius: var(--radius-md);
+  padding: var(--space-4) var(--space-5);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  transition: background var(--transition-fast);
+}
+.guarantee-card:hover {
+  background: var(--gray-25);
+}
+.guarantee-card__info {
+  display: flex;
+  align-items: center;
+  gap: var(--space-3);
+}
+.guarantee-card__icon {
+  width: 38px;
+  height: 38px;
+  border-radius: var(--radius-md);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+.guarantee-card__name {
+  font-size: var(--text-sm);
+  font-weight: 600;
+  color: var(--gray-900);
+}
+.guarantee-card__desc {
+  font-size: var(--text-xs);
+  color: var(--gray-500);
+  margin-top: 2px;
+}
+.guarantee-card__limits {
+  text-align: right;
+}
+.guarantee-card__amount {
+  font-family: var(--font-display);
+  font-size: var(--text-sm);
+  font-weight: 700;
+  color: var(--gray-900);
+}
+.guarantee-card__taux {
+  font-size: var(--text-xs);
+  color: var(--iips-primary);
+  font-weight: 600;
+  margin-top: 2px;
+}
+
+/* --- Document Row (Documents G-015) --- */
+.doc-row {
+  display: flex;
+  align-items: center;
+  gap: var(--space-3);
+  padding: var(--space-3) var(--space-4);
+  border: var(--border-light);
+  border-radius: var(--radius-md);
+  transition: all var(--transition-fast);
+}
+.doc-row:hover {
+  background: var(--gray-25);
+  border-color: var(--gray-300);
+}
+.doc-row__icon {
+  width: 36px;
+  height: 36px;
+  border-radius: var(--radius-md);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+.doc-row__icon--pdf { background: #FEE4E2; color: var(--color-error); }
+.doc-row__icon--img { background: var(--color-info-light); color: var(--color-info); }
+.doc-row__icon--doc { background: var(--iips-primary-50); color: var(--iips-primary); }
+.doc-row__info {
+  flex: 1;
+  min-width: 0;
+}
+.doc-row__name {
+  font-size: var(--text-sm);
+  font-weight: 500;
+  color: var(--gray-900);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.doc-row__meta {
+  font-size: var(--text-xs);
+  color: var(--gray-500);
+  margin-top: 2px;
+}
+.doc-row__actions {
+  display: flex;
+  gap: var(--space-1);
+}
+
+/* --- Upload Zone (Documents G-015) --- */
+.upload-zone {
+  border: 2px dashed var(--gray-300);
+  border-radius: var(--radius-lg);
+  padding: var(--space-8) var(--space-6);
+  text-align: center;
+  transition: all var(--transition-fast);
+  cursor: pointer;
+}
+.upload-zone:hover {
+  border-color: var(--iips-primary);
+  background: var(--iips-primary-50);
+}
+.upload-zone__icon {
+  color: var(--gray-400);
+  margin-bottom: var(--space-3);
+}
+.upload-zone__text {
+  font-size: var(--text-sm);
+  color: var(--gray-600);
+}
+.upload-zone__text strong {
+  color: var(--iips-primary);
+}
+.upload-zone__hint {
+  font-size: var(--text-xs);
+  color: var(--gray-400);
+  margin-top: var(--space-2);
+}
+
+/* --- Timeline (Historique G-016) --- */
+.timeline {
+  position: relative;
+  padding-left: var(--space-8);
+}
+.timeline::before {
+  content: '';
+  position: absolute;
+  left: 11px;
+  top: 4px;
+  bottom: 4px;
+  width: 2px;
+  background: var(--gray-200);
+}
+.timeline-item {
+  position: relative;
+  padding-bottom: var(--space-6);
+}
+.timeline-item:last-child {
+  padding-bottom: 0;
+}
+.timeline-item__dot {
+  position: absolute;
+  left: calc(-1 * var(--space-8) + 4px);
+  top: 2px;
+  width: 16px;
+  height: 16px;
+  border-radius: var(--radius-full);
+  border: 2px solid var(--gray-300);
+  background: #fff;
+}
+.timeline-item__dot--success { border-color: var(--color-success); background: var(--color-success-light); }
+.timeline-item__dot--info { border-color: var(--color-info); background: var(--color-info-light); }
+.timeline-item__dot--warning { border-color: var(--color-warning); background: var(--color-warning-light); }
+.timeline-item__dot--primary { border-color: var(--iips-primary); background: var(--iips-primary-50); }
+.timeline-item__header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: var(--space-1);
+}
+.timeline-item__title {
+  font-size: var(--text-sm);
+  font-weight: 600;
+  color: var(--gray-900);
+}
+.timeline-item__date {
+  font-size: var(--text-xs);
+  color: var(--gray-500);
+}
+.timeline-item__desc {
+  font-size: var(--text-sm);
+  color: var(--gray-600);
+  line-height: var(--leading-relaxed);
+}
+.timeline-item__user {
+  font-size: var(--text-xs);
+  color: var(--gray-500);
+  margin-top: var(--space-1);
+}
+
+/* --- Tab Panels (Détail contrat) --- */
+.tab-panel {
+  display: none;
+}
+.tab-panel.active {
+  display: block;
+}
+
+
+/* ============================================================
+   AVENANT CONTRAT (G-017)
+   ============================================================ */
+
+/* --- Avenant Type Selector --- */
+.avenant-type-card {
+  border: 2px solid var(--gray-200);
+  border-radius: var(--radius-lg);
+  padding: var(--space-5);
+  cursor: pointer;
+  transition: all var(--transition-fast);
+}
+.avenant-type-card:hover {
+  border-color: var(--gray-300);
+  background: var(--gray-25);
+}
+.avenant-type-card.selected {
+  border-color: var(--iips-primary);
+  background: var(--iips-primary-50);
+}
+.avenant-type-card__icon {
+  width: 42px;
+  height: 42px;
+  border-radius: var(--radius-lg);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: var(--space-3);
+}
+.avenant-type-card__title {
+  font-size: var(--text-sm);
+  font-weight: 600;
+  color: var(--gray-900);
+  margin-bottom: var(--space-1);
+}
+.avenant-type-card__desc {
+  font-size: var(--text-xs);
+  color: var(--gray-500);
+  line-height: var(--leading-relaxed);
+}
+
+/* --- Diff Display --- */
+.diff-row {
+  display: flex;
+  align-items: center;
+  gap: var(--space-4);
+  padding: var(--space-3) var(--space-4);
+  border-radius: var(--radius-md);
+  font-size: var(--text-sm);
+}
+.diff-row:nth-child(even) {
+  background: var(--gray-50);
+}
+.diff-row__label {
+  width: 180px;
+  font-weight: 500;
+  color: var(--gray-600);
+  flex-shrink: 0;
+}
+.diff-row__old {
+  flex: 1;
+  color: var(--color-error);
+  text-decoration: line-through;
+}
+.diff-row__arrow {
+  color: var(--gray-400);
+  flex-shrink: 0;
+}
+.diff-row__new {
+  flex: 1;
+  color: var(--color-success-dark);
+  font-weight: 600;
+}
+
+
+/* ============================================================
+   RENOUVELLEMENT CONTRAT (G-018)
+   ============================================================ */
+
+/* --- Renewal Summary Card --- */
+.renewal-summary {
+  background: linear-gradient(135deg, var(--iips-primary-50) 0%, #EBF5FF 100%);
+  border: 2px solid var(--iips-primary-200);
+  border-radius: var(--radius-lg);
+  padding: var(--space-6);
+}
+.renewal-summary__title {
+  font-size: var(--text-sm);
+  font-weight: 600;
+  color: var(--iips-primary-dark);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  margin-bottom: var(--space-4);
+}
+
+/* --- Comparison Card --- */
+.comparison-grid {
+  display: grid;
+  grid-template-columns: 1fr auto 1fr;
+  gap: var(--space-4);
+  align-items: start;
+}
+.comparison-card {
+  border: var(--border-light);
+  border-radius: var(--radius-lg);
+  padding: var(--space-5);
+}
+.comparison-card--current {
+  background: var(--gray-50);
+  border-color: var(--gray-300);
+}
+.comparison-card--new {
+  background: var(--iips-primary-50);
+  border-color: var(--iips-primary-200);
+}
+.comparison-card__label {
+  font-size: var(--text-xs);
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  margin-bottom: var(--space-4);
+}
+.comparison-card--current .comparison-card__label { color: var(--gray-500); }
+.comparison-card--new .comparison-card__label { color: var(--iips-primary); }
+.comparison-arrow {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-top: var(--space-10);
+  color: var(--gray-400);
+}

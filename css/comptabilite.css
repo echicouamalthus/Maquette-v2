@@ -1,0 +1,242 @@
+/* ============================================================
+   IIPS — Module Comptabilite & Prelevements
+   Styles specifiques aux pages G-050 a G-054
+   ============================================================ */
+
+/* --- Month Selector (G-050 Primes) --- */
+.month-selector {
+  display: flex;
+  align-items: center;
+  gap: var(--space-3);
+  margin-bottom: var(--space-6);
+}
+.month-selector__btn {
+  width: 36px;
+  height: 36px;
+  border-radius: var(--radius-md);
+  border: var(--border-light);
+  background: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  color: var(--gray-600);
+  transition: all var(--transition-fast);
+}
+.month-selector__btn:hover {
+  background: var(--gray-50);
+  color: var(--gray-900);
+}
+.month-selector__label {
+  font-family: var(--font-display);
+  font-size: var(--text-lg);
+  font-weight: 700;
+  color: var(--gray-900);
+}
+
+/* --- Overdue Row (G-050 Impayes) --- */
+.overdue {
+  background: #FFF5F5;
+}
+.overdue td {
+  color: var(--color-error-dark) !important;
+}
+
+/* --- Progress Bar (recouvrement) --- */
+.progress-bar {
+  height: 6px;
+  background: var(--gray-100);
+  border-radius: 99px;
+  overflow: hidden;
+  width: 100px;
+}
+.progress-bar__fill {
+  height: 100%;
+  border-radius: 99px;
+}
+
+/* --- Encaissement Mode Cards (G-053) --- */
+.encaissement-modes {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: var(--space-3);
+  margin-bottom: var(--space-6);
+}
+.encaissement-mode-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--space-2);
+  padding: var(--space-5) var(--space-4);
+  border: 2px solid var(--gray-200);
+  border-radius: var(--radius-lg);
+  background: #fff;
+  cursor: pointer;
+  transition: all var(--transition-fast);
+  text-align: center;
+}
+.encaissement-mode-card:hover {
+  border-color: var(--gray-300);
+  background: var(--gray-50);
+}
+.encaissement-mode-card.selected {
+  border-color: var(--iips-primary);
+  background: var(--iips-primary-50, #E6F4EF);
+  box-shadow: 0 0 0 3px rgba(11, 110, 79, 0.1);
+}
+.encaissement-mode-card__icon {
+  width: 42px;
+  height: 42px;
+  border-radius: var(--radius-md);
+  background: var(--gray-100);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--gray-600);
+}
+.encaissement-mode-card.selected .encaissement-mode-card__icon {
+  background: var(--iips-primary);
+  color: #fff;
+}
+.encaissement-mode-card__label {
+  font-size: var(--text-sm);
+  font-weight: 600;
+  color: var(--gray-700);
+}
+.encaissement-mode-card__desc {
+  font-size: var(--text-xs);
+  color: var(--gray-400);
+}
+
+/* --- Encaissement Summary (G-053 right panel) --- */
+.encaissement-summary {
+  background: var(--gray-50);
+  border: var(--border-light);
+  border-radius: var(--radius-lg);
+  padding: var(--space-5);
+  position: sticky;
+  top: calc(64px + var(--space-6));
+}
+.encaissement-summary__title {
+  font-family: var(--font-display);
+  font-size: var(--text-md);
+  font-weight: 700;
+  color: var(--gray-900);
+  margin-bottom: var(--space-4);
+  padding-bottom: var(--space-3);
+  border-bottom: var(--border-light);
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+}
+.encaissement-summary__row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: var(--space-2) 0;
+  font-size: var(--text-sm);
+}
+.encaissement-summary__label {
+  color: var(--gray-500);
+}
+.encaissement-summary__value {
+  font-weight: 600;
+  color: var(--gray-900);
+}
+.encaissement-summary__total {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: var(--space-3) 0;
+  margin-top: var(--space-3);
+  border-top: 2px solid var(--gray-200);
+  font-size: var(--text-md);
+}
+.encaissement-summary__total-label {
+  font-weight: 600;
+  color: var(--gray-700);
+}
+.encaissement-summary__total-value {
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: var(--text-xl);
+  color: var(--iips-primary);
+}
+
+/* --- Mode Details (conditional fields) --- */
+.mode-details {
+  display: none;
+  padding: var(--space-4);
+  background: var(--gray-50);
+  border-radius: var(--radius-md);
+  margin-top: var(--space-3);
+}
+.mode-details.visible {
+  display: block;
+}
+
+/* --- Commission Detail Header (G-054) --- */
+.commission-header {
+  display: flex;
+  align-items: center;
+  gap: var(--space-5);
+  padding: var(--space-6);
+  background: #fff;
+  border: var(--border-light);
+  border-radius: var(--radius-lg);
+  margin-bottom: var(--space-6);
+}
+.commission-header__avatar {
+  width: 56px;
+  height: 56px;
+  border-radius: var(--radius-full);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: var(--text-xl);
+  color: #fff;
+  flex-shrink: 0;
+}
+.commission-header__info {
+  flex: 1;
+}
+.commission-header__name {
+  font-family: var(--font-display);
+  font-size: var(--text-xl);
+  font-weight: 700;
+  color: var(--gray-900);
+}
+.commission-header__role {
+  font-size: var(--text-sm);
+  color: var(--gray-500);
+  margin-top: 2px;
+}
+.commission-header__stats {
+  display: flex;
+  gap: var(--space-6);
+}
+.commission-header__stat {
+  text-align: center;
+}
+.commission-header__stat-value {
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: var(--text-lg);
+  color: var(--gray-900);
+}
+.commission-header__stat-label {
+  font-size: 11px;
+  color: var(--gray-400);
+  margin-top: 2px;
+}
+
+/* --- Total Row in commission table --- */
+.table-total-row {
+  background: var(--gray-50);
+  font-weight: 700;
+}
+.table-total-row td {
+  border-top: 2px solid var(--gray-200);
+}

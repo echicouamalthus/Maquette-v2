@@ -1,0 +1,389 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>IIPS &#8212; Mes Garanties</title>
+  <link rel="stylesheet" href="../../css/design-system.css">
+  <link rel="stylesheet" href="../../css/assure.css">
+  <link rel="stylesheet" href="../../css/assure-v2.css">
+  <script src="../../js/icons.js"></script>
+</head>
+<body class="assure-v2">
+<div class="consumer-portal">
+
+  <!-- ===== TOP NAVIGATION ===== -->
+  <nav class="portal-topnav">
+    <a href="dashboard.html" class="portal-topnav__logo">
+      <div class="portal-topnav__logo-icon">IP</div>
+      IIPS Sant&#233;
+    </a>
+    <div class="portal-topnav__links">
+      <a href="dashboard.html" class="portal-topnav__link">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3" y="3" width="7" height="7"/><rect x="14" y="3" width="7" height="7"/><rect x="3" y="14" width="7" height="7"/><rect x="14" y="14" width="7" height="7"/></svg>
+        Accueil
+      </a>
+      <a href="carte.html" class="portal-topnav__link">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3" y="3" width="18" height="18"/><line x1="3" y1="9" x2="21" y2="9"/><line x1="9" y1="3" x2="9" y2="9"/></svg>
+        Carte
+      </a>
+      <a href="garanties.html" class="portal-topnav__link active">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+        Garanties
+      </a>
+      <a href="prestations.html" class="portal-topnav__link">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z"/><polyline points="14,2 14,8 20,8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/></svg>
+        Prestations
+      </a>
+      <a href="reseau.html" class="portal-topnav__link">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
+        R&#233;seau
+      </a>
+      <a href="messages.html" class="portal-topnav__link">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M21 15a2 2 0 01-2 2H7l-4 4V5a2 2 0 012-2h14a2 2 0 012 2z"/></svg>
+        Messages
+      </a>
+      <a href="profil.html" class="portal-topnav__link">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="12" cy="7" r="4"/><path d="M5.5 21v-1a6.5 6.5 0 0113 0v1"/></svg>
+        Profil
+      </a>
+    </div>
+    <div class="portal-topnav__actions">
+      <button class="portal-topnav__hamburger" onclick="toggleMobileNav()">
+        <svg width="20" height="20" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.8"><line x1="3" y1="5" x2="17" y2="5"/><line x1="3" y1="10" x2="17" y2="10"/><line x1="3" y1="15" x2="17" y2="15"/></svg>
+      </button>
+      <button class="portal-topnav__notif">
+        <svg width="18" height="18" viewBox="0 0 18 18" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M13 7a4 4 0 00-8 0c0 4-2 5.5-2 5.5h12S13 11 13 7z"/><path d="M7.5 14a1.5 1.5 0 003 0"/></svg>
+        <span class="dot"></span>
+      </button>
+      <a href="profil.html" class="portal-topnav__user">
+        <div class="portal-topnav__avatar">FB</div>
+        <span class="portal-topnav__username">Fatoumata</span>
+      </a>
+    </div>
+  </nav>
+
+  <!-- ===== MOBILE DRAWER ===== -->
+  <div class="portal-mobile-nav" id="mobile-nav">
+    <div class="portal-mobile-nav__overlay" onclick="toggleMobileNav()"></div>
+    <div class="portal-mobile-nav__panel">
+      <div class="portal-mobile-nav__header">
+        <span style="font-family:var(--font-display);font-weight:800;font-size:var(--text-md);">IIPS Sant&#233;</span>
+        <button class="portal-mobile-nav__close" onclick="toggleMobileNav()">
+          <svg width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4l8 8M12 4l-8 8"/></svg>
+        </button>
+      </div>
+      <a href="dashboard.html" class="portal-mobile-nav__link">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3" y="3" width="7" height="7"/><rect x="14" y="3" width="7" height="7"/><rect x="3" y="14" width="7" height="7"/><rect x="14" y="14" width="7" height="7"/></svg>
+        Accueil
+      </a>
+      <a href="carte.html" class="portal-mobile-nav__link">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3" y="3" width="18" height="18"/><line x1="3" y1="9" x2="21" y2="9"/><line x1="9" y1="3" x2="9" y2="9"/></svg>
+        Ma carte
+      </a>
+      <a href="garanties.html" class="portal-mobile-nav__link active">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+        Mes garanties
+      </a>
+      <a href="prestations.html" class="portal-mobile-nav__link">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z"/><polyline points="14,2 14,8 20,8"/></svg>
+        Mes prestations
+      </a>
+      <a href="reseau.html" class="portal-mobile-nav__link">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
+        R&#233;seau de soins
+      </a>
+      <a href="messages.html" class="portal-mobile-nav__link">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M21 15a2 2 0 01-2 2H7l-4 4V5a2 2 0 012-2h14a2 2 0 012 2z"/></svg>
+        Messages
+      </a>
+      <a href="remboursement.html" class="portal-mobile-nav__link">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><line x1="12" y1="1" x2="12" y2="23"/><path d="M17 5H9.5a3.5 3.5 0 000 7h5a3.5 3.5 0 010 7H6"/></svg>
+        Remboursement
+      </a>
+      <a href="reclamation.html" class="portal-mobile-nav__link">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M10.29 3.86L1.82 18a2 2 0 001.71 3h16.94a2 2 0 001.71-3L13.71 3.86a2 2 0 00-3.42 0z"/><line x1="12" y1="9" x2="12" y2="13"/><line x1="12" y1="17" x2="12.01" y2="17"/></svg>
+        R&#233;clamation
+      </a>
+      <a href="profil.html" class="portal-mobile-nav__link">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="12" cy="7" r="4"/><path d="M5.5 21v-1a6.5 6.5 0 0113 0v1"/></svg>
+        Mon profil
+      </a>
+    </div>
+  </div>
+
+  <!-- ===== PAGE CONTENT ===== -->
+  <div class="consumer-portal__body">
+    <div class="consumer-portal__container">
+
+      <!-- Page Header -->
+      <div class="portal-page-header">
+        <div class="portal-page-header__breadcrumb">
+          <a href="dashboard.html">Accueil</a> / <span>Mes garanties</span>
+        </div>
+        <h1 class="portal-page-header__title">Mes garanties</h1>
+      </div>
+
+      <!-- Plafond global -->
+      <div class="plafond-card" style="margin-bottom:var(--space-5);">
+        <div class="plafond-card__header">
+          <span class="plafond-card__title">Plafond annuel global</span>
+          <span class="plafond-card__amount">5 000 000 FCFA</span>
+        </div>
+        <div class="plafond-bar">
+          <div class="plafond-bar__fill" style="width: 25%;"></div>
+        </div>
+        <div class="plafond-card__details">
+          <span>Consomm&#233; : 1 250 000 (25%)</span>
+          <span>Restant : 3 750 000</span>
+        </div>
+      </div>
+
+      <!-- Consultation -->
+      <div class="garantie-detail-card open" style="margin-bottom:var(--space-3);">
+        <div class="garantie-detail-card__header" onclick="toggleGarantie(this)">
+          <div class="garantie-detail-card__icon" style="background:#DBEAFE;">&#129658;</div>
+          <span class="garantie-detail-card__name">Consultation</span>
+          <span class="garantie-detail-card__rate">80% couvert</span>
+          <span class="garantie-detail-card__chevron"><svg width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 6l4 4 4-4"/></svg></span>
+        </div>
+        <div class="garantie-detail-card__body">
+          <div class="garantie-detail-card__item">
+            <span class="garantie-detail-card__item-name">Consultation g&#233;n&#233;raliste</span>
+            <span class="garantie-detail-card__item-rate">80%</span>
+            <span class="garantie-detail-card__item-plafond">500 000</span>
+          </div>
+          <div class="garantie-detail-card__item">
+            <span class="garantie-detail-card__item-name">Consultation sp&#233;cialiste</span>
+            <span class="garantie-detail-card__item-rate">70%</span>
+            <span class="garantie-detail-card__item-plafond">750 000</span>
+          </div>
+          <div class="garantie-detail-card__item">
+            <span class="garantie-detail-card__item-name">Consultation urgence</span>
+            <span class="garantie-detail-card__item-rate">100%</span>
+            <span class="garantie-detail-card__item-plafond">Illimit&#233;</span>
+          </div>
+          <div class="garantie-detail-card__progress">
+            <div class="garantie-detail-card__progress-label">
+              <span>Consomm&#233; : 120 000</span>
+              <span>Plafond : 500 000</span>
+            </div>
+            <div class="plafond-bar"><div class="plafond-bar__fill" style="width:24%;"></div></div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Hospitalisation -->
+      <div class="garantie-detail-card" style="margin-bottom:var(--space-3);">
+        <div class="garantie-detail-card__header" onclick="toggleGarantie(this)">
+          <div class="garantie-detail-card__icon" style="background:#FEE2E2;">&#127973;</div>
+          <span class="garantie-detail-card__name">Hospitalisation</span>
+          <span class="garantie-detail-card__rate">90% couvert</span>
+          <span class="garantie-detail-card__chevron"><svg width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 6l4 4 4-4"/></svg></span>
+        </div>
+        <div class="garantie-detail-card__body">
+          <div class="garantie-detail-card__item">
+            <span class="garantie-detail-card__item-name">Hospitalisation m&#233;dicale</span>
+            <span class="garantie-detail-card__item-rate">90%</span>
+            <span class="garantie-detail-card__item-plafond">2 000 000</span>
+          </div>
+          <div class="garantie-detail-card__item">
+            <span class="garantie-detail-card__item-name">Hospitalisation chirurgicale</span>
+            <span class="garantie-detail-card__item-rate">85%</span>
+            <span class="garantie-detail-card__item-plafond">3 000 000</span>
+          </div>
+          <div class="garantie-detail-card__item">
+            <span class="garantie-detail-card__item-name">Chambre individuelle</span>
+            <span class="garantie-detail-card__item-rate">80%</span>
+            <span class="garantie-detail-card__item-plafond">25 000/jour</span>
+          </div>
+          <div class="garantie-detail-card__progress">
+            <div class="garantie-detail-card__progress-label">
+              <span>Consomm&#233; : 875 000</span>
+              <span>Plafond : 2 000 000</span>
+            </div>
+            <div class="plafond-bar"><div class="plafond-bar__fill" style="width:44%;"></div></div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Pharmacie -->
+      <div class="garantie-detail-card" style="margin-bottom:var(--space-3);">
+        <div class="garantie-detail-card__header" onclick="toggleGarantie(this)">
+          <div class="garantie-detail-card__icon" style="background:#D1FAE5;">&#128138;</div>
+          <span class="garantie-detail-card__name">Pharmacie</span>
+          <span class="garantie-detail-card__rate">75% couvert</span>
+          <span class="garantie-detail-card__chevron"><svg width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 6l4 4 4-4"/></svg></span>
+        </div>
+        <div class="garantie-detail-card__body">
+          <div class="garantie-detail-card__item">
+            <span class="garantie-detail-card__item-name">M&#233;dicaments prescrits</span>
+            <span class="garantie-detail-card__item-rate">75%</span>
+            <span class="garantie-detail-card__item-plafond">300 000</span>
+          </div>
+          <div class="garantie-detail-card__item">
+            <span class="garantie-detail-card__item-name">M&#233;dicaments hospitaliers</span>
+            <span class="garantie-detail-card__item-rate">90%</span>
+            <span class="garantie-detail-card__item-plafond">Inclus</span>
+          </div>
+          <div class="garantie-detail-card__progress">
+            <div class="garantie-detail-card__progress-label">
+              <span>Consomm&#233; : 8 500</span>
+              <span>Plafond : 300 000</span>
+            </div>
+            <div class="plafond-bar"><div class="plafond-bar__fill" style="width:3%;"></div></div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Optique -->
+      <div class="garantie-detail-card" style="margin-bottom:var(--space-3);">
+        <div class="garantie-detail-card__header" onclick="toggleGarantie(this)">
+          <div class="garantie-detail-card__icon" style="background:#FEF3C7;">&#128083;</div>
+          <span class="garantie-detail-card__name">Optique</span>
+          <span class="garantie-detail-card__rate">70% couvert</span>
+          <span class="garantie-detail-card__chevron"><svg width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 6l4 4 4-4"/></svg></span>
+        </div>
+        <div class="garantie-detail-card__body">
+          <div class="garantie-detail-card__item">
+            <span class="garantie-detail-card__item-name">Montures</span>
+            <span class="garantie-detail-card__item-rate">70%</span>
+            <span class="garantie-detail-card__item-plafond">50 000/an</span>
+          </div>
+          <div class="garantie-detail-card__item">
+            <span class="garantie-detail-card__item-name">Verres correcteurs</span>
+            <span class="garantie-detail-card__item-rate">70%</span>
+            <span class="garantie-detail-card__item-plafond">100 000/an</span>
+          </div>
+          <div class="garantie-detail-card__item">
+            <span class="garantie-detail-card__item-name">Lentilles</span>
+            <span class="garantie-detail-card__item-rate">60%</span>
+            <span class="garantie-detail-card__item-plafond">75 000/an</span>
+          </div>
+          <div class="garantie-detail-card__progress">
+            <div class="garantie-detail-card__progress-label">
+              <span>Consomm&#233; : 0</span>
+              <span>Plafond : 150 000</span>
+            </div>
+            <div class="plafond-bar"><div class="plafond-bar__fill" style="width:0%;"></div></div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Dentaire -->
+      <div class="garantie-detail-card" style="margin-bottom:var(--space-3);">
+        <div class="garantie-detail-card__header" onclick="toggleGarantie(this)">
+          <div class="garantie-detail-card__icon" style="background:#E0E7FF;">&#129463;</div>
+          <span class="garantie-detail-card__name">Dentaire</span>
+          <span class="garantie-detail-card__rate">65% couvert</span>
+          <span class="garantie-detail-card__chevron"><svg width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 6l4 4 4-4"/></svg></span>
+        </div>
+        <div class="garantie-detail-card__body">
+          <div class="garantie-detail-card__item">
+            <span class="garantie-detail-card__item-name">Soins conservateurs</span>
+            <span class="garantie-detail-card__item-rate">65%</span>
+            <span class="garantie-detail-card__item-plafond">200 000</span>
+          </div>
+          <div class="garantie-detail-card__item">
+            <span class="garantie-detail-card__item-name">Proth&#232;ses dentaires</span>
+            <span class="garantie-detail-card__item-rate">50%</span>
+            <span class="garantie-detail-card__item-plafond">300 000</span>
+          </div>
+          <div class="garantie-detail-card__progress">
+            <div class="garantie-detail-card__progress-label">
+              <span>Consomm&#233; : 0</span>
+              <span>Plafond : 200 000</span>
+            </div>
+            <div class="plafond-bar"><div class="plafond-bar__fill" style="width:0%;"></div></div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Analyses & Imagerie -->
+      <div class="garantie-detail-card" style="margin-bottom:var(--space-3);">
+        <div class="garantie-detail-card__header" onclick="toggleGarantie(this)">
+          <div class="garantie-detail-card__icon" style="background:#EDE9FE;">&#128300;</div>
+          <span class="garantie-detail-card__name">Analyses &amp; Imagerie</span>
+          <span class="garantie-detail-card__rate">80% couvert</span>
+          <span class="garantie-detail-card__chevron"><svg width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 6l4 4 4-4"/></svg></span>
+        </div>
+        <div class="garantie-detail-card__body">
+          <div class="garantie-detail-card__item">
+            <span class="garantie-detail-card__item-name">Analyses sanguines</span>
+            <span class="garantie-detail-card__item-rate">80%</span>
+            <span class="garantie-detail-card__item-plafond">250 000</span>
+          </div>
+          <div class="garantie-detail-card__item">
+            <span class="garantie-detail-card__item-name">Radiologie</span>
+            <span class="garantie-detail-card__item-rate">75%</span>
+            <span class="garantie-detail-card__item-plafond">300 000</span>
+          </div>
+          <div class="garantie-detail-card__item">
+            <span class="garantie-detail-card__item-name">IRM / Scanner</span>
+            <span class="garantie-detail-card__item-rate">70%</span>
+            <span class="garantie-detail-card__item-plafond">500 000</span>
+          </div>
+          <div class="garantie-detail-card__progress">
+            <div class="garantie-detail-card__progress-label">
+              <span>Consomm&#233; : 32 000</span>
+              <span>Plafond : 250 000</span>
+            </div>
+            <div class="plafond-bar"><div class="plafond-bar__fill" style="width:13%;"></div></div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- ===== FOOTER ===== -->
+  <footer class="portal-footer">
+    <div class="portal-footer__inner">
+      <span class="portal-footer__brand">IIPS Sant&#233;</span>
+      <div class="portal-footer__links">
+        <a href="#">Conditions d'utilisation</a>
+        <a href="#">Politique de confidentialit&#233;</a>
+        <a href="#">Aide &amp; FAQ</a>
+      </div>
+      <span class="portal-footer__copy">&#169; 2026 KOJIT Systems &#8212; C&#244;te d'Ivoire</span>
+    </div>
+  </footer>
+
+  <!-- ===== BOTTOM NAV (Mobile) ===== -->
+  <div class="portal-bottom-nav">
+    <a class="portal-bottom-nav__item" href="dashboard.html">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="7" height="7"/><rect x="14" y="3" width="7" height="7"/><rect x="3" y="14" width="7" height="7"/><rect x="14" y="14" width="7" height="7"/></svg>
+      Accueil
+    </a>
+    <a class="portal-bottom-nav__item" href="carte.html">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18"/><line x1="3" y1="9" x2="21" y2="9"/><line x1="9" y1="3" x2="9" y2="9"/></svg>
+      Carte
+    </a>
+    <a class="portal-bottom-nav__item" href="reseau.html">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s-8-4.5-8-11.8A8 8 0 0112 2a8 8 0 018 8.2c0 7.3-8 11.8-8 11.8z"/><circle cx="12" cy="10" r="3"/></svg>
+      Réseau
+    </a>
+    <a class="portal-bottom-nav__item" href="messages.html">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15a2 2 0 01-2 2H7l-4 4V5a2 2 0 012-2h14a2 2 0 012 2z"/></svg>
+      Messages
+    </a>
+    <a class="portal-bottom-nav__item" href="profil.html">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="7" r="4"/><path d="M5.5 21v-1a6.5 6.5 0 0113 0v1"/></svg>
+      Profil
+    </a>
+  </div>
+
+</div>
+
+<script src="../../js/main.js"></script>
+<script>
+function toggleMobileNav() {
+  document.getElementById('mobile-nav').classList.toggle('active');
+}
+function toggleGarantie(header) {
+  var card = header.closest('.garantie-detail-card');
+  card.classList.toggle('open');
+}
+</script>
+</body>
+</html>

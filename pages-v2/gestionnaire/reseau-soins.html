@@ -1,0 +1,1734 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>IIPS v2 — Réseau de Soins</title>
+  <link rel="stylesheet" href="../../css/design-system.css">
+  <link rel="stylesheet" href="../../css/design-system-v2.css">
+  <script src="../../js/icons.js"></script>
+</head>
+<body data-page-module="pec">
+<div class="app-shell">
+
+  <!-- ===== SIDEBAR v2 ===== -->
+  <aside class="sidebar">
+
+    <div class="sidebar__brand">
+      <img src="../../iips.jpg" alt="IIPS" class="sidebar__brand-logo">
+      <div class="sidebar__brand-text">
+        <span class="sidebar__brand-name">IIPS Santé</span>
+        <span class="sidebar__brand-tagline">Gestion Assurance</span>
+      </div>
+    </div>
+
+    <nav class="sidebar__nav">
+      <div class="nav-section">
+        <details open>
+          <summary class="nav-section__title">
+            Principal
+            <svg class="section-chevron" width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2"><polyline points="4,6 8,10 12,6"/></svg>
+          </summary>
+          <a href="dashboard.html" class="nav-item" data-module="dashboard" data-tooltip="Tableau de bord">
+            <span class="nav-item__icon"><svg width="20" height="20" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="7" height="8"/><rect x="11" y="2" width="7" height="5"/><rect x="2" y="12" width="7" height="6"/><rect x="11" y="9" width="7" height="9"/></svg></span>
+            <span class="nav-item__label">Tableau de bord</span>
+          </a>
+        </details>
+      </div>
+
+      <div class="nav-section">
+        <details open>
+          <summary class="nav-section__title">
+            Gestion
+            <svg class="section-chevron" width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2"><polyline points="4,6 8,10 12,6"/></svg>
+          </summary>
+          <a href="contrats.html" class="nav-item" data-module="production" data-tooltip="Production">
+            <span class="nav-item__icon"><svg width="20" height="20" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2H5a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7l-5-5z"/><path d="M12 2v5h5"/><line x1="7" y1="10" x2="13" y2="10"/><line x1="7" y1="13" x2="11" y2="13"/></svg></span>
+            <span class="nav-item__label">Production</span>
+            <span class="nav-item__badge">24</span>
+          </a>
+          <a href="souscriptions.html" class="nav-item" data-module="souscription" data-tooltip="Souscriptions">
+            <span class="nav-item__icon"><svg width="20" height="20" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M16 17v-1a4 4 0 00-4-4H8a4 4 0 00-4 4v1"/><circle cx="10" cy="6" r="3.5"/><line x1="15" y1="5" x2="15" y2="9"/><line x1="13" y1="7" x2="17" y2="7"/></svg></span>
+            <span class="nav-item__label">Souscriptions</span>
+            <span class="nav-item__badge">8</span>
+          </a>
+          <a href="sinistres.html" class="nav-item" data-module="sinistre" data-tooltip="Sinistres">
+            <span class="nav-item__icon"><svg width="20" height="20" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M10.29 3.86L1.82 18a2 2 0 001.71 3h16.94a2 2 0 001.71-3L13.71 3.86a2 2 0 00-3.42 0z" transform="scale(0.85) translate(1.5,0)"/><line x1="10" y1="8" x2="10" y2="12"/><circle cx="10" cy="15" r="0.5" fill="currentColor"/></svg></span>
+            <span class="nav-item__label">Sinistres</span>
+            <span class="nav-item__badge">12</span>
+          </a>
+          <a href="pec.html" class="nav-item" data-module="pec" data-tooltip="Prise en charge">
+            <span class="nav-item__icon"><svg width="20" height="20" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M16 7V4a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2h8a2 2 0 002-2v-3"/><path d="M8 10h9"/><path d="M14 7l3 3-3 3"/><line x1="8" y1="6" x2="12" y2="6"/><line x1="8" y1="14" x2="11" y2="14"/></svg></span>
+            <span class="nav-item__label">Prise en charge</span>
+            <span class="nav-item__badge">7</span>
+          </a>
+          <a href="confection-cartes.html" class="nav-item" data-module="confection-cartes" data-tooltip="Confection Cartes">
+            <span class="nav-item__icon"><svg width="20" height="20" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><rect x="2" y="4" width="16" height="12"/><line x1="2" y1="9" x2="18" y2="9"/><line x1="6" y1="13" x2="10" y2="13"/></svg></span>
+            <span class="nav-item__label">Confection Cartes</span>
+          </a>
+          <a href="secretariat.html" class="nav-item" data-module="secretariat" data-tooltip="Secrétariat">
+            <span class="nav-item__icon"><svg width="20" height="20" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><rect x="3" y="2" width="14" height="16"/><line x1="7" y1="6" x2="13" y2="6"/><line x1="7" y1="10" x2="13" y2="10"/><line x1="7" y1="14" x2="10" y2="14"/></svg></span>
+            <span class="nav-item__label">Secrétariat</span>
+          </a>
+        </details>
+      </div>
+
+      <div class="nav-section">
+        <details open>
+          <summary class="nav-section__title">
+            Commercial
+            <svg class="section-chevron" width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2"><polyline points="4,6 8,10 12,6"/></svg>
+          </summary>
+          <a href="crm.html" class="nav-item" data-module="crm" data-tooltip="CRM">
+            <span class="nav-item__icon"><svg width="20" height="20" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M17 18v-1a3 3 0 00-3-3h-1"/><path d="M13 8a3 3 0 100-6"/><path d="M12 18v-1a4 4 0 00-4-4H5a4 4 0 00-4 4v1"/><circle cx="6.5" cy="6" r="3"/></svg></span>
+            <span class="nav-item__label">CRM</span>
+          </a>
+        </details>
+      </div>
+
+      <div class="nav-section">
+        <details open>
+          <summary class="nav-section__title">
+            Finance
+            <svg class="section-chevron" width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2"><polyline points="4,6 8,10 12,6"/></svg>
+          </summary>
+          <a href="comptabilite.html" class="nav-item" data-module="comptabilite" data-tooltip="Comptabilité">
+            <span class="nav-item__icon"><svg width="20" height="20" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><line x1="10" y1="2" x2="10" y2="18"/><path d="M14 5H8.5a2.5 2.5 0 000 5h3a2.5 2.5 0 010 5H6"/></svg></span>
+            <span class="nav-item__label">Comptabilité</span>
+          </a>
+          <a href="tresorerie.html" class="nav-item" data-module="tresorerie" data-tooltip="Trésorerie">
+            <span class="nav-item__icon"><svg width="20" height="20" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="3" width="16" height="14"/><path d="M2 7h16"/><path d="M2 11h16"/><circle cx="14" cy="14" r="2"/></svg></span>
+            <span class="nav-item__label">Trésorerie</span>
+          </a>
+          <a href="paiements.html" class="nav-item" data-module="paiement" data-tooltip="Paiements">
+            <span class="nav-item__icon"><svg width="20" height="20" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="16" height="12"/><line x1="2" y1="9" x2="18" y2="9"/></svg></span>
+            <span class="nav-item__label">Paiements</span>
+          </a>
+          <a href="recouvrement.html" class="nav-item" data-module="recouvrement" data-tooltip="Recouvrement">
+            <span class="nav-item__icon"><svg width="20" height="20" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M1 4v6h6"/><path d="M3.51 14a8 8 0 0013.9-3.2"/><path d="M19 16v-6h-6"/><path d="M16.49 6A8 8 0 002.6 9.2"/></svg></span>
+            <span class="nav-item__label">Recouvrement</span>
+          </a>
+        </details>
+      </div>
+
+      <div class="nav-section">
+        <details open>
+          <summary class="nav-section__title">
+            Outils
+            <svg class="section-chevron" width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2"><polyline points="4,6 8,10 12,6"/></svg>
+          </summary>
+          <a href="ged.html" class="nav-item" data-module="ged" data-tooltip="GED">
+            <span class="nav-item__icon"><svg width="20" height="20" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M18 16V6a2 2 0 00-2-2H9L7 2H4a2 2 0 00-2 2v12a2 2 0 002 2h12a2 2 0 002-2z"/></svg></span>
+            <span class="nav-item__label">GED</span>
+          </a>
+          <a href="reporting.html" class="nav-item" data-module="reporting" data-tooltip="Reporting">
+            <span class="nav-item__icon"><svg width="20" height="20" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><line x1="15" y1="5" x2="15" y2="15"/><line x1="10" y1="8" x2="10" y2="15"/><line x1="5" y1="11" x2="5" y2="15"/></svg></span>
+            <span class="nav-item__label">Reporting</span>
+          </a>
+        </details>
+      </div>
+
+      <div class="nav-section">
+        <details open>
+          <summary class="nav-section__title">
+            Système
+            <svg class="section-chevron" width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2"><polyline points="4,6 8,10 12,6"/></svg>
+          </summary>
+          <a href="administration.html" class="nav-item" data-module="administration" data-tooltip="Administration">
+            <span class="nav-item__icon"><svg width="20" height="20" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="10" cy="10" r="3"/><path d="M19.4 15a1.65 1.65 0 00.33 1.82l.06.06a2 2 0 11-2.83 2.83l-.06-.06a1.65 1.65 0 00-2.82.72V20" transform="scale(0.82) translate(1.5,1.5)"/></svg></span>
+            <span class="nav-item__label">Administration</span>
+          </a>
+          <a href="configuration.html" class="nav-item active" data-module="configuration" data-tooltip="Configuration">
+            <span class="nav-item__icon"><svg width="20" height="20" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><line x1="3" y1="5" x2="17" y2="5"/><line x1="3" y1="10" x2="17" y2="10"/><line x1="3" y1="15" x2="17" y2="15"/><circle cx="13" cy="5" r="2" fill="currentColor"/><circle cx="7" cy="10" r="2" fill="currentColor"/><circle cx="11" cy="15" r="2" fill="currentColor"/></svg></span>
+            <span class="nav-item__label">Configuration</span>
+          </a>
+        </details>
+      </div>
+
+    </nav>
+
+    <div class="sidebar__footer">
+      <div class="sidebar__user">
+        <div class="sidebar__user-avatar">AD</div>
+        <div class="sidebar__user-info">
+          <div class="sidebar__user-name">Aminata Diabaté</div>
+          <div class="sidebar__user-role">Gestionnaire santé</div>
+        </div>
+        <a href="../login.html" style="color: rgba(255,255,255,0.4); margin-left: auto;" title="Déconnexion">
+          <svg width="18" height="18" viewBox="0 0 18 18" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><path d="M6 15H4a2 2 0 01-2-2V5a2 2 0 012-2h2"/><polyline points="11,13 15,9 11,5"/><line x1="15" y1="9" x2="6" y2="9"/></svg>
+        </a>
+      </div>
+    </div>
+  </aside>
+
+  <!-- ===== MAIN CONTENT ===== -->
+  <main class="app-main">
+
+    <!-- Top Bar v2 -->
+    <header class="topbar">
+      <button class="topbar__hamburger" onclick="toggleSidebar()" title="Menu">
+        <svg width="20" height="20" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><line x1="3" y1="5" x2="17" y2="5"/><line x1="3" y1="10" x2="17" y2="10"/><line x1="3" y1="15" x2="17" y2="15"/></svg>
+      </button>
+
+      <nav class="topbar__breadcrumb">
+        <a href="dashboard.html">Accueil</a>
+        <span class="separator">/</span>
+        <a href="configuration.html">Configuration</a>
+        <span class="separator">/</span>
+        <span class="current">Réseau de soins</span>
+      </nav>
+
+      <div class="topbar__search">
+        <span class="topbar__search-icon">
+          <svg width="18" height="18" viewBox="0 0 18 18" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><circle cx="8" cy="8" r="5.5"/><line x1="12.5" y1="12.5" x2="16" y2="16"/></svg>
+        </span>
+        <input type="text" class="topbar__search-input" placeholder="Rechercher un contrat, un assuré, un prestataire...">
+        <div class="topbar__search-shortcut">
+          <kbd>Ctrl</kbd><kbd>K</kbd>
+        </div>
+      </div>
+
+      <div class="topbar__role-indicator">
+        <button class="topbar__role-badge" data-dropdown>
+          <span class="badge badge--primary" id="topbar-role-label">Gestionnaire</span>
+          <svg width="14" height="14" viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="2"><polyline points="4,5 7,8 10,5"/></svg>
+        </button>
+        <div class="dropdown-menu topbar__role-dropdown" id="role-switcher"></div>
+      </div>
+
+      <div class="topbar__actions">
+        <button class="topbar__action-btn" title="Aide">
+          <svg width="20" height="20" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="10" cy="10" r="8"/><path d="M7.5 7.5a2.5 2.5 0 014.87.83c0 1.67-2.5 2.5-2.5 2.5"/><circle cx="10" cy="14" r="0.5" fill="currentColor"/></svg>
+        </button>
+        <div class="topbar__notif-wrapper">
+          <button class="topbar__action-btn topbar__notif-toggle" title="Notifications">
+            <svg width="20" height="20" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M15 7a5 5 0 00-10 0c0 5-2.5 7-2.5 7h15S15 12 15 7z"/><path d="M8.5 17a1.5 1.5 0 003 0"/></svg>
+            <span class="badge-dot"></span>
+          </button>
+          <div class="topbar__notif-dropdown">
+            <div class="topbar__notif-header">
+              <h4>Notifications</h4>
+              <span class="topbar__notif-count">3 nouvelles</span>
+            </div>
+            <div class="topbar__notif-list">
+              <div class="topbar__notif-item unread">
+                <div class="topbar__notif-icon topbar__notif-icon--success"><svg width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2"><polyline points="3,8 6,11 13,4"/></svg></div>
+                <div class="topbar__notif-content">
+                  <div class="topbar__notif-title">Contrat CTR-2026-1847 validé par le superviseur</div>
+                  <div class="topbar__notif-meta">Il y a 15 min</div>
+                </div>
+              </div>
+              <div class="topbar__notif-item unread">
+                <div class="topbar__notif-icon topbar__notif-icon--warning"><svg width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2"><path d="M8 3v5"/><circle cx="8" cy="11" r="0.5" fill="currentColor"/></svg></div>
+                <div class="topbar__notif-content">
+                  <div class="topbar__notif-title">Alerte fraude : doublon détecté — Pharmacie Salama</div>
+                  <div class="topbar__notif-meta">Il y a 1h</div>
+                </div>
+              </div>
+              <div class="topbar__notif-item unread">
+                <div class="topbar__notif-icon topbar__notif-icon--info"><svg width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2"><circle cx="8" cy="8" r="6"/><line x1="8" y1="5" x2="8" y2="8"/><line x1="8" y1="8" x2="10" y2="10"/></svg></div>
+                <div class="topbar__notif-content">
+                  <div class="topbar__notif-title">Échéance renouvellement SOTRA CI dans 15 jours</div>
+                  <div class="topbar__notif-meta">Il y a 3h</div>
+                </div>
+              </div>
+            </div>
+            <div class="topbar__notif-footer"><a href="#">Voir toutes les notifications</a></div>
+          </div>
+        </div>
+      </div>
+
+      <button class="topbar__user">
+        <div class="topbar__user-avatar-top">AD</div>
+        <span class="topbar__user-name-top">Aminata</span>
+        <svg class="topbar__user-chevron" width="14" height="14" viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="2"><polyline points="4,5 7,8 10,5"/></svg>
+      </button>
+      <div class="topbar__user-dropdown">
+        <div class="topbar__user-dropdown__info">
+          <div class="topbar__user-dropdown__name">Aminata Diabaté</div>
+          <div class="topbar__user-dropdown__role">Gestionnaire santé</div>
+        </div>
+        <a href="profil.html" class="topbar__user-dropdown__item">
+          <svg width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="8" cy="5" r="3"/><path d="M2 15v-1a6 6 0 0112 0v1"/></svg>
+          Mon profil
+        </a>
+        <a href="configuration.html" class="topbar__user-dropdown__item">
+          <svg width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="8" cy="8" r="2.5"/><path d="M13.5 8a5.5 5.5 0 01-.3 1.8"/></svg>
+          Paramètres
+        </a>
+        <hr class="topbar__user-dropdown__divider">
+        <a href="../login.html" class="topbar__user-dropdown__item topbar__user-dropdown__item--danger">
+          <svg width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><path d="M5 13H3.5a1.5 1.5 0 01-1.5-1.5v-7A1.5 1.5 0 013.5 3H5"/><polyline points="9,11 13,8 9,5"/><line x1="13" y1="8" x2="5" y2="8"/></svg>
+          Déconnexion
+        </a>
+      </div>
+    </header>
+
+    <!-- Page Content -->
+    <div class="app-content">
+
+      <!-- ===== PAGE HEADER ===== -->
+      <div class="page-header animate-in">
+        <div class="page-header__top">
+          <div>
+            <div style="display: flex; align-items: center; gap: 10px; margin-bottom: 4px;">
+              <a href="pec.html" class="btn btn-ghost btn-sm" style="padding: 4px 8px;">
+                <svg width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><polyline points="10,12 6,8 10,4"/></svg>
+              </a>
+              <span style="font-size: var(--text-xs); color: var(--gray-400);">Prise en charge</span>
+              <span style="font-size: var(--text-xs); color: var(--gray-300);">/</span>
+              <span style="font-size: var(--text-xs); color: var(--gray-600); font-weight: 500;">Réseau de Soins</span>
+            </div>
+            <h1 class="page-header__title">Réseau de Soins</h1>
+            <p class="page-header__subtitle">Gestion des prestataires conventionnés et tarification</p>
+          </div>
+          <div class="page-header__actions">
+            <button class="btn btn-secondary btn-sm" onclick="showToast('Export en cours...', 'info')">
+              <svg width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><path d="M2 11v2a2 2 0 002 2h8a2 2 0 002-2v-2"/><polyline points="4,7 8,11 12,7"/><line x1="8" y1="2" x2="8" y2="11"/></svg>
+              Exporter
+            </button>
+            <button class="btn btn-primary btn-sm" onclick="openModal('modal-nouveau-prestataire')">
+              <svg width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><line x1="8" y1="3" x2="8" y2="13"/><line x1="3" y1="8" x2="13" y2="8"/></svg>
+              Nouveau prestataire
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <!-- ===== KPI CARDS ===== -->
+      <div class="grid grid-4 mb-6">
+        <div class="card stat-card animate-in animate-in-delay-1">
+          <div class="stat-card__header">
+            <div class="stat-card__icon stat-card__icon--primary">
+              <svg width="22" height="22" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 3h14v14H3z"/><path d="M7 10h6"/><path d="M10 7v6"/></svg>
+            </div>
+            <span class="stat-card__menu">&#x22EF;</span>
+          </div>
+          <div class="stat-card__value" data-count="247">0</div>
+          <div class="stat-card__label">Prestataires conventionnés</div>
+          <span class="stat-card__trend stat-card__trend--up">+14 ce trimestre</span>
+        </div>
+
+        <div class="card stat-card animate-in animate-in-delay-2">
+          <div class="stat-card__header">
+            <div class="stat-card__icon stat-card__icon--secondary">
+              <svg width="22" height="22" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2H5a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7l-5-5z"/><path d="M12 2v5h5"/><path d="M8 13l2 2 4-4"/></svg>
+            </div>
+            <span class="stat-card__menu">&#x22EF;</span>
+          </div>
+          <div class="stat-card__value" data-count="18">0</div>
+          <div class="stat-card__label">Nouvelles conventions</div>
+          <span class="stat-card__trend stat-card__trend--up">+6 vs mois précédent</span>
+        </div>
+
+        <div class="card stat-card animate-in animate-in-delay-3">
+          <div class="stat-card__header">
+            <div class="stat-card__icon stat-card__icon--accent">
+              <svg width="22" height="22" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2l4 4-4 4"/><path d="M18 6H9"/><path d="M6 18l-4-4 4-4"/><path d="M2 14h9"/></svg>
+            </div>
+            <span class="stat-card__menu">&#x22EF;</span>
+          </div>
+          <div class="stat-card__value">87,3%</div>
+          <div class="stat-card__label">Taux de satisfaction</div>
+          <span class="stat-card__trend stat-card__trend--up">+2,1% ce mois</span>
+        </div>
+
+        <div class="card stat-card animate-in animate-in-delay-4">
+          <div class="stat-card__header">
+            <div class="stat-card__icon stat-card__icon--warning">
+              <svg width="22" height="22" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="10" cy="10" r="8"/><line x1="10" y1="6" x2="10" y2="10"/><line x1="10" y1="14" x2="10.01" y2="14"/></svg>
+            </div>
+            <span class="stat-card__menu">&#x22EF;</span>
+          </div>
+          <div class="stat-card__value" data-count="12">0</div>
+          <div class="stat-card__label">Tarifs en révision</div>
+          <span class="stat-card__trend stat-card__trend--down">-3 vs mois précédent</span>
+        </div>
+      </div>
+
+      <!-- ===== TABS ===== -->
+      <div class="tab-container">
+        <div class="tabs animate-in">
+          <button class="tab active" data-tab="prestataires">Prestataires</button>
+          <button class="tab" data-tab="conventions">Conventions</button>
+          <button class="tab" data-tab="tarification">Tarification</button>
+          <button class="tab" data-tab="geographie">Géographie</button>
+          <button class="tab" data-tab="qualite">Qualité</button>
+        </div>
+
+        <!-- ============================== -->
+        <!-- TAB 1 : Prestataires           -->
+        <!-- ============================== -->
+        <div id="prestataires" class="tab-panel active">
+
+          <!-- Filters -->
+          <div class="card animate-in" style="margin-bottom: var(--space-4);">
+            <div class="card__body" style="display: flex; align-items: center; gap: var(--space-3); flex-wrap: wrap;">
+              <div style="flex: 1; min-width: 200px;">
+                <input type="text" class="form-input" placeholder="Rechercher un prestataire..." data-filter-table="tablePrestataires" style="width: 100%;">
+              </div>
+              <select class="form-select" style="min-width: 160px;">
+                <option value="">Tous les types</option>
+                <option value="clinique">Clinique</option>
+                <option value="hopital">Hôpital</option>
+                <option value="pharmacie">Pharmacie</option>
+                <option value="opticien">Opticien</option>
+                <option value="labo">Laboratoire</option>
+              </select>
+              <select class="form-select" style="min-width: 160px;">
+                <option value="">Toutes les zones</option>
+                <option value="cocody">Cocody</option>
+                <option value="plateau">Plateau</option>
+                <option value="yopougon">Yopougon</option>
+                <option value="marcory">Marcory</option>
+                <option value="treichville">Treichville</option>
+                <option value="abobo">Abobo</option>
+                <option value="interieur">Intérieur</option>
+              </select>
+              <select class="form-select" style="min-width: 160px;">
+                <option value="">Tous les statuts</option>
+                <option value="actif">Actif</option>
+                <option value="en-cours">En cours</option>
+                <option value="suspendu">Suspendu</option>
+                <option value="expire">Expiré</option>
+              </select>
+            </div>
+          </div>
+
+          <!-- Table -->
+          <div class="card animate-in">
+            <div class="table-container">
+              <table class="table" id="tablePrestataires">
+                <thead>
+                  <tr>
+                    <th class="table__checkbox"><input type="checkbox" class="select-all-checkbox"></th>
+                    <th>Code</th>
+                    <th>Nom prestataire</th>
+                    <th>Type</th>
+                    <th>Zone</th>
+                    <th>Statut convention</th>
+                    <th>Date convention</th>
+                    <th>Actions</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td class="table__checkbox"><input type="checkbox"></td>
+                    <td><span class="font-mono text-sm" style="color: var(--iips-primary); font-weight: 600;">PRS-001</span></td>
+                    <td>
+                      <div class="flex items-center gap-2">
+                        <div class="avatar avatar--sm" style="background: var(--iips-primary);">PF</div>
+                        <div>
+                          <div style="font-weight: 500;">Polyclinique Farah</div>
+                          <div style="font-size: var(--text-xs); color: var(--gray-500);">Cocody Angré 8e Tranche</div>
+                        </div>
+                      </div>
+                    </td>
+                    <td><span class="badge badge--primary">Clinique</span></td>
+                    <td>Cocody</td>
+                    <td><span class="badge badge--success"><span class="badge__dot"></span> Actif</span></td>
+                    <td style="color: var(--gray-500);">15 Jan 2024</td>
+                    <td>
+                      <div class="flex gap-1">
+                        <button class="btn btn-ghost btn-icon btn-sm" title="Voir détail" onclick="showToast('Ouverture fiche prestataire...', 'info')">
+                          <svg width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="8" cy="8" r="3"/><path d="M1 8s3-5 7-5 7 5 7 5-3 5-7 5-7-5-7-5z"/></svg>
+                        </button>
+                        <button class="btn btn-ghost btn-icon btn-sm" title="Modifier">
+                          <svg width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M11.5 2.5l2 2L5 13H3v-2L11.5 2.5z"/></svg>
+                        </button>
+                      </div>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class="table__checkbox"><input type="checkbox"></td>
+                    <td><span class="font-mono text-sm" style="color: var(--iips-primary); font-weight: 600;">PRS-002</span></td>
+                    <td>
+                      <div class="flex items-center gap-2">
+                        <div class="avatar avatar--sm" style="background: var(--iips-secondary);">CY</div>
+                        <div>
+                          <div style="font-weight: 500;">CHU de Yopougon</div>
+                          <div style="font-size: var(--text-xs); color: var(--gray-500);">Yopougon Attié</div>
+                        </div>
+                      </div>
+                    </td>
+                    <td><span class="badge badge--info">Hôpital</span></td>
+                    <td>Yopougon</td>
+                    <td><span class="badge badge--success"><span class="badge__dot"></span> Actif</span></td>
+                    <td style="color: var(--gray-500);">01 Mars 2023</td>
+                    <td>
+                      <div class="flex gap-1">
+                        <button class="btn btn-ghost btn-icon btn-sm" title="Voir détail">
+                          <svg width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="8" cy="8" r="3"/><path d="M1 8s3-5 7-5 7 5 7 5-3 5-7 5-7-5-7-5z"/></svg>
+                        </button>
+                        <button class="btn btn-ghost btn-icon btn-sm" title="Modifier">
+                          <svg width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M11.5 2.5l2 2L5 13H3v-2L11.5 2.5z"/></svg>
+                        </button>
+                      </div>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class="table__checkbox"><input type="checkbox"></td>
+                    <td><span class="font-mono text-sm" style="color: var(--iips-primary); font-weight: 600;">PRS-003</span></td>
+                    <td>
+                      <div class="flex items-center gap-2">
+                        <div class="avatar avatar--sm" style="background: var(--color-success);">PP</div>
+                        <div>
+                          <div style="font-weight: 500;">Pharmacie du Plateau</div>
+                          <div style="font-size: var(--text-xs); color: var(--gray-500);">Plateau, Av. Franchet d'Esperey</div>
+                        </div>
+                      </div>
+                    </td>
+                    <td><span class="badge badge--warning">Pharmacie</span></td>
+                    <td>Plateau</td>
+                    <td><span class="badge badge--success"><span class="badge__dot"></span> Actif</span></td>
+                    <td style="color: var(--gray-500);">10 Juin 2023</td>
+                    <td>
+                      <div class="flex gap-1">
+                        <button class="btn btn-ghost btn-icon btn-sm" title="Voir détail">
+                          <svg width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="8" cy="8" r="3"/><path d="M1 8s3-5 7-5 7 5 7 5-3 5-7 5-7-5-7-5z"/></svg>
+                        </button>
+                        <button class="btn btn-ghost btn-icon btn-sm" title="Modifier">
+                          <svg width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M11.5 2.5l2 2L5 13H3v-2L11.5 2.5z"/></svg>
+                        </button>
+                      </div>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class="table__checkbox"><input type="checkbox"></td>
+                    <td><span class="font-mono text-sm" style="color: var(--iips-primary); font-weight: 600;">PRS-004</span></td>
+                    <td>
+                      <div class="flex items-center gap-2">
+                        <div class="avatar avatar--sm" style="background: #8B5CF6;">CP</div>
+                        <div>
+                          <div style="font-weight: 500;">Clinique Procréa</div>
+                          <div style="font-size: var(--text-xs); color: var(--gray-500);">Cocody Riviera Palmeraie</div>
+                        </div>
+                      </div>
+                    </td>
+                    <td><span class="badge badge--primary">Clinique</span></td>
+                    <td>Cocody</td>
+                    <td><span class="badge badge--success"><span class="badge__dot"></span> Actif</span></td>
+                    <td style="color: var(--gray-500);">22 Sept 2023</td>
+                    <td>
+                      <div class="flex gap-1">
+                        <button class="btn btn-ghost btn-icon btn-sm" title="Voir détail">
+                          <svg width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="8" cy="8" r="3"/><path d="M1 8s3-5 7-5 7 5 7 5-3 5-7 5-7-5-7-5z"/></svg>
+                        </button>
+                        <button class="btn btn-ghost btn-icon btn-sm" title="Modifier">
+                          <svg width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M11.5 2.5l2 2L5 13H3v-2L11.5 2.5z"/></svg>
+                        </button>
+                      </div>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class="table__checkbox"><input type="checkbox"></td>
+                    <td><span class="font-mono text-sm" style="color: var(--iips-primary); font-weight: 600;">PRS-005</span></td>
+                    <td>
+                      <div class="flex items-center gap-2">
+                        <div class="avatar avatar--sm" style="background: var(--iips-accent);">OV</div>
+                        <div>
+                          <div style="font-weight: 500;">Optique Vision Plus</div>
+                          <div style="font-size: var(--text-xs); color: var(--gray-500);">Marcory Zone 4</div>
+                        </div>
+                      </div>
+                    </td>
+                    <td><span class="badge badge--neutral">Opticien</span></td>
+                    <td>Marcory</td>
+                    <td><span class="badge badge--success"><span class="badge__dot"></span> Actif</span></td>
+                    <td style="color: var(--gray-500);">05 Fév 2024</td>
+                    <td>
+                      <div class="flex gap-1">
+                        <button class="btn btn-ghost btn-icon btn-sm" title="Voir détail">
+                          <svg width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="8" cy="8" r="3"/><path d="M1 8s3-5 7-5 7 5 7 5-3 5-7 5-7-5-7-5z"/></svg>
+                        </button>
+                        <button class="btn btn-ghost btn-icon btn-sm" title="Modifier">
+                          <svg width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M11.5 2.5l2 2L5 13H3v-2L11.5 2.5z"/></svg>
+                        </button>
+                      </div>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class="table__checkbox"><input type="checkbox"></td>
+                    <td><span class="font-mono text-sm" style="color: var(--iips-primary); font-weight: 600;">PRS-006</span></td>
+                    <td>
+                      <div class="flex items-center gap-2">
+                        <div class="avatar avatar--sm" style="background: var(--color-info);">LB</div>
+                        <div>
+                          <div style="font-weight: 500;">Laboratoire Bio24</div>
+                          <div style="font-size: var(--text-xs); color: var(--gray-500);">Treichville Av. Christiani</div>
+                        </div>
+                      </div>
+                    </td>
+                    <td><span class="badge badge--info">Laboratoire</span></td>
+                    <td>Treichville</td>
+                    <td><span class="badge badge--warning"><span class="badge__dot"></span> En cours</span></td>
+                    <td style="color: var(--gray-500);">18 Fév 2026</td>
+                    <td>
+                      <div class="flex gap-1">
+                        <button class="btn btn-ghost btn-icon btn-sm" title="Voir détail">
+                          <svg width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="8" cy="8" r="3"/><path d="M1 8s3-5 7-5 7 5 7 5-3 5-7 5-7-5-7-5z"/></svg>
+                        </button>
+                        <button class="btn btn-ghost btn-icon btn-sm" title="Modifier">
+                          <svg width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M11.5 2.5l2 2L5 13H3v-2L11.5 2.5z"/></svg>
+                        </button>
+                      </div>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class="table__checkbox"><input type="checkbox"></td>
+                    <td><span class="font-mono text-sm" style="color: var(--iips-primary); font-weight: 600;">PRS-007</span></td>
+                    <td>
+                      <div class="flex items-center gap-2">
+                        <div class="avatar avatar--sm" style="background: #E11D48;">LP</div>
+                        <div>
+                          <div style="font-weight: 500;">Clinique La Providence</div>
+                          <div style="font-size: var(--text-xs); color: var(--gray-500);">Marcory Résidentiel</div>
+                        </div>
+                      </div>
+                    </td>
+                    <td><span class="badge badge--primary">Clinique</span></td>
+                    <td>Marcory</td>
+                    <td><span class="badge badge--success"><span class="badge__dot"></span> Actif</span></td>
+                    <td style="color: var(--gray-500);">03 Avr 2023</td>
+                    <td>
+                      <div class="flex gap-1">
+                        <button class="btn btn-ghost btn-icon btn-sm" title="Voir détail">
+                          <svg width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="8" cy="8" r="3"/><path d="M1 8s3-5 7-5 7 5 7 5-3 5-7 5-7-5-7-5z"/></svg>
+                        </button>
+                        <button class="btn btn-ghost btn-icon btn-sm" title="Modifier">
+                          <svg width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M11.5 2.5l2 2L5 13H3v-2L11.5 2.5z"/></svg>
+                        </button>
+                      </div>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class="table__checkbox"><input type="checkbox"></td>
+                    <td><span class="font-mono text-sm" style="color: var(--iips-primary); font-weight: 600;">PRS-008</span></td>
+                    <td>
+                      <div class="flex items-center gap-2">
+                        <div class="avatar avatar--sm" style="background: var(--iips-secondary-dark);">CA</div>
+                        <div>
+                          <div style="font-weight: 500;">CHR d'Abobo</div>
+                          <div style="font-size: var(--text-xs); color: var(--gray-500);">Abobo Centre</div>
+                        </div>
+                      </div>
+                    </td>
+                    <td><span class="badge badge--info">Hôpital</span></td>
+                    <td>Abobo</td>
+                    <td><span class="badge badge--success"><span class="badge__dot"></span> Actif</span></td>
+                    <td style="color: var(--gray-500);">12 Nov 2022</td>
+                    <td>
+                      <div class="flex gap-1">
+                        <button class="btn btn-ghost btn-icon btn-sm" title="Voir détail">
+                          <svg width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="8" cy="8" r="3"/><path d="M1 8s3-5 7-5 7 5 7 5-3 5-7 5-7-5-7-5z"/></svg>
+                        </button>
+                        <button class="btn btn-ghost btn-icon btn-sm" title="Modifier">
+                          <svg width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M11.5 2.5l2 2L5 13H3v-2L11.5 2.5z"/></svg>
+                        </button>
+                      </div>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class="table__checkbox"><input type="checkbox"></td>
+                    <td><span class="font-mono text-sm" style="color: var(--iips-primary); font-weight: 600;">PRS-009</span></td>
+                    <td>
+                      <div class="flex items-center gap-2">
+                        <div class="avatar avatar--sm" style="background: #059669;">PS</div>
+                        <div>
+                          <div style="font-weight: 500;">Pharmacie Sainte-Rita</div>
+                          <div style="font-size: var(--text-xs); color: var(--gray-500);">Cocody II Plateaux</div>
+                        </div>
+                      </div>
+                    </td>
+                    <td><span class="badge badge--warning">Pharmacie</span></td>
+                    <td>Cocody</td>
+                    <td><span class="badge badge--error"><span class="badge__dot"></span> Suspendu</span></td>
+                    <td style="color: var(--gray-500);">20 Août 2023</td>
+                    <td>
+                      <div class="flex gap-1">
+                        <button class="btn btn-ghost btn-icon btn-sm" title="Voir détail">
+                          <svg width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="8" cy="8" r="3"/><path d="M1 8s3-5 7-5 7 5 7 5-3 5-7 5-7-5-7-5z"/></svg>
+                        </button>
+                        <button class="btn btn-ghost btn-icon btn-sm" title="Modifier">
+                          <svg width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M11.5 2.5l2 2L5 13H3v-2L11.5 2.5z"/></svg>
+                        </button>
+                      </div>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class="table__checkbox"><input type="checkbox"></td>
+                    <td><span class="font-mono text-sm" style="color: var(--iips-primary); font-weight: 600;">PRS-010</span></td>
+                    <td>
+                      <div class="flex items-center gap-2">
+                        <div class="avatar avatar--sm" style="background: #7C3AED;">CB</div>
+                        <div>
+                          <div style="font-weight: 500;">Centre Médical Bouaké</div>
+                          <div style="font-size: var(--text-xs); color: var(--gray-500);">Bouaké Centre</div>
+                        </div>
+                      </div>
+                    </td>
+                    <td><span class="badge badge--primary">Clinique</span></td>
+                    <td>Bouaké</td>
+                    <td><span class="badge badge--warning"><span class="badge__dot"></span> En cours</span></td>
+                    <td style="color: var(--gray-500);">25 Fév 2026</td>
+                    <td>
+                      <div class="flex gap-1">
+                        <button class="btn btn-ghost btn-icon btn-sm" title="Voir détail">
+                          <svg width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="8" cy="8" r="3"/><path d="M1 8s3-5 7-5 7 5 7 5-3 5-7 5-7-5-7-5z"/></svg>
+                        </button>
+                        <button class="btn btn-ghost btn-icon btn-sm" title="Modifier">
+                          <svg width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M11.5 2.5l2 2L5 13H3v-2L11.5 2.5z"/></svg>
+                        </button>
+                      </div>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <!-- Pagination -->
+            <div style="display: flex; justify-content: space-between; align-items: center; padding: var(--space-4); border-top: var(--border-light);">
+              <span style="font-size: var(--text-sm); color: var(--gray-500);">Affichage 1-10 sur 247 prestataires</span>
+              <div class="flex gap-1">
+                <button class="btn btn-ghost btn-sm" disabled>&laquo;</button>
+                <button class="btn btn-primary btn-sm">1</button>
+                <button class="btn btn-ghost btn-sm">2</button>
+                <button class="btn btn-ghost btn-sm">3</button>
+                <button class="btn btn-ghost btn-sm">...</button>
+                <button class="btn btn-ghost btn-sm">25</button>
+                <button class="btn btn-ghost btn-sm">&raquo;</button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- ============================== -->
+        <!-- TAB 2 : Conventions            -->
+        <!-- ============================== -->
+        <div id="conventions" class="tab-panel">
+
+          <!-- Status summary -->
+          <div class="grid grid-4 mb-6">
+            <div class="card stat-card animate-in">
+              <div class="stat-card__value" style="color: var(--color-success);" data-count="198">0</div>
+              <div class="stat-card__label">Conventions actives</div>
+            </div>
+            <div class="card stat-card animate-in">
+              <div class="stat-card__value" style="color: var(--color-warning);" data-count="23">0</div>
+              <div class="stat-card__label">En cours de négociation</div>
+            </div>
+            <div class="card stat-card animate-in">
+              <div class="stat-card__value" style="color: var(--color-error);" data-count="14">0</div>
+              <div class="stat-card__label">Expirées (à renouveler)</div>
+            </div>
+            <div class="card stat-card animate-in">
+              <div class="stat-card__value" style="color: var(--gray-500);" data-count="12">0</div>
+              <div class="stat-card__label">Résiliées</div>
+            </div>
+          </div>
+
+          <div class="card animate-in">
+            <div class="card__header">
+              <h3 class="card__title">Conventions en cours</h3>
+              <button class="btn btn-primary btn-sm" onclick="showToast('Formulaire nouvelle convention...', 'info')">
+                <svg width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><line x1="8" y1="3" x2="8" y2="13"/><line x1="3" y1="8" x2="13" y2="8"/></svg>
+                Nouvelle convention
+              </button>
+            </div>
+            <div class="table-container">
+              <table class="table">
+                <thead>
+                  <tr>
+                    <th>N° Convention</th>
+                    <th>Prestataire</th>
+                    <th>Type</th>
+                    <th>Date début</th>
+                    <th>Date fin</th>
+                    <th>Statut</th>
+                    <th>Montant plafond</th>
+                    <th>Actions</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><span class="font-mono text-sm" style="color: var(--iips-primary); font-weight: 600;">CVN-2024-001</span></td>
+                    <td>
+                      <div style="font-weight: 500;">Polyclinique Farah</div>
+                      <div style="font-size: var(--text-xs); color: var(--gray-500);">Clinique — Cocody</div>
+                    </td>
+                    <td>Soins généraux</td>
+                    <td>15 Jan 2024</td>
+                    <td>14 Jan 2027</td>
+                    <td><span class="badge badge--success"><span class="badge__dot"></span> Active</span></td>
+                    <td><strong>150 000 000 FCFA</strong></td>
+                    <td><button class="btn btn-ghost btn-icon btn-sm" title="Détails">&#x22EF;</button></td>
+                  </tr>
+                  <tr>
+                    <td><span class="font-mono text-sm" style="color: var(--iips-primary); font-weight: 600;">CVN-2023-015</span></td>
+                    <td>
+                      <div style="font-weight: 500;">CHU de Yopougon</div>
+                      <div style="font-size: var(--text-xs); color: var(--gray-500);">Hôpital — Yopougon</div>
+                    </td>
+                    <td>Hospitalisation</td>
+                    <td>01 Mars 2023</td>
+                    <td>28 Fév 2026</td>
+                    <td><span class="badge badge--warning"><span class="badge__dot"></span> À renouveler</span></td>
+                    <td><strong>500 000 000 FCFA</strong></td>
+                    <td><button class="btn btn-ghost btn-icon btn-sm" title="Détails">&#x22EF;</button></td>
+                  </tr>
+                  <tr>
+                    <td><span class="font-mono text-sm" style="color: var(--iips-primary); font-weight: 600;">CVN-2023-042</span></td>
+                    <td>
+                      <div style="font-weight: 500;">Pharmacie du Plateau</div>
+                      <div style="font-size: var(--text-xs); color: var(--gray-500);">Pharmacie — Plateau</div>
+                    </td>
+                    <td>Dispensation</td>
+                    <td>10 Juin 2023</td>
+                    <td>09 Juin 2026</td>
+                    <td><span class="badge badge--success"><span class="badge__dot"></span> Active</span></td>
+                    <td><strong>75 000 000 FCFA</strong></td>
+                    <td><button class="btn btn-ghost btn-icon btn-sm" title="Détails">&#x22EF;</button></td>
+                  </tr>
+                  <tr>
+                    <td><span class="font-mono text-sm" style="color: var(--iips-primary); font-weight: 600;">CVN-2023-078</span></td>
+                    <td>
+                      <div style="font-weight: 500;">Clinique Procréa</div>
+                      <div style="font-size: var(--text-xs); color: var(--gray-500);">Clinique — Cocody</div>
+                    </td>
+                    <td>Maternité & Soins</td>
+                    <td>22 Sept 2023</td>
+                    <td>21 Sept 2026</td>
+                    <td><span class="badge badge--success"><span class="badge__dot"></span> Active</span></td>
+                    <td><strong>200 000 000 FCFA</strong></td>
+                    <td><button class="btn btn-ghost btn-icon btn-sm" title="Détails">&#x22EF;</button></td>
+                  </tr>
+                  <tr>
+                    <td><span class="font-mono text-sm" style="color: var(--iips-primary); font-weight: 600;">CVN-2024-012</span></td>
+                    <td>
+                      <div style="font-weight: 500;">Optique Vision Plus</div>
+                      <div style="font-size: var(--text-xs); color: var(--gray-500);">Opticien — Marcory</div>
+                    </td>
+                    <td>Optique</td>
+                    <td>05 Fév 2024</td>
+                    <td>04 Fév 2027</td>
+                    <td><span class="badge badge--success"><span class="badge__dot"></span> Active</span></td>
+                    <td><strong>40 000 000 FCFA</strong></td>
+                    <td><button class="btn btn-ghost btn-icon btn-sm" title="Détails">&#x22EF;</button></td>
+                  </tr>
+                  <tr>
+                    <td><span class="font-mono text-sm" style="color: var(--iips-primary); font-weight: 600;">CVN-2026-003</span></td>
+                    <td>
+                      <div style="font-weight: 500;">Laboratoire Bio24</div>
+                      <div style="font-size: var(--text-xs); color: var(--gray-500);">Laboratoire — Treichville</div>
+                    </td>
+                    <td>Analyses médicales</td>
+                    <td>18 Fév 2026</td>
+                    <td>—</td>
+                    <td><span class="badge badge--info"><span class="badge__dot"></span> Négociation</span></td>
+                    <td><strong>60 000 000 FCFA</strong></td>
+                    <td><button class="btn btn-ghost btn-icon btn-sm" title="Détails">&#x22EF;</button></td>
+                  </tr>
+                  <tr>
+                    <td><span class="font-mono text-sm" style="color: var(--iips-primary); font-weight: 600;">CVN-2023-025</span></td>
+                    <td>
+                      <div style="font-weight: 500;">Clinique La Providence</div>
+                      <div style="font-size: var(--text-xs); color: var(--gray-500);">Clinique — Marcory</div>
+                    </td>
+                    <td>Soins généraux</td>
+                    <td>03 Avr 2023</td>
+                    <td>02 Avr 2026</td>
+                    <td><span class="badge badge--success"><span class="badge__dot"></span> Active</span></td>
+                    <td><strong>120 000 000 FCFA</strong></td>
+                    <td><button class="btn btn-ghost btn-icon btn-sm" title="Détails">&#x22EF;</button></td>
+                  </tr>
+                  <tr>
+                    <td><span class="font-mono text-sm" style="color: var(--iips-primary); font-weight: 600;">CVN-2022-089</span></td>
+                    <td>
+                      <div style="font-weight: 500;">CHR d'Abobo</div>
+                      <div style="font-size: var(--text-xs); color: var(--gray-500);">Hôpital — Abobo</div>
+                    </td>
+                    <td>Hospitalisation</td>
+                    <td>12 Nov 2022</td>
+                    <td>11 Nov 2025</td>
+                    <td><span class="badge badge--error"><span class="badge__dot"></span> Expirée</span></td>
+                    <td><strong>350 000 000 FCFA</strong></td>
+                    <td><button class="btn btn-ghost btn-icon btn-sm" title="Détails">&#x22EF;</button></td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+
+        <!-- ============================== -->
+        <!-- TAB 3 : Tarification           -->
+        <!-- ============================== -->
+        <div id="tarification" class="tab-panel">
+
+          <!-- Filters -->
+          <div class="card animate-in" style="margin-bottom: var(--space-4);">
+            <div class="card__body" style="display: flex; align-items: center; gap: var(--space-3); flex-wrap: wrap;">
+              <div style="flex: 1; min-width: 200px;">
+                <input type="text" class="form-input" placeholder="Rechercher un acte..." data-filter-table="tableTarifs" style="width: 100%;">
+              </div>
+              <select class="form-select" style="min-width: 180px;">
+                <option value="">Toutes les catégories</option>
+                <option value="consultation">Consultation</option>
+                <option value="chirurgie">Chirurgie</option>
+                <option value="analyse">Analyses</option>
+                <option value="imagerie">Imagerie</option>
+                <option value="pharmacie">Pharmacie</option>
+                <option value="optique">Optique</option>
+                <option value="hospitalisation">Hospitalisation</option>
+              </select>
+              <button class="btn btn-secondary btn-sm" onclick="showToast('Grille tarifaire exportée', 'success')">
+                <svg width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><path d="M2 11v2a2 2 0 002 2h8a2 2 0 002-2v-2"/><polyline points="4,7 8,11 12,7"/><line x1="8" y1="2" x2="8" y2="11"/></svg>
+                Exporter grille
+              </button>
+            </div>
+          </div>
+
+          <div class="card animate-in">
+            <div class="card__header">
+              <h3 class="card__title">Grille tarifaire conventionnée</h3>
+              <div class="flex gap-2">
+                <span class="badge badge--warning" style="font-size: var(--text-xs);">12 tarifs en révision</span>
+                <span class="badge badge--info" style="font-size: var(--text-xs);">Dernière MAJ : 15 Fév 2026</span>
+              </div>
+            </div>
+            <div class="table-container">
+              <table class="table" id="tableTarifs">
+                <thead>
+                  <tr>
+                    <th>Code acte</th>
+                    <th>Libellé acte</th>
+                    <th>Catégorie</th>
+                    <th>Tarif conventionné</th>
+                    <th>Tarif plafond</th>
+                    <th>Dernière révision</th>
+                    <th>Statut</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><span class="font-mono text-sm" style="font-weight: 600;">CS-001</span></td>
+                    <td>Consultation généraliste</td>
+                    <td><span class="badge badge--primary">Consultation</span></td>
+                    <td><strong>5 000 FCFA</strong></td>
+                    <td>7 500 FCFA</td>
+                    <td style="color: var(--gray-500);">10 Jan 2026</td>
+                    <td><span class="badge badge--success">Validé</span></td>
+                  </tr>
+                  <tr>
+                    <td><span class="font-mono text-sm" style="font-weight: 600;">CS-002</span></td>
+                    <td>Consultation spécialiste</td>
+                    <td><span class="badge badge--primary">Consultation</span></td>
+                    <td><strong>15 000 FCFA</strong></td>
+                    <td>25 000 FCFA</td>
+                    <td style="color: var(--gray-500);">10 Jan 2026</td>
+                    <td><span class="badge badge--success">Validé</span></td>
+                  </tr>
+                  <tr>
+                    <td><span class="font-mono text-sm" style="font-weight: 600;">CH-010</span></td>
+                    <td>Appendicectomie</td>
+                    <td><span class="badge badge--error">Chirurgie</span></td>
+                    <td><strong>250 000 FCFA</strong></td>
+                    <td>400 000 FCFA</td>
+                    <td style="color: var(--gray-500);">05 Déc 2025</td>
+                    <td><span class="badge badge--warning">En révision</span></td>
+                  </tr>
+                  <tr>
+                    <td><span class="font-mono text-sm" style="font-weight: 600;">CH-015</span></td>
+                    <td>Césarienne</td>
+                    <td><span class="badge badge--error">Chirurgie</span></td>
+                    <td><strong>350 000 FCFA</strong></td>
+                    <td>500 000 FCFA</td>
+                    <td style="color: var(--gray-500);">05 Déc 2025</td>
+                    <td><span class="badge badge--success">Validé</span></td>
+                  </tr>
+                  <tr>
+                    <td><span class="font-mono text-sm" style="font-weight: 600;">AN-001</span></td>
+                    <td>NFS (Numération Formule Sanguine)</td>
+                    <td><span class="badge badge--info">Analyses</span></td>
+                    <td><strong>5 000 FCFA</strong></td>
+                    <td>8 000 FCFA</td>
+                    <td style="color: var(--gray-500);">15 Fév 2026</td>
+                    <td><span class="badge badge--success">Validé</span></td>
+                  </tr>
+                  <tr>
+                    <td><span class="font-mono text-sm" style="font-weight: 600;">AN-005</span></td>
+                    <td>Glycémie à jeun</td>
+                    <td><span class="badge badge--info">Analyses</span></td>
+                    <td><strong>3 000 FCFA</strong></td>
+                    <td>5 000 FCFA</td>
+                    <td style="color: var(--gray-500);">15 Fév 2026</td>
+                    <td><span class="badge badge--success">Validé</span></td>
+                  </tr>
+                  <tr>
+                    <td><span class="font-mono text-sm" style="font-weight: 600;">IM-003</span></td>
+                    <td>Échographie abdominale</td>
+                    <td><span class="badge badge--secondary">Imagerie</span></td>
+                    <td><strong>25 000 FCFA</strong></td>
+                    <td>40 000 FCFA</td>
+                    <td style="color: var(--gray-500);">20 Nov 2025</td>
+                    <td><span class="badge badge--warning">En révision</span></td>
+                  </tr>
+                  <tr>
+                    <td><span class="font-mono text-sm" style="font-weight: 600;">IM-007</span></td>
+                    <td>Radiographie thoracique</td>
+                    <td><span class="badge badge--secondary">Imagerie</span></td>
+                    <td><strong>15 000 FCFA</strong></td>
+                    <td>20 000 FCFA</td>
+                    <td style="color: var(--gray-500);">20 Nov 2025</td>
+                    <td><span class="badge badge--success">Validé</span></td>
+                  </tr>
+                  <tr>
+                    <td><span class="font-mono text-sm" style="font-weight: 600;">IM-012</span></td>
+                    <td>IRM cérébrale</td>
+                    <td><span class="badge badge--secondary">Imagerie</span></td>
+                    <td><strong>120 000 FCFA</strong></td>
+                    <td>180 000 FCFA</td>
+                    <td style="color: var(--gray-500);">20 Nov 2025</td>
+                    <td><span class="badge badge--warning">En révision</span></td>
+                  </tr>
+                  <tr>
+                    <td><span class="font-mono text-sm" style="font-weight: 600;">OP-001</span></td>
+                    <td>Verres simples (paire)</td>
+                    <td><span class="badge badge--neutral">Optique</span></td>
+                    <td><strong>25 000 FCFA</strong></td>
+                    <td>35 000 FCFA</td>
+                    <td style="color: var(--gray-500);">08 Jan 2026</td>
+                    <td><span class="badge badge--success">Validé</span></td>
+                  </tr>
+                  <tr>
+                    <td><span class="font-mono text-sm" style="font-weight: 600;">OP-003</span></td>
+                    <td>Monture standard</td>
+                    <td><span class="badge badge--neutral">Optique</span></td>
+                    <td><strong>30 000 FCFA</strong></td>
+                    <td>50 000 FCFA</td>
+                    <td style="color: var(--gray-500);">08 Jan 2026</td>
+                    <td><span class="badge badge--success">Validé</span></td>
+                  </tr>
+                  <tr>
+                    <td><span class="font-mono text-sm" style="font-weight: 600;">HO-001</span></td>
+                    <td>Journée d'hospitalisation (chambre standard)</td>
+                    <td><span class="badge badge--warning">Hospitalisation</span></td>
+                    <td><strong>35 000 FCFA</strong></td>
+                    <td>50 000 FCFA</td>
+                    <td style="color: var(--gray-500);">01 Fév 2026</td>
+                    <td><span class="badge badge--warning">En révision</span></td>
+                  </tr>
+                  <tr>
+                    <td><span class="font-mono text-sm" style="font-weight: 600;">HO-003</span></td>
+                    <td>Journée d'hospitalisation (chambre individuelle)</td>
+                    <td><span class="badge badge--warning">Hospitalisation</span></td>
+                    <td><strong>75 000 FCFA</strong></td>
+                    <td>100 000 FCFA</td>
+                    <td style="color: var(--gray-500);">01 Fév 2026</td>
+                    <td><span class="badge badge--success">Validé</span></td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+
+        <!-- ============================== -->
+        <!-- TAB 4 : Géographie             -->
+        <!-- ============================== -->
+        <div id="geographie" class="tab-panel">
+
+          <!-- Total summary -->
+          <div class="card animate-in" style="margin-bottom: var(--space-6);">
+            <div class="card__body" style="display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: var(--space-4);">
+              <div>
+                <h3 style="font-size: var(--text-lg); font-weight: 600; margin-bottom: 4px;">Répartition géographique du réseau</h3>
+                <p style="font-size: var(--text-sm); color: var(--gray-500);">Distribution des 247 prestataires conventionnés sur le territoire</p>
+              </div>
+              <div class="flex gap-3">
+                <div style="text-align: center;">
+                  <div style="font-size: var(--text-2xl); font-weight: 700; color: var(--iips-primary);">82%</div>
+                  <div style="font-size: var(--text-xs); color: var(--gray-500);">Abidjan</div>
+                </div>
+                <div style="width: 1px; background: var(--gray-200);"></div>
+                <div style="text-align: center;">
+                  <div style="font-size: var(--text-2xl); font-weight: 700; color: var(--iips-secondary);">18%</div>
+                  <div style="font-size: var(--text-xs); color: var(--gray-500);">Intérieur</div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Zone cards -->
+          <div class="grid" style="grid-template-columns: 1fr 1fr; gap: var(--space-4); margin-bottom: var(--space-6);">
+
+            <!-- Abidjan Nord -->
+            <div class="card animate-in">
+              <div class="card__header">
+                <h3 class="card__title" style="display: flex; align-items: center; gap: 8px;">
+                  <span style="width: 10px; height: 10px; border-radius: 50%; background: var(--iips-primary); display: inline-block;"></span>
+                  Abidjan Nord
+                </h3>
+                <span class="badge badge--primary" style="font-size: var(--text-lg); font-weight: 700;">89</span>
+              </div>
+              <div class="card__body">
+                <p style="font-size: var(--text-sm); color: var(--gray-500); margin-bottom: var(--space-4);">Cocody, Abobo, Adjamé, Anyama, Bingerville</p>
+                <div style="display: flex; flex-direction: column; gap: var(--space-3);">
+                  <div style="display: flex; justify-content: space-between; align-items: center;">
+                    <span style="font-size: var(--text-sm); color: var(--gray-700);">Cliniques / Hôpitaux</span>
+                    <span style="font-weight: 600;">34</span>
+                  </div>
+                  <div style="height: 6px; background: var(--gray-100); border-radius: 99px; overflow: hidden;">
+                    <div style="height: 100%; width: 38%; background: var(--iips-primary); border-radius: 99px;"></div>
+                  </div>
+                  <div style="display: flex; justify-content: space-between; align-items: center;">
+                    <span style="font-size: var(--text-sm); color: var(--gray-700);">Pharmacies</span>
+                    <span style="font-weight: 600;">32</span>
+                  </div>
+                  <div style="height: 6px; background: var(--gray-100); border-radius: 99px; overflow: hidden;">
+                    <div style="height: 100%; width: 36%; background: var(--color-warning); border-radius: 99px;"></div>
+                  </div>
+                  <div style="display: flex; justify-content: space-between; align-items: center;">
+                    <span style="font-size: var(--text-sm); color: var(--gray-700);">Laboratoires</span>
+                    <span style="font-weight: 600;">14</span>
+                  </div>
+                  <div style="height: 6px; background: var(--gray-100); border-radius: 99px; overflow: hidden;">
+                    <div style="height: 100%; width: 16%; background: var(--color-info); border-radius: 99px;"></div>
+                  </div>
+                  <div style="display: flex; justify-content: space-between; align-items: center;">
+                    <span style="font-size: var(--text-sm); color: var(--gray-700);">Opticiens</span>
+                    <span style="font-weight: 600;">9</span>
+                  </div>
+                  <div style="height: 6px; background: var(--gray-100); border-radius: 99px; overflow: hidden;">
+                    <div style="height: 100%; width: 10%; background: var(--gray-400); border-radius: 99px;"></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Abidjan Sud -->
+            <div class="card animate-in">
+              <div class="card__header">
+                <h3 class="card__title" style="display: flex; align-items: center; gap: 8px;">
+                  <span style="width: 10px; height: 10px; border-radius: 50%; background: var(--iips-secondary); display: inline-block;"></span>
+                  Abidjan Sud
+                </h3>
+                <span class="badge badge--secondary" style="font-size: var(--text-lg); font-weight: 700;">72</span>
+              </div>
+              <div class="card__body">
+                <p style="font-size: var(--text-sm); color: var(--gray-500); margin-bottom: var(--space-4);">Marcory, Treichville, Koumassi, Port-Bouët, Plateau</p>
+                <div style="display: flex; flex-direction: column; gap: var(--space-3);">
+                  <div style="display: flex; justify-content: space-between; align-items: center;">
+                    <span style="font-size: var(--text-sm); color: var(--gray-700);">Cliniques / Hôpitaux</span>
+                    <span style="font-weight: 600;">26</span>
+                  </div>
+                  <div style="height: 6px; background: var(--gray-100); border-radius: 99px; overflow: hidden;">
+                    <div style="height: 100%; width: 36%; background: var(--iips-primary); border-radius: 99px;"></div>
+                  </div>
+                  <div style="display: flex; justify-content: space-between; align-items: center;">
+                    <span style="font-size: var(--text-sm); color: var(--gray-700);">Pharmacies</span>
+                    <span style="font-weight: 600;">25</span>
+                  </div>
+                  <div style="height: 6px; background: var(--gray-100); border-radius: 99px; overflow: hidden;">
+                    <div style="height: 100%; width: 35%; background: var(--color-warning); border-radius: 99px;"></div>
+                  </div>
+                  <div style="display: flex; justify-content: space-between; align-items: center;">
+                    <span style="font-size: var(--text-sm); color: var(--gray-700);">Laboratoires</span>
+                    <span style="font-weight: 600;">13</span>
+                  </div>
+                  <div style="height: 6px; background: var(--gray-100); border-radius: 99px; overflow: hidden;">
+                    <div style="height: 100%; width: 18%; background: var(--color-info); border-radius: 99px;"></div>
+                  </div>
+                  <div style="display: flex; justify-content: space-between; align-items: center;">
+                    <span style="font-size: var(--text-sm); color: var(--gray-700);">Opticiens</span>
+                    <span style="font-weight: 600;">8</span>
+                  </div>
+                  <div style="height: 6px; background: var(--gray-100); border-radius: 99px; overflow: hidden;">
+                    <div style="height: 100%; width: 11%; background: var(--gray-400); border-radius: 99px;"></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Abidjan Ouest -->
+            <div class="card animate-in">
+              <div class="card__header">
+                <h3 class="card__title" style="display: flex; align-items: center; gap: 8px;">
+                  <span style="width: 10px; height: 10px; border-radius: 50%; background: var(--iips-accent); display: inline-block;"></span>
+                  Abidjan Ouest
+                </h3>
+                <span class="badge badge--warning" style="font-size: var(--text-lg); font-weight: 700;">42</span>
+              </div>
+              <div class="card__body">
+                <p style="font-size: var(--text-sm); color: var(--gray-500); margin-bottom: var(--space-4);">Yopougon, Songon, Attécoubé</p>
+                <div style="display: flex; flex-direction: column; gap: var(--space-3);">
+                  <div style="display: flex; justify-content: space-between; align-items: center;">
+                    <span style="font-size: var(--text-sm); color: var(--gray-700);">Cliniques / Hôpitaux</span>
+                    <span style="font-weight: 600;">16</span>
+                  </div>
+                  <div style="height: 6px; background: var(--gray-100); border-radius: 99px; overflow: hidden;">
+                    <div style="height: 100%; width: 38%; background: var(--iips-primary); border-radius: 99px;"></div>
+                  </div>
+                  <div style="display: flex; justify-content: space-between; align-items: center;">
+                    <span style="font-size: var(--text-sm); color: var(--gray-700);">Pharmacies</span>
+                    <span style="font-weight: 600;">16</span>
+                  </div>
+                  <div style="height: 6px; background: var(--gray-100); border-radius: 99px; overflow: hidden;">
+                    <div style="height: 100%; width: 38%; background: var(--color-warning); border-radius: 99px;"></div>
+                  </div>
+                  <div style="display: flex; justify-content: space-between; align-items: center;">
+                    <span style="font-size: var(--text-sm); color: var(--gray-700);">Laboratoires</span>
+                    <span style="font-weight: 600;">7</span>
+                  </div>
+                  <div style="height: 6px; background: var(--gray-100); border-radius: 99px; overflow: hidden;">
+                    <div style="height: 100%; width: 17%; background: var(--color-info); border-radius: 99px;"></div>
+                  </div>
+                  <div style="display: flex; justify-content: space-between; align-items: center;">
+                    <span style="font-size: var(--text-sm); color: var(--gray-700);">Opticiens</span>
+                    <span style="font-weight: 600;">3</span>
+                  </div>
+                  <div style="height: 6px; background: var(--gray-100); border-radius: 99px; overflow: hidden;">
+                    <div style="height: 100%; width: 7%; background: var(--gray-400); border-radius: 99px;"></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Intérieur -->
+            <div class="card animate-in">
+              <div class="card__header">
+                <h3 class="card__title" style="display: flex; align-items: center; gap: 8px;">
+                  <span style="width: 10px; height: 10px; border-radius: 50%; background: #8B5CF6; display: inline-block;"></span>
+                  Intérieur du pays
+                </h3>
+                <span class="badge badge--neutral" style="font-size: var(--text-lg); font-weight: 700;">44</span>
+              </div>
+              <div class="card__body">
+                <p style="font-size: var(--text-sm); color: var(--gray-500); margin-bottom: var(--space-4);">Bouaké, San-Pédro, Yamoussoukro, Daloa, Korhogo, Man</p>
+                <div style="display: flex; flex-direction: column; gap: var(--space-3);">
+                  <div style="display: flex; justify-content: space-between; align-items: center;">
+                    <span style="font-size: var(--text-sm); color: var(--gray-700);">Cliniques / Hôpitaux</span>
+                    <span style="font-weight: 600;">18</span>
+                  </div>
+                  <div style="height: 6px; background: var(--gray-100); border-radius: 99px; overflow: hidden;">
+                    <div style="height: 100%; width: 41%; background: var(--iips-primary); border-radius: 99px;"></div>
+                  </div>
+                  <div style="display: flex; justify-content: space-between; align-items: center;">
+                    <span style="font-size: var(--text-sm); color: var(--gray-700);">Pharmacies</span>
+                    <span style="font-weight: 600;">15</span>
+                  </div>
+                  <div style="height: 6px; background: var(--gray-100); border-radius: 99px; overflow: hidden;">
+                    <div style="height: 100%; width: 34%; background: var(--color-warning); border-radius: 99px;"></div>
+                  </div>
+                  <div style="display: flex; justify-content: space-between; align-items: center;">
+                    <span style="font-size: var(--text-sm); color: var(--gray-700);">Laboratoires</span>
+                    <span style="font-weight: 600;">8</span>
+                  </div>
+                  <div style="height: 6px; background: var(--gray-100); border-radius: 99px; overflow: hidden;">
+                    <div style="height: 100%; width: 18%; background: var(--color-info); border-radius: 99px;"></div>
+                  </div>
+                  <div style="display: flex; justify-content: space-between; align-items: center;">
+                    <span style="font-size: var(--text-sm); color: var(--gray-700);">Opticiens</span>
+                    <span style="font-weight: 600;">3</span>
+                  </div>
+                  <div style="height: 6px; background: var(--gray-100); border-radius: 99px; overflow: hidden;">
+                    <div style="height: 100%; width: 7%; background: var(--gray-400); border-radius: 99px;"></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Villes détails -->
+          <div class="card animate-in">
+            <div class="card__header">
+              <h3 class="card__title">Détail par ville (Intérieur)</h3>
+            </div>
+            <div class="table-container">
+              <table class="table">
+                <thead>
+                  <tr>
+                    <th>Ville</th>
+                    <th>Cliniques</th>
+                    <th>Pharmacies</th>
+                    <th>Laboratoires</th>
+                    <th>Opticiens</th>
+                    <th>Total</th>
+                    <th>Couverture</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td style="font-weight: 600;">Bouaké</td>
+                    <td>6</td>
+                    <td>5</td>
+                    <td>3</td>
+                    <td>1</td>
+                    <td><strong>15</strong></td>
+                    <td><span class="badge badge--success">Bonne</span></td>
+                  </tr>
+                  <tr>
+                    <td style="font-weight: 600;">San-Pédro</td>
+                    <td>4</td>
+                    <td>3</td>
+                    <td>2</td>
+                    <td>1</td>
+                    <td><strong>10</strong></td>
+                    <td><span class="badge badge--success">Bonne</span></td>
+                  </tr>
+                  <tr>
+                    <td style="font-weight: 600;">Yamoussoukro</td>
+                    <td>4</td>
+                    <td>4</td>
+                    <td>2</td>
+                    <td>1</td>
+                    <td><strong>11</strong></td>
+                    <td><span class="badge badge--success">Bonne</span></td>
+                  </tr>
+                  <tr>
+                    <td style="font-weight: 600;">Daloa</td>
+                    <td>2</td>
+                    <td>2</td>
+                    <td>1</td>
+                    <td>0</td>
+                    <td><strong>5</strong></td>
+                    <td><span class="badge badge--warning">Moyenne</span></td>
+                  </tr>
+                  <tr>
+                    <td style="font-weight: 600;">Korhogo</td>
+                    <td>1</td>
+                    <td>1</td>
+                    <td>0</td>
+                    <td>0</td>
+                    <td><strong>2</strong></td>
+                    <td><span class="badge badge--error">Faible</span></td>
+                  </tr>
+                  <tr>
+                    <td style="font-weight: 600;">Man</td>
+                    <td>1</td>
+                    <td>0</td>
+                    <td>0</td>
+                    <td>0</td>
+                    <td><strong>1</strong></td>
+                    <td><span class="badge badge--error">Faible</span></td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+
+        <!-- ============================== -->
+        <!-- TAB 5 : Qualité                -->
+        <!-- ============================== -->
+        <div id="qualite" class="tab-panel">
+
+          <!-- Quality overview -->
+          <div class="grid grid-4 mb-6">
+            <div class="card stat-card animate-in">
+              <div class="stat-card__value" style="color: var(--color-success);">87,3%</div>
+              <div class="stat-card__label">Score moyen qualité</div>
+              <span class="stat-card__trend stat-card__trend--up">+2,1% ce trimestre</span>
+            </div>
+            <div class="card stat-card animate-in">
+              <div class="stat-card__value" style="color: var(--color-warning);" data-count="34">0</div>
+              <div class="stat-card__label">Réclamations ce mois</div>
+              <span class="stat-card__trend stat-card__trend--down">-8 vs mois précédent</span>
+            </div>
+            <div class="card stat-card animate-in">
+              <div class="stat-card__value" style="color: var(--iips-primary);">2,4h</div>
+              <div class="stat-card__label">Délai moyen PEC</div>
+              <span class="stat-card__trend stat-card__trend--up">-0,3h ce mois</span>
+            </div>
+            <div class="card stat-card animate-in">
+              <div class="stat-card__value" style="color: var(--color-error);" data-count="3">0</div>
+              <div class="stat-card__label">Prestataires sous alerte</div>
+            </div>
+          </div>
+
+          <!-- Quality table -->
+          <div class="card animate-in">
+            <div class="card__header">
+              <h3 class="card__title">Suivi qualité des prestataires</h3>
+              <div class="flex gap-2">
+                <select class="form-select" style="min-width: 160px; font-size: var(--text-sm);">
+                  <option>Tous les types</option>
+                  <option>Cliniques</option>
+                  <option>Hôpitaux</option>
+                  <option>Pharmacies</option>
+                  <option>Laboratoires</option>
+                  <option>Opticiens</option>
+                </select>
+                <select class="form-select" style="min-width: 160px; font-size: var(--text-sm);">
+                  <option>Score : Tous</option>
+                  <option>Score &ge; 90%</option>
+                  <option>Score 70-89%</option>
+                  <option>Score &lt; 70%</option>
+                </select>
+              </div>
+            </div>
+            <div class="table-container">
+              <table class="table">
+                <thead>
+                  <tr>
+                    <th>Prestataire</th>
+                    <th>Score qualité</th>
+                    <th>Réclamations</th>
+                    <th>Délai moyen PEC</th>
+                    <th>Dernière visite</th>
+                    <th>Tendance</th>
+                    <th>Actions</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>
+                      <div class="flex items-center gap-2">
+                        <div class="avatar avatar--sm" style="background: var(--iips-primary);">PF</div>
+                        <div>
+                          <div style="font-weight: 500;">Polyclinique Farah</div>
+                          <div style="font-size: var(--text-xs); color: var(--gray-500);">Clinique — Cocody</div>
+                        </div>
+                      </div>
+                    </td>
+                    <td>
+                      <div style="display: flex; align-items: center; gap: 8px;">
+                        <div style="width: 80px; height: 6px; background: var(--gray-100); border-radius: 99px; overflow: hidden;">
+                          <div style="height: 100%; width: 94%; background: var(--color-success); border-radius: 99px;"></div>
+                        </div>
+                        <span style="font-weight: 600; color: var(--color-success);">94%</span>
+                      </div>
+                    </td>
+                    <td>2</td>
+                    <td>1,2h</td>
+                    <td style="color: var(--gray-500);">12 Fév 2026</td>
+                    <td><span class="stat-card__trend stat-card__trend--up" style="font-size: var(--text-xs);">+3%</span></td>
+                    <td>
+                      <button class="btn btn-ghost btn-sm" onclick="showToast('Rapport qualité en cours de génération...', 'info')">Rapport</button>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <div class="flex items-center gap-2">
+                        <div class="avatar avatar--sm" style="background: var(--iips-secondary);">CY</div>
+                        <div>
+                          <div style="font-weight: 500;">CHU de Yopougon</div>
+                          <div style="font-size: var(--text-xs); color: var(--gray-500);">Hôpital — Yopougon</div>
+                        </div>
+                      </div>
+                    </td>
+                    <td>
+                      <div style="display: flex; align-items: center; gap: 8px;">
+                        <div style="width: 80px; height: 6px; background: var(--gray-100); border-radius: 99px; overflow: hidden;">
+                          <div style="height: 100%; width: 91%; background: var(--color-success); border-radius: 99px;"></div>
+                        </div>
+                        <span style="font-weight: 600; color: var(--color-success);">91%</span>
+                      </div>
+                    </td>
+                    <td>5</td>
+                    <td>2,8h</td>
+                    <td style="color: var(--gray-500);">08 Fév 2026</td>
+                    <td><span class="stat-card__trend stat-card__trend--up" style="font-size: var(--text-xs);">+1%</span></td>
+                    <td>
+                      <button class="btn btn-ghost btn-sm">Rapport</button>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <div class="flex items-center gap-2">
+                        <div class="avatar avatar--sm" style="background: var(--color-success);">PP</div>
+                        <div>
+                          <div style="font-weight: 500;">Pharmacie du Plateau</div>
+                          <div style="font-size: var(--text-xs); color: var(--gray-500);">Pharmacie — Plateau</div>
+                        </div>
+                      </div>
+                    </td>
+                    <td>
+                      <div style="display: flex; align-items: center; gap: 8px;">
+                        <div style="width: 80px; height: 6px; background: var(--gray-100); border-radius: 99px; overflow: hidden;">
+                          <div style="height: 100%; width: 88%; background: var(--color-success); border-radius: 99px;"></div>
+                        </div>
+                        <span style="font-weight: 600; color: var(--color-success);">88%</span>
+                      </div>
+                    </td>
+                    <td>3</td>
+                    <td>0,5h</td>
+                    <td style="color: var(--gray-500);">20 Jan 2026</td>
+                    <td><span class="stat-card__trend stat-card__trend--up" style="font-size: var(--text-xs);">+5%</span></td>
+                    <td>
+                      <button class="btn btn-ghost btn-sm">Rapport</button>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <div class="flex items-center gap-2">
+                        <div class="avatar avatar--sm" style="background: #8B5CF6;">CP</div>
+                        <div>
+                          <div style="font-weight: 500;">Clinique Procréa</div>
+                          <div style="font-size: var(--text-xs); color: var(--gray-500);">Clinique — Cocody</div>
+                        </div>
+                      </div>
+                    </td>
+                    <td>
+                      <div style="display: flex; align-items: center; gap: 8px;">
+                        <div style="width: 80px; height: 6px; background: var(--gray-100); border-radius: 99px; overflow: hidden;">
+                          <div style="height: 100%; width: 92%; background: var(--color-success); border-radius: 99px;"></div>
+                        </div>
+                        <span style="font-weight: 600; color: var(--color-success);">92%</span>
+                      </div>
+                    </td>
+                    <td>1</td>
+                    <td>1,5h</td>
+                    <td style="color: var(--gray-500);">15 Fév 2026</td>
+                    <td><span class="stat-card__trend stat-card__trend--up" style="font-size: var(--text-xs);">+2%</span></td>
+                    <td>
+                      <button class="btn btn-ghost btn-sm">Rapport</button>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <div class="flex items-center gap-2">
+                        <div class="avatar avatar--sm" style="background: var(--iips-accent);">OV</div>
+                        <div>
+                          <div style="font-weight: 500;">Optique Vision Plus</div>
+                          <div style="font-size: var(--text-xs); color: var(--gray-500);">Opticien — Marcory</div>
+                        </div>
+                      </div>
+                    </td>
+                    <td>
+                      <div style="display: flex; align-items: center; gap: 8px;">
+                        <div style="width: 80px; height: 6px; background: var(--gray-100); border-radius: 99px; overflow: hidden;">
+                          <div style="height: 100%; width: 85%; background: var(--color-success); border-radius: 99px;"></div>
+                        </div>
+                        <span style="font-weight: 600; color: var(--color-success);">85%</span>
+                      </div>
+                    </td>
+                    <td>4</td>
+                    <td>1,8h</td>
+                    <td style="color: var(--gray-500);">05 Fév 2026</td>
+                    <td><span style="font-size: var(--text-xs); color: var(--gray-400);">0%</span></td>
+                    <td>
+                      <button class="btn btn-ghost btn-sm">Rapport</button>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <div class="flex items-center gap-2">
+                        <div class="avatar avatar--sm" style="background: var(--color-info);">LB</div>
+                        <div>
+                          <div style="font-weight: 500;">Laboratoire Bio24</div>
+                          <div style="font-size: var(--text-xs); color: var(--gray-500);">Laboratoire — Treichville</div>
+                        </div>
+                      </div>
+                    </td>
+                    <td>
+                      <div style="display: flex; align-items: center; gap: 8px;">
+                        <div style="width: 80px; height: 6px; background: var(--gray-100); border-radius: 99px; overflow: hidden;">
+                          <div style="height: 100%; width: 79%; background: var(--color-warning); border-radius: 99px;"></div>
+                        </div>
+                        <span style="font-weight: 600; color: var(--color-warning);">79%</span>
+                      </div>
+                    </td>
+                    <td>7</td>
+                    <td>3,2h</td>
+                    <td style="color: var(--gray-500);">18 Fév 2026</td>
+                    <td><span class="stat-card__trend stat-card__trend--down" style="font-size: var(--text-xs);">-4%</span></td>
+                    <td>
+                      <button class="btn btn-ghost btn-sm">Rapport</button>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <div class="flex items-center gap-2">
+                        <div class="avatar avatar--sm" style="background: #E11D48;">LP</div>
+                        <div>
+                          <div style="font-weight: 500;">Clinique La Providence</div>
+                          <div style="font-size: var(--text-xs); color: var(--gray-500);">Clinique — Marcory</div>
+                        </div>
+                      </div>
+                    </td>
+                    <td>
+                      <div style="display: flex; align-items: center; gap: 8px;">
+                        <div style="width: 80px; height: 6px; background: var(--gray-100); border-radius: 99px; overflow: hidden;">
+                          <div style="height: 100%; width: 90%; background: var(--color-success); border-radius: 99px;"></div>
+                        </div>
+                        <span style="font-weight: 600; color: var(--color-success);">90%</span>
+                      </div>
+                    </td>
+                    <td>2</td>
+                    <td>1,4h</td>
+                    <td style="color: var(--gray-500);">10 Fév 2026</td>
+                    <td><span class="stat-card__trend stat-card__trend--up" style="font-size: var(--text-xs);">+1%</span></td>
+                    <td>
+                      <button class="btn btn-ghost btn-sm">Rapport</button>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <div class="flex items-center gap-2">
+                        <div class="avatar avatar--sm" style="background: var(--iips-secondary-dark);">CA</div>
+                        <div>
+                          <div style="font-weight: 500;">CHR d'Abobo</div>
+                          <div style="font-size: var(--text-xs); color: var(--gray-500);">Hôpital — Abobo</div>
+                        </div>
+                      </div>
+                    </td>
+                    <td>
+                      <div style="display: flex; align-items: center; gap: 8px;">
+                        <div style="width: 80px; height: 6px; background: var(--gray-100); border-radius: 99px; overflow: hidden;">
+                          <div style="height: 100%; width: 72%; background: var(--color-warning); border-radius: 99px;"></div>
+                        </div>
+                        <span style="font-weight: 600; color: var(--color-warning);">72%</span>
+                      </div>
+                    </td>
+                    <td>9</td>
+                    <td>4,1h</td>
+                    <td style="color: var(--gray-500);">22 Jan 2026</td>
+                    <td><span class="stat-card__trend stat-card__trend--down" style="font-size: var(--text-xs);">-6%</span></td>
+                    <td>
+                      <button class="btn btn-ghost btn-sm" style="color: var(--color-error);">Alerte</button>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <div class="flex items-center gap-2">
+                        <div class="avatar avatar--sm" style="background: #059669;">PS</div>
+                        <div>
+                          <div style="font-weight: 500;">Pharmacie Sainte-Rita</div>
+                          <div style="font-size: var(--text-xs); color: var(--gray-500);">Pharmacie — Cocody</div>
+                        </div>
+                      </div>
+                    </td>
+                    <td>
+                      <div style="display: flex; align-items: center; gap: 8px;">
+                        <div style="width: 80px; height: 6px; background: var(--gray-100); border-radius: 99px; overflow: hidden;">
+                          <div style="height: 100%; width: 58%; background: var(--color-error); border-radius: 99px;"></div>
+                        </div>
+                        <span style="font-weight: 600; color: var(--color-error);">58%</span>
+                      </div>
+                    </td>
+                    <td>14</td>
+                    <td>5,6h</td>
+                    <td style="color: var(--gray-500);">25 Fév 2026</td>
+                    <td><span class="stat-card__trend stat-card__trend--down" style="font-size: var(--text-xs);">-12%</span></td>
+                    <td>
+                      <button class="btn btn-ghost btn-sm" style="color: var(--color-error); font-weight: 600;">Suspendu</button>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <div class="flex items-center gap-2">
+                        <div class="avatar avatar--sm" style="background: #7C3AED;">CB</div>
+                        <div>
+                          <div style="font-weight: 500;">Centre Médical Bouaké</div>
+                          <div style="font-size: var(--text-xs); color: var(--gray-500);">Clinique — Bouaké</div>
+                        </div>
+                      </div>
+                    </td>
+                    <td>
+                      <div style="display: flex; align-items: center; gap: 8px;">
+                        <div style="width: 80px; height: 6px; background: var(--gray-100); border-radius: 99px; overflow: hidden;">
+                          <div style="height: 100%; width: 65%; background: var(--color-error); border-radius: 99px;"></div>
+                        </div>
+                        <span style="font-weight: 600; color: var(--color-error);">65%</span>
+                      </div>
+                    </td>
+                    <td>8</td>
+                    <td>4,8h</td>
+                    <td style="color: var(--gray-500);">20 Fév 2026</td>
+                    <td><span class="stat-card__trend stat-card__trend--down" style="font-size: var(--text-xs);">-9%</span></td>
+                    <td>
+                      <button class="btn btn-ghost btn-sm" style="color: var(--color-error);">Alerte</button>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+
+      </div><!-- /tab-container -->
+
+    </div><!-- /app-content -->
+  </main>
+
+</div><!-- /app-shell -->
+
+<!-- ===== MODAL : Nouveau prestataire ===== -->
+<div class="modal-backdrop" id="modal-nouveau-prestataire">
+  <div class="modal" style="max-width: 640px;">
+    <div class="modal__header">
+      <h3 class="modal__title">Nouveau prestataire</h3>
+      <button class="modal__close" onclick="closeModal('modal-nouveau-prestataire')">&times;</button>
+    </div>
+    <div class="modal__body">
+      <div style="display: grid; grid-template-columns: 1fr 1fr; gap: var(--space-4);">
+        <div class="form-group">
+          <label class="form-label">Nom du prestataire <span style="color: var(--color-error);">*</span></label>
+          <input type="text" class="form-input" placeholder="Ex: Clinique Saint-Jean">
+        </div>
+        <div class="form-group">
+          <label class="form-label">Type <span style="color: var(--color-error);">*</span></label>
+          <select class="form-select">
+            <option value="">Sélectionner...</option>
+            <option value="clinique">Clinique</option>
+            <option value="hopital">Hôpital</option>
+            <option value="pharmacie">Pharmacie</option>
+            <option value="opticien">Opticien</option>
+            <option value="labo">Laboratoire</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label class="form-label">Zone géographique <span style="color: var(--color-error);">*</span></label>
+          <select class="form-select">
+            <option value="">Sélectionner...</option>
+            <option value="cocody">Cocody</option>
+            <option value="plateau">Plateau</option>
+            <option value="marcory">Marcory</option>
+            <option value="treichville">Treichville</option>
+            <option value="yopougon">Yopougon</option>
+            <option value="abobo">Abobo</option>
+            <option value="adjame">Adjamé</option>
+            <option value="koumassi">Koumassi</option>
+            <option value="bouake">Bouaké</option>
+            <option value="san-pedro">San-Pédro</option>
+            <option value="yamoussoukro">Yamoussoukro</option>
+            <option value="daloa">Daloa</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label class="form-label">Téléphone</label>
+          <input type="tel" class="form-input" placeholder="+225 XX XX XX XX XX">
+        </div>
+        <div class="form-group" style="grid-column: span 2;">
+          <label class="form-label">Adresse</label>
+          <input type="text" class="form-input" placeholder="Adresse complète du prestataire">
+        </div>
+        <div class="form-group">
+          <label class="form-label">Email</label>
+          <input type="email" class="form-input" placeholder="contact@prestataire.ci">
+        </div>
+        <div class="form-group">
+          <label class="form-label">Responsable</label>
+          <input type="text" class="form-input" placeholder="Nom du responsable">
+        </div>
+        <div class="form-group" style="grid-column: span 2;">
+          <label class="form-label">Spécialités / Services</label>
+          <textarea class="form-input" rows="3" placeholder="Décrire les spécialités et services proposés..." style="resize: vertical;"></textarea>
+        </div>
+      </div>
+    </div>
+    <div class="modal__footer">
+      <button class="btn btn-secondary" onclick="closeModal('modal-nouveau-prestataire')">Annuler</button>
+      <button class="btn btn-primary" onclick="showToast('Prestataire ajouté avec succès', 'success'); closeModal('modal-nouveau-prestataire');">
+        <svg width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><line x1="8" y1="3" x2="8" y2="13"/><line x1="3" y1="8" x2="13" y2="8"/></svg>
+        Ajouter le prestataire
+      </button>
+    </div>
+  </div>
+</div>
+
+<script src="../../js/roles.js"></script>
+<script src="../../js/main.js"></script>
+<script src="../../js/main-v2.js"></script>
+</body>
+</html>

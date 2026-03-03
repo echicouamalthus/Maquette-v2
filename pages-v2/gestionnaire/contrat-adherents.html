@@ -1,0 +1,585 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>IIPS v2 — Adh&eacute;rents contrat CTR-2026-1847</title>
+  <link rel="stylesheet" href="../../css/design-system.css">
+  <link rel="stylesheet" href="../../css/design-system-v2.css">
+  <link rel="stylesheet" href="../../css/production.css">
+  <script src="../../js/icons.js"></script>
+</head>
+<body data-page-module="production">
+<div class="app-shell">
+
+  <!-- ===== SIDEBAR v2 ===== -->
+  <aside class="sidebar">
+
+    <div class="sidebar__brand">
+      <img src="../../iips.jpg" alt="IIPS" class="sidebar__brand-logo">
+      <div class="sidebar__brand-text">
+        <span class="sidebar__brand-name">IIPS Santé</span>
+        <span class="sidebar__brand-tagline">Gestion Assurance</span>
+      </div>
+    </div>
+
+    <nav class="sidebar__nav">
+      <div class="nav-section">
+        <details open>
+          <summary class="nav-section__title">
+            Principal
+            <svg class="section-chevron" width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2"><polyline points="4,6 8,10 12,6"/></svg>
+          </summary>
+          <a href="dashboard.html" class="nav-item" data-module="dashboard" data-tooltip="Tableau de bord">
+            <span class="nav-item__icon"><svg width="20" height="20" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="7" height="8"/><rect x="11" y="2" width="7" height="5"/><rect x="2" y="12" width="7" height="6"/><rect x="11" y="9" width="7" height="9"/></svg></span>
+            <span class="nav-item__label">Tableau de bord</span>
+          </a>
+        </details>
+      </div>
+
+      <div class="nav-section">
+        <details open>
+          <summary class="nav-section__title">
+            Gestion
+            <svg class="section-chevron" width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2"><polyline points="4,6 8,10 12,6"/></svg>
+          </summary>
+          <a href="contrats.html" class="nav-item active" data-module="production" data-tooltip="Production">
+            <span class="nav-item__icon"><svg width="20" height="20" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2H5a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7l-5-5z"/><path d="M12 2v5h5"/><line x1="7" y1="10" x2="13" y2="10"/><line x1="7" y1="13" x2="11" y2="13"/></svg></span>
+            <span class="nav-item__label">Production</span>
+            <span class="nav-item__badge">24</span>
+          </a>
+          <a href="souscriptions.html" class="nav-item" data-module="souscription" data-tooltip="Souscriptions">
+            <span class="nav-item__icon"><svg width="20" height="20" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M16 17v-1a4 4 0 00-4-4H8a4 4 0 00-4 4v1"/><circle cx="10" cy="6" r="3.5"/><line x1="15" y1="5" x2="15" y2="9"/><line x1="13" y1="7" x2="17" y2="7"/></svg></span>
+            <span class="nav-item__label">Souscriptions</span>
+            <span class="nav-item__badge">8</span>
+          </a>
+          <a href="sinistres.html" class="nav-item" data-module="sinistre" data-tooltip="Sinistres">
+            <span class="nav-item__icon"><svg width="20" height="20" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M10.29 3.86L1.82 18a2 2 0 001.71 3h16.94a2 2 0 001.71-3L13.71 3.86a2 2 0 00-3.42 0z" transform="scale(0.85) translate(1.5,0)"/><line x1="10" y1="8" x2="10" y2="12"/><circle cx="10" cy="15" r="0.5" fill="currentColor"/></svg></span>
+            <span class="nav-item__label">Sinistres</span>
+            <span class="nav-item__badge">12</span>
+          </a>
+          <a href="pec.html" class="nav-item" data-module="pec" data-tooltip="Prise en charge">
+            <span class="nav-item__icon"><svg width="20" height="20" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M16 7V4a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2h8a2 2 0 002-2v-3"/><path d="M8 10h9"/><path d="M14 7l3 3-3 3"/><line x1="8" y1="6" x2="12" y2="6"/><line x1="8" y1="14" x2="11" y2="14"/></svg></span>
+            <span class="nav-item__label">Prise en charge</span>
+            <span class="nav-item__badge">7</span>
+          </a>
+          <a href="confection-cartes.html" class="nav-item" data-module="confection-cartes" data-tooltip="Confection Cartes">
+            <span class="nav-item__icon"><svg width="20" height="20" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><rect x="2" y="4" width="16" height="12"/><line x1="2" y1="9" x2="18" y2="9"/><line x1="6" y1="13" x2="10" y2="13"/></svg></span>
+            <span class="nav-item__label">Confection Cartes</span>
+          </a>
+          <a href="secretariat.html" class="nav-item" data-module="secretariat" data-tooltip="Secrétariat">
+            <span class="nav-item__icon"><svg width="20" height="20" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><rect x="3" y="2" width="14" height="16"/><line x1="7" y1="6" x2="13" y2="6"/><line x1="7" y1="10" x2="13" y2="10"/><line x1="7" y1="14" x2="10" y2="14"/></svg></span>
+            <span class="nav-item__label">Secrétariat</span>
+          </a>
+        </details>
+      </div>
+
+      <div class="nav-section">
+        <details open>
+          <summary class="nav-section__title">
+            Commercial
+            <svg class="section-chevron" width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2"><polyline points="4,6 8,10 12,6"/></svg>
+          </summary>
+          <a href="crm.html" class="nav-item" data-module="crm" data-tooltip="CRM">
+            <span class="nav-item__icon"><svg width="20" height="20" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M17 18v-1a3 3 0 00-3-3h-1"/><path d="M13 8a3 3 0 100-6"/><path d="M12 18v-1a4 4 0 00-4-4H5a4 4 0 00-4 4v1"/><circle cx="6.5" cy="6" r="3"/></svg></span>
+            <span class="nav-item__label">CRM</span>
+          </a>
+        </details>
+      </div>
+
+      <div class="nav-section">
+        <details open>
+          <summary class="nav-section__title">
+            Finance
+            <svg class="section-chevron" width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2"><polyline points="4,6 8,10 12,6"/></svg>
+          </summary>
+          <a href="comptabilite.html" class="nav-item" data-module="comptabilite" data-tooltip="Comptabilité">
+            <span class="nav-item__icon"><svg width="20" height="20" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><line x1="10" y1="2" x2="10" y2="18"/><path d="M14 5H8.5a2.5 2.5 0 000 5h3a2.5 2.5 0 010 5H6"/></svg></span>
+            <span class="nav-item__label">Comptabilité</span>
+          </a>
+          <a href="tresorerie.html" class="nav-item" data-module="tresorerie" data-tooltip="Trésorerie">
+            <span class="nav-item__icon"><svg width="20" height="20" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="3" width="16" height="14"/><path d="M2 7h16"/><path d="M2 11h16"/><circle cx="14" cy="14" r="2"/></svg></span>
+            <span class="nav-item__label">Trésorerie</span>
+          </a>
+          <a href="paiements.html" class="nav-item" data-module="paiement" data-tooltip="Paiements">
+            <span class="nav-item__icon"><svg width="20" height="20" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="16" height="12"/><line x1="2" y1="9" x2="18" y2="9"/></svg></span>
+            <span class="nav-item__label">Paiements</span>
+          </a>
+          <a href="recouvrement.html" class="nav-item" data-module="recouvrement" data-tooltip="Recouvrement">
+            <span class="nav-item__icon"><svg width="20" height="20" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M1 4v6h6"/><path d="M3.51 14a8 8 0 0013.9-3.2"/><path d="M19 16v-6h-6"/><path d="M16.49 6A8 8 0 002.6 9.2"/></svg></span>
+            <span class="nav-item__label">Recouvrement</span>
+          </a>
+        </details>
+      </div>
+
+      <div class="nav-section">
+        <details open>
+          <summary class="nav-section__title">
+            Outils
+            <svg class="section-chevron" width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2"><polyline points="4,6 8,10 12,6"/></svg>
+          </summary>
+          <a href="ged.html" class="nav-item" data-module="ged" data-tooltip="GED">
+            <span class="nav-item__icon"><svg width="20" height="20" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M18 16V6a2 2 0 00-2-2H9L7 2H4a2 2 0 00-2 2v12a2 2 0 002 2h12a2 2 0 002-2z"/></svg></span>
+            <span class="nav-item__label">GED</span>
+          </a>
+          <a href="reporting.html" class="nav-item" data-module="reporting" data-tooltip="Reporting">
+            <span class="nav-item__icon"><svg width="20" height="20" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><line x1="15" y1="5" x2="15" y2="15"/><line x1="10" y1="8" x2="10" y2="15"/><line x1="5" y1="11" x2="5" y2="15"/></svg></span>
+            <span class="nav-item__label">Reporting</span>
+          </a>
+        </details>
+      </div>
+
+      <div class="nav-section">
+        <details open>
+          <summary class="nav-section__title">
+            Système
+            <svg class="section-chevron" width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2"><polyline points="4,6 8,10 12,6"/></svg>
+          </summary>
+          <a href="administration.html" class="nav-item" data-module="administration" data-tooltip="Administration">
+            <span class="nav-item__icon"><svg width="20" height="20" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="10" cy="10" r="3"/><path d="M19.4 15a1.65 1.65 0 00.33 1.82l.06.06a2 2 0 11-2.83 2.83l-.06-.06a1.65 1.65 0 00-2.82.72V20" transform="scale(0.82) translate(1.5,1.5)"/></svg></span>
+            <span class="nav-item__label">Administration</span>
+          </a>
+          <a href="configuration.html" class="nav-item" data-module="configuration" data-tooltip="Configuration">
+            <span class="nav-item__icon"><svg width="20" height="20" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><line x1="3" y1="5" x2="17" y2="5"/><line x1="3" y1="10" x2="17" y2="10"/><line x1="3" y1="15" x2="17" y2="15"/><circle cx="13" cy="5" r="2" fill="currentColor"/><circle cx="7" cy="10" r="2" fill="currentColor"/><circle cx="11" cy="15" r="2" fill="currentColor"/></svg></span>
+            <span class="nav-item__label">Configuration</span>
+          </a>
+        </details>
+      </div>
+
+    </nav>
+
+    <div class="sidebar__footer">
+      <div class="sidebar__user">
+        <div class="sidebar__user-avatar">AD</div>
+        <div class="sidebar__user-info">
+          <div class="sidebar__user-name">Aminata Diabaté</div>
+          <div class="sidebar__user-role">Gestionnaire santé</div>
+        </div>
+        <a href="../login.html" style="color: rgba(255,255,255,0.4); margin-left: auto;" title="Déconnexion">
+          <svg width="18" height="18" viewBox="0 0 18 18" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><path d="M6 15H4a2 2 0 01-2-2V5a2 2 0 012-2h2"/><polyline points="11,13 15,9 11,5"/><line x1="15" y1="9" x2="6" y2="9"/></svg>
+        </a>
+      </div>
+    </div>
+  </aside>
+
+  <!-- ===== MAIN ===== -->
+  <main class="app-main">
+    <!-- Top Bar v2 -->
+    <header class="topbar">
+      <button class="topbar__hamburger" onclick="toggleSidebar()" title="Menu">
+        <svg width="20" height="20" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><line x1="3" y1="5" x2="17" y2="5"/><line x1="3" y1="10" x2="17" y2="10"/><line x1="3" y1="15" x2="17" y2="15"/></svg>
+      </button>
+
+      <nav class="topbar__breadcrumb">
+        <a href="dashboard.html">Accueil</a>
+        <span class="separator">/</span>
+        <a href="contrats.html">Production</a>
+        <span class="separator">/</span>
+        <span class="current">Adhérents</span>
+      </nav>
+
+      <div class="topbar__search">
+        <span class="topbar__search-icon">
+          <svg width="18" height="18" viewBox="0 0 18 18" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><circle cx="8" cy="8" r="5.5"/><line x1="12.5" y1="12.5" x2="16" y2="16"/></svg>
+        </span>
+        <input type="text" class="topbar__search-input" placeholder="Rechercher un contrat, un assuré, un prestataire...">
+        <div class="topbar__search-shortcut">
+          <kbd>Ctrl</kbd><kbd>K</kbd>
+        </div>
+      </div>
+
+      <div class="topbar__role-indicator">
+        <button class="topbar__role-badge" data-dropdown>
+          <span class="badge badge--primary" id="topbar-role-label">Gestionnaire</span>
+          <svg width="14" height="14" viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="2"><polyline points="4,5 7,8 10,5"/></svg>
+        </button>
+        <div class="dropdown-menu topbar__role-dropdown" id="role-switcher"></div>
+      </div>
+
+      <div class="topbar__actions">
+        <button class="topbar__action-btn" title="Aide">
+          <svg width="20" height="20" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="10" cy="10" r="8"/><path d="M7.5 7.5a2.5 2.5 0 014.87.83c0 1.67-2.5 2.5-2.5 2.5"/><circle cx="10" cy="14" r="0.5" fill="currentColor"/></svg>
+        </button>
+        <div class="topbar__notif-wrapper">
+          <button class="topbar__action-btn topbar__notif-toggle" title="Notifications">
+            <svg width="20" height="20" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M15 7a5 5 0 00-10 0c0 5-2.5 7-2.5 7h15S15 12 15 7z"/><path d="M8.5 17a1.5 1.5 0 003 0"/></svg>
+            <span class="badge-dot"></span>
+          </button>
+          <div class="topbar__notif-dropdown">
+            <div class="topbar__notif-header">
+              <h4>Notifications</h4>
+              <span class="topbar__notif-count">3 nouvelles</span>
+            </div>
+            <div class="topbar__notif-list">
+              <div class="topbar__notif-item unread">
+                <div class="topbar__notif-icon topbar__notif-icon--success"><svg width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2"><polyline points="3,8 6,11 13,4"/></svg></div>
+                <div class="topbar__notif-content">
+                  <div class="topbar__notif-title">Contrat CTR-2026-1847 validé par le superviseur</div>
+                  <div class="topbar__notif-meta">Il y a 15 min</div>
+                </div>
+              </div>
+              <div class="topbar__notif-item unread">
+                <div class="topbar__notif-icon topbar__notif-icon--warning"><svg width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2"><path d="M8 3v5"/><circle cx="8" cy="11" r="0.5" fill="currentColor"/></svg></div>
+                <div class="topbar__notif-content">
+                  <div class="topbar__notif-title">Alerte fraude : doublon détecté — Pharmacie Salama</div>
+                  <div class="topbar__notif-meta">Il y a 1h</div>
+                </div>
+              </div>
+              <div class="topbar__notif-item unread">
+                <div class="topbar__notif-icon topbar__notif-icon--info"><svg width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2"><circle cx="8" cy="8" r="6"/><line x1="8" y1="5" x2="8" y2="8"/><line x1="8" y1="8" x2="10" y2="10"/></svg></div>
+                <div class="topbar__notif-content">
+                  <div class="topbar__notif-title">Échéance renouvellement SOTRA CI dans 15 jours</div>
+                  <div class="topbar__notif-meta">Il y a 3h</div>
+                </div>
+              </div>
+            </div>
+            <div class="topbar__notif-footer"><a href="#">Voir toutes les notifications</a></div>
+          </div>
+        </div>
+      </div>
+
+      <button class="topbar__user">
+        <div class="topbar__user-avatar-top">AD</div>
+        <span class="topbar__user-name-top">Aminata</span>
+        <svg class="topbar__user-chevron" width="14" height="14" viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="2"><polyline points="4,5 7,8 10,5"/></svg>
+      </button>
+      <div class="topbar__user-dropdown">
+        <div class="topbar__user-dropdown__info">
+          <div class="topbar__user-dropdown__name">Aminata Diabaté</div>
+          <div class="topbar__user-dropdown__role">Gestionnaire santé</div>
+        </div>
+        <a href="profil.html" class="topbar__user-dropdown__item">
+          <svg width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="8" cy="5" r="3"/><path d="M2 15v-1a6 6 0 0112 0v1"/></svg>
+          Mon profil
+        </a>
+        <a href="configuration.html" class="topbar__user-dropdown__item">
+          <svg width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="8" cy="8" r="2.5"/><path d="M13.5 8a5.5 5.5 0 01-.3 1.8"/></svg>
+          Paramètres
+        </a>
+        <hr class="topbar__user-dropdown__divider">
+        <a href="../login.html" class="topbar__user-dropdown__item topbar__user-dropdown__item--danger">
+          <svg width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><path d="M5 13H3.5a1.5 1.5 0 01-1.5-1.5v-7A1.5 1.5 0 013.5 3H5"/><polyline points="9,11 13,8 9,5"/><line x1="13" y1="8" x2="5" y2="8"/></svg>
+          Déconnexion
+        </a>
+      </div>
+    </header>
+
+    <div class="app-content">
+
+      <!-- Breadcrumb & Page Header -->
+      <div class="page-header animate-in">
+        <div class="page-header__breadcrumb">
+          <a href="dashboard.html">Tableau de bord</a>
+          <span class="separator">&rsaquo;</span>
+          <a href="contrats.html">Production</a>
+          <span class="separator">&rsaquo;</span>
+          <a href="contrat-detail.html" style="color: var(--gray-600);">CTR-2026-1847</a>
+          <span class="separator">&rsaquo;</span>
+          <span style="color: var(--gray-800); font-weight: 500;">Adh&eacute;rents</span>
+        </div>
+        <div class="page-header__top">
+          <div>
+            <h1 class="page-header__title">Adh&eacute;rents du contrat</h1>
+            <p class="page-header__subtitle">Gestion des b&eacute;n&eacute;ficiaires rattach&eacute;s au contrat CTR-2026-1847</p>
+          </div>
+          <div class="page-header__actions">
+            <button class="btn btn-secondary btn-sm" onclick="showToast('Import Excel en pr&eacute;paration...', 'info')">
+              <svg width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><path d="M14 11v2a2 2 0 01-2 2H4a2 2 0 01-2-2v-2"/><polyline points="12,7 8,3 4,7"/><line x1="8" y1="3" x2="8" y2="12"/></svg>
+              Importer Excel
+            </button>
+            <button class="btn btn-primary btn-sm" onclick="openModal('modal-ajout-adherent')">
+              <svg width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><line x1="8" y1="3" x2="8" y2="13"/><line x1="3" y1="8" x2="13" y2="8"/></svg>
+              Ajouter un adh&eacute;rent
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Contract Header Card -->
+      <div class="card animate-in mb-6">
+        <div class="contract-header">
+          <div class="contract-header__main">
+            <div class="flex items-center gap-3">
+              <span class="contract-header__ref">CTR-2026-1847</span>
+              <span class="badge badge--success"><span class="badge__dot"></span> Actif</span>
+              <span class="contract-type alpha2">ALPHA 2</span>
+              <span class="contract-type groupe">Groupe</span>
+            </div>
+            <div class="contract-header__meta">
+              <div class="flex items-center gap-2">
+                <div class="avatar avatar--sm" style="background: var(--iips-secondary);">AE</div>
+                <div>
+                  <span style="font-weight: 600; font-size: var(--text-sm);">AERIA CI</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- KPI Summary -->
+      <div class="grid grid-4 mb-6">
+        <div class="card stat-card animate-in animate-in-delay-1" style="padding: var(--space-4) var(--space-5);">
+          <div class="stat-card__value" style="font-size: var(--text-2xl); color: var(--iips-primary);">85</div>
+          <div class="stat-card__label">Adh&eacute;rents</div>
+        </div>
+        <div class="card stat-card animate-in animate-in-delay-2" style="padding: var(--space-4) var(--space-5);">
+          <div class="stat-card__value" style="font-size: var(--text-2xl); color: var(--color-info);">78</div>
+          <div class="stat-card__label">Conjoints</div>
+        </div>
+        <div class="card stat-card animate-in animate-in-delay-3" style="padding: var(--space-4) var(--space-5);">
+          <div class="stat-card__value" style="font-size: var(--text-2xl); color: #8B5CF6;">84</div>
+          <div class="stat-card__label">Enfants</div>
+        </div>
+        <div class="card stat-card animate-in animate-in-delay-4" style="padding: var(--space-4) var(--space-5);">
+          <div class="stat-card__value" style="font-size: var(--text-2xl); color: var(--iips-accent);">247</div>
+          <div class="stat-card__label">Total b&eacute;n&eacute;ficiaires</div>
+        </div>
+      </div>
+
+      <!-- Filter Bar -->
+      <div class="filter-bar animate-in">
+        <input type="text" class="form-input" placeholder="Rechercher un b&eacute;n&eacute;ficiaire..." data-filter-table="adherents-table" style="width: 280px;">
+        <select class="form-select">
+          <option>Tous les liens</option>
+          <option>Adh&eacute;rent</option>
+          <option>Conjoint</option>
+          <option>Enfant</option>
+        </select>
+        <select class="form-select">
+          <option>Tous les statuts</option>
+          <option>Actif</option>
+          <option>Suspendu</option>
+        </select>
+      </div>
+
+      <!-- Adherents Table -->
+      <div class="card animate-in">
+        <div class="table-container">
+          <table class="table" id="adherents-table">
+            <thead>
+              <tr>
+                <th class="table__checkbox"><input type="checkbox" class="select-all-checkbox"></th>
+                <th>Nom &amp; Pr&eacute;nom</th>
+                <th>Lien</th>
+                <th>Date naissance</th>
+                <th>Genre</th>
+                <th>N&deg; Carte</th>
+                <th>Statut</th>
+              </tr>
+            </thead>
+            <tbody>
+              <!-- Famille Ou&eacute;draogo -->
+              <tr>
+                <td class="table__checkbox"><input type="checkbox"></td>
+                <td>
+                  <div class="flex items-center gap-2">
+                    <div class="avatar avatar--sm" style="background: var(--iips-primary);">OA</div>
+                    <div>
+                      <div style="font-weight: 600; font-size: 13px;">Ou&eacute;draogo Alassane</div>
+                    </div>
+                  </div>
+                </td>
+                <td><span class="badge badge--primary">Adh&eacute;rent</span></td>
+                <td style="color: var(--gray-500);">08/03/1975</td>
+                <td>H</td>
+                <td><span class="font-mono" style="font-size: var(--text-xs); color: var(--iips-primary);">IIPS-2026-004501</span></td>
+                <td><span class="badge badge--success"><span class="badge__dot"></span> Actif</span></td>
+              </tr>
+              <tr style="background: var(--gray-25);">
+                <td class="table__checkbox"><input type="checkbox"></td>
+                <td>
+                  <div class="flex items-center gap-2" style="padding-left: var(--space-6);">
+                    <div class="avatar avatar--sm" style="background: var(--color-info);">OM</div>
+                    <div>
+                      <div style="font-weight: 500; font-size: 13px; color: var(--gray-700);">&#8627; Ou&eacute;draogo Mariame</div>
+                    </div>
+                  </div>
+                </td>
+                <td><span class="badge badge--info">Conjoint</span></td>
+                <td style="color: var(--gray-500);">15/09/1980</td>
+                <td>F</td>
+                <td><span class="font-mono" style="font-size: var(--text-xs); color: var(--iips-primary);">IIPS-2026-004502</span></td>
+                <td><span class="badge badge--success"><span class="badge__dot"></span> Actif</span></td>
+              </tr>
+              <tr style="background: var(--gray-25);">
+                <td class="table__checkbox"><input type="checkbox"></td>
+                <td>
+                  <div class="flex items-center gap-2" style="padding-left: var(--space-6);">
+                    <div class="avatar avatar--sm" style="background: var(--gray-400);">OY</div>
+                    <div>
+                      <div style="font-weight: 500; font-size: 13px; color: var(--gray-700);">&#8627; Ou&eacute;draogo Yacine</div>
+                    </div>
+                  </div>
+                </td>
+                <td><span class="badge badge--neutral">Enfant</span></td>
+                <td style="color: var(--gray-500);">22/01/2010</td>
+                <td>F</td>
+                <td><span class="font-mono" style="font-size: var(--text-xs); color: var(--iips-primary);">IIPS-2026-004503</span></td>
+                <td><span class="badge badge--success"><span class="badge__dot"></span> Actif</span></td>
+              </tr>
+
+              <!-- Famille Kouam&eacute; -->
+              <tr>
+                <td class="table__checkbox"><input type="checkbox"></td>
+                <td>
+                  <div class="flex items-center gap-2">
+                    <div class="avatar avatar--sm" style="background: #8B5CF6;">KA</div>
+                    <div>
+                      <div style="font-weight: 600; font-size: 13px;">Kouam&eacute; Ahou</div>
+                    </div>
+                  </div>
+                </td>
+                <td><span class="badge badge--primary">Adh&eacute;rent</span></td>
+                <td style="color: var(--gray-500);">14/06/1983</td>
+                <td>F</td>
+                <td><span class="font-mono" style="font-size: var(--text-xs); color: var(--iips-primary);">IIPS-2026-004504</span></td>
+                <td><span class="badge badge--success"><span class="badge__dot"></span> Actif</span></td>
+              </tr>
+              <tr style="background: var(--gray-25);">
+                <td class="table__checkbox"><input type="checkbox"></td>
+                <td>
+                  <div class="flex items-center gap-2" style="padding-left: var(--space-6);">
+                    <div class="avatar avatar--sm" style="background: var(--color-info);">KJ</div>
+                    <div>
+                      <div style="font-weight: 500; font-size: 13px; color: var(--gray-700);">&#8627; Kouam&eacute; Jean-Luc</div>
+                    </div>
+                  </div>
+                </td>
+                <td><span class="badge badge--info">Conjoint</span></td>
+                <td style="color: var(--gray-500);">03/11/1979</td>
+                <td>H</td>
+                <td><span class="font-mono" style="font-size: var(--text-xs); color: var(--iips-primary);">IIPS-2026-004505</span></td>
+                <td><span class="badge badge--success"><span class="badge__dot"></span> Actif</span></td>
+              </tr>
+
+              <!-- Demb&eacute;l&eacute; Souleymane -->
+              <tr>
+                <td class="table__checkbox"><input type="checkbox"></td>
+                <td>
+                  <div class="flex items-center gap-2">
+                    <div class="avatar avatar--sm" style="background: var(--iips-accent);">DS</div>
+                    <div>
+                      <div style="font-weight: 600; font-size: 13px;">Demb&eacute;l&eacute; Souleymane</div>
+                    </div>
+                  </div>
+                </td>
+                <td><span class="badge badge--primary">Adh&eacute;rent</span></td>
+                <td style="color: var(--gray-500);">29/07/1990</td>
+                <td>H</td>
+                <td><span class="font-mono" style="font-size: var(--text-xs); color: var(--iips-primary);">IIPS-2026-004506</span></td>
+                <td><span class="badge badge--warning"><span class="badge__dot"></span> Suspendu</span></td>
+              </tr>
+
+              <!-- Traor&eacute; Mariam -->
+              <tr>
+                <td class="table__checkbox"><input type="checkbox"></td>
+                <td>
+                  <div class="flex items-center gap-2">
+                    <div class="avatar avatar--sm" style="background: #06B6D4;">TM</div>
+                    <div>
+                      <div style="font-weight: 600; font-size: 13px;">Traor&eacute; Mariam</div>
+                    </div>
+                  </div>
+                </td>
+                <td><span class="badge badge--primary">Adh&eacute;rent</span></td>
+                <td style="color: var(--gray-500);">12/05/1988</td>
+                <td>F</td>
+                <td><span class="font-mono" style="font-size: var(--text-xs); color: var(--iips-primary);">IIPS-2026-004507</span></td>
+                <td><span class="badge badge--success"><span class="badge__dot"></span> Actif</span></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <!-- Pagination -->
+        <div style="padding: var(--space-4) var(--space-6); border-top: var(--border-light);">
+          <div class="pagination">
+            <div class="pagination__info">
+              Affichage de <strong>7</strong> sur <strong>247</strong> b&eacute;n&eacute;ficiaires
+            </div>
+            <div class="pagination__controls">
+              <button class="pagination__btn">&lsaquo;</button>
+              <button class="pagination__btn active">1</button>
+              <button class="pagination__btn">2</button>
+              <button class="pagination__btn">3</button>
+              <button class="pagination__btn">...</button>
+              <button class="pagination__btn">31</button>
+              <button class="pagination__btn">&rsaquo;</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </main>
+</div>
+
+<!-- ===== MODAL : Ajouter un adhérent ===== -->
+<div class="modal-backdrop" id="modal-ajout-adherent">
+  <div class="modal" style="max-width: 640px;">
+    <div class="modal__header">
+      <h3 class="modal__title">Ajouter un adhérent</h3>
+      <button class="modal__close" onclick="closeModal('modal-ajout-adherent')">&times;</button>
+    </div>
+    <div class="modal__body">
+      <div style="display: grid; grid-template-columns: 1fr 1fr; gap: var(--space-4);">
+        <div class="form-group">
+          <label class="form-label">Nom <span style="color: var(--color-error);">*</span></label>
+          <input type="text" class="form-input" placeholder="Ex: Kouassi">
+        </div>
+        <div class="form-group">
+          <label class="form-label">Prénom <span style="color: var(--color-error);">*</span></label>
+          <input type="text" class="form-input" placeholder="Ex: Aya Marie">
+        </div>
+        <div class="form-group">
+          <label class="form-label">Matricule <span style="color: var(--color-error);">*</span></label>
+          <input type="text" class="form-input" placeholder="MAT-XXXX" style="font-family: 'JetBrains Mono', monospace;">
+        </div>
+        <div class="form-group">
+          <label class="form-label">Date de naissance <span style="color: var(--color-error);">*</span></label>
+          <input type="date" class="form-input">
+        </div>
+        <div class="form-group">
+          <label class="form-label">Lien de parenté <span style="color: var(--color-error);">*</span></label>
+          <select class="form-select">
+            <option value="">Sélectionner...</option>
+            <option value="titulaire">Titulaire (salarié)</option>
+            <option value="conjoint">Conjoint(e)</option>
+            <option value="enfant">Enfant</option>
+            <option value="ascendant">Ascendant</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label class="form-label">Sexe</label>
+          <select class="form-select">
+            <option value="">Sélectionner...</option>
+            <option value="M">Masculin</option>
+            <option value="F">Féminin</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label class="form-label">Téléphone</label>
+          <input type="tel" class="form-input" placeholder="+225 XX XX XX XX XX">
+        </div>
+        <div class="form-group">
+          <label class="form-label">Email</label>
+          <input type="email" class="form-input" placeholder="email@exemple.ci">
+        </div>
+        <div class="form-group" style="grid-column: span 2;">
+          <label class="form-label">Observations</label>
+          <textarea class="form-input" rows="2" placeholder="Notes complémentaires..."></textarea>
+        </div>
+      </div>
+    </div>
+    <div class="modal__footer">
+      <button class="btn btn-secondary btn-sm" onclick="closeModal('modal-ajout-adherent')">Annuler</button>
+      <button class="btn btn-primary btn-sm" onclick="showToast('Adhérent ajouté avec succès','success'); closeModal('modal-ajout-adherent');">Enregistrer</button>
+    </div>
+  </div>
+</div>
+
+<script src="../../js/roles.js"></script>
+<script src="../../js/main.js"></script>
+<script src="../../js/main-v2.js"></script>
+</body>
+</html>
