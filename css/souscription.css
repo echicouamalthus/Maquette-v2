@@ -212,3 +212,35 @@
 /* --- Reuse shared styles from Production if not already loaded --- */
 /* form-section, tarif-preview, alert-box, form-footer, info-grid, info-block,
    diff-row, tab-panel, contract-type, etc. are in production.css */
+
+/* ============================================================
+   RESPONSIVE — Souscription
+   ============================================================ */
+@media (max-width: 768px) {
+  /* Workflow stepper: allow wrap */
+  .workflow-stepper {
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+  }
+
+  /* Doc checklist: adjust layout */
+  .doc-checklist-item__actions {
+    flex-shrink: 0;
+  }
+}
+
+@media (max-width: 640px) {
+  /* Workflow step card: compact */
+  .workflow-step-card {
+    padding: var(--space-3);
+  }
+  .workflow-step-card__content {
+    flex: 1;
+  }
+
+  /* Validation actions: stack buttons */
+  .validation-actions .btn {
+    width: 100%;
+    justify-content: center;
+  }
+}

@@ -825,3 +825,102 @@
 .text-success { color: var(--color-success); }
 .text-warning { color: var(--color-warning); }
 .text-accent { color: var(--iips-accent); }
+
+/* --------------------------------------------------------------------------
+   20. RESPONSIVE
+   -------------------------------------------------------------------------- */
+@media (max-width: 768px) {
+  /* Acte selector: 3 cols on tablet */
+  .acte-selector {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  /* Patient info grid: 2 cols */
+  .patient-info-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  /* Bordereau / payment summary: 2 cols */
+  .bordereau-summary,
+  .paiement-summary-presta {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  /* Result card grid: 2 cols */
+  .result-card__grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  /* Status tabs: scroll */
+  .status-tabs {
+    overflow-x: auto;
+    white-space: nowrap;
+    -webkit-overflow-scrolling: touch;
+  }
+}
+
+@media (max-width: 640px) {
+  /* Verification card: stack input group */
+  .verification-card {
+    padding: var(--space-5);
+  }
+  .verification-card__input-group {
+    flex-direction: column;
+  }
+  .verification-card__input-group input,
+  .verification-card__input-group button {
+    width: 100%;
+  }
+
+  /* Acte selector: 2 cols on mobile */
+  .acte-selector {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  /* Patient banner: stack */
+  .patient-banner {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .patient-banner__guarantees {
+    margin-left: 0;
+    flex-wrap: wrap;
+    gap: var(--space-4);
+  }
+
+  /* Patient info grid: 1 col */
+  .patient-info-grid {
+    grid-template-columns: 1fr;
+  }
+
+  /* Bordereau / payment summary: 1 col */
+  .bordereau-summary,
+  .paiement-summary-presta {
+    grid-template-columns: 1fr;
+  }
+
+  /* Result card grid: 1 col */
+  .result-card__grid {
+    grid-template-columns: 1fr;
+  }
+
+  /* Result card actions: stack */
+  .result-card__actions {
+    flex-direction: column;
+  }
+  .result-card__actions .btn {
+    width: 100%;
+    justify-content: center;
+  }
+
+  /* Form footer: stack */
+  .form-footer {
+    flex-direction: column;
+    align-items: stretch;
+    gap: var(--space-3);
+  }
+  .form-footer .btn {
+    width: 100%;
+    justify-content: center;
+  }
+}

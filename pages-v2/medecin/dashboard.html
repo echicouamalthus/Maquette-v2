@@ -123,10 +123,13 @@
     </div>
   </aside>
 
+  <!-- Overlay drawer mobile -->
+  <div class="sidebar-overlay" id="sidebar-overlay" onclick="closeDrawer()"></div>
+
   <main class="app-main">
     <!-- Top Bar v2 -->
     <header class="topbar">
-      <button class="topbar__hamburger" onclick="toggleSidebar()" title="Menu">
+      <button class="topbar__hamburger" onclick="handleHamburger()" title="Menu">
         <svg width="20" height="20" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><line x1="3" y1="5" x2="17" y2="5"/><line x1="3" y1="10" x2="17" y2="10"/><line x1="3" y1="15" x2="17" y2="15"/></svg>
       </button>
 
@@ -345,5 +348,26 @@
 </div>
 <script src="../../js/main.js"></script>
 <script src="../../js/main-v2.js"></script>
+<script>
+  // Drawer mobile
+  function handleHamburger() {
+    if (window.innerWidth <= 640) { openDrawer(); } else { toggleSidebar(); }
+  }
+  function openDrawer() {
+    document.querySelector('.sidebar').classList.add('drawer-open');
+    document.getElementById('sidebar-overlay').classList.add('active');
+    document.body.style.overflow = 'hidden';
+  }
+  function closeDrawer() {
+    document.querySelector('.sidebar').classList.remove('drawer-open');
+    document.getElementById('sidebar-overlay').classList.remove('active');
+    document.body.style.overflow = '';
+  }
+  document.querySelectorAll('.sidebar .nav-item').forEach(function(item) {
+    item.addEventListener('click', function() { if (window.innerWidth <= 640) closeDrawer(); });
+  });
+  window.addEventListener('resize', function() { if (window.innerWidth > 640) closeDrawer(); });
+</script>
+<script src="../../js/help.js"></script>
 </body>
 </html>

@@ -646,3 +646,64 @@
 .text-success { color: var(--color-success); }
 .text-warning { color: var(--color-warning); }
 .text-error { color: var(--color-error); }
+
+/* --------------------------------------------------------------------------
+   17. RESPONSIVE
+   -------------------------------------------------------------------------- */
+@media (max-width: 768px) {
+  /* Contract summary: stack */
+  .contract-summary {
+    grid-template-columns: 1fr;
+  }
+
+  /* Contract info grid: 2 cols */
+  .contract-info-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  /* Summary grids: 2 cols */
+  .soc-summary--3,
+  .soc-summary--4 {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  /* Status tabs: scroll */
+  .status-tabs {
+    overflow-x: auto;
+    white-space: nowrap;
+    -webkit-overflow-scrolling: touch;
+  }
+}
+
+@media (max-width: 640px) {
+  /* Contract summary: single col, compact */
+  .contract-summary {
+    padding: var(--space-4);
+    gap: var(--space-4);
+  }
+  .contract-summary__amount {
+    font-size: var(--text-2xl);
+  }
+  .contract-summary__details {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  /* Contract info grid: 1 col */
+  .contract-info-grid {
+    grid-template-columns: 1fr;
+  }
+
+  /* Summary grids: 1 col */
+  .soc-summary--3,
+  .soc-summary--4 {
+    grid-template-columns: 1fr;
+  }
+
+  /* Reclamation card footer: stack */
+  .reclamation-card__footer,
+  .avenant-card__footer {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: var(--space-2);
+  }
+}

@@ -247,6 +247,48 @@
   font-weight: 700;
 }
 
+/* ============================================================
+   RESPONSIVE — PEC
+   ============================================================ */
+@media (max-width: 768px) {
+  /* PEC header: allow wrapping */
+  .pec-header {
+    flex-wrap: wrap;
+    gap: var(--space-4);
+  }
+  .pec-header__actions {
+    width: 100%;
+    flex-wrap: wrap;
+  }
+  .pec-header__actions .btn {
+    flex: 1;
+    justify-content: center;
+    min-width: 120px;
+  }
+
+  /* PEC alert: stack */
+  .pec-alert {
+    flex-wrap: wrap;
+  }
+  .pec-alert__action {
+    width: 100%;
+    flex-shrink: 0;
+  }
+}
+
+@media (max-width: 640px) {
+  /* PEC header: stack */
+  .pec-header {
+    flex-direction: column;
+    padding: var(--space-4);
+  }
+
+  /* Eligibilité card: compact */
+  .eligibilite-card {
+    padding: var(--space-4);
+  }
+}
+
 /* --- Prestataire Info (compact) --- */
 .prestataire-info {
   display: flex;

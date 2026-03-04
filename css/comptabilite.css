@@ -175,6 +175,33 @@
   display: block;
 }
 
+/* ============================================================
+   RESPONSIVE — Comptabilité / Encaissement
+   ============================================================ */
+@media (max-width: 768px) {
+  /* Encaissement modes: 2 cols */
+  .encaissement-modes {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  /* Summary: unstick on mobile */
+  .encaissement-summary {
+    position: static;
+  }
+}
+
+@media (max-width: 640px) {
+  /* Encaissement modes: 2 cols */
+  .encaissement-modes {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  /* Mode card: compact */
+  .encaissement-mode-card {
+    padding: var(--space-3) var(--space-2);
+  }
+}
+
 /* --- Commission Detail Header (G-054) --- */
 .commission-header {
   display: flex;

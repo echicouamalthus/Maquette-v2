@@ -166,13 +166,16 @@
     </div>
   </aside>
 
+  <!-- Overlay drawer mobile -->
+  <div class="sidebar-overlay" id="sidebar-overlay" onclick="closeDrawer()"></div>
+
   <!-- ===== MAIN CONTENT ===== -->
   <main class="app-main">
 
     <!-- Top Bar v2 -->
     <header class="topbar">
       <!-- Hamburger menu (mobile / alternative toggle) -->
-      <button class="topbar__hamburger" onclick="toggleSidebar()" title="Menu">
+      <button class="topbar__hamburger" onclick="handleHamburger()" title="Menu">
         <svg width="20" height="20" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><line x1="3" y1="5" x2="17" y2="5"/><line x1="3" y1="10" x2="17" y2="10"/><line x1="3" y1="15" x2="17" y2="15"/></svg>
       </button>
 
@@ -205,7 +208,7 @@
 
       <!-- Actions -->
       <div class="topbar__actions">
-        <button class="topbar__action-btn" title="Aide">
+        <button class="topbar__action-btn" title="Aide contextuelle" onclick="toggleHelp()">
           <svg width="20" height="20" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="10" cy="10" r="8"/><path d="M7.5 7.5a2.5 2.5 0 014.87.83c0 1.67-2.5 2.5-2.5 2.5"/><circle cx="10" cy="14" r="0.5" fill="currentColor"/></svg>
         </button>
 
@@ -628,8 +631,62 @@
 
 </div>
 
+<!-- ===== HELP PANEL — Aide contextuelle ===== -->
+<div class="help-panel" id="help-panel">
+  <div class="help-panel__header">
+    <div class="help-panel__title-wrap">
+      <div class="help-panel__badge">?</div>
+      <div>
+        <div class="help-panel__title">Guide de l'espace</div>
+        <div class="help-panel__space" id="help-panel-space">Espace Gestionnaire</div>
+      </div>
+    </div>
+    <button class="help-panel__close" onclick="closeHelp()" title="Fermer">
+      <svg width="14" height="14" viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="2"><line x1="2" y1="2" x2="12" y2="12"/><line x1="12" y1="2" x2="2" y2="12"/></svg>
+    </button>
+  </div>
+  <div class="help-panel__body" id="help-panel-body">
+    <!-- Contenu injecté dynamiquement par help.js -->
+  </div>
+  <div class="help-panel__footer">
+    <div class="help-panel__version">IIPS v2.0 — KOJIT Systems Côte d'Ivoire</div>
+  </div>
+</div>
+<div class="help-overlay" id="help-overlay" onclick="closeHelp()"></div>
+
 <script src="../../js/roles.js"></script>
 <script src="../../js/main.js"></script>
 <script src="../../js/main-v2.js"></script>
+<script src="../../js/help.js"></script>
+<script>
+  // Drawer mobile
+  function handleHamburger() {
+    if (window.innerWidth <= 640) {
+      openDrawer();
+    } else {
+      toggleSidebar();
+    }
+  }
+  function openDrawer() {
+    document.querySelector('.sidebar').classList.add('drawer-open');
+    document.getElementById('sidebar-overlay').classList.add('active');
+    document.body.style.overflow = 'hidden';
+  }
+  function closeDrawer() {
+    document.querySelector('.sidebar').classList.remove('drawer-open');
+    document.getElementById('sidebar-overlay').classList.remove('active');
+    document.body.style.overflow = '';
+  }
+  // Ferme le drawer si on clique un nav-item (navigation)
+  document.querySelectorAll('.sidebar .nav-item').forEach(function(item) {
+    item.addEventListener('click', function() {
+      if (window.innerWidth <= 640) closeDrawer();
+    });
+  });
+  // Ferme le drawer si on resize vers desktop
+  window.addEventListener('resize', function() {
+    if (window.innerWidth > 640) closeDrawer();
+  });
+</script>
 </body>
 </html>

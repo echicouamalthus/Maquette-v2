@@ -754,47 +754,84 @@
 
     @media (max-width: 768px) {
       .v2-nav__links { display: none; }
+      .v2-nav__actions { border-left: none; padding-left: 0; }
       .v2-nav__actions .v2-btn--outline { display: none; }
       .v2-nav__hamburger { display: flex; }
-      .v2-nav__inner { padding: 0 20px; }
+      .v2-nav__inner { padding: 0 20px; gap: 0; }
 
       .v2-hero { padding: 100px 5% 64px; min-height: auto; }
       .v2-hero__shapes { display: none; }
       .v2-hero::before { display: none; }
       .v2-hero__title { font-size: 28px; }
+      .v2-hero__subtitle { font-size: 15px; }
       .v2-hero__inner { gap: 0; }
 
       .v2-proof__stats { flex-wrap: wrap; padding: 24px 20px; gap: 20px; }
       .v2-proof__stat { flex: 1 0 45%; }
       .v2-proof__divider { display: none; }
 
-      .v2-how__steps { grid-template-columns: 1fr 1fr; }
+      .v2-how__steps { grid-template-columns: 1fr 1fr; padding: 0; }
       .v2-how__line { display: none; }
+      .v2-how__cta { flex-direction: column; gap: 12px; }
 
       .v2-benefits__grid { grid-template-columns: 1fr; }
+      .v2-benefit-card { padding: 24px 20px; }
 
       .v2-testimonials__grid { grid-template-columns: 1fr; }
+      .v2-testimonial { padding: 24px 20px; }
+
+      .v2-spaces__panel { padding: 24px 20px; }
 
       .v2-section { padding: 56px 5%; }
+      .v2-section__header { margin-bottom: 32px; }
       .v2-section__title { font-size: 24px; }
       .v2-cta-section { padding: 56px 5%; }
       .v2-cta__left { padding: 36px 24px; }
       .v2-cta__title { font-size: 26px; }
+      .v2-cta__status { padding: 24px 20px; }
 
       .v2-footer__grid { grid-template-columns: 1fr; gap: 28px; }
       .v2-footer__bottom { flex-direction: column; align-items: flex-start; gap: 8px; }
+      .v2-footer__bottom-links { flex-wrap: wrap; gap: 12px; }
     }
 
     @media (max-width: 480px) {
+      .v2-nav__actions { display: none; }
+
+      .v2-hero { padding: 88px 4% 48px; }
       .v2-hero__title { font-size: 24px; }
+      .v2-hero__subtitle { font-size: 14px; }
       .v2-hero__ctas { flex-direction: column; }
       .v2-hero__ctas .v2-btn { width: 100%; justify-content: center; }
       .v2-hero__trust { flex-direction: column; gap: 8px; }
-      .v2-how__steps { grid-template-columns: 1fr; }
+
       .v2-proof__stat { flex: 1 0 100%; }
+      .v2-proof__stat-value { font-size: 28px; }
+      .v2-proof__stats { padding: 20px 16px; }
+
+      .v2-how__steps { grid-template-columns: 1fr; }
+      .v2-how__step-num { font-size: 48px; }
+
       .v2-spaces__tab { min-width: 100%; }
+      .v2-spaces__panel { padding: 20px 16px; }
+      .v2-spaces__panel-title { font-size: 20px; }
+
+      .v2-benefit-card { padding: 20px 16px; }
+
+      .v2-testimonial { padding: 20px 16px; }
+
+      .v2-cta__left { padding: 28px 20px; }
+      .v2-cta__title { font-size: 22px; }
+      .v2-cta__status { padding: 20px 16px; }
       .v2-cta__buttons { flex-direction: column; }
       .v2-cta__buttons .v2-btn { width: 100%; justify-content: center; }
+
+      .v2-section { padding: 44px 4%; }
+      .v2-section__title { font-size: 22px; }
+      .v2-cta-section { padding: 44px 4%; }
+
+      .v2-footer { padding: 40px 4% 0; }
+      .v2-footer__grid { gap: 20px; }
     }
   </style>
 </head>
