@@ -1198,9 +1198,9 @@ body {
     display: none;
   }
 
-  /* Bouton aide → masqué */
-  .topbar__actions > .topbar__action-btn {
-    display: none;
+  /* Topbar actions : gap réduit */
+  .topbar__actions {
+    gap: 4px;
   }
 
   /* Breadcrumb : affiche seulement la page courante */
